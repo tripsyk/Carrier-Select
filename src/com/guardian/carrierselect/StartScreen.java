@@ -35,8 +35,6 @@ public class StartScreen extends Fragment {
 		welcome.setTypeface(null, Typeface.ITALIC);
 		next = (TextView) rootView.findViewById(R.id.next1);
 		next.setTypeface(null, Typeface.ITALIC);
-		scalenext = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.scalenext);
 
 		fadeOut = AnimationUtils.loadAnimation(rootView.getContext(),
 				R.anim.fadeout);

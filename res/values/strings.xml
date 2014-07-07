@@ -148,5 +148,8 @@
     <string name="smartphonestitle">How many smartphones do you have?</string>
     <string name="basicphonestitle">How many basic phones do you have?</string>
     <string name="datatitle">How much data do you have/use between all phones?</string>
+    <string name="monthlytitle">How much do you pay on average per month?</string>
+    <string name="blankstring"></string>
+    <string name="monthlyhint">Enter monthly bill</string>
 
 </resources>

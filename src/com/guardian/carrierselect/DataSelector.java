@@ -70,7 +70,7 @@ public class DataSelector extends Fragment {
 
 			@Override
 			public void onAnimationEnd(Animation arg0) {
-				Fragment fragment = new Home();
+				Fragment fragment = new MonthlySelector();
 				FragmentTransaction fragmenttran = getFragmentManager()
 						.beginTransaction();
 				getFragmentManager().popBackStack(null,

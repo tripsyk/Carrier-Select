@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/startuplayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/welcome_back"
+    android:orientation="vertical"
+    android:padding="30dip" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/monthlyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/monthlytitle"
+            android:text="@string/monthlytitle"
+            android:textColor="@color/titlenoback"
+            android:textSize="@dimen/title_dimens" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/theMonthly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/monthlyhint"
+            android:inputType="number"
+            android:text="@string/blankstring"
+            android:textColor="@color/titlenoback"
+            android:textSize="@dimen/title_dimens" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom|right"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/next"
+            android:layout_width="80dip"
+            android:layout_height="50dip"
+            android:layout_gravity="bottom|right"
+            android:gravity="center"
+            android:hint="@string/next1"
+            android:text="@string/next1"
+            android:textColor="@color/titlenoback"
+            android:textSize="@dimen/title_dimens" />
+    </LinearLayout>
+
+</LinearLayout>
