@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollFooter="@color/white_color"
+    android:overScrollHeader="@color/white_color" >
+
+    <LinearLayout
+        android:id="@+id/selectordatabox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/welcome_back"
+        android:orientation="vertical"
+        android:padding="30dip" >
+
+        <TextView
+            android:id="@+id/yourdataplan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dip"
+            android:layout_marginTop="50dip"
+            android:gravity="center"
+            android:hint="@string/datatitle"
+            android:text="@string/datatitle"
+            android:textColor="@color/titlenoback"
+            android:textSize="@dimen/title_dimens" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/zerodatabox"
+                android:layout_width="238dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/splashborder"
+                android:clickable="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/zerodata"
+                    android:layout_width="238dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/nodata"
+                    android:text="@string/nodata"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/onedatabox"
+                android:layout_width="115dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dip"
+                android:background="@drawable/splashborder"
+                android:clickable="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/onedata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/onegig"
+                    android:text="@string/onegig"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/twodatabox"
+                android:layout_width="115dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/splashborder"
+                android:clickable="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/twodata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/twogig"
+                    android:text="@string/twogig"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/threedatabox"
+                android:layout_width="115dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dip"
+                android:background="@drawable/splashborder"
+                android:clickable="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/threedata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/threegig"
+                    android:text="@string/threegig"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fourdatabox"
+                android:layout_width="115dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/splashborder"
+                android:clickable="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/fourdata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/fourgig"
+                    android:text="@string/fourgig"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/fivedatabox"
+                android:layout_width="115dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dip"
+                android:background="@drawable/splashborder"
+                android:clickable="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/fivedata"
+                    android:layout_width="115dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/fivegig"
+                    android:text="@string/fivegig"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sixdatabox"
+                android:layout_width="115dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/splashborder"
+                android:clickable="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/sixdata"
+                    android:layout_width="115dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/sixgig"
+                    android:text="@string/sixgig"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/sevendatabox"
+                android:layout_width="115dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dip"
+                android:background="@drawable/splashborder"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/sevendata"
+                    android:layout_width="115dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/sevengig"
+                    android:text="@string/sevengig"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/eightdatabox"
+                android:layout_width="115dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/splashborder"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/eightdata"
+                    android:layout_width="115dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/eightgig"
+                    android:text="@string/eightgig"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/ninedatabox"
+                android:layout_width="115dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dip"
+                android:background="@drawable/splashborder"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/ninedata"
+                    android:layout_width="115dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/ninegig"
+                    android:text="@string/ninegig"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tendatabox"
+                android:layout_width="115dip"
+                android:layout_height="wrap_content"
+                android:background="@drawable/splashborder"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tendata"
+                    android:layout_width="115dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/tengig"
+                    android:text="@string/tengig"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

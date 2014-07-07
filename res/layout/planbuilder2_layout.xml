@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollFooter="@color/white_color"
+    android:overScrollHeader="@color/white_color" >
+
+    <LinearLayout
+        android:id="@+id/basics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/welcome_back"
+        android:orientation="vertical"
+        android:padding="30dip" >
+
+
+            <TextView
+                android:id="@+id/pb2title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dip"
+                android:layout_marginTop="80dip"
+                android:gravity="center"
+                android:hint="@string/pb2title"
+                android:text="@string/pb2title"
+                android:textColor="@color/titlenoback"
+                android:textSize="@dimen/title_dimens" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/smart1box"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dip"
+                android:background="@drawable/splashborder"
+                android:clickable="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/smart1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/one"
+                    android:text="@string/one"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/smart2box"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/splashborder"
+                android:clickable="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/smart2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/two"
+                    android:text="@string/two"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/smart3box"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dip"
+                android:background="@drawable/splashborder"
+                android:clickable="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/smart3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/three"
+                    android:text="@string/three"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/smart4box"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/splashborder"
+                android:clickable="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/smart4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/four"
+                    android:text="@string/four"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/smart5box"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="8dip"
+                android:background="@drawable/splashborder"
+                android:clickable="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/smart5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/five"
+                    android:text="@string/five"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/smart6box"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/splashborder"
+                android:clickable="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/smart6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/six"
+                    android:text="@string/six"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

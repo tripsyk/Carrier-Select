@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/white_color"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <TextView
+        android:id="@+id/contract_plans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/contract_plans"
+        android:text="@string/contract_plans"
+        android:textColor="@color/titlenoback"
+        android:textSize="@dimen/title_dimens" />
+
+    <TextView
+        android:id="@+id/att_breakdown_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:gravity="center"
+        android:hint="@string/att_breakdown_message"
+        android:textColor="@color/titlenoback"
+        android:textSize="@dimen/breakdown_dimens" />
+
+    <TextView
+        android:id="@+id/ver_breakdown_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:gravity="center"
+        android:hint="@string/ver_breakdown_message"
+        android:textColor="@color/titlenoback"
+        android:textSize="@dimen/breakdown_dimens" />
+
+    <TextView
+        android:id="@+id/spr_breakdown_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:gravity="center"
+        android:hint="@string/spr_breakdown_message"
+        android:textColor="@color/titlenoback"
+        android:textSize="@dimen/breakdown_dimens" />
+
+    <TextView
+        android:id="@+id/tmo_breakdown_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:gravity="center"
+        android:hint="@string/tmo_breakdown_message"
+        android:textColor="@color/titlenoback"
+        android:textSize="@dimen/breakdown_dimens" />
+
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Carrier Select</string>
+    <string name="action_settings">Settings</string>
+    <string name="sphone_message"></string>
+    <string name="bphone_message" />
+    <string name="data_message" />
+    <string name="button_send">Next ></string>
+    <string name="sphone_label">Number of smartphones?: </string>
+    <string name="data_label">How many gigs of data?: </string>
+    <string name="bphone_label">Number of basic phones?: </string>
+    <string name="sphone_input" />
+    <string name="bphone_input" />
+    <string name="data_input" />
+    <string name="total_message">Quote Again</string>
+    <string name="edit_message" />
+    <string name="back_button">Quote Again</string>
+    <string name="ver_total" />
+    <string name="att_total" />
+    <string name="tmo_total" />
+    <string name="logo_string">Carrier Select</string>
+    <string name="checkbox_hotspot">Mobile Broadband?</string>
+    <string name="sprsoon">T-Mobile coming soon!</string>
+    <string name="breakdown_send">Next ></string>
+    <string name="att_breakdown_message" />
+    <string name="ver_breakdown_message" />
+    <string name="spr_total" />
+    <string name="spr_breakdown_message" />
+    <string name="tmo_breakdown_message" />
+    <string name="logo_desc">Carrier Select Logo</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">close</string>
+
+    <string-array name="menu_list">
+        <item>Home</item>
+        <item>PlanBuilder</item>
+        <item>Service Plans</item>
+        <item>No Contract Plans</item>
+        <item>Phone Search</item>
+        <item>About</item>
+    </string-array>
+
+    <string name="sphone_p">+</string>
+    <string name="sphone_m">-</string>
+    <string name="sstarter">0</string>
+    <string name="contract_plans">Contract Plan Quotes</string>
+    <string name="bstarter">0</string>
+    <string name="dstarter">0</string>
+    <string name="bphone_p">+</string>
+    <string name="bphone_m">-</string>
+    <string name="data_p">+</string>
+    <string name="data_m">-</string>
+    <string name="discount_text">Bill discount (employer, etc)?</string>
+    <string name="dis_value">0%</string>
+    <string name="title_activity_start_screen">StartScreen</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="welcome">Welcome to Carrier Select</string>
+    <string name="next1">Next &gt;</string>
+    <string name="tellus">First, tell us a little about yourself.</string>
+    <string name="next2">Next &gt;</string>
+    <string name="next3">Next &gt;</string>
+    <string name="next4">Next &gt;</string>
+    <string name="profile">What kind of user are you/your family?</string>
+    <string name="light">Light</string>
+    <string name="moderate">Moderate</string>
+    <string name="heavy">Heavy</string>
+    <string name="lightdesc">Phones are used lightly, little to no data or texting.</string>
+    <string name="moderatedesc">I\'m an average user or family. Texting is a must, and I use average amounts of data.</string>
+    <string name="heavydesc">I need the best of the best. I chew through everything.</string>
+    <string name="title_activity_monthly">Monthly</string>
+    <string name="dollarQ">What is your total cellphone bill monthly?</string>
+    <string name="monthly" />
+    <string name="less70">$0-$70</string>
+    <string name="less125">$71-$125</string>
+    <string name="less150">$126-$150</string>
+    <string name="less175">$151-$175</string>
+    <string name="less200">$176-$200</string>
+    <string name="less225">$201-$225</string>
+    <string name="less250">$226-$250</string>
+    <string name="plus250">$250+</string>
+    <string name="title_activity_home">Home</string>
+    <string name="title_activity_plan_builder">PlanBuilder</string>
+    <string name="planbuilder1">Using PlanBuilder, you can create your own wireless plan and see which carriers fit your needs.</string>
+    <string name="home">Home</string>
+    <string name="pb">PlanBuilder</string>
+    <string name="contract">Contract Plans</string>
+    <string name="nocontract">No Contract Plans</string>
+    <string name="tools">Tools</string>
+    <string name="about">About</string>
+    <string name="pbicon">PlanBuilder</string>
+    <string name="minstarter">0</string>
+    <string name="min_label">How many minutes would you use?</string>
+    <string name="text_label">How many texts would you use?</string>
+    <string name="gig_label">How many gigs of data would you use?</string>
+    <string name="search">Phone Search</string>
+    <string name="searchTermHint">Tap to search for a phone</string>
+    <string name="searchGoBox">Go</string>
+    <string name="powered">Powered by Guardian-Project.com</string>
+    <string name="yourProfile">Your Profile</string>
+    <string name="yourcarrier">Carrier: Not set</string>
+    <string name="numsmartphones">Smartphones: Not set</string>
+    <string name="numbasicphones">Basic phones: Not set</string>
+    <string name="gigsofdata">Data usage: Not set</string>
+    <string name="monthlypayment">Monthly bill: Not set</string>
+    <string name="editprofile">Edit Profile</string>
+    <string name="pb2title">How many smartphones would you like?</string>
+    <string name="zero">None</string>
+    <string name="one">One</string>
+    <string name="two">Two</string>
+    <string name="three">Three</string>
+    <string name="four">Four</string>
+    <string name="five">Five</string>
+    <string name="six">Six</string>
+    <string name="seven">Seven</string>
+    <string name="eight">Eight</string>
+    <string name="nine">Nine</string>
+    <string name="ten">Ten</string>
+    <string name="oneword">One</string>
+    <string name="twoword">Two</string>
+    <string name="threeword">Three</string>
+    <string name="fourword">Four</string>
+    <string name="fiveword">Five</string>
+    <string name="sixword">Six</string>
+    <string name="sevenword">Seven</string>
+    <string name="eightword">Eight</string>
+    <string name="nineword">Nine</string>
+    <string name="tenword">Ten</string>
+    <string name="nosmart">No Smartphones</string>
+    <string name="nobasic">No Basicphones</string>
+    <string name="nodata">No Data</string>
+    <string name="att">AT&amp;T</string>
+    <string name="sprint">Sprint</string>
+    <string name="tmobile">T-Mobile</string>
+    <string name="verizon">Verizon</string>
+    <string name="other">Other</string>
+    <string name="onegig">1GB</string>
+    <string name="twogig">2GB</string>
+    <string name="threegig">3GB</string>
+    <string name="fourgig">4GB</string>
+    <string name="fivegig">5GB</string>
+    <string name="sixgig">6GB</string>
+    <string name="sevengig">7GB</string>
+    <string name="eightgig">8GB</string>
+    <string name="ninegig">9GB</string>
+    <string name="tengig">10GB</string>
+    <string name="carriertitle">Which carrier do you currently reside on?</string>
+    <string name="smartphonestitle">How many smartphones do you have?</string>
+    <string name="basicphonestitle">How many basic phones do you have?</string>
+    <string name="datatitle">How much data do you have/use between all phones?</string>
+
+</resources>
