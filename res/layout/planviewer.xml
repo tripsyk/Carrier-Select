@@ -228,13 +228,25 @@
                     android:textSize="@dimen/breakdown_dimens" />
             </LinearLayout>
         </LinearLayout>
+        
+        <TextView
+            android:id="@+id/pvyourplan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:hint="@string/builtplan"
+            android:text="@string/builtplan"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/midtitle" />
 
         <LinearLayout
             android:id="@+id/attquotebox"
             android:layout_width="250dip"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dip"
+            android:layout_marginTop="5dip"
             android:background="@drawable/contentback"
             android:clickable="true"
             android:orientation="vertical"
@@ -472,7 +484,7 @@
             android:layout_width="250dip"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dip"
+            android:layout_marginTop="5dip"
             android:background="@drawable/contentback"
             android:clickable="true"
             android:orientation="vertical"
@@ -710,7 +722,7 @@
             android:layout_width="250dip"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dip"
+            android:layout_marginTop="5dip"
             android:background="@drawable/contentback"
             android:clickable="true"
             android:orientation="vertical"
@@ -948,7 +960,7 @@
             android:layout_width="250dip"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dip"
+            android:layout_marginTop="5dip"
             android:background="@drawable/contentback"
             android:clickable="true"
             android:orientation="vertical"

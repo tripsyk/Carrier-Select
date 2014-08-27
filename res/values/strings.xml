@@ -255,5 +255,6 @@
     <string name="kbsearchgo">Search for topic</string>
     <string name="kbsearchhint">(ex. Installment Billing)</string>
     <string name="kbsearch">Enter a topic you would like to know more about</string>
+    <string name="builtplan">Your Built Plan</string>
 
 </resources>

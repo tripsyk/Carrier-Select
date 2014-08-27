@@ -47,7 +47,7 @@ public class PlanViewer extends Fragment {
 	private TextView sprplan, sprsmart, sprbasic, sprtablets, sprmifi, sprtax,
 			sprdiscount, sprtotal;
 	private TextView tmoplan, tmophones, tmotax, tmodiscount, tmototal;
-	private TextView title;
+	private TextView title, pvyourplan;
 
 	private static View rootView;
 
@@ -73,6 +73,9 @@ public class PlanViewer extends Fragment {
 				.findViewById(R.id.sprquotebox);
 		final LinearLayout tmo = (LinearLayout) rootView
 				.findViewById(R.id.tmoquotebox);
+		final TextView builtplan = (TextView) rootView
+				.findViewById(R.id.pvyourplan);
+		builtplan.setTypeface(null, Typeface.BOLD);
 
 		attplan = (TextView) rootView.findViewById(R.id.attplan);
 		verplan = (TextView) rootView.findViewById(R.id.verplan);
