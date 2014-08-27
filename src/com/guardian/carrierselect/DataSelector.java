@@ -17,8 +17,8 @@ import android.widget.LinearLayout;
 public class DataSelector extends Fragment {
 
 	private static View rootView;
-	private static LinearLayout zerodatabox, onedatabox, twodatabox, threedatabox,
-			fourdatabox, fivedatabox, sixdatabox, sevendatabox,
+	private static LinearLayout zerodatabox, onedatabox, twodatabox,
+			threedatabox, fourdatabox, fivedatabox, sixdatabox, sevendatabox,
 			eightdatabox, ninedatabox, tendatabox;
 
 	@Override
@@ -34,10 +34,10 @@ public class DataSelector extends Fragment {
 		final SharedPreferences.Editor editor = sharedPref.edit();
 
 		// Load in animations.
-		final Animation righttoleft = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.right_to_left);
-		final Animation lefttoright = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.left_to_right);
+		final Animation righttoleft = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.right_to_left);
+		final Animation lefttoright = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.left_to_right);
 
 		// Begin startup flow.
 		rootView.startAnimation(lefttoright);
@@ -46,18 +46,14 @@ public class DataSelector extends Fragment {
 		zerodatabox = (LinearLayout) rootView.findViewById(R.id.zerodatabox);
 		onedatabox = (LinearLayout) rootView.findViewById(R.id.onedatabox);
 		twodatabox = (LinearLayout) rootView.findViewById(R.id.twodatabox);
-		threedatabox = (LinearLayout) rootView
-				.findViewById(R.id.threedatabox);
+		threedatabox = (LinearLayout) rootView.findViewById(R.id.threedatabox);
 		fourdatabox = (LinearLayout) rootView.findViewById(R.id.fourdatabox);
 		fivedatabox = (LinearLayout) rootView.findViewById(R.id.fivedatabox);
 		sixdatabox = (LinearLayout) rootView.findViewById(R.id.sixdatabox);
-		sevendatabox = (LinearLayout) rootView
-				.findViewById(R.id.sevendatabox);
-		eightdatabox = (LinearLayout) rootView
-				.findViewById(R.id.eightdatabox);
+		sevendatabox = (LinearLayout) rootView.findViewById(R.id.sevendatabox);
+		eightdatabox = (LinearLayout) rootView.findViewById(R.id.eightdatabox);
 		ninedatabox = (LinearLayout) rootView.findViewById(R.id.ninedatabox);
 		tendatabox = (LinearLayout) rootView.findViewById(R.id.tendatabox);
-
 
 		// Set animation listeners for fragment
 		righttoleft.setAnimationListener(new AnimationListener() {
@@ -86,7 +82,7 @@ public class DataSelector extends Fragment {
 
 			}
 		});
-		
+
 		zerodatabox.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {

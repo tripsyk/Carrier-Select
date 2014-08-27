@@ -63,7 +63,7 @@
                     android:hint="@string/plancost"
                     android:text="@string/plancost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/attplan"
@@ -74,7 +74,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -90,7 +90,7 @@
                     android:hint="@string/smartcost"
                     android:text="@string/smartcost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/attsmart"
@@ -101,7 +101,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -117,7 +117,7 @@
                     android:hint="@string/basiccost"
                     android:text="@string/basiccost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/attbasic"
@@ -128,7 +128,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -144,7 +144,7 @@
                     android:hint="@string/tabletcost"
                     android:text="@string/tabletcost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/atttablet"
@@ -155,7 +155,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -171,7 +171,7 @@
                     android:hint="@string/hotspotcost"
                     android:text="@string/hotspotcost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/attmifi"
@@ -182,7 +182,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -198,7 +198,7 @@
                     android:hint="@string/taxescost"
                     android:text="@string/taxescost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/atttax"
@@ -209,7 +209,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -225,7 +225,7 @@
                     android:hint="@string/discountcost"
                     android:text="@string/discountcost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/attdiscount"
@@ -236,7 +236,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <TextView
@@ -262,7 +262,7 @@
                     android:hint="@string/total"
                     android:text="@string/total"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/atttotal"
@@ -273,7 +273,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
         </LinearLayout>
 
@@ -329,7 +329,7 @@
                     android:hint="@string/plancost"
                     android:text="@string/plancost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/verplan"
@@ -340,7 +340,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -356,7 +356,7 @@
                     android:hint="@string/smartcost"
                     android:text="@string/smartcost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/versmart"
@@ -367,7 +367,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -383,7 +383,7 @@
                     android:hint="@string/basiccost"
                     android:text="@string/basiccost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/verbasic"
@@ -394,7 +394,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -410,7 +410,7 @@
                     android:hint="@string/tabletcost"
                     android:text="@string/tabletcost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/vertablet"
@@ -421,7 +421,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -437,7 +437,7 @@
                     android:hint="@string/hotspotcost"
                     android:text="@string/hotspotcost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/vermifi"
@@ -448,7 +448,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -464,7 +464,7 @@
                     android:hint="@string/taxescost"
                     android:text="@string/taxescost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/vertax"
@@ -475,7 +475,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -491,7 +491,7 @@
                     android:hint="@string/discountcost"
                     android:text="@string/discountcost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/verdiscount"
@@ -502,7 +502,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <TextView
@@ -528,7 +528,7 @@
                     android:hint="@string/total"
                     android:text="@string/total"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/vertotal"
@@ -539,7 +539,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
         </LinearLayout>
 
@@ -595,7 +595,7 @@
                     android:hint="@string/plancost"
                     android:text="@string/plancost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/sprplan"
@@ -606,7 +606,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -622,7 +622,7 @@
                     android:hint="@string/smartcost"
                     android:text="@string/smartcost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/sprsmart"
@@ -633,7 +633,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -649,7 +649,7 @@
                     android:hint="@string/basiccost"
                     android:text="@string/basiccost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/sprbasic"
@@ -660,7 +660,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -676,7 +676,7 @@
                     android:hint="@string/tabletcost"
                     android:text="@string/tabletcost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/sprtablet"
@@ -687,7 +687,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -703,7 +703,7 @@
                     android:hint="@string/hotspotcost"
                     android:text="@string/hotspotcost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/sprmifi"
@@ -714,7 +714,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -730,7 +730,7 @@
                     android:hint="@string/taxescost"
                     android:text="@string/taxescost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/sprtax"
@@ -741,7 +741,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -757,7 +757,7 @@
                     android:hint="@string/discountcost"
                     android:text="@string/discountcost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/sprdiscount"
@@ -768,7 +768,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <TextView
@@ -794,7 +794,7 @@
                     android:hint="@string/total"
                     android:text="@string/total"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/sprtotal"
@@ -805,7 +805,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
         </LinearLayout>
 
@@ -861,7 +861,7 @@
                     android:hint="@string/datacost"
                     android:text="@string/datacost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/tmoplan"
@@ -872,7 +872,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -888,7 +888,7 @@
                     android:hint="@string/phonecost"
                     android:text="@string/phonecost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/tmophone"
@@ -899,7 +899,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -915,7 +915,7 @@
                     android:hint="@string/taxescost"
                     android:text="@string/taxescost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/tmotax"
@@ -926,7 +926,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <LinearLayout
@@ -942,7 +942,7 @@
                     android:hint="@string/discountcost"
                     android:text="@string/discountcost"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/tmodiscount"
@@ -953,7 +953,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
 
             <TextView
@@ -979,7 +979,7 @@
                     android:hint="@string/total"
                     android:text="@string/total"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
                     android:id="@+id/tmototal"
@@ -990,7 +990,7 @@
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
         </LinearLayout>
 

@@ -191,7 +191,7 @@ public class PlanViewer extends Fragment {
 							+ Math.round(((plan + smart + basic + tablets + mifi)
 									+ tax - dis)));
 					atttotal.setTypeface(null, Typeface.BOLD);
-					
+
 					final TextView b1typepre = (TextView) rootView
 							.findViewById(R.id.box1typepre);
 					b1typepre.setTypeface(null, Typeface.BOLD);
@@ -236,18 +236,25 @@ public class PlanViewer extends Fragment {
 					String data = PlanList.get(0).getString("Data");
 					String overage = PlanList.get(0).getString("Overage");
 					String smartetf = PlanList.get(0).getString("SmartETF");
-					String smartetflower = PlanList.get(0).getString("SmartETFDown");
+					String smartetflower = PlanList.get(0).getString(
+							"SmartETFDown");
 					String basicetf = PlanList.get(0).getString("BasicETF");
-					String basicetflower = PlanList.get(0).getString("BasicETFDown");
-					String installetf = PlanList.get(0).getString("ETFInstallments");
-					
+					String basicetflower = PlanList.get(0).getString(
+							"BasicETFDown");
+					String installetf = PlanList.get(0).getString(
+							"ETFInstallments");
+
 					b1type.setText(type);
 					b1devices.setText(devices);
 					b1tt.setText("Unlimited Talk & Text Nationwide");
 					b1data.setText(data + " shared for group");
 					b1over.setText(overage);
-					b1etfsmart.setText("Smartphones - $" + smartetf + " and declines $" + smartetflower + " per month into contract.");
-					b1etfbasic.setText("Basic phones, Tablets, Hotspots - $" + basicetf+ " and declines $" + basicetflower + " per month into contract.");
+					b1etfsmart.setText("Smartphones - $" + smartetf
+							+ " and declines $" + smartetflower
+							+ " per month into contract.");
+					b1etfbasic.setText("Basic phones, Tablets, Hotspots - $"
+							+ basicetf + " and declines $" + basicetflower
+							+ " per month into contract.");
 					b1etfinstall.setText(installetf);
 
 					progress.dismiss();
@@ -321,8 +328,6 @@ public class PlanViewer extends Fragment {
 							+ Math.round(((plan + smart + basic + tablets + mifi)
 									+ tax - dis)));
 					vertotal.setTypeface(null, Typeface.BOLD);
-					
-					
 
 					final TextView b1typepre = (TextView) rootView
 							.findViewById(R.id.box1typepre);
@@ -368,20 +373,27 @@ public class PlanViewer extends Fragment {
 					String data = PlanList.get(0).getString("Data");
 					String overage = PlanList.get(0).getString("Overage");
 					String smartetf = PlanList.get(0).getString("SmartETF");
-					String smartetflower = PlanList.get(0).getString("SmartETFDown");
+					String smartetflower = PlanList.get(0).getString(
+							"SmartETFDown");
 					String basicetf = PlanList.get(0).getString("BasicETF");
-					String basicetflower = PlanList.get(0).getString("BasicETFDown");
-					String installetf = PlanList.get(0).getString("ETFInstallments");
-					
+					String basicetflower = PlanList.get(0).getString(
+							"BasicETFDown");
+					String installetf = PlanList.get(0).getString(
+							"ETFInstallments");
+
 					b1type.setText(type);
 					b1devices.setText(devices);
 					b1tt.setText("Unlimited Talk & Text Nationwide");
 					b1data.setText(data + " shared for group");
 					b1over.setText(overage);
-					b1etfsmart.setText("Smartphones - $" + smartetf + " and declines $" + smartetflower + " per month into contract.");
-					b1etfbasic.setText("Basic phones, Tablets, Hotspots - $" + basicetf+ " and declines $" + basicetflower + " per month into contract.");
+					b1etfsmart.setText("Smartphones - $" + smartetf
+							+ " and declines $" + smartetflower
+							+ " per month into contract.");
+					b1etfbasic.setText("Basic phones, Tablets, Hotspots - $"
+							+ basicetf + " and declines $" + basicetflower
+							+ " per month into contract.");
 					b1etfinstall.setText(installetf);
-					
+
 					progress.dismiss();
 				} else {
 				}
@@ -402,10 +414,10 @@ public class PlanViewer extends Fragment {
 		Parse.initialize(rootView.getContext(),
 				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
 				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
-		
+
 		String adjustedGB = String.valueOf(gigs);
 
-		if ((smartphones + basicphones + tabs == 1) && gigs > 2){
+		if ((smartphones + basicphones + tabs == 1) && gigs > 2) {
 			adjustedGB = "Unlimited";
 		}
 
@@ -451,7 +463,7 @@ public class PlanViewer extends Fragment {
 							+ Math.round(((plan + smart + basic + tablets + mifi)
 									+ tax - dis)));
 					sprtotal.setTypeface(null, Typeface.BOLD);
-					
+
 					final TextView b1typepre = (TextView) rootView
 							.findViewById(R.id.box1typepre);
 					b1typepre.setTypeface(null, Typeface.BOLD);
@@ -496,18 +508,25 @@ public class PlanViewer extends Fragment {
 					String data = PlanList.get(0).getString("Data");
 					String overage = PlanList.get(0).getString("Overage");
 					String smartetf = PlanList.get(0).getString("SmartETF");
-					String smartetflower = PlanList.get(0).getString("SmartETFDown");
+					String smartetflower = PlanList.get(0).getString(
+							"SmartETFDown");
 					String basicetf = PlanList.get(0).getString("BasicETF");
-					String basicetflower = PlanList.get(0).getString("BasicETFDown");
-					String installetf = PlanList.get(0).getString("ETFInstallments");
-					
+					String basicetflower = PlanList.get(0).getString(
+							"BasicETFDown");
+					String installetf = PlanList.get(0).getString(
+							"ETFInstallments");
+
 					b1type.setText(type);
 					b1devices.setText(devices);
 					b1tt.setText("Unlimited Talk & Text Nationwide");
 					b1data.setText(data + " shared for group");
 					b1over.setText(overage);
-					b1etfsmart.setText("Smartphones - $" + smartetf + " and declines $" + smartetflower + " per month starting at 17 months.");
-					b1etfbasic.setText("Basic phones, Tablets, Hotspots - $" + basicetf+ " and declines $" + basicetflower + " per starting at 19 months.");
+					b1etfsmart.setText("Smartphones - $" + smartetf
+							+ " and declines $" + smartetflower
+							+ " per month starting at 17 months.");
+					b1etfbasic.setText("Basic phones, Tablets, Hotspots - $"
+							+ basicetf + " and declines $" + basicetflower
+							+ " per starting at 19 months.");
 					b1etfinstall.setText(installetf);
 
 					progress.dismiss();
@@ -524,21 +543,21 @@ public class PlanViewer extends Fragment {
 		progress.setTitle("Building your plan");
 		progress.setMessage("Just a sec...");
 		progress.show();
-		
+
 		String phones = String.valueOf(smartphones + basicphones + tabs);
 		String adjustedGB = String.valueOf(gigs);
-		
-		if (phones.equals("1") && gigs > 5){
+
+		if (phones.equals("1") && gigs > 5) {
 			adjustedGB = "Unlimited";
-		} else if (phones.equals("2") && gigs > 10){
+		} else if (phones.equals("2") && gigs > 10) {
 			adjustedGB = "Unlimited";
-		} else if (phones.equals("3") && gigs > 15){
+		} else if (phones.equals("3") && gigs > 15) {
 			adjustedGB = "Unlimited";
-		} else if (phones.equals("4") && gigs > 20){
+		} else if (phones.equals("4") && gigs > 20) {
 			adjustedGB = "Unlimited";
-		} else if (phones.equals("5") && gigs > 25){
+		} else if (phones.equals("5") && gigs > 25) {
 			adjustedGB = "Unlimited";
-		} else if (phones.equals("6") && gigs > 30){
+		} else if (phones.equals("6") && gigs > 30) {
 			adjustedGB = "Unlimited";
 		}
 
@@ -575,7 +594,7 @@ public class PlanViewer extends Fragment {
 					tmototal.setText("$"
 							+ Math.round(((plan + smart) + tax - dis)));
 					tmototal.setTypeface(null, Typeface.BOLD);
-					
+
 					final TextView b1typepre = (TextView) rootView
 							.findViewById(R.id.box1typepre);
 					b1typepre.setTypeface(null, Typeface.BOLD);
@@ -623,15 +642,20 @@ public class PlanViewer extends Fragment {
 					String overage = PlanList.get(0).getString("Overage");
 					String smartetf = PlanList.get(0).getString("SmartETF");
 					String basicetf = PlanList.get(0).getString("BasicETF");
-					String basicetflower = PlanList.get(0).getString("BasicETFDown");
-					String installetf = PlanList.get(0).getString("ETFInstallments");
-					
+					String basicetflower = PlanList.get(0).getString(
+							"BasicETFDown");
+					String installetf = PlanList.get(0).getString(
+							"ETFInstallments");
+
 					b1type.setText(type);
 					b1devices.setText(devices);
 					b1tt.setText("Unlimited Talk & Text Nationwide");
 					b1data.setText(data);
 					b1over.setText(overage + " " + data);
-					b1etfsmart.setText("Smartphones - $" + smartetf + " if 6 months or longer remain, $" + basicetf + " if 3-6 months remain, $" + basicetflower + " if less than 3 months remain.");
+					b1etfsmart.setText("Smartphones - $" + smartetf
+							+ " if 6 months or longer remain, $" + basicetf
+							+ " if 3-6 months remain, $" + basicetflower
+							+ " if less than 3 months remain.");
 					b1etfinstall.setText(installetf);
 
 					progress.dismiss();

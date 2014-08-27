@@ -1,5 +1,6 @@
 package com.guardian.carrierselect;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +12,6 @@ public class MenuListAdapter extends ArrayAdapter<String> {
 
 	private LayoutInflater inflater;
 	private String[] mMenuItems;
-	private Context mContext;
 
 	public MenuListAdapter(Context ctx, int id, String[] menuItems) {
 
@@ -25,6 +25,7 @@ public class MenuListAdapter extends ArrayAdapter<String> {
 		return mMenuItems.length;
 	}
 
+	@SuppressLint("InflateParams")
 	public View getView(int position, View convertView, ViewGroup parent) {
 
 		ViewHolder holder;
@@ -40,8 +41,6 @@ public class MenuListAdapter extends ArrayAdapter<String> {
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
-
-		
 
 		holder.menuTitle.setText(mMenuItems[position]);
 

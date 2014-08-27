@@ -22,7 +22,8 @@ import com.parse.ParseQuery;
 
 public class Home extends Fragment {
 
-	private TextView newstitle, plantitle, phonetitle, kbtitle, news, plan, phone, kb;
+	private TextView newstitle, plantitle, phonetitle, kbtitle, news, plan,
+			phone, kb;
 	private ProgressDialog progress;
 	private static View rootView;
 
@@ -35,11 +36,9 @@ public class Home extends Fragment {
 		getActivity().getActionBar().setTitle("News");
 
 		// Load in animations.
-		final Animation righttoleft = AnimationUtils.loadAnimation(
-				rootView.getContext(), R.anim.right_to_left);
 		final Animation lefttoright = AnimationUtils.loadAnimation(
 				rootView.getContext(), R.anim.left_to_right);
-		
+
 		newstitle = (TextView) rootView.findViewById(R.id.newsupdatetitle);
 		plantitle = (TextView) rootView.findViewById(R.id.planupdatetitle);
 		phonetitle = (TextView) rootView.findViewById(R.id.phoneupdatetitle);
@@ -48,7 +47,6 @@ public class Home extends Fragment {
 		plan = (TextView) rootView.findViewById(R.id.planupdates);
 		phone = (TextView) rootView.findViewById(R.id.phoneupdates);
 		kb = (TextView) rootView.findViewById(R.id.kbupdates);
-		
 
 		// Begin startup flow.
 		rootView.startAnimation(lefttoright);
@@ -64,28 +62,27 @@ public class Home extends Fragment {
 		progress.setTitle("Just a sec...");
 		progress.setMessage("Updating your news...");
 		progress.show();
-		
+
 		ParseObject.registerSubclass(NewsUpdater.class);
 		Parse.initialize(rootView.getContext(),
 				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
 				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
 
-		ParseQuery<ParseObject> querynews = ParseQuery
-				.getQuery("Plan_Promo");
+		ParseQuery<ParseObject> querynews = ParseQuery.getQuery("Plan_Promo");
 		querynews.whereEqualTo("Tag", "Title");
 		querynews.findInBackground(new FindCallback<ParseObject>() {
 			public void done(List<ParseObject> NewsList, ParseException e) {
 
 				if (e == null) {
 					newstitle.setText("");
-					newstitle.setText(NewsList.get(0).getString("Title")
-							+ "\n" + NewsList.get(0).getString("Date")
-							+ "\n\n" + NewsList.get(0).getString("Subtitle"));
+					newstitle.setText(NewsList.get(0).getString("Title") + "\n"
+							+ NewsList.get(0).getString("Date") + "\n\n"
+							+ NewsList.get(0).getString("Subtitle"));
 				} else {
 				}
 			}
 		});
-		
+
 		// Test Query
 		ParseQuery<ParseObject> queryplanscontent = ParseQuery
 				.getQuery("Plan_Promo");
@@ -100,7 +97,8 @@ public class Home extends Fragment {
 
 					for (int i = 0; i < NewsList.size(); i++) {
 						news.setText(news.getText()
-								+ NewsList.get(i).getString("PromoAdded") + "\n");
+								+ NewsList.get(i).getString("PromoAdded")
+								+ "\n");
 					}
 				} else {
 				}
@@ -120,9 +118,9 @@ public class Home extends Fragment {
 
 				if (e == null) {
 					plantitle.setText("");
-					plantitle.setText(PlanList.get(0).getString("Title")
-							+ "\n" + PlanList.get(0).getString("Date")
-							+ "\n\n" + PlanList.get(0).getString("Subtitle"));
+					plantitle.setText(PlanList.get(0).getString("Title") + "\n"
+							+ PlanList.get(0).getString("Date") + "\n\n"
+							+ PlanList.get(0).getString("Subtitle"));
 				} else {
 				}
 			}
@@ -219,7 +217,7 @@ public class Home extends Fragment {
 					}
 				} else {
 				}
-				
+
 				progress.dismiss();
 			}
 

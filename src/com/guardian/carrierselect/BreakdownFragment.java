@@ -36,7 +36,7 @@ public class BreakdownFragment extends Fragment {
 
 	private static int smartphones, basicphones, gigs, tabs, hotspotprice;
 	private double discount;
-	
+
 	private String carrier;
 
 	private ProgressDialog progress;
@@ -77,7 +77,7 @@ public class BreakdownFragment extends Fragment {
 		final TextView tmo_title = (TextView) rootView
 				.findViewById(R.id.tmo_title);
 		tmo_title.setTypeface(null, Typeface.BOLD);
-		
+
 		final TextView attviewer = (TextView) rootView
 				.findViewById(R.id.gotoatt);
 		final TextView verviewer = (TextView) rootView
@@ -128,7 +128,7 @@ public class BreakdownFragment extends Fragment {
 		buildVer();
 		buildSpr();
 		buildTmo();
-		
+
 		righttoleft.setAnimationListener(new AnimationListener() {
 
 			@Override
@@ -164,7 +164,7 @@ public class BreakdownFragment extends Fragment {
 			}
 
 		});
-		
+
 		verviewer.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -174,7 +174,7 @@ public class BreakdownFragment extends Fragment {
 			}
 
 		});
-		
+
 		sprviewer.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -184,7 +184,7 @@ public class BreakdownFragment extends Fragment {
 			}
 
 		});
-		
+
 		tmoviewer.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -247,8 +247,8 @@ public class BreakdownFragment extends Fragment {
 					attmifi.setText("$" + mifi);
 					attdiscount.setText("-$" + Math.round(dis));
 					atttax.setText("$" + tax);
-					atttotal.setText("$" + Math.round(((plan + smart + basic
-									+ tablets + mifi)
+					atttotal.setText("$"
+							+ Math.round(((plan + smart + basic + tablets + mifi)
 									+ tax - dis)));
 					atttotal.setTypeface(null, Typeface.BOLD);
 
@@ -265,7 +265,7 @@ public class BreakdownFragment extends Fragment {
 		Parse.initialize(rootView.getContext(),
 				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
 				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
-		
+
 		String phones = "Shared / Individual";
 
 		if ((smartphones + basicphones + tabs == 1) && gigs < 3) {
@@ -309,8 +309,8 @@ public class BreakdownFragment extends Fragment {
 					vermifi.setText("$" + mifi);
 					verdiscount.setText("-$" + Math.round(dis));
 					vertax.setText("$" + tax);
-					vertotal.setText("$" + Math.round(((plan + smart + basic
-									+ tablets + mifi)
+					vertotal.setText("$"
+							+ Math.round(((plan + smart + basic + tablets + mifi)
 									+ tax - dis)));
 					vertotal.setTypeface(null, Typeface.BOLD);
 
@@ -330,7 +330,7 @@ public class BreakdownFragment extends Fragment {
 
 		String adjustedGB = String.valueOf(gigs);
 
-		if ((smartphones + basicphones + tabs == 1) && gigs > 2){
+		if ((smartphones + basicphones + tabs == 1) && gigs > 2) {
 			adjustedGB = "Unlimited";
 		}
 
@@ -370,8 +370,8 @@ public class BreakdownFragment extends Fragment {
 					sprmifi.setText("$" + mifi);
 					sprdiscount.setText("-$" + Math.round(dis));
 					sprtax.setText("$" + tax);
-					sprtotal.setText("$" + Math.round(((plan + smart + basic
-									+ tablets + mifi)
+					sprtotal.setText("$"
+							+ Math.round(((plan + smart + basic + tablets + mifi)
 									+ tax - dis)));
 					sprtotal.setTypeface(null, Typeface.BOLD);
 
@@ -383,24 +383,24 @@ public class BreakdownFragment extends Fragment {
 
 	@SuppressLint("DefaultLocale")
 	public void buildTmo() {
-		
+
 		String phones = String.valueOf(smartphones + basicphones + tabs);
 		String adjustedGB = String.valueOf(gigs);
-		
-		if (phones.equals("1") && gigs > 5){
+
+		if (phones.equals("1") && gigs > 5) {
 			adjustedGB = "Unlimited";
-		} else if (phones.equals("2") && gigs > 10){
+		} else if (phones.equals("2") && gigs > 10) {
 			adjustedGB = "Unlimited";
-		} else if (phones.equals("3") && gigs > 15){
+		} else if (phones.equals("3") && gigs > 15) {
 			adjustedGB = "Unlimited";
-		} else if (phones.equals("4") && gigs > 20){
+		} else if (phones.equals("4") && gigs > 20) {
 			adjustedGB = "Unlimited";
-		} else if (phones.equals("5") && gigs > 25){
+		} else if (phones.equals("5") && gigs > 25) {
 			adjustedGB = "Unlimited";
-		} else if (phones.equals("6") && gigs > 30){
+		} else if (phones.equals("6") && gigs > 30) {
 			adjustedGB = "Unlimited";
 		}
-		
+
 		ParseObject.registerSubclass(Phone.class);
 		Parse.initialize(rootView.getContext(),
 				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
@@ -422,15 +422,16 @@ public class BreakdownFragment extends Fragment {
 							"SmartPrice"));
 
 					double dis = 1 - (discount / 100);
-					int tax = (int) Math.round((((smart * dis) + plan) * .16) * 100) / 100;
+					int tax = (int) Math
+							.round((((smart * dis) + plan) * .16) * 100) / 100;
 					dis = Math.round(smart - (smart * dis));
 
 					tmoplan.setText("$" + plan);
 					tmophones.setText("$" + smart);
 					tmodiscount.setText("-$" + Math.round(dis));
 					tmotax.setText("$" + tax);
-					tmototal.setText("$" + Math.round(((plan + smart)
-									+ tax - dis)));
+					tmototal.setText("$"
+							+ Math.round(((plan + smart) + tax - dis)));
 					tmototal.setTypeface(null, Typeface.BOLD);
 
 					progress.dismiss();

@@ -70,7 +70,7 @@ public class PhoneSearch3 extends Fragment {
 		wireless = (TextView) rootView.findViewById(R.id.wirelesstext);
 		nc = (TextView) rootView.findViewById(R.id.nctext);
 		sensors = (TextView) rootView.findViewById(R.id.sensortext);
-		
+
 		t1 = (TextView) rootView.findViewById(R.id.releasedate);
 		t1.setTypeface(null, Typeface.BOLD);
 		t2 = (TextView) rootView.findViewById(R.id.os);
@@ -117,11 +117,8 @@ public class PhoneSearch3 extends Fragment {
 		t22.setTypeface(null, Typeface.BOLD);
 		t23 = (TextView) rootView.findViewById(R.id.sensors);
 		t23.setTypeface(null, Typeface.BOLD);
-		
 
 		// Load in animations.
-		final Animation righttoleft = AnimationUtils.loadAnimation(
-				rootView.getContext(), R.anim.right_to_left);
 		final Animation lefttoright = AnimationUtils.loadAnimation(
 				rootView.getContext(), R.anim.left_to_right);
 

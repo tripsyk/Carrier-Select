@@ -25,7 +25,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/splashborder"
                 android:gravity="center"
                 android:hint="@string/sp2title"
                 android:text="@string/sp2title"

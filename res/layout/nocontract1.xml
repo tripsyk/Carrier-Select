@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="30dip" >
@@ -91,10 +91,9 @@
                 android:layout_width="70dip"
                 android:layout_height="50dip"
                 android:layout_gravity="center"
-                android:background="@drawable/splashborder"
                 android:gravity="center"
-                android:hint="@string/breakdown_send"
-                android:text="@string/breakdown_send"
+                android:hint="@string/next"
+                android:text="@string/next"
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/title_dimens" />
         </LinearLayout>

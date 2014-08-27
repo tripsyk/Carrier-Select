@@ -32,27 +32,18 @@
             android:gravity="center"
             android:orientation="horizontal" >
 
-            <LinearLayout
+            <TextView
                 android:id="@+id/zerodatabox"
                 android:layout_width="180dip"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:padding="10dip"
                 android:background="@drawable/contentback"
-                android:clickable="true"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/zerodata"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/nodata"
-                    android:text="@string/nodata"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/subtitle_dimens" />
-            </LinearLayout>
+                android:gravity="center"
+                android:hint="@string/none"
+                android:padding="10dip"
+                android:text="@string/none"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/subtitle_dimens" />
         </LinearLayout>
 
         <LinearLayout
@@ -89,9 +80,9 @@
                 android:layout_width="85dip"
                 android:layout_height="55dip"
                 android:layout_gravity="center"
-                android:gravity="center"
                 android:background="@drawable/contentback"
                 android:clickable="true"
+                android:gravity="center"
                 android:orientation="vertical" >
 
                 <TextView
@@ -119,10 +110,10 @@
                 android:layout_width="85dip"
                 android:layout_height="55dip"
                 android:layout_gravity="center"
-                android:gravity="center"
                 android:layout_marginRight="8dip"
                 android:background="@drawable/contentback"
                 android:clickable="true"
+                android:gravity="center"
                 android:orientation="vertical" >
 
                 <TextView
@@ -142,9 +133,9 @@
                 android:layout_width="85dip"
                 android:layout_height="55dip"
                 android:layout_gravity="center"
-                android:gravity="center"
                 android:background="@drawable/contentback"
                 android:clickable="true"
+                android:gravity="center"
                 android:orientation="vertical" >
 
                 <TextView
@@ -172,10 +163,10 @@
                 android:layout_width="85dip"
                 android:layout_height="55dip"
                 android:layout_gravity="center"
-                android:gravity="center"
                 android:layout_marginRight="8dip"
                 android:background="@drawable/contentback"
                 android:clickable="true"
+                android:gravity="center"
                 android:orientation="vertical" >
 
                 <TextView
@@ -195,9 +186,9 @@
                 android:layout_width="85dip"
                 android:layout_height="55dip"
                 android:layout_gravity="center"
-                android:gravity="center"
                 android:background="@drawable/contentback"
                 android:clickable="true"
+                android:gravity="center"
                 android:orientation="vertical" >
 
                 <TextView
@@ -226,10 +217,10 @@
                 android:layout_width="85dip"
                 android:layout_height="55dip"
                 android:layout_gravity="center"
-                android:gravity="center"
                 android:layout_marginRight="8dip"
                 android:background="@drawable/contentback"
                 android:clickable="true"
+                android:gravity="center"
                 android:orientation="vertical" >
 
                 <TextView

@@ -262,10 +262,9 @@ public class DisplayMessageFragment extends Fragment {
 
 		String adjustedGB = String.valueOf(gigs);
 
-		if ((smartphones + basicphones + tabs == 1) && gigs > 2){
+		if ((smartphones + basicphones + tabs == 1) && gigs > 2) {
 			adjustedGB = "Unlimited";
 		}
-		
 
 		// Test Query
 		ParseQuery<ParseObject> query = ParseQuery.getQuery("Postpaid");
@@ -315,21 +314,21 @@ public class DisplayMessageFragment extends Fragment {
 		Parse.initialize(rootView.getContext(),
 				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
 				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
-		
+
 		String phones = String.valueOf(smartphones + basicphones + tabs);
 		String adjustedGB = String.valueOf(gigs);
-		
-		if (phones.equals("1") && gigs > 5){
+
+		if (phones.equals("1") && gigs > 5) {
 			adjustedGB = "Unlimited";
-		} else if (phones.equals("2") && gigs > 10){
+		} else if (phones.equals("2") && gigs > 10) {
 			adjustedGB = "Unlimited";
-		} else if (phones.equals("3") && gigs > 15){
+		} else if (phones.equals("3") && gigs > 15) {
 			adjustedGB = "Unlimited";
-		} else if (phones.equals("4") && gigs > 20){
+		} else if (phones.equals("4") && gigs > 20) {
 			adjustedGB = "Unlimited";
-		} else if (phones.equals("5") && gigs > 25){
+		} else if (phones.equals("5") && gigs > 25) {
 			adjustedGB = "Unlimited";
-		} else if (phones.equals("6") && gigs > 30){
+		} else if (phones.equals("6") && gigs > 30) {
 			adjustedGB = "Unlimited";
 		}
 

@@ -26,34 +26,18 @@
             android:textColor="@color/white_color"
             android:textSize="@dimen/title_dimens" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal" >
-
-            <LinearLayout
+            <TextView
                 android:id="@+id/zerobasicbox"
                 android:layout_width="180dip"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/contentback"
-                android:clickable="true"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/zerobasic"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/nobasic"
-                    android:padding="10dip"
-                    android:text="@string/nobasic"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/subtitle_dimens" />
-            </LinearLayout>
-        </LinearLayout>
+                android:gravity="center"
+                android:hint="@string/none"
+                android:padding="10dip"
+                android:text="@string/none"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/subtitle_dimens" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -78,8 +62,8 @@
                     android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:hint="@string/one"
-                    android:text="@string/one"
+                    android:hint="@string/oneword"
+                    android:text="@string/oneword"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
@@ -99,8 +83,8 @@
                     android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:hint="@string/two"
-                    android:text="@string/two"
+                    android:hint="@string/twoword"
+                    android:text="@string/twoword"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
@@ -129,8 +113,8 @@
                     android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:hint="@string/three"
-                    android:text="@string/three"
+                    android:hint="@string/threeword"
+                    android:text="@string/threeword"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
@@ -150,8 +134,8 @@
                     android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:hint="@string/four"
-                    android:text="@string/four"
+                    android:hint="@string/fourword"
+                    android:text="@string/fourword"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
@@ -180,8 +164,8 @@
                     android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:hint="@string/five"
-                    android:text="@string/five"
+                    android:hint="@string/fiveword"
+                    android:text="@string/fiveword"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
@@ -201,8 +185,8 @@
                     android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:hint="@string/six"
-                    android:text="@string/six"
+                    android:hint="@string/sixword"
+                    android:text="@string/sixword"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
@@ -233,8 +217,8 @@
                     android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:hint="@string/seven"
-                    android:text="@string/seven"
+                    android:hint="@string/sevenword"
+                    android:text="@string/sevenword"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
@@ -254,8 +238,8 @@
                     android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:hint="@string/eight"
-                    android:text="@string/eight"
+                    android:hint="@string/eightword"
+                    android:text="@string/eightword"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
@@ -286,8 +270,8 @@
                     android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:hint="@string/nine"
-                    android:text="@string/nine"
+                    android:hint="@string/nineword"
+                    android:text="@string/nineword"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
@@ -307,8 +291,8 @@
                     android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:hint="@string/ten"
-                    android:text="@string/ten"
+                    android:hint="@string/tenword"
+                    android:text="@string/tenword"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>

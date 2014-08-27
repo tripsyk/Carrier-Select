@@ -225,7 +225,7 @@ public class QuoteFragment extends Fragment {
 
 			@Override
 			public void onAnimationEnd(Animation arg0) {
-				
+
 				getCheckBoxes();
 
 				final TextView eSmart = (TextView) rootView
@@ -282,11 +282,11 @@ public class QuoteFragment extends Fragment {
 			hotspotCost = 1;
 		} else
 			hotspotCost = 0;
-		
-		if (currentcarrier.isChecked()){
-			
+
+		if (currentcarrier.isChecked()) {
+
 		}
-		
+
 	}
 
 	public void onDestroy() {

@@ -65,8 +65,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
-                    android:hint="@string/pb71"
-                    android:text="@string/pb71"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
@@ -92,8 +92,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dip"
                     android:gravity="right"
-                    android:hint="@string/pb72"
-                    android:text="@string/pb72"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
@@ -119,8 +119,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dip"
                     android:gravity="right"
-                    android:hint="@string/pb73"
-                    android:text="@string/pb73"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
@@ -146,8 +146,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dip"
                     android:gravity="right"
-                    android:hint="@string/pb74"
-                    android:text="@string/pb74"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
@@ -173,8 +173,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dip"
                     android:gravity="right"
-                    android:hint="@string/pb75"
-                    android:text="@string/pb75"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>

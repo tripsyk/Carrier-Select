@@ -49,8 +49,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:hint="@string/ps2resultstitle"
-                android:text="@string/ps2resultstitle"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/next"
                 android:textStyle="bold" />
@@ -71,9 +71,9 @@
                 android:layout_marginTop="30dip"
                 android:background="@drawable/contentback"
                 android:gravity="center"
-                android:hint="@string/ps21"
+                android:hint="@string/loadingphone"
                 android:padding="10dip"
-                android:text="@string/ps21"
+                android:text="@string/loadingphone"
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/breakdown_dimens" />
 
@@ -84,9 +84,9 @@
                 android:layout_marginTop="6dip"
                 android:background="@drawable/contentback"
                 android:gravity="center"
-                android:hint="@string/ps22"
+                android:hint="@string/loadingphone"
                 android:padding="10dip"
-                android:text="@string/ps22"
+                android:text="@string/loadingphone"
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/breakdown_dimens" />
 
@@ -97,9 +97,9 @@
                 android:layout_marginTop="6dip"
                 android:background="@drawable/contentback"
                 android:gravity="center"
-                android:hint="@string/ps23"
+                android:hint="@string/loadingphone"
                 android:padding="10dip"
-                android:text="@string/ps23"
+                android:text="@string/loadingphone"
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/breakdown_dimens" />
 
@@ -110,9 +110,9 @@
                 android:layout_marginTop="6dip"
                 android:background="@drawable/contentback"
                 android:gravity="center"
-                android:hint="@string/ps24"
+                android:hint="@string/loadingphone"
                 android:padding="10dip"
-                android:text="@string/ps24"
+                android:text="@string/loadingphone"
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/breakdown_dimens" />
 
@@ -124,9 +124,9 @@
                 android:layout_marginTop="6dip"
                 android:background="@drawable/contentback"
                 android:gravity="center"
-                android:hint="@string/ps25"
+                android:hint="@string/loadingphone"
                 android:padding="10dip"
-                android:text="@string/ps25"
+                android:text="@string/loadingphone"
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/breakdown_dimens" />
         </LinearLayout>

@@ -13,13 +13,15 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class BasicphoneSelector extends Fragment {
 
 	private static View rootView;
-	private static LinearLayout zerobasicbox, onebasicbox, twobasicbox, threebasicbox,
-			fourbasicbox, fivebasicbox, sixbasicbox, sevenbasicbox,
-			eightbasicbox, ninebasicbox, tenbasicbox;
+	private static LinearLayout onebasicbox, twobasicbox,
+			threebasicbox, fourbasicbox, fivebasicbox, sixbasicbox,
+			sevenbasicbox, eightbasicbox, ninebasicbox, tenbasicbox;
+	private static TextView zerobasicbox;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -34,16 +36,16 @@ public class BasicphoneSelector extends Fragment {
 		final SharedPreferences.Editor editor = sharedPref.edit();
 
 		// Load in animations.
-		final Animation righttoleft = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.right_to_left);
-		final Animation lefttoright = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.left_to_right);
+		final Animation righttoleft = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.right_to_left);
+		final Animation lefttoright = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.left_to_right);
 
 		// Begin startup flow.
 		rootView.startAnimation(lefttoright);
 
 		// Declare LinearLayouts
-		zerobasicbox = (LinearLayout) rootView.findViewById(R.id.zerobasicbox);
+		zerobasicbox = (TextView) rootView.findViewById(R.id.zerobasicbox);
 		onebasicbox = (LinearLayout) rootView.findViewById(R.id.onebasicbox);
 		twobasicbox = (LinearLayout) rootView.findViewById(R.id.twobasicbox);
 		threebasicbox = (LinearLayout) rootView
@@ -57,7 +59,6 @@ public class BasicphoneSelector extends Fragment {
 				.findViewById(R.id.eightbasicbox);
 		ninebasicbox = (LinearLayout) rootView.findViewById(R.id.ninebasicbox);
 		tenbasicbox = (LinearLayout) rootView.findViewById(R.id.tenbasicbox);
-
 
 		// Set animation listeners for fragment
 		righttoleft.setAnimationListener(new AnimationListener() {
@@ -86,7 +87,7 @@ public class BasicphoneSelector extends Fragment {
 
 			}
 		});
-		
+
 		zerobasicbox.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {

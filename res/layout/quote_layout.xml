@@ -76,7 +76,7 @@
                     android:layout_gravity="center"
                     android:background="@drawable/circlebtn"
                     android:gravity="center"
-                    android:text="@string/sphone_m"
+                    android:text="@string/minus"
                     android:textColor="@color/white_color"
                     android:textColorHint="@color/white_color"
                     android:textSize="@dimen/planquotenum" />
@@ -87,8 +87,8 @@
                     android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:hint="@string/sstarter"
-                    android:text="@string/sstarter"
+                    android:hint="@string/zero"
+                    android:text="@string/zero"
                     android:textColor="@color/white_color"
                     android:textColorHint="@color/white_color"
                     android:textSize="@dimen/planquotenum" />
@@ -99,7 +99,7 @@
                     android:layout_height="45dip"
                     android:background="@drawable/circlebtn"
                     android:gravity="center"
-                    android:text="@string/sphone_p"
+                    android:text="@string/plus"
                     android:textColor="@color/white_color"
                     android:textColorHint="@color/white_color"
                     android:textSize="@dimen/planquotenum" />
@@ -140,7 +140,7 @@
                     android:layout_height="45dip"
                     android:background="@drawable/circlebtn"
                     android:gravity="center"
-                    android:text="@string/bphone_m"
+                    android:text="@string/minus"
                     android:textColor="@color/white_color"
                     android:textColorHint="@color/white_color"
                     android:textSize="@dimen/planquotenum" />
@@ -151,8 +151,8 @@
                     android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:hint="@string/bstarter"
-                    android:text="@string/bstarter"
+                    android:hint="@string/zero"
+                    android:text="@string/zero"
                     android:textColor="@color/white_color"
                     android:textColorHint="@color/white_color"
                     android:textSize="@dimen/planquotenum" />
@@ -163,7 +163,7 @@
                     android:layout_height="45dip"
                     android:background="@drawable/circlebtn"
                     android:gravity="center"
-                    android:text="@string/bphone_p"
+                    android:text="@string/plus"
                     android:textColor="@color/white_color"
                     android:textColorHint="@color/white_color"
                     android:textSize="@dimen/planquotenum" />
@@ -204,7 +204,7 @@
                     android:layout_height="45dip"
                     android:background="@drawable/circlebtn"
                     android:gravity="center"
-                    android:text="@string/data_m"
+                    android:text="@string/minus"
                     android:textColor="@color/white_color"
                     android:textColorHint="@color/white_color"
                     android:textSize="@dimen/planquotenum" />
@@ -215,8 +215,8 @@
                     android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:hint="@string/dstarter"
-                    android:text="@string/dstarter"
+                    android:hint="@string/zero"
+                    android:text="@string/zero"
                     android:textColor="@color/white_color"
                     android:textColorHint="@color/white_color"
                     android:textSize="@dimen/planquotenum" />
@@ -227,7 +227,7 @@
                     android:layout_height="45dip"
                     android:background="@drawable/circlebtn"
                     android:gravity="center"
-                    android:text="@string/data_p"
+                    android:text="@string/plus"
                     android:textColor="@color/white_color"
                     android:textColorHint="@color/white_color"
                     android:textSize="@dimen/planquotenum" />
@@ -268,7 +268,7 @@
                     android:layout_height="45dip"
                     android:background="@drawable/circlebtn"
                     android:gravity="center"
-                    android:text="@string/data_m"
+                    android:text="@string/minus"
                     android:textColor="@color/white_color"
                     android:textColorHint="@color/white_color"
                     android:textSize="@dimen/planquotenum" />
@@ -279,8 +279,8 @@
                     android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:hint="@string/dstarter"
-                    android:text="@string/dstarter"
+                    android:hint="@string/zero"
+                    android:text="@string/zero"
                     android:textColor="@color/white_color"
                     android:textColorHint="@color/white_color"
                     android:textSize="@dimen/planquotenum" />
@@ -291,7 +291,7 @@
                     android:layout_height="45dip"
                     android:background="@drawable/circlebtn"
                     android:gravity="center"
-                    android:text="@string/data_p"
+                    android:text="@string/plus"
                     android:textColor="@color/white_color"
                     android:textColorHint="@color/white_color"
                     android:textSize="@dimen/planquotenum" />
@@ -393,10 +393,9 @@
                 android:layout_width="70dip"
                 android:layout_height="50dip"
                 android:layout_gravity="center"
-                android:background="@drawable/splashborder"
                 android:gravity="center"
-                android:hint="@string/breakdown_send"
-                android:text="@string/breakdown_send"
+                android:hint="@string/next"
+                android:text="@string/next"
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/title_dimens" />
         </LinearLayout>

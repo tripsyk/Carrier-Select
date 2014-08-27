@@ -68,8 +68,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
-                    android:hint="@string/yourcarrier"
-                    android:text="@string/yourcarrier"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
@@ -99,8 +99,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
-                    android:hint="@string/numsmartphones"
-                    android:text="@string/numsmartphones"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
@@ -130,8 +130,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
-                    android:hint="@string/numbasicphones"
-                    android:text="@string/numbasicphones"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
@@ -161,8 +161,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
-                    android:hint="@string/gigsofdata"
-                    android:text="@string/gigsofdata"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
@@ -192,8 +192,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
-                    android:hint="@string/numtablets"
-                    android:text="@string/numtablets"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>
@@ -221,8 +221,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
-                    android:hint="@string/monthlypayment"
-                    android:text="@string/monthlypayment"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
             </LinearLayout>

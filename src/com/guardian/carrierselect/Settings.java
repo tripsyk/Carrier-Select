@@ -17,7 +17,7 @@ public class Settings extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		rootView = inflater.inflate(R.layout.settings, container, false);
-		
+
 		getActivity().getActionBar().setTitle("Settings");
 
 		// Declare preferences

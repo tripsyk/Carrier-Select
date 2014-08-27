@@ -48,7 +48,7 @@ public class TellUs extends Fragment {
 			@Override
 			public void onAnimationEnd(Animation arg0) {
 
-				final Fragment fragment = new UserBasics();
+				final Fragment fragment = new CarrierSelector();
 
 				final FragmentTransaction fragmenttran = getFragmentManager()
 						.beginTransaction();

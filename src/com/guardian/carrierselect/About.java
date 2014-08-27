@@ -16,21 +16,16 @@ public class About extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		rootView = inflater.inflate(R.layout.about, container, false);
-		
+
 		getActivity().getActionBar().setTitle("About");
-		
 
 		// Load in animations.
-		final Animation righttoleft = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.right_to_left);
-		final Animation lefttoright = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.left_to_right);
+		final Animation lefttoright = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.left_to_right);
 
 		// Begin startup flow.
 		rootView.startAnimation(lefttoright);
-		
-		
-		
+
 		return rootView;
 	}
 }

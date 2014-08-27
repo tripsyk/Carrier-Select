@@ -24,6 +24,7 @@
             android:textSize="@dimen/title_dimens" />
 
         <LinearLayout
+            android:id="@+id/nctitle"
             android:layout_width="300dip"
             android:layout_height="wrap_content"
             android:background="@drawable/contentback"

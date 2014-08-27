@@ -41,8 +41,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:hint="@string/ps3mantitle"
-                android:text="@string/ps3mantitle"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/title_dimens"
                 android:textStyle="bold" />
@@ -53,8 +53,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:hint="@string/ps3carrier"
-                android:text="@string/ps3carrier"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/breakdown_dimens"
                 android:textStyle="bold" />
@@ -96,164 +96,125 @@
                 android:orientation="vertical"
                 android:padding="10dip" >
 
-                <LinearLayout
-                    android:id="@+id/releasebox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/releasedate"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical" >
-
-                    <TextView
-                        android:id="@+id/releasedate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/releasedate"
-                        android:text="@string/releasedate"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/releasetext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/osbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/releasedate"
+                    android:text="@string/releasedate"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/os"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/os"
-                        android:text="@string/os"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/ostext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/dimensionsbox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/releasetext"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/os"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/os"
+                    android:text="@string/os"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/dimensions"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/dimensions"
-                        android:text="@string/dimensions"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/dimentext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/thicknessbox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/ostext"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/dimensions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/dimensions"
+                    android:text="@string/dimensions"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/thickness"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/thickness"
-                        android:text="@string/thickness"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/thicktext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/weightbox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/dimentext"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/thickness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/thickness"
+                    android:text="@string/thickness"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/weight"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/weight"
-                        android:text="@string/weight"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/thicktext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
 
-                    <TextView
-                        android:id="@+id/weighttext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/weight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center"
+                    android:hint="@string/weight"
+                    android:text="@string/weight"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/weighttext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
             </LinearLayout>
 
             <TextView
@@ -279,100 +240,77 @@
                 android:orientation="vertical"
                 android:padding="10dip" >
 
-                <LinearLayout
-                    android:id="@+id/displaysizebox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/displaysize"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical" >
-
-                    <TextView
-                        android:id="@+id/displaysize"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/displaysize"
-                        android:text="@string/displaysize"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/displaytext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/pixdenbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/displaysize"
+                    android:text="@string/displaysize"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/pixden"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/pixden"
-                        android:text="@string/pixden"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/pixdentext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/resolutionbox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/displaytext"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/pixden"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/pixden"
+                    android:text="@string/pixden"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/resolution"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/resolution"
-                        android:text="@string/resolution"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/pixdentext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
 
-                    <TextView
-                        android:id="@+id/resotext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/resolution"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center"
+                    android:hint="@string/resolution"
+                    android:text="@string/resolution"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/resotext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
             </LinearLayout>
 
             <TextView
@@ -399,101 +337,78 @@
                 android:orientation="vertical"
                 android:padding="10dip" >
 
-                <LinearLayout
-                    android:id="@+id/backbox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/backcam"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical" >
-
-                    <TextView
-                        android:id="@+id/backcam"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/backcam"
-                        android:text="@string/backcam"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/backcamtext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/frontcambox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/backcam"
+                    android:text="@string/backcam"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/frontcam"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/frontcam"
-                        android:text="@string/frontcam"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/frontcamtext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/videobox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/backcamtext"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/frontcam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/frontcam"
+                    android:text="@string/frontcam"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/video"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/video"
-                        android:text="@string/video"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/videotext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/frontcamtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dip"
+                android:gravity="center"
+                android:hint="@string/video"
+                android:text="@string/video"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/readable"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/videotext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/breakdown_dimens" />
 
             <TextView
                 android:id="@+id/hardware"
@@ -519,164 +434,125 @@
                 android:orientation="vertical"
                 android:padding="10dip" >
 
-                <LinearLayout
-                    android:id="@+id/processorbox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/processor"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical" >
-
-                    <TextView
-                        android:id="@+id/processor"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/processor"
-                        android:text="@string/processor"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/processortext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/rambox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/processor"
+                    android:text="@string/processor"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/ram"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/ram"
-                        android:text="@string/ram"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/ramtext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/storagebox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/processortext"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/ram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/ram"
+                    android:text="@string/ram"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/storage"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/storage"
-                        android:text="@string/storage"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/storagetext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/batterybox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/ramtext"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/storage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/storage"
+                    android:text="@string/storage"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/battery"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/battery"
-                        android:text="@string/battery"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/batterytext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/microsdbox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/storagetext"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/battery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/battery"
+                    android:text="@string/battery"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/microsd"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/microsd"
-                        android:text="@string/microsd"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/batterytext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
 
-                    <TextView
-                        android:id="@+id/microsdtext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/microsd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center"
+                    android:hint="@string/microsd"
+                    android:text="@string/microsd"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/microsdtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
             </LinearLayout>
 
             <TextView
@@ -704,228 +580,173 @@
                 android:orientation="vertical"
                 android:padding="10dip" >
 
-                <LinearLayout
-                    android:id="@+id/stabbox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/imagestab"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical" >
-
-                    <TextView
-                        android:id="@+id/imagestab"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/imagestab"
-                        android:text="@string/imagestab"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/istext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/bluetoothbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/imagestab"
+                    android:text="@string/imagestab"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/bt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/bt"
-                        android:text="@string/bt"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/bttext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nfcbox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/istext"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/bt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/bt"
+                    android:text="@string/bt"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/nfc"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/nfc"
-                        android:text="@string/nfc"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/nfctext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/infrabox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/bttext"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/nfc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/nfc"
+                    android:text="@string/nfc"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/infra"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/infra"
-                        android:text="@string/infra"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/infratext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/wirelessbox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/nfctext"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/infra"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/infra"
+                    android:text="@string/infra"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/wireless"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/wireless"
-                        android:text="@string/wireless"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/wirelesstext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/ncbox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/infratext"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/wireless"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/wireless"
+                    android:text="@string/wireless"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/noisecanceling"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/noisecanceling"
-                        android:text="@string/noisecanceling"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/nctext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/sensorbox"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/wirelesstext"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/noisecanceling"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/noisecanceling"
+                    android:text="@string/noisecanceling"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/sensors"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/sensors"
-                        android:text="@string/sensors"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/readable"
-                        android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/nctext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
 
-                    <TextView
-                        android:id="@+id/sensortext"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/test"
-                        android:text="@string/test"
-                        android:textColor="@color/white_color"
-                        android:textSize="@dimen/breakdown_dimens" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/sensors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center"
+                    android:hint="@string/sensors"
+                    android:text="@string/sensors"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sensortext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

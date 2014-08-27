@@ -31,8 +31,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dip"
             android:gravity="center"
-            android:hint="@string/pvsubtitle"
-            android:text="@string/pvsubtitle"
+            android:hint="@string/blankstring"
+            android:text="@string/blankstring"
             android:textColor="@color/white_color"
             android:textSize="@dimen/midtitle" />
 
