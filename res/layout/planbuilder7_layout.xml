@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/titlenoback"
+    android:overScrollFooter="@color/white_color"
+    android:overScrollHeader="@color/white_color" >
+
+    <LinearLayout
+        android:id="@+id/pb4basics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dip" >
+
+        <LinearLayout
+            android:id="@+id/pb7titlebox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/pb7title2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip"
+                android:gravity="center"
+                android:hint="@string/pb7title2"
+                android:text="@string/pb7title2"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/title_dimens" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pb7box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dip"
+            android:background="@drawable/contentback"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <LinearLayout
+                android:id="@+id/pb7sbbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip" >
+
+                <TextView
+                    android:id="@+id/pb7sbpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/phonetype"
+                    android:text="@string/phonetype"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:id="@+id/pb7sb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:hint="@string/pb71"
+                    android:text="@string/pb71"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pb7minbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/pb7minpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dip"
+                    android:hint="@string/minutes"
+                    android:text="@string/minutes"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:id="@+id/pb7min"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dip"
+                    android:gravity="right"
+                    android:hint="@string/pb72"
+                    android:text="@string/pb72"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pb7textbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/pb7textpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dip"
+                    android:hint="@string/texts"
+                    android:text="@string/texts"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:id="@+id/pb7text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dip"
+                    android:gravity="right"
+                    android:hint="@string/pb73"
+                    android:text="@string/pb73"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pb7databox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/pb7datapre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dip"
+                    android:hint="@string/data"
+                    android:text="@string/data"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:id="@+id/pb7data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dip"
+                    android:gravity="right"
+                    android:hint="@string/pb74"
+                    android:text="@string/pb74"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pb7throttlebox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/pb7throttlepre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dip"
+                    android:hint="@string/throttle"
+                    android:text="@string/throttle"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:id="@+id/pb7throttle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dip"
+                    android:gravity="right"
+                    android:hint="@string/pb75"
+                    android:text="@string/pb75"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/pb7edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/contentback"
+                android:gravity="center"
+                android:hint="@string/editplan"
+                android:text="@string/editplan"
+                android:padding="15dip"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/next" />
+
+            <TextView
+                android:id="@+id/pb7next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/contentback"
+                android:layout_marginTop="8dip"
+                android:gravity="center"
+                android:hint="@string/pb7find"
+                android:text="@string/pb7find"
+                android:padding="15dip"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/next" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

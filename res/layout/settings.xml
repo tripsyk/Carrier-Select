@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/titlenoback"
+    android:overScrollFooter="@color/white_color"
+    android:overScrollHeader="@color/white_color" >
+
+    <LinearLayout
+        android:id="@+id/settingslayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dip" >
+
+        <TextView
+            android:id="@+id/settingstitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/settings"
+            android:text="@string/settings"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/title_dimens" />
+
+        <LinearLayout
+            android:id="@+id/settingsbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dip"
+            android:background="@drawable/contentback"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <Switch
+                android:id="@+id/pushtv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:hint="@string/pushnotifs"
+                android:text="@string/pushnotifs"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/desc_dimens" />
+
+            <TextView
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/line"
+                android:gravity="center"
+                android:hint=""
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/set2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <Switch
+                    android:id="@+id/offlinetv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="center"
+                    android:hint="@string/offlineset"
+                    android:text="@string/offlineset"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/desc_dimens" />
+
+                <TextView
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/line"
+                    android:gravity="center"
+                    android:hint=""
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/updateTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/updateTV"
+                    android:text="@string/updateTV"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/desc_dimens"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

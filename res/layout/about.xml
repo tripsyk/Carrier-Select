@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/titlenoback"
+    android:overScrollFooter="@color/white_color"
+    android:overScrollHeader="@color/white_color" >
+
+    <LinearLayout
+        android:id="@+id/aboutbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dip" >
+
+        <LinearLayout
+            android:id="@+id/aboutlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/abouttitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/about"
+                android:text="@string/about"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/title_dimens" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/websitebox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="18dip"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/cswebsite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/cswebsite"
+                android:text="@string/cswebsite"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/subtitle_dimens" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/writtenbybox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="4dip"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/writtenby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:gravity="center"
+                android:hint="@string/writtenby"
+                android:text="@string/writtenby"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/subtitle_dimens" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/aboutdescbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="9dip"
+            android:background="@drawable/contentback"
+            android:gravity="center"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/aboutdesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:gravity="center"
+                android:hint="@string/aboutp1"
+                android:text="@string/aboutp1"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/breakdown_dimens" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

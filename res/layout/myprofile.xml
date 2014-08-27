@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/titlenoback"
+    android:overScrollFooter="@color/white_color"
+    android:overScrollHeader="@color/white_color" >
+
+    <LinearLayout
+        android:id="@+id/homeprofile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/titlenoback"
+        android:orientation="vertical"
+        android:padding="30dip" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/yourProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/yourProfile"
+                android:text="@string/yourProfile"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/title_dimens" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dip"
+            android:background="@drawable/contentback"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <LinearLayout
+                android:id="@+id/carrierbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/carriertitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profilecarrier"
+                    android:text="@string/profilecarrier"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:id="@+id/yourcarrier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:hint="@string/yourcarrier"
+                    android:text="@string/yourcarrier"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/smartphonesbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/numsmartphonespre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profilesmart"
+                    android:text="@string/profilesmart"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:id="@+id/numsmartphones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:hint="@string/numsmartphones"
+                    android:text="@string/numsmartphones"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/basicphonesbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/numbasicphonespre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profilebasic"
+                    android:text="@string/profilebasic"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:id="@+id/numbasicphones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:hint="@string/numbasicphones"
+                    android:text="@string/numbasicphones"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/databox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/datapre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profilegigs"
+                    android:text="@string/profilegigs"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:id="@+id/gigsofdata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:hint="@string/gigsofdata"
+                    android:text="@string/gigsofdata"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tabletbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tabletpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profiletablets"
+                    android:text="@string/profiletablets"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:id="@+id/numtablets"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:hint="@string/numtablets"
+                    android:text="@string/numtablets"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/monthlybox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/monthlybillpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profilemonthly"
+                    android:text="@string/profilemonthly"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:id="@+id/monthlybill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:hint="@string/monthlypayment"
+                    android:text="@string/monthlypayment"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/editbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dip"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/editprofile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/contentback"
+                android:gravity="center"
+                android:hint="@string/editprofile"
+                android:padding="15dip"
+                android:text="@string/editprofile"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/next" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

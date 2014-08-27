@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/titlenoback"
+    android:orientation="vertical"
+    android:padding="30dp" >
+
+    <LinearLayout
+        android:id="@+id/ps1titlebox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/ps1title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/search"
+            android:text="@string/search"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/title_dimens" />
+
+        <TextView
+            android:id="@+id/ps1subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/ps1subtitle"
+            android:text="@string/ps1subtitle"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/subtitle_dimens" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pscontentbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="65dip"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/pssubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/pssubtitle"
+            android:text="@string/pssubtitle"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/subtitle_dimens" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/contentback"
+        android:gravity="center"
+        android:padding="15dip" >
+
+        <EditText
+            android:id="@+id/searchTerm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/searchTermHint"
+            android:singleLine="true"
+            android:textColor="@color/white_color"
+            android:textColorHint="@color/white_color" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/contentback"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/searchGo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="15dip"
+            android:text="@string/searchGoBox"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/subtitle_dimens" >
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

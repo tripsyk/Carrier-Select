@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/titlenoback"
+    android:overScrollFooter="@color/white_color"
+    android:overScrollHeader="@color/white_color" >
+
+    <LinearLayout
+        android:id="@+id/homebox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dip" >
+
+        <LinearLayout
+            android:id="@+id/hometitlebox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/hometitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/homenews"
+                android:text="@string/homenews"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/title_dimens" />
+
+            <TextView
+                android:id="@+id/homesubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/homesubtitle"
+                android:text="@string/homesubtitle"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/subtitle_dimens" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mobilenewsbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="25dip"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/homenews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/newsupdatetitle"
+                android:text="@string/newsupdatetitle"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/midtitle" />
+
+            <LinearLayout
+                android:id="@+id/newscontentbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/contentback"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <TextView
+                    android:id="@+id/newsupdatetitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/newstest"
+                    android:text="@string/newstest"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable" />
+
+                <TextView
+                    android:id="@+id/newsupdates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center"
+                    android:hint="@string/newstest"
+                    android:text="@string/newstest"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/newscontent" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/planupdatebox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/homeplan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/planupdatetitle"
+                android:text="@string/planupdatetitle"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/midtitle" />
+
+            <LinearLayout
+                android:id="@+id/plancontentbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/contentback"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <TextView
+                    android:id="@+id/planupdatetitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/newstest"
+                    android:text="@string/newstest"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable" />
+
+                <TextView
+                    android:id="@+id/planupdates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center"
+                    android:hint="@string/newstest"
+                    android:text="@string/newstest"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/newscontent" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/psnewsbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/homephone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/phoneupdatetitle"
+                android:text="@string/phoneupdatetitle"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/midtitle" />
+
+            <LinearLayout
+                android:id="@+id/phonecontentbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/contentback"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <TextView
+                    android:id="@+id/phoneupdatetitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/newstest"
+                    android:text="@string/newstest"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable" />
+
+                <TextView
+                    android:id="@+id/phoneupdates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center"
+                    android:hint="@string/newstest"
+                    android:text="@string/newstest"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/newscontent" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/kbnewsbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/homekb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/kbupdatetitle"
+                android:text="@string/kbupdatetitle"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/midtitle" />
+
+            <LinearLayout
+                android:id="@+id/kbcontentbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/contentback"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <TextView
+                    android:id="@+id/kbupdatetitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/newstest"
+                    android:text="@string/newstest"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable" />
+
+                <TextView
+                    android:id="@+id/kbupdates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center"
+                    android:hint="@string/newstest"
+                    android:text="@string/newstest"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/newscontent" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

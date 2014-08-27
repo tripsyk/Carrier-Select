@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/titlenoback"
+    android:overScrollFooter="@color/white_color"
+    android:overScrollHeader="@color/white_color" >
+
+    <LinearLayout
+        android:id="@+id/pb4basics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dip" >
+
+        <TextView
+            android:id="@+id/pb6title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dip"
+            android:gravity="center"
+            android:hint="@string/pb6title"
+            android:text="@string/pb6title"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/title_dimens" />
+
+        <LinearLayout
+            android:id="@+id/pb6box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/splashborder"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/pb6yesbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dip"
+                android:background="@drawable/contentback"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <TextView
+                    android:id="@+id/pb6yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/yes"
+                    android:text="@string/yes"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/title_dimens"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/pb6yesdesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/yesthrottle"
+                    android:text="@string/yesthrottle"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/desc_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pb6nobox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dip"
+                android:background="@drawable/contentback"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <TextView
+                    android:id="@+id/pb6no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/no"
+                    android:text="@string/no"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/title_dimens"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/pb6nodesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:hint="@string/nothrottle"
+                    android:text="@string/nothrottle"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/desc_dimens" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
