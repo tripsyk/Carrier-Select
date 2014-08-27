@@ -1,140 +1,228 @@
 package com.guardian.carrierselect;
 
+import java.util.List;
+
+import android.annotation.SuppressLint;
 import android.app.Fragment;
-import android.app.FragmentTransaction;
-import android.content.Context;
-import android.content.SharedPreferences;
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
+import com.guardian.carrierselect.model.NewsUpdater;
+import com.parse.FindCallback;
+import com.parse.Parse;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
+
 public class Home extends Fragment {
 
+	private TextView newstitle, plantitle, phonetitle, kbtitle, news, plan, phone, kb;
+	private ProgressDialog progress;
 	private static View rootView;
-	private static Animation scalenext, fadeOut, fadeIn;
-	private static TextView edit, theCarrier, theSmarts, theBasics, theData,
-			theMonthly;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		rootView = inflater.inflate(R.layout.home_profile, container, false);
-		getActivity().getActionBar().show();
 
-		// Declare preferences
-		final String PREFS_NAME = "MyPrefsFile";
-		SharedPreferences settings = getActivity().getSharedPreferences(
-				PREFS_NAME, 0);
+		rootView = inflater.inflate(R.layout.home, container, false);
 
-		// Declare animations
-		fadeIn = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.fadein);
-		fadeOut = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.fadeout);
-		scalenext = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.scalenext);
+		getActivity().getActionBar().setTitle("News");
 
-		// Declare TextViews
-		theCarrier = (TextView) rootView.findViewById(R.id.yourcarrier);
-		theSmarts = (TextView) rootView.findViewById(R.id.numsmartphones);
-		theBasics = (TextView) rootView.findViewById(R.id.numbasicphones);
-		theData = (TextView) rootView.findViewById(R.id.gigsofdata);
-		theMonthly = (TextView) rootView.findViewById(R.id.monthlybill);
-		edit = (TextView) rootView.findViewById(R.id.editprofile);
+		// Load in animations.
+		final Animation righttoleft = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.right_to_left);
+		final Animation lefttoright = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.left_to_right);
+		
+		newstitle = (TextView) rootView.findViewById(R.id.newsupdatetitle);
+		plantitle = (TextView) rootView.findViewById(R.id.planupdatetitle);
+		phonetitle = (TextView) rootView.findViewById(R.id.phoneupdatetitle);
+		kbtitle = (TextView) rootView.findViewById(R.id.kbupdatetitle);
+		news = (TextView) rootView.findViewById(R.id.newsupdates);
+		plan = (TextView) rootView.findViewById(R.id.planupdates);
+		phone = (TextView) rootView.findViewById(R.id.phoneupdates);
+		kb = (TextView) rootView.findViewById(R.id.kbupdates);
+		
 
-		// Initial operations on View Create
-		settings.edit().putBoolean("my_first_time", false).commit();
-		rootView.startAnimation(fadeIn);
+		// Begin startup flow.
+		rootView.startAnimation(lefttoright);
 
-		// Set animation listeners for Fragment
-		scalenext.setAnimationListener(new AnimationListener() {
-
-			@Override
-			public void onAnimationEnd(Animation arg0) {
-				rootView.startAnimation(fadeOut);
-				final Fragment fragment = new UserBasics();
-				final FragmentTransaction fragmenttran = getFragmentManager()
-						.beginTransaction();
-				fragmenttran.replace(R.id.fragment_container, fragment);
-				fragmenttran.addToBackStack(null);
-				fragmenttran.commit();
-				getFragmentManager().executePendingTransactions();
-
-			}
-
-			@Override
-			public void onAnimationRepeat(Animation arg0) {
-			}
-
-			@Override
-			public void onAnimationStart(Animation arg0) {
-			}
-		});
-
-		edit.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View view) {
-				edit.startAnimation(scalenext);
-
-			}
-		});
-
-		initHomePrefs();
-
-		// Send the view back to the main Activity
+		initHomeNews();
 		return rootView;
 	}
 
-	private void initHomePrefs() {
+	@SuppressLint("DefaultLocale")
+	public void initHomeNews() {
 
-		// Declare preferences
-		final SharedPreferences sharedPref = getActivity().getPreferences(
-				Context.MODE_PRIVATE);
-
-		// Set the appropriate Carrier on the homescreen
-		int carrier = sharedPref.getInt("carrier", 0);
-		if (carrier == 1) {
-			theCarrier.setText("Carrier: AT&T");
-
-		} else if (carrier == 2) {
-			theCarrier.setText("Carrier: Sprint");
-
-		} else if (carrier == 3) {
-			theCarrier.setText("Carrier: T-Mobile");
-
-		} else if (carrier == 4) {
-			theCarrier.setText("Carrier: Verizon");
-
-		} else if (carrier == 5) {
-			theCarrier.setText("Carrier: Prepaid");
-
-		}
-
-		// Set the appropriate Smartphones on the homescreen
-		int smartphones = sharedPref.getInt("smart", 0);
-		theSmarts.setText("Smartphones: " + smartphones);
-
-		// Set the appropriate Basic phones on the homescreen
-		int basicphones = sharedPref.getInt("basic", 0);
-		theBasics.setText("Basic phones: " + basicphones);
-
-		// Set the appropriate data usage on the homescreen
-		int thegigs = sharedPref.getInt("data", 0);
-		theData.setText("Data usage: " + thegigs);
+		progress = new ProgressDialog(getActivity());
+		progress.setTitle("Just a sec...");
+		progress.setMessage("Updating your news...");
+		progress.show();
 		
-		// Set the appropriate monthly bill on the homescreen
-		int monthly = sharedPref.getInt("monthly", 0);
-		theMonthly.setText("Monthly Bill: " + monthly);
-	}
+		ParseObject.registerSubclass(NewsUpdater.class);
+		Parse.initialize(rootView.getContext(),
+				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
+				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
 
-	public void onDestroy() {
-		super.onDestroy();
-	}
+		ParseQuery<ParseObject> querynews = ParseQuery
+				.getQuery("Plan_Promo");
+		querynews.whereEqualTo("Tag", "Title");
+		querynews.findInBackground(new FindCallback<ParseObject>() {
+			public void done(List<ParseObject> NewsList, ParseException e) {
 
+				if (e == null) {
+					newstitle.setText("");
+					newstitle.setText(NewsList.get(0).getString("Title")
+							+ "\n" + NewsList.get(0).getString("Date")
+							+ "\n\n" + NewsList.get(0).getString("Subtitle"));
+				} else {
+				}
+			}
+		});
+		
+		// Test Query
+		ParseQuery<ParseObject> queryplanscontent = ParseQuery
+				.getQuery("Plan_Promo");
+		queryplanscontent.whereEqualTo("Top", "1");
+		queryplanscontent.orderByAscending("PromoAdded");
+		queryplanscontent.findInBackground(new FindCallback<ParseObject>() {
+			public void done(List<ParseObject> NewsList, ParseException e) {
+
+				if (e == null) {
+
+					news.setText("");
+
+					for (int i = 0; i < NewsList.size(); i++) {
+						news.setText(news.getText()
+								+ NewsList.get(i).getString("PromoAdded") + "\n");
+					}
+				} else {
+				}
+			}
+		});
+
+		ParseObject.registerSubclass(NewsUpdater.class);
+		Parse.initialize(rootView.getContext(),
+				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
+				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
+
+		ParseQuery<ParseObject> queryplans = ParseQuery
+				.getQuery("Changes_Plans");
+		queryplans.whereEqualTo("Tag", "Title");
+		queryplans.findInBackground(new FindCallback<ParseObject>() {
+			public void done(List<ParseObject> PlanList, ParseException e) {
+
+				if (e == null) {
+					plantitle.setText("");
+					plantitle.setText(PlanList.get(0).getString("Title")
+							+ "\n" + PlanList.get(0).getString("Date")
+							+ "\n\n" + PlanList.get(0).getString("Subtitle"));
+				} else {
+				}
+			}
+		});
+
+		// Test Query
+		ParseQuery<ParseObject> queryplans2 = ParseQuery
+				.getQuery("Changes_Plans");
+		queryplans2.whereEqualTo("Top", "1");
+		queryplans2.orderByAscending("PlanAdded");
+		queryplans2.findInBackground(new FindCallback<ParseObject>() {
+			public void done(List<ParseObject> PlanList, ParseException e) {
+
+				if (e == null) {
+
+					plan.setText("");
+
+					for (int i = 0; i < PlanList.size(); i++) {
+						plan.setText(plan.getText()
+								+ PlanList.get(i).getString("PlanAdded") + "\n");
+					}
+				} else {
+				}
+			}
+		});
+
+		// Test Query
+		ParseQuery<ParseObject> queryphone = ParseQuery.getQuery("Changes_PS");
+		queryphone.orderByAscending("PhoneAdded");
+		queryphone.whereEqualTo("NewsID", "1");
+		queryphone.findInBackground(new FindCallback<ParseObject>() {
+			public void done(List<ParseObject> PhoneList, ParseException e) {
+
+				if (e == null) {
+					phonetitle.setText("");
+					phonetitle.setText(PhoneList.get(0).getString("Title")
+							+ "\n" + PhoneList.get(0).getString("Date")
+							+ "\n\n" + PhoneList.get(0).getString("Subtitle"));
+				} else {
+				}
+			}
+		});
+
+		// Test Query
+		ParseQuery<ParseObject> queryphonecontent = ParseQuery
+				.getQuery("Changes_PS");
+		queryphonecontent.whereEqualTo("NewsID", "11");
+		queryphonecontent.findInBackground(new FindCallback<ParseObject>() {
+			public void done(List<ParseObject> PhoneList, ParseException e) {
+
+				if (e == null) {
+
+					phone.setText("");
+
+					for (int i = 0; i < PhoneList.size(); i++) {
+						phone.setText(phone.getText()
+								+ PhoneList.get(i).getString("PhoneAdded")
+								+ "\n");
+					}
+				} else {
+				}
+			}
+		});
+
+		// Test Query
+		ParseQuery<ParseObject> querykb = ParseQuery.getQuery("Changes_KB");
+		querykb.whereEqualTo("Top", "1");
+		querykb.findInBackground(new FindCallback<ParseObject>() {
+			public void done(List<ParseObject> KBList, ParseException e) {
+
+				if (e == null) {
+					kbtitle.setText("");
+					kbtitle.setText(KBList.get(0).getString("Title") + "\n"
+							+ KBList.get(0).getString("Date") + "\n\n"
+							+ KBList.get(0).getString("Subtitle"));
+				} else {
+				}
+			}
+		});
+
+		// Test Query
+		ParseQuery<ParseObject> querykbcontent = ParseQuery
+				.getQuery("Changes_KB");
+		querykbcontent.whereEqualTo("Top", "content");
+		querykbcontent.findInBackground(new FindCallback<ParseObject>() {
+			public void done(List<ParseObject> KBList, ParseException e) {
+
+				if (e == null) {
+					kb.setText("");
+
+					for (int i = 0; i < KBList.size(); i++) {
+						kb.setText(kb.getText()
+								+ KBList.get(i).getString("KBAdded") + "\n");
+					}
+				} else {
+				}
+				
+				progress.dismiss();
+			}
+
+		});
+	}
 }

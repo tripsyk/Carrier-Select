@@ -1,81 +1,208 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white_color"
-    android:orientation="vertical"
-    android:paddingTop="10dip" >
-
-    <TextView
-        android:id="@+id/contract_plans"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:hint="@string/contract_plans"
-        android:text="@string/contract_plans"
-        android:textColor="@color/titlenoback"
-        android:textSize="@dimen/title_dimens" />
-
-    <TextView
-        android:id="@+id/att_total"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="35dip"
-        android:gravity="center"
-        android:hint="@string/att_total"
-        android:textColor="@color/titlenoback"
-        android:textSize="@dimen/breakdown_dimens" />
-
-    <TextView
-        android:id="@+id/ver_total"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dip"
-        android:gravity="center"
-        android:hint="@string/ver_total"
-        android:textColor="@color/titlenoback"
-        android:textSize="@dimen/breakdown_dimens" />
-
-    <TextView
-        android:id="@+id/spr_total"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dip"
-        android:gravity="center"
-        android:hint="@string/spr_total"
-        android:textColor="@color/titlenoback"
-        android:textSize="@dimen/breakdown_dimens" />
-    
-        <TextView
-        android:id="@+id/tmo_total"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dip"
-        android:gravity="center"
-        android:hint="@string/tmo_total"
-        android:textColor="@color/titlenoback"
-        android:textSize="@dimen/breakdown_dimens" />
+    android:background="@color/titlenoback"
+    android:overScrollFooter="@color/white_color"
+    android:overScrollHeader="@color/white_color" >
 
     <LinearLayout
+        android:id="@+id/displaylayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom|right"
-        android:paddingBottom="20dip"
-        android:paddingTop="10dip" >
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dip" >
 
-        <TextView
-            android:id="@+id/breakdown_send"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/titlenoback"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/contract_plans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/splashborder"
+                android:gravity="center"
+                android:hint="@string/sp2title"
+                android:text="@string/sp2title"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/title_dimens" />
+
+            <TextView
+                android:id="@+id/equipnotice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dip"
+                android:gravity="center"
+                android:hint="@string/equipnotice"
+                android:text="@string/equipnotice"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/desc_dimens" />
+
+            <LinearLayout
+                android:id="@+id/attdisplaybox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip"
+                android:background="@drawable/contentback"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <TextView
+                    android:id="@+id/att_pretotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/att_pretotal"
+                    android:text="@string/att_pretotal"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:id="@+id/att_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/loadingprices"
+                    android:text="@string/loadingprices"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/midtitle"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/verdisplaybox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dip"
+                android:background="@drawable/contentback"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <TextView
+                    android:id="@+id/ver_pretotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/ver_pretotal"
+                    android:text="@string/ver_pretotal"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:id="@+id/ver_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/loadingprices"
+                    android:text="@string/loadingprices"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/midtitle"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sprdisplaybox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dip"
+                android:background="@drawable/contentback"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <TextView
+                    android:id="@+id/spr_pretotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/spr_pretotal"
+                    android:text="@string/spr_pretotal"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:id="@+id/spr_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/loadingprices"
+                    android:text="@string/loadingprices"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/midtitle"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tmodisplaybox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dip"
+                android:background="@drawable/contentback"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dip" >
+
+                <TextView
+                    android:id="@+id/tmo_pretotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/tmo_pretotal"
+                    android:text="@string/tmo_pretotal"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:id="@+id/tmo_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/loadingprices"
+                    android:text="@string/loadingprices"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/midtitle"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/breakdownbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="30dip"
-            android:gravity="right"
-            android:text="@string/breakdown_send"
-            android:textColor="@color/titlenoback"
-            android:textSize="@dimen/title_dimens" />
+            android:layout_gravity="center|bottom"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/contentback"
+            android:gravity="center"
+            android:padding="10dip"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/breakdown_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/viewbreakdown"
+                android:text="@string/viewbreakdown"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/subtitle_dimens" />
+        </LinearLayout>
     </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

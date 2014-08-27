@@ -4,7 +4,6 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,16 +12,13 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 public class SmartphoneSelector extends Fragment {
 
-	private static Animation fadeOut, fadeIn;
 	private static View rootView;
-	private static LinearLayout onesmartbox, twosmartbox, threesmartbox,
-			foursmartbox, fivesmartbox, sixsmartbox, sevensmartbox,
-			eightsmartbox, ninesmartbox, tensmartbox;
-	private static TextView smartphones;
+	private static LinearLayout zerosmartbox, onesmartbox, twosmartbox,
+			threesmartbox, foursmartbox, fivesmartbox, sixsmartbox,
+			sevensmartbox, eightsmartbox, ninesmartbox, tensmartbox;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,27 +26,23 @@ public class SmartphoneSelector extends Fragment {
 		rootView = inflater.inflate(R.layout.smartphone_layout, container,
 				false);
 		getActivity().getActionBar().hide();
-		
-		
+
 		// Declare preferences
 		final SharedPreferences sharedPref = getActivity().getPreferences(
 				Context.MODE_PRIVATE);
 		final SharedPreferences.Editor editor = sharedPref.edit();
 
-		
-		// Declare animations
-		fadeIn = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.fadein);
-		fadeOut = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.fadeout);
+		// Load in animations.
+		final Animation righttoleft = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.right_to_left);
+		final Animation lefttoright = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.left_to_right);
 
-		
-		// Declare TextViews
-		smartphones = (TextView) rootView.findViewById(R.id.yoursmartphones);
-		smartphones.setTypeface(null, Typeface.ITALIC);
-		
-		
+		// Begin startup flow.
+		rootView.startAnimation(lefttoright);
+
 		// Declare LinearLayouts
+		zerosmartbox = (LinearLayout) rootView.findViewById(R.id.zerosmartbox);
 		onesmartbox = (LinearLayout) rootView.findViewById(R.id.onesmartbox);
 		twosmartbox = (LinearLayout) rootView.findViewById(R.id.twosmartbox);
 		threesmartbox = (LinearLayout) rootView
@@ -64,12 +56,9 @@ public class SmartphoneSelector extends Fragment {
 				.findViewById(R.id.eightsmartbox);
 		ninesmartbox = (LinearLayout) rootView.findViewById(R.id.ninesmartbox);
 		tensmartbox = (LinearLayout) rootView.findViewById(R.id.tensmartbox);
-		
-		rootView.startAnimation(fadeIn);
 
-		
 		// Set animation listeners for fragment
-		fadeOut.setAnimationListener(new AnimationListener() {
+		righttoleft.setAnimationListener(new AnimationListener() {
 
 			@Override
 			public void onAnimationEnd(Animation arg0) {
@@ -80,7 +69,7 @@ public class SmartphoneSelector extends Fragment {
 				fragmenttran.addToBackStack(null);
 				fragmenttran.commit();
 				getFragmentManager().executePendingTransactions();
-				
+
 			}
 
 			@Override
@@ -94,12 +83,22 @@ public class SmartphoneSelector extends Fragment {
 			}
 		});
 
+		zerosmartbox.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				editor.putInt("smart", 0);
+				editor.commit();
+				rootView.startAnimation(righttoleft);
+
+			}
+		});
+
 		onesmartbox.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				editor.putInt("smart", 1);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 
 			}
 		});
@@ -109,7 +108,7 @@ public class SmartphoneSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("smart", 2);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
@@ -118,7 +117,7 @@ public class SmartphoneSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("smart", 3);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
@@ -127,7 +126,7 @@ public class SmartphoneSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("smart", 4);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
@@ -136,7 +135,7 @@ public class SmartphoneSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("smart", 5);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
@@ -145,7 +144,7 @@ public class SmartphoneSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("smart", 6);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
@@ -154,7 +153,7 @@ public class SmartphoneSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("smart", 7);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
@@ -163,16 +162,16 @@ public class SmartphoneSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("smart", 8);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
-		
+
 		ninesmartbox.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				editor.putInt("smart", 9);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
@@ -181,7 +180,7 @@ public class SmartphoneSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("smart", 10);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 

@@ -12,17 +12,13 @@ public class MenuListAdapter extends ArrayAdapter<String> {
 	private LayoutInflater inflater;
 	private String[] mMenuItems;
 	private Context mContext;
-	int[] micons;
 
-	public MenuListAdapter(Context ctx, int id, String[] menuItems,
-			int[] myicons) {
+	public MenuListAdapter(Context ctx, int id, String[] menuItems) {
 
 		super(ctx, id);
 		inflater = (LayoutInflater) ctx
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		mMenuItems = menuItems;
-		mContext = ctx;
-		micons = myicons;
 	}
 
 	public int getCount() {
@@ -45,10 +41,7 @@ public class MenuListAdapter extends ArrayAdapter<String> {
 			holder = (ViewHolder) convertView.getTag();
 		}
 
-		holder.menuTitle
-				.setCompoundDrawablesWithIntrinsicBounds(mContext
-						.getResources().getDrawable(micons[position]), null,
-						null, null);
+		
 
 		holder.menuTitle.setText(mMenuItems[position]);
 

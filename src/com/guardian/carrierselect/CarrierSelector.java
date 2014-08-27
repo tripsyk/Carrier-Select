@@ -4,44 +4,39 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.view.animation.Animation.AnimationListener;
+import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 public class CarrierSelector extends Fragment {
 
-	private static Animation fadeOut, fadeIn;
-	private static LinearLayout attbox, sprintbox, tmobox, verizonbox, otherbox;
+	private static LinearLayout attbox, sprintbox, tmobox, verizonbox,
+			otherbox;
 	private static View rootView;
-	private static TextView title;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		rootView = inflater.inflate(R.layout.carrierselector_layout, container,
 				false);
-		getActivity().getActionBar().hide();
 
-		fadeIn = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.fadein);
-
-		rootView.startAnimation(fadeIn);
-
-		title = (TextView) rootView.findViewById(R.id.carriertitle);
-		title.setTypeface(null, Typeface.ITALIC);
 		final SharedPreferences sharedPref = getActivity().getPreferences(
 				Context.MODE_PRIVATE);
 		final SharedPreferences.Editor editor = sharedPref.edit();
 
-		fadeOut = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.fadeout);
+		// Load in animations.
+		final Animation righttoleft = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.right_to_left);
+		final Animation lefttoright = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.left_to_right);
+
+		// Begin startup flow.
+		rootView.startAnimation(lefttoright);
 
 		attbox = (LinearLayout) rootView.findViewById(R.id.attbox);
 		sprintbox = (LinearLayout) rootView.findViewById(R.id.sprintbox);
@@ -54,7 +49,7 @@ public class CarrierSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("carrier", 1);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
@@ -64,7 +59,7 @@ public class CarrierSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("carrier", 2);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
@@ -74,31 +69,49 @@ public class CarrierSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("carrier", 3);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
-		
+
 		verizonbox.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				editor.putInt("carrier", 4);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
-		
+
 		otherbox.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				editor.putInt("carrier", 5);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
-		fadeOut.setAnimationListener(new AnimationListener() {
+		lefttoright.setAnimationListener(new AnimationListener() {
+
+			@Override
+			public void onAnimationEnd(Animation arg0) {
+				getActivity().getActionBar().hide();
+			}
+
+			@Override
+			public void onAnimationRepeat(Animation arg0) {
+
+			}
+
+			@Override
+			public void onAnimationStart(Animation arg0) {
+
+			}
+		});
+
+		righttoleft.setAnimationListener(new AnimationListener() {
 
 			@Override
 			public void onAnimationEnd(Animation arg0) {
@@ -133,4 +146,3 @@ public class CarrierSelector extends Fragment {
 	}
 
 }
-

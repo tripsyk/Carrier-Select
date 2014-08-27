@@ -2,7 +2,6 @@ package com.guardian.carrierselect;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +13,6 @@ import android.widget.TextView;
 
 public class StartScreen extends Fragment {
 
-	private static Animation scalenext, fadeOut, fadeIn;
 	private static TextView next;
 	private static View rootView;
 
@@ -26,40 +24,19 @@ public class StartScreen extends Fragment {
 				false);
 		getActivity().getActionBar().hide();
 
-		fadeIn = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.fadein);
-
-		rootView.startAnimation(fadeIn);
-
 		final TextView welcome = (TextView) rootView.findViewById(R.id.welcome);
-		welcome.setTypeface(null, Typeface.ITALIC);
 		next = (TextView) rootView.findViewById(R.id.next1);
-		next.setTypeface(null, Typeface.ITALIC);
 
-		fadeOut = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.fadeout);
-		scalenext = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.scalenext);
+		// Load in animations.
+		final Animation righttoleft = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.right_to_left);
+		final Animation lefttoright = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.left_to_right);
 
-		scalenext.setAnimationListener(new AnimationListener() {
+		// Begin startup flow.
+		rootView.startAnimation(lefttoright);
 
-			@Override
-			public void onAnimationEnd(Animation arg0) {
-				rootView.startAnimation(fadeOut);
-			}
-
-			@Override
-			public void onAnimationRepeat(Animation arg0) {
-
-			}
-
-			@Override
-			public void onAnimationStart(Animation arg0) {
-
-			}
-		});
-
-		fadeOut.setAnimationListener(new AnimationListener() {
+		righttoleft.setAnimationListener(new AnimationListener() {
 
 			@Override
 			public void onAnimationEnd(Animation arg0) {
@@ -96,7 +73,8 @@ public class StartScreen extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				next.startAnimation(scalenext);
+				// next.startAnimation(scalenext);
+				rootView.startAnimation(righttoleft);
 			}
 
 		});

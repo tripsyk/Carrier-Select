@@ -4,46 +4,38 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.view.animation.Animation.AnimationListener;
+import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 public class UserBasics extends Fragment {
 
-	private static Animation fadeOut, fadeIn;
 	private static LinearLayout lightbox;
 	private static LinearLayout moderatebox;
 	private static LinearLayout heavybox;
 	private static View rootView;
-	private static TextView name;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		rootView = inflater.inflate(R.layout.activity_user_basics, container,
 				false);
-		getActivity().getActionBar().hide();
 
-		fadeIn = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.fadein);
+		final Animation righttoleft = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.right_to_left);
+		final Animation lefttoright = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.left_to_right);
 
-		rootView.startAnimation(fadeIn);
+		rootView.startAnimation(lefttoright);
 
-		name = (TextView) rootView.findViewById(R.id.profile);
-		name.setTypeface(null, Typeface.ITALIC);
 		final SharedPreferences sharedPref = getActivity().getPreferences(
 				Context.MODE_PRIVATE);
 		final SharedPreferences.Editor editor = sharedPref.edit();
-
-		fadeOut = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.fadeout);
 
 		lightbox = (LinearLayout) rootView.findViewById(R.id.lightbox);
 		moderatebox = (LinearLayout) rootView.findViewById(R.id.moderatebox);
@@ -54,7 +46,7 @@ public class UserBasics extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("userType", 1);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
@@ -64,7 +56,7 @@ public class UserBasics extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("userType", 2);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
@@ -74,11 +66,11 @@ public class UserBasics extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("userType", 3);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
-		fadeOut.setAnimationListener(new AnimationListener() {
+		righttoleft.setAnimationListener(new AnimationListener() {
 
 			@Override
 			public void onAnimationEnd(Animation arg0) {

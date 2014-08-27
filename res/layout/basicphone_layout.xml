@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/titlenoback"
     android:overScrollFooter="@color/white_color"
     android:overScrollHeader="@color/white_color" >
 
@@ -9,7 +10,6 @@
         android:id="@+id/selectorbasicbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/welcome_back"
         android:orientation="vertical"
         android:padding="30dip" >
 
@@ -23,31 +23,32 @@
             android:gravity="center"
             android:hint="@string/basicphonestitle"
             android:text="@string/basicphonestitle"
-            android:textColor="@color/titlenoback"
+            android:textColor="@color/white_color"
             android:textSize="@dimen/title_dimens" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dip"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <LinearLayout
                 android:id="@+id/zerobasicbox"
-                android:layout_width="238dip"
+                android:layout_width="180dip"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/splashborder"
+                android:background="@drawable/contentback"
                 android:clickable="true"
                 android:orientation="vertical" >
 
                 <TextView
                     android:id="@+id/zerobasic"
-                    android:layout_width="238dip"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:hint="@string/nobasic"
+                    android:padding="10dip"
                     android:text="@string/nobasic"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/subtitle_dimens" />
@@ -56,24 +57,26 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <LinearLayout
                 android:id="@+id/onebasicbox"
-                android:layout_width="115dip"
-                android:layout_height="wrap_content"
+                android:layout_width="85dip"
+                android:layout_height="55dip"
                 android:layout_gravity="center"
                 android:layout_marginRight="8dip"
-                android:background="@drawable/splashborder"
+                android:background="@drawable/contentback"
                 android:clickable="true"
                 android:orientation="vertical" >
 
                 <TextView
                     android:id="@+id/onebasic"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="70dip"
+                    android:layout_height="50dip"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:hint="@string/one"
                     android:text="@string/one"
@@ -83,17 +86,18 @@
 
             <LinearLayout
                 android:id="@+id/twobasicbox"
-                android:layout_width="115dip"
-                android:layout_height="wrap_content"
+                android:layout_width="85dip"
+                android:layout_height="55dip"
                 android:layout_gravity="center"
-                android:background="@drawable/splashborder"
+                android:background="@drawable/contentback"
                 android:clickable="true"
                 android:orientation="vertical" >
 
                 <TextView
                     android:id="@+id/twobasic"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="70dip"
+                    android:layout_height="50dip"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:hint="@string/two"
                     android:text="@string/two"
@@ -104,24 +108,26 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <LinearLayout
                 android:id="@+id/threebasicbox"
-                android:layout_width="115dip"
-                android:layout_height="wrap_content"
+                android:layout_width="85dip"
+                android:layout_height="55dip"
                 android:layout_gravity="center"
                 android:layout_marginRight="8dip"
-                android:background="@drawable/splashborder"
+                android:background="@drawable/contentback"
                 android:clickable="true"
                 android:orientation="vertical" >
 
                 <TextView
                     android:id="@+id/threebasic"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="70dip"
+                    android:layout_height="50dip"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:hint="@string/three"
                     android:text="@string/three"
@@ -131,17 +137,18 @@
 
             <LinearLayout
                 android:id="@+id/fourbasicbox"
-                android:layout_width="115dip"
-                android:layout_height="wrap_content"
+                android:layout_width="85dip"
+                android:layout_height="55dip"
                 android:layout_gravity="center"
-                android:background="@drawable/splashborder"
+                android:background="@drawable/contentback"
                 android:clickable="true"
                 android:orientation="vertical" >
 
                 <TextView
                     android:id="@+id/fourbasic"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="70dip"
+                    android:layout_height="50dip"
+                    android:layout_gravity="center"
                     android:gravity="center"
                     android:hint="@string/four"
                     android:text="@string/four"
@@ -152,24 +159,25 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <LinearLayout
                 android:id="@+id/fivebasicbox"
-                android:layout_width="115dip"
-                android:layout_height="wrap_content"
+                android:layout_width="85dip"
+                android:layout_height="55dip"
                 android:layout_gravity="center"
                 android:layout_marginRight="8dip"
-                android:background="@drawable/splashborder"
+                android:background="@drawable/contentback"
                 android:clickable="true"
                 android:orientation="vertical" >
 
                 <TextView
                     android:id="@+id/fivebasic"
-                    android:layout_width="115dip"
-                    android:layout_height="wrap_content"
+                    android:layout_width="70dip"
+                    android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:hint="@string/five"
@@ -180,17 +188,17 @@
 
             <LinearLayout
                 android:id="@+id/sixbasicbox"
-                android:layout_width="115dip"
-                android:layout_height="wrap_content"
+                android:layout_width="85dip"
+                android:layout_height="55dip"
                 android:layout_gravity="center"
-                android:background="@drawable/splashborder"
+                android:background="@drawable/contentback"
                 android:clickable="true"
                 android:orientation="vertical" >
 
                 <TextView
                     android:id="@+id/sixbasic"
-                    android:layout_width="115dip"
-                    android:layout_height="wrap_content"
+                    android:layout_width="70dip"
+                    android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:hint="@string/six"
@@ -202,26 +210,27 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dip"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="8dip"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <LinearLayout
                 android:id="@+id/sevenbasicbox"
-                android:layout_width="115dip"
-                android:layout_height="wrap_content"
+                android:layout_width="85dip"
+                android:layout_height="55dip"
                 android:layout_gravity="center"
                 android:layout_marginRight="8dip"
-                android:background="@drawable/splashborder"
+                android:background="@drawable/contentback"
                 android:clickable="true"
                 android:gravity="center"
                 android:orientation="vertical" >
 
                 <TextView
                     android:id="@+id/sevenbasic"
-                    android:layout_width="115dip"
-                    android:layout_height="wrap_content"
+                    android:layout_width="70dip"
+                    android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:hint="@string/seven"
@@ -232,17 +241,17 @@
 
             <LinearLayout
                 android:id="@+id/eightbasicbox"
-                android:layout_width="115dip"
-                android:layout_height="wrap_content"
-                android:background="@drawable/splashborder"
+                android:layout_width="85dip"
+                android:layout_height="55dip"
+                android:background="@drawable/contentback"
                 android:clickable="true"
                 android:gravity="center"
                 android:orientation="vertical" >
 
                 <TextView
                     android:id="@+id/eightbasic"
-                    android:layout_width="115dip"
-                    android:layout_height="wrap_content"
+                    android:layout_width="70dip"
+                    android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:hint="@string/eight"
@@ -254,26 +263,27 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dip"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="8dip"
             android:gravity="center"
             android:orientation="horizontal" >
 
             <LinearLayout
                 android:id="@+id/ninebasicbox"
-                android:layout_width="115dip"
-                android:layout_height="wrap_content"
+                android:layout_width="85dip"
+                android:layout_height="55dip"
                 android:layout_gravity="center"
                 android:layout_marginRight="8dip"
-                android:background="@drawable/splashborder"
+                android:background="@drawable/contentback"
                 android:clickable="true"
                 android:gravity="center"
                 android:orientation="vertical" >
 
                 <TextView
                     android:id="@+id/ninebasic"
-                    android:layout_width="115dip"
-                    android:layout_height="wrap_content"
+                    android:layout_width="70dip"
+                    android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:hint="@string/nine"
@@ -284,17 +294,17 @@
 
             <LinearLayout
                 android:id="@+id/tenbasicbox"
-                android:layout_width="115dip"
-                android:layout_height="wrap_content"
-                android:background="@drawable/splashborder"
+                android:layout_width="85dip"
+                android:layout_height="55dip"
+                android:background="@drawable/contentback"
                 android:clickable="true"
                 android:gravity="center"
                 android:orientation="vertical" >
 
                 <TextView
                     android:id="@+id/tenbasic"
-                    android:layout_width="115dip"
-                    android:layout_height="wrap_content"
+                    android:layout_width="70dip"
+                    android:layout_height="50dip"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:hint="@string/ten"

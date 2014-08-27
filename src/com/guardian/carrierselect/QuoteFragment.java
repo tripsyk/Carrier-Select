@@ -3,6 +3,7 @@ package com.guardian.carrierselect;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,46 +13,54 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
 public class QuoteFragment extends Fragment {
 
-	private static double hotspotCost;
+	private static int hotspotCost;
 	private static View rootView;
 	private static SeekBar seekBar;
-	private static TextView disValue, send;
-	private static int discount;
-	private static Animation scale, animScale, animScalet, fadeOut, fadeIn;
+	private static TextView disValue;
+	private static int discount;;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		rootView = inflater.inflate(R.layout.quote_layout, container, false);
-		getActivity().getActionBar().show();
+		getActivity().getActionBar().setTitle("Service Plans");
 
-		fadeIn = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.fadein);
+		// Load in animations.
+		final Animation righttoleft = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.right_to_left);
+		final Animation lefttoright = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.left_to_right);
+		final Animation animScale = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.scale);
+		final Animation animScalet = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.scaleinput);
 
-		rootView.startAnimation(fadeIn);
-		fadeOut = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.fadeout);
-
-		send = (TextView) rootView.findViewById(R.id.button_send);
-		send.setTypeface(null, Typeface.ITALIC);
-
-		animScale = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.scale);
-		animScalet = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.scaleinput);
+		// Begin startup flow.
+		rootView.startAnimation(lefttoright);
 
 		seekBar = (SeekBar) rootView.findViewById(R.id.discount_bar);
+		seekBar.setProgressDrawable(getResources().getDrawable(
+				R.drawable.progressbar));
+		Drawable mDrawable = getResources().getDrawable(R.drawable.thumb);
+		mDrawable.setBounds(0, 0, mDrawable.getIntrinsicWidth(),
+				mDrawable.getIntrinsicHeight());
+		seekBar.setThumb(mDrawable);
 		final TextView eSmart = (TextView) rootView
 				.findViewById(R.id.sphone_input);
 		final TextView eBasic = (TextView) rootView
 				.findViewById(R.id.bphone_input);
 		final TextView eData = (TextView) rootView
 				.findViewById(R.id.data_input);
+		final TextView eTab = (TextView) rootView.findViewById(R.id.tab_input);
+		final TextView extras = (TextView) rootView
+				.findViewById(R.id.extras_label);
+		extras.setTypeface(null, Typeface.BOLD);
 		disValue = (TextView) rootView.findViewById(R.id.dis_value);
 
 		seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -77,7 +86,7 @@ public class QuoteFragment extends Fragment {
 
 					@Override
 					public void onClick(View arg0) {
-						sendMessage();
+						rootView.startAnimation(righttoleft);
 					}
 
 				});
@@ -180,31 +189,44 @@ public class QuoteFragment extends Fragment {
 
 				});
 
-		scale = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.scalenext);
+		((Button) rootView.findViewById(R.id.tab_m))
+				.setOnClickListener(new OnClickListener() {
 
-		scale.setAnimationListener(new AnimationListener() {
+					@Override
+					public void onClick(View arg0) {
+						int number = Integer
+								.parseInt(eTab.getText().toString());
+						if (number > 0) {
+							eTab.setText(String.valueOf(number - 1));
+						}
+						arg0.startAnimation(animScale);
+						eTab.startAnimation(animScalet);
+					}
+
+				});
+
+		// When a user clicks on the plus sign next to the number of gigs they
+		// would like.
+		((Button) rootView.findViewById(R.id.tab_p))
+				.setOnClickListener(new OnClickListener() {
+
+					@Override
+					public void onClick(View arg0) {
+						int number = Integer
+								.parseInt(eTab.getText().toString());
+						eTab.setText(String.valueOf(number + 1));
+						arg0.startAnimation(animScale);
+						eTab.startAnimation(animScalet);
+					}
+
+				});
+
+		righttoleft.setAnimationListener(new AnimationListener() {
 
 			@Override
 			public void onAnimationEnd(Animation arg0) {
-				rootView.startAnimation(fadeOut);
-			}
-
-			@Override
-			public void onAnimationRepeat(Animation arg0) {
-
-			}
-
-			@Override
-			public void onAnimationStart(Animation arg0) {
-
-			}
-		});
-
-		fadeOut.setAnimationListener(new AnimationListener() {
-
-			@Override
-			public void onAnimationEnd(Animation arg0) {
+				
+				getCheckBoxes();
 
 				final TextView eSmart = (TextView) rootView
 						.findViewById(R.id.sphone_input);
@@ -212,19 +234,24 @@ public class QuoteFragment extends Fragment {
 						.findViewById(R.id.bphone_input);
 				final TextView eData = (TextView) rootView
 						.findViewById(R.id.data_input);
+				final TextView eTab = (TextView) rootView
+						.findViewById(R.id.tab_input);
 
 				final String smartString = eSmart.getText().toString();
 				final String basicString = eBasic.getText().toString();
 				final String gigsString = eData.getText().toString();
+				final String tabString = eTab.getText().toString();
 
-				final double smart = Double.parseDouble(smartString);
-				final double basic = Double.parseDouble(basicString);
-				final double gigs = Double.parseDouble(gigsString);
+				final int smart = Integer.parseInt(smartString);
+				final int basic = Integer.parseInt(basicString);
+				final int gigs = Integer.parseInt(gigsString);
+				final int tabs = Integer.parseInt(tabString);
 
 				final FragmentTransaction ft = getFragmentManager()
 						.beginTransaction();
-				ft.replace(R.id.fragment_container, DisplayMessageFragment
-						.create(smart, basic, gigs, hotspotCost, discount));
+				ft.replace(R.id.fragment_container,
+						DisplayMessageFragment.create(smart, basic, gigs, tabs,
+								hotspotCost, discount));
 				ft.addToBackStack(null);
 				ft.commit();
 				getFragmentManager().executePendingTransactions();
@@ -244,22 +271,26 @@ public class QuoteFragment extends Fragment {
 		return rootView;
 	}
 
-	public static void onCheck(boolean isit) {
+	public void getCheckBoxes() {
 
-		if (isit)
-			hotspotCost = 20;
-		else
+		final CheckBox hotbox = (CheckBox) rootView
+				.findViewById(R.id.checkbox_hotspot);
+		final CheckBox currentcarrier = (CheckBox) rootView
+				.findViewById(R.id.includecarrier);
+
+		if (hotbox.isChecked()) {
+			hotspotCost = 1;
+		} else
 			hotspotCost = 0;
-
+		
+		if (currentcarrier.isChecked()){
+			
+		}
+		
 	}
 
 	public void onDestroy() {
 		super.onDestroy();
-	}
-
-	/** Called when the user clicks the Send button */
-	public void sendMessage() {
-		send.startAnimation(scale);
 	}
 
 }

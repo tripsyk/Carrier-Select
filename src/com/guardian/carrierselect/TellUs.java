@@ -2,7 +2,6 @@ package com.guardian.carrierselect;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,8 +13,7 @@ import android.widget.TextView;
 
 public class TellUs extends Fragment {
 
-	private static Animation scalenext, fadeOut, fadeIn;
-	private static TextView next, tellus;
+	private static TextView next;
 	private static View rootView;
 
 	@Override
@@ -24,48 +22,28 @@ public class TellUs extends Fragment {
 		rootView = inflater.inflate(R.layout.tellus_layout, container, false);
 		getActivity().getActionBar().hide();
 
-		fadeIn = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.fadein);
+		// Load in animations.
+		final Animation righttoleft = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.right_to_left);
+		final Animation lefttoright = AnimationUtils.loadAnimation(
+				rootView.getContext(), R.anim.left_to_right);
 
-		rootView.startAnimation(fadeIn);
-
-		fadeOut = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.fadeout);
-		scalenext = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.scalenext);
+		// Load in TVs
 		next = (TextView) rootView.findViewById(R.id.next2);
-		tellus = (TextView) rootView.findViewById(R.id.tellus);
-		tellus.setTypeface(null, Typeface.ITALIC);
-		next.setTypeface(null, Typeface.ITALIC);
+
+		// Begin startup flow.
+		rootView.startAnimation(lefttoright);
 
 		next.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View view) {
-				next.startAnimation(scalenext);
+				rootView.startAnimation(righttoleft);
 
 			}
 		});
 
-		scalenext.setAnimationListener(new AnimationListener() {
-
-			@Override
-			public void onAnimationEnd(Animation arg0) {
-				rootView.startAnimation(fadeOut);
-			}
-
-			@Override
-			public void onAnimationRepeat(Animation arg0) {
-
-			}
-
-			@Override
-			public void onAnimationStart(Animation arg0) {
-
-			}
-		});
-
-		fadeOut.setAnimationListener(new AnimationListener() {
+		righttoleft.setAnimationListener(new AnimationListener() {
 
 			@Override
 			public void onAnimationEnd(Animation arg0) {

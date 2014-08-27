@@ -7,37 +7,60 @@
     <string name="bphone_message" />
     <string name="data_message" />
     <string name="button_send">Next ></string>
-    <string name="sphone_label">Number of smartphones?: </string>
-    <string name="data_label">How many gigs of data?: </string>
-    <string name="bphone_label">Number of basic phones?: </string>
+    <string name="sphone_label">Number of smartphones? </string>
+    <string name="data_label">How many GB of data? </string>
+    <string name="bphone_label">Number of basic phones? </string>
+    <string name="extras_label">Extras</string>
     <string name="sphone_input" />
     <string name="bphone_input" />
     <string name="data_input" />
     <string name="total_message">Quote Again</string>
     <string name="edit_message" />
     <string name="back_button">Quote Again</string>
-    <string name="ver_total" />
-    <string name="att_total" />
-    <string name="tmo_total" />
+    <string name="ver_pretotal">Verizon Monthly Cost</string>
+    <string name="att_pretotal">AT&amp;T Monthly Cost</string>
+    <string name="spr_pretotal">Sprint Monthly Cost</string>
+    <string name="tmo_pretotal">T-Mobile Monthly Cost</string>
+    <string name="serviceplans">Service Plans</string>
+    <string name="sp1title">Build Your Plan</string>
+    <string name="sp2title">Service Plan Quotes</string>
+    <string name="sp3title">Breakdown of Costs</string>
+    <string name="ver_total">Loading Total&#8230;</string>
+    <string name="att_total">Loading Total&#8230;</string>
+    <string name="spr_total">Loading Total&#8230;</string>
+    <string name="tmo_total">Loading Total&#8230;</string>
+    <string name="pvtype">Plan Type</string>
+    <string name="plandevices">Plan Supports</string>
+    <string name="pvtalktext">Talk and Text Amount</string>
+    <string name="pvdata">Shared Data Limit</string>
+    <string name="pvdatathrottle">High Speed Internet until</string>
+    <string name="pvoverages">Data Overage Costs</string>
+    <string name="pvetf">Early Termination Fee \n (Contracts)</string>
+    <string name="pvetfinstall">Early Termination Fee \n (Phone Installments)</string>
     <string name="logo_string">Carrier Select</string>
     <string name="checkbox_hotspot">Mobile Broadband?</string>
-    <string name="sprsoon">T-Mobile coming soon!</string>
-    <string name="breakdown_send">Next ></string>
-    <string name="att_breakdown_message" />
-    <string name="ver_breakdown_message" />
-    <string name="spr_total" />
-    <string name="spr_breakdown_message" />
-    <string name="tmo_breakdown_message" />
+    <string name="breakdown_send">Next</string>
+    <string name="att_breakdown_message">AT&amp;T Breakdown</string>
+    <string name="ver_breakdown_message">Verizon Breakdown</string>
+    <string name="spr_breakdown_message">Sprint Breakdown</string>
+    <string name="tmo_breakdown_message">T-Mobile Breakdown</string>
+    <string name="att_breakdowntitle">AT&amp;T Breakdown</string>
+    <string name="ver_breakdowntitle">Verizon Breakdown</string>
+    <string name="spr_breakdowntitle">Sprint Breakdown</string>
+    <string name="tmo_breakdowntitle">T-Mobile Breakdown</string>
     <string name="logo_desc">Carrier Select Logo</string>
     <string name="drawer_open">Open</string>
     <string name="drawer_close">close</string>
 
     <string-array name="menu_list">
-        <item>Home</item>
+        <item>News</item>
+        <item>My Profile</item>
         <item>PlanBuilder</item>
         <item>Service Plans</item>
         <item>No Contract Plans</item>
         <item>Phone Search</item>
+        <item>Knowledge Base</item>
+        <item>Settings</item>
         <item>About</item>
     </string-array>
 
@@ -53,10 +76,31 @@
     <string name="data_m">-</string>
     <string name="discount_text">Bill discount (employer, etc)?</string>
     <string name="dis_value">0%</string>
+    <string name="plancost">Core Plan Cost:</string>
+    <string name="smartcost">Line Access - Smart:</string>
+    <string name="basiccost">Line Access - Basic:</string>
+    <string name="phonecost">Line Access - Devices:</string>
+    <string name="datacost">Cost of Data:</string>
+    <string name="tabletcost">Line Access - Tablets:</string>
+    <string name="hotspotcost">Line Access - Hotspots:</string>
+    <string name="taxescost">Taxes &amp; Charges:</string>
+    <string name="discountcost">Employer Discount:</string>
+    <string name="total">Total:</string>
+    <string name="viewplan">View This Plan</string>
+    <string name="pvtitle">Service Plan Viewer</string>
+    <string name="pvsubtitle"></string>
     <string name="title_activity_start_screen">StartScreen</string>
-    <string name="hello_world">Hello world!</string>
     <string name="welcome">Welcome to Carrier Select</string>
+    <string name="welcomeback">Welcome back.</string>
+    <string name="homenews">News</string>
+    <string name="homesubtitle">News &amp; Updates on Everything Mobile</string>
+    <string name="newsupdatetitle">Current Plan Promotions</string>
+    <string name="planupdatetitle">Plan Search Updates</string>
+    <string name="phoneupdatetitle">Phone Search Updates</string>
+    <string name="kbupdatetitle">Knowledge Base Updates</string>
+    <string name="newstest">Loading Updates&#8230;</string>
     <string name="next1">Next &gt;</string>
+    <string name="viewbreakdown">View Breakdown</string>
     <string name="tellus">First, tell us a little about yourself.</string>
     <string name="next2">Next &gt;</string>
     <string name="next3">Next &gt;</string>
@@ -86,25 +130,58 @@
     <string name="pb">PlanBuilder</string>
     <string name="contract">Contract Plans</string>
     <string name="nocontract">No Contract Plans</string>
-    <string name="tools">Tools</string>
     <string name="about">About</string>
     <string name="pbicon">PlanBuilder</string>
+    <string name="next">Next</string>
     <string name="minstarter">0</string>
     <string name="min_label">How many minutes would you use?</string>
     <string name="text_label">How many texts would you use?</string>
     <string name="gig_label">How many gigs of data would you use?</string>
+    <string name="tab_label">How many tablets?</string>
+    <string name="includecarrier">Factor in current carrier</string>
     <string name="search">Phone Search</string>
-    <string name="searchTermHint">Tap to search for a phone</string>
-    <string name="searchGoBox">Go</string>
-    <string name="powered">Powered by Guardian-Project.com</string>
-    <string name="yourProfile">Your Profile</string>
-    <string name="yourcarrier">Carrier: Not set</string>
-    <string name="numsmartphones">Smartphones: Not set</string>
-    <string name="numbasicphones">Basic phones: Not set</string>
-    <string name="gigsofdata">Data usage: Not set</string>
-    <string name="monthlypayment">Monthly bill: Not set</string>
-    <string name="editprofile">Edit Profile</string>
-    <string name="pb2title">How many smartphones would you like?</string>
+    <string name="pssubtitle">Enter a phone to see technical specs</string>
+    <string name="searchTermHint">(ex. LG Optimus G Pro)</string>
+    <string name="searchGoBox">Search for Phone</string>
+    <string name="yourProfile">My Profile</string>
+    <string name="yourcarrier">Not Set</string>
+    <string name="numsmartphones">Not Set</string>
+    <string name="numbasicphones">Not Set</string>
+    <string name="gigsofdata">Not Set</string>
+    <string name="numtablets">Not Set</string>
+    <string name="monthlypayment">Not Set</string>
+    <string name="profilecarrier">My Carrier:</string>
+    <string name="profilesmart">My Smartphones:</string>
+    <string name="profilebasic">My Basic phones:</string>
+    <string name="profilegigs">My Data Plan:</string>
+    <string name="profiletablets">My Tablets:</string>
+    <string name="profilemonthly">My Monthly bill:</string>
+    <string name="editprofile">Edit My Profile</string>
+    <string name="homesave">Save My Profile</string>
+    <string name="editplan">Edit PlanBuilder Selections</string>
+    <string name="pb2title">Would you like a smart phone or a basic phone?</string>
+    <string name="pb3title">Around how many minutes do you need?</string>
+    <string name="pb4title">How about texting?</string>
+    <string name="pb5title">Okay, so you want a smartphone. How much data do you need?</string>
+    <string name="pb6title">Is it okay if your internet slows down after heavy usage or do you need max speed at all times?</string>
+    <string name="pb7title2">PlanBuilder Summary</string>
+    <string name="pb71">Smart</string>
+    <string name="pb72">Unlimited</string>
+    <string name="pb73">Unlimited</string>
+    <string name="pb74">Unlimited</string>
+    <string name="pb75">Yes</string>
+    <string name="pb7find">Search For My Plan</string>
+    <string name="planphone">Phones Supported:</string>
+    <string name="planmins">Minutes Included:</string>
+    <string name="plantext">Texting Included:</string>
+    <string name="plandata">Data Included:</string>
+    <string name="planthrottle">Slows Data:</string>
+    <string name="network">Network Type:</string>
+    <string name="phonetype">Phone:</string>
+    <string name="minutes">Minutes:</string>
+    <string name="texts">Texts:</string>
+    <string name="data">Data:</string>
+    <string name="throttle">Throttle:</string>
     <string name="zero">None</string>
     <string name="one">One</string>
     <string name="two">Two</string>
@@ -144,12 +221,129 @@
     <string name="eightgig">8GB</string>
     <string name="ninegig">9GB</string>
     <string name="tengig">10GB</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
     <string name="carriertitle">Which carrier do you currently reside on?</string>
     <string name="smartphonestitle">How many smartphones do you have?</string>
     <string name="basicphonestitle">How many basic phones do you have?</string>
     <string name="datatitle">How much data do you have/use between all phones?</string>
-    <string name="monthlytitle">How much do you pay on average per month?</string>
+    <string name="monthlytitle">How much do you pay on average per month for your mobile service?</string>
+    <string name="nodatadesc">I don\'t need any internet access.</string>
+    <string name="onegigdesc">I\'m a light user. I use maps, e-mail, and web browse occasionally.</string>
+    <string name="twogigdesc">I\'m a moderate user. I use maps, e-mail, upload/view pictures, and web browse frequently.</string>
+    <string name="threegigdesc">I\'m a pretty heavy user. I use every aspect of my phone a moderate amount.</string>
+    <string name="unlgigdesc">I need unlimited. I stream music, watch videos, upload tons of photos, and much more.</string>
     <string name="blankstring"></string>
     <string name="monthlyhint">Enter monthly bill</string>
+    <string name="smartphone">Smartphone</string>
+    <string name="basicphone">Basicphone</string>
+    <string name="limited">Limited</string>
+    <string name="settings">Settings</string>
+    <string name="pushnotifs">Notifications on potential plan savings</string>
+    <string name="offlineset">Enable offline searching</string>
+    <string name="downloadset">Download</string>
+    <string name="unlimited">Unlimited</string>
+    <string name="limtextdesc">I don\'t need an infinite amount of texts. I\'m a light to moderate texter.</string>
+    <string name="unltextdesc">Texting is my primary form of communication. I need it to be unlimited.</string>
+    <string name="smartdesc">My phone has to have apps, make calls, text, and get the internet.</string>
+    <string name="basicdesc">I only really use my phone for calls and text. A flip or slide phone is best for me.</string>
+    <string name="unlimmindesc">I need unlimited minutes. I talk to a lot of people on a lot of different carriers.</string>
+    <string name="limmindesc">I can handle a limited amount of minutes. I don\'t talk on the phone much this day in age.</string>
+    <string name="yesthrottle">You can slow it down after heavy monthly usage if it reduces the price.</string>
+    <string name="nothrottle">I want max speeds at all times, no questions asked. I don\'t mind if it raises the price.</string>
+    <string name="equipnotice">Prices include no equipment. Click for more info.</string>
+    <string name="cswebsite">CarrierSelectApp.com</string>
+    <string name="writtenby">Created by Steve Gregos</string>
+    <string name="updateTV">Check for plan updates</string>
+    <string name="kb">Knowledge Base</string>
+    <string name="kbsub">The mobile plan Q&amp;A center</string>
+    <string name="nocontracttitle">No Contract Plans</string>
+    <string name="ncresultstitle">Carrier Name</string>
+    <string name="ncresultsdesc">Plan details</string>
+    <string name="ncsubtitle">The Prepaid Plan Browser</string>
+    <string name="nctitlesub">Select a plan from the list below</string>
+    <string name="aboutp1">Carrier Select is an effort from an experienced member of the wireless industry to help everyday people make choices easier. \n\n Carrier Select was built on the pillars of user-friendliness and beautiful design. I wanted to make choosing a mobile plan for people fun, beautiful, exact, and most of all, simple. Talking to someone about mobile plans is like listening to someone speak a different language. Researching them online only leaves you more confused than when you started. \n\n Let me do all of the hard work for you. Welcome to Carrier Select.</string>
+
+    <string-array name="nocontractarray">
+        <item>AT&amp;T</item>
+        <item>Verizon Wireless</item>
+        <item>T-Mobile</item>
+        <item>Sprint</item>
+        <item>Boost Mobile</item>
+        <item>Virgin Mobile</item>
+        <item>Net10</item>
+        <item>MetroPCS</item>
+        <item>PayLo</item>
+        <item>Tracfone</item>
+        <item>SIMple Mobile</item>
+        <item>H20</item>
+        <item>Republic Wireless</item>
+        <item>Straight Talk</item>
+        <item>Page Plus</item>
+        <item>Platinum Tel</item>
+        <item>Kajeet</item>
+        <item>Red Pocket Mobile</item>
+        <item>Cricket</item>
+        <item>EcoMobile</item>
+        <item>GoSmart Mobile</item>
+        <item>Pure TalkUSA</item>
+    </string-array>
+
+    <string name="nc2title">No Contract Plan Results</string>
+    <string name="ncresultshint">ATT\nPhone Type: Test\nMinutes: Test\n Texts: Test\nData: Test\n Throttle: Test</string>
+    <string name="nc21title">$30/month plan </string>
+    <string name="nc22title">$35/month plan </string>
+    <string name="nc23title">$40/month plan </string>
+    <string name="nc24title">$45/month plan </string>
+    <string name="nc25title">$50/month plan </string>
+    <string name="nc26title">$55/month plan </string>
+    <string name="nc27title">$60/month plan </string>
+    <string name="loadingplan">Loading Plan&#8230;</string>
+    <string name="loadingprices">Loading Prices&#8230;</string>
+    <string name="ps2title">Phone Lookup Results</string>
+    <string name="ps2subtitle">Showing 0 results for</string>
+    <string name="ps2resultstitle"></string>
+    <string name="ps1subtitle">The Phone Detail Database</string>
+    <string name="ps21">Loading Phone&#8230;</string>
+    <string name="ps22">Loading Phone&#8230;</string>
+    <string name="ps23">Loading Phone&#8230;</string>
+    <string name="ps24">Loading Phone&#8230;</string>
+    <string name="ps25">Loading Phone&#8230;</string>
+    <string name="ps3title">Phone Lookup</string>
+    <string name="ps3mantitle"></string>
+    <string name="ps3carrier"></string>
+    <string name="comparephone">Compare this phone</string>
+    <string name="test">None</string>
+    <string name="designinfo">Design &amp; Info</string>
+    <string name="releasedate">Release Date:</string>
+    <string name="os">Operating System:</string>
+    <string name="dimensions">Dimensions:</string>
+    <string name="thickness">Thickness:</string>
+    <string name="weight">Weight:</string>
+    <string name="display">Display</string>
+    <string name="displaysize">Display Size:</string>
+    <string name="resolution">Screen Resolution:</string>
+    <string name="pixden">Pixel Density:</string>
+    <string name="camera">Camera</string>
+    <string name="backcam">Rear Camera:</string>
+    <string name="frontcam">Front-facing Camera:</string>
+    <string name="video">Video Quality:</string>
+    <string name="hardware">Hardware</string>
+    <string name="processor">Processor:</string>
+    <string name="ram">RAM:</string>
+    <string name="storage">Built-in Storage:</string>
+    <string name="battery">Battery Size:</string>
+    <string name="microsd">MicroSD Slot:</string>
+    <string name="features">Features</string>
+    <string name="imagestab">Image Stabilizing:</string>
+    <string name="nfc">NFC:</string>
+    <string name="infra">Infrared Shooter:</string>
+    <string name="wireless">Wireless Charging:</string>
+    <string name="bt">Bluetooth:</string>
+    <string name="noisecanceling">Active Noise Canceling:</string>
+    <string name="sensors">Device Sensors:</string>
+    <string name="kbsearchgo">Search for topic</string>
+    <string name="kbsearchhint">(ex. Installment Billing)</string>
+    <string name="kbsearch">Enter a topic you would like to know more about</string>
 
 </resources>

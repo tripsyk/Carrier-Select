@@ -5,7 +5,6 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,16 +13,13 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 public class DataSelector extends Fragment {
 
-	private static Animation fadeOut, fadeIn;
 	private static View rootView;
 	private static LinearLayout zerodatabox, onedatabox, twodatabox, threedatabox,
 			fourdatabox, fivedatabox, sixdatabox, sevendatabox,
 			eightdatabox, ninedatabox, tendatabox;
-	private static TextView gigstitle;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,15 +33,14 @@ public class DataSelector extends Fragment {
 				Context.MODE_PRIVATE);
 		final SharedPreferences.Editor editor = sharedPref.edit();
 
-		// Declare animations
-		fadeIn = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.fadein);
-		fadeOut = AnimationUtils.loadAnimation(rootView.getContext(),
-				R.anim.fadeout);
+		// Load in animations.
+		final Animation righttoleft = AnimationUtils.loadAnimation(rootView.getContext(),
+				R.anim.right_to_left);
+		final Animation lefttoright = AnimationUtils.loadAnimation(rootView.getContext(),
+				R.anim.left_to_right);
 
-		// Declare TextViews
-		gigstitle = (TextView) rootView.findViewById(R.id.yourdataplan);
-		gigstitle.setTypeface(null, Typeface.ITALIC);
+		// Begin startup flow.
+		rootView.startAnimation(lefttoright);
 
 		// Declare LinearLayouts
 		zerodatabox = (LinearLayout) rootView.findViewById(R.id.zerodatabox);
@@ -63,10 +58,9 @@ public class DataSelector extends Fragment {
 		ninedatabox = (LinearLayout) rootView.findViewById(R.id.ninedatabox);
 		tendatabox = (LinearLayout) rootView.findViewById(R.id.tendatabox);
 
-		rootView.startAnimation(fadeIn);
 
 		// Set animation listeners for fragment
-		fadeOut.setAnimationListener(new AnimationListener() {
+		righttoleft.setAnimationListener(new AnimationListener() {
 
 			@Override
 			public void onAnimationEnd(Animation arg0) {
@@ -98,7 +92,7 @@ public class DataSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("data", 0);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 
 			}
 		});
@@ -108,7 +102,7 @@ public class DataSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("data", 1);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 
 			}
 		});
@@ -118,7 +112,7 @@ public class DataSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("data", 2);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
@@ -127,7 +121,7 @@ public class DataSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("data", 3);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
@@ -136,7 +130,7 @@ public class DataSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("data", 4);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
@@ -145,7 +139,7 @@ public class DataSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("data", 5);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
@@ -154,7 +148,7 @@ public class DataSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("data", 6);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
@@ -163,7 +157,7 @@ public class DataSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("data", 7);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
@@ -172,7 +166,7 @@ public class DataSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("data", 8);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
@@ -181,7 +175,7 @@ public class DataSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("data", 9);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 
@@ -190,7 +184,7 @@ public class DataSelector extends Fragment {
 			public void onClick(View v) {
 				editor.putInt("data", 10);
 				editor.commit();
-				rootView.startAnimation(fadeOut);
+				rootView.startAnimation(righttoleft);
 			}
 		});
 

@@ -1,62 +1,1012 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_centerInParent="true"
-    android:layout_gravity="center_horizontal"
-    android:background="@color/white_color"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="10dip" >
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/titlenoback"
+    android:overScrollFooter="@color/white_color"
+    android:overScrollHeader="@color/white_color" >
 
-    <TextView
-        android:id="@+id/contract_plans"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/breakdownlayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:hint="@string/contract_plans"
-        android:text="@string/contract_plans"
-        android:textColor="@color/titlenoback"
-        android:textSize="@dimen/title_dimens" />
+        android:orientation="vertical"
+        android:padding="30dip" >
 
-    <TextView
-        android:id="@+id/att_breakdown_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dip"
-        android:gravity="center"
-        android:hint="@string/att_breakdown_message"
-        android:textColor="@color/titlenoback"
-        android:textSize="@dimen/breakdown_dimens" />
+        <TextView
+            android:id="@+id/contract_plans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:hint="@string/sp3title"
+            android:text="@string/sp3title"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/title_dimens" />
 
-    <TextView
-        android:id="@+id/ver_breakdown_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dip"
-        android:gravity="center"
-        android:hint="@string/ver_breakdown_message"
-        android:textColor="@color/titlenoback"
-        android:textSize="@dimen/breakdown_dimens" />
+        <TextView
+            android:id="@+id/att_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:hint="@string/att_breakdowntitle"
+            android:padding="5dip"
+            android:text="@string/att_breakdowntitle"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/midtitle"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/spr_breakdown_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dip"
-        android:gravity="center"
-        android:hint="@string/spr_breakdown_message"
-        android:textColor="@color/titlenoback"
-        android:textSize="@dimen/breakdown_dimens" />
+        <LinearLayout
+            android:id="@+id/attquotebox"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/contentback"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:padding="10dip" >
 
-    <TextView
-        android:id="@+id/tmo_breakdown_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dip"
-        android:gravity="center"
-        android:hint="@string/tmo_breakdown_message"
-        android:textColor="@color/titlenoback"
-        android:textSize="@dimen/breakdown_dimens" />
+            <LinearLayout
+                android:id="@+id/attplanbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
 
-</LinearLayout>
+                <TextView
+                    android:id="@+id/attplanpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/plancost"
+                    android:text="@string/plancost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/attplan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/attsmartbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/attsmartpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/smartcost"
+                    android:text="@string/smartcost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/attsmart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/attbasicbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/attbasicpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/basiccost"
+                    android:text="@string/basiccost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/attbasic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/atttabletbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/atttabletpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/tabletcost"
+                    android:text="@string/tabletcost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/atttablet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/attmifibox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/attmifipre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/hotspotcost"
+                    android:text="@string/hotspotcost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/attmifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/atttaxbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/atttaxpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/taxescost"
+                    android:text="@string/taxescost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/atttax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/attdiscountbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/attdiscountpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/discountcost"
+                    android:text="@string/discountcost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/attdiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/lineblue"
+                android:gravity="center"
+                android:hint=""
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/atttotalbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/atttotalpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/total"
+                    android:text="@string/total"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/atttotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/gotoatt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/contentback"
+            android:gravity="center"
+            android:hint="@string/viewplan"
+            android:padding="10dip"
+            android:text="@string/viewplan"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/subtitle_dimens" />
+
+        <TextView
+            android:id="@+id/ver_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:hint="@string/ver_breakdowntitle"
+            android:padding="5dip"
+            android:text="@string/ver_breakdowntitle"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/midtitle"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/verquotebox"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/contentback"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <LinearLayout
+                android:id="@+id/verplanbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/verplanpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/plancost"
+                    android:text="@string/plancost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/verplan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/versmartbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/versmartpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/smartcost"
+                    android:text="@string/smartcost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/versmart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/verbasicbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/verbasicpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/basiccost"
+                    android:text="@string/basiccost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/verbasic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vertabletbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/vertabletpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/tabletcost"
+                    android:text="@string/tabletcost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/vertablet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vermifibox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/vermifipre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/hotspotcost"
+                    android:text="@string/hotspotcost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/vermifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vertaxbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/vertaxpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/taxescost"
+                    android:text="@string/taxescost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/vertax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/verdiscountbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/verdiscountpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/discountcost"
+                    android:text="@string/discountcost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/verdiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/lineblue"
+                android:gravity="center"
+                android:hint=""
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/vertotalbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/vertotalpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/total"
+                    android:text="@string/total"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/vertotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/gotover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/contentback"
+            android:gravity="center"
+            android:hint="@string/viewplan"
+            android:padding="10dip"
+            android:text="@string/viewplan"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/subtitle_dimens" />
+
+        <TextView
+            android:id="@+id/spr_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:hint="@string/spr_breakdowntitle"
+            android:padding="5dip"
+            android:text="@string/spr_breakdowntitle"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/midtitle"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/sprquotebox"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/contentback"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <LinearLayout
+                android:id="@+id/sprplanbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/sprplanpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/plancost"
+                    android:text="@string/plancost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/sprplan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sprsmartbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/sprsmartpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/smartcost"
+                    android:text="@string/smartcost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/sprsmart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sprbasicbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/sprbasicpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/basiccost"
+                    android:text="@string/basiccost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/sprbasic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sprtabletbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/sprtabletpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/tabletcost"
+                    android:text="@string/tabletcost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/sprtablet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sprmifibox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/sprmifipre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/hotspotcost"
+                    android:text="@string/hotspotcost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/sprmifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sprtaxbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/sprtaxpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/taxescost"
+                    android:text="@string/taxescost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/sprtax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sprdiscountbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/sprdiscountpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/discountcost"
+                    android:text="@string/discountcost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/sprdiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/lineblue"
+                android:gravity="center"
+                android:hint=""
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/sprtotalbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/sprtotalpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/total"
+                    android:text="@string/total"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/sprtotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/gotospr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/contentback"
+            android:gravity="center"
+            android:hint="@string/viewplan"
+            android:padding="10dip"
+            android:text="@string/viewplan"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/subtitle_dimens" />
+
+        <TextView
+            android:id="@+id/tmo_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dip"
+            android:gravity="center"
+            android:hint="@string/tmo_breakdowntitle"
+            android:padding="5dip"
+            android:text="@string/tmo_breakdowntitle"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/midtitle"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/tmoquotebox"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/contentback"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <LinearLayout
+                android:id="@+id/tmoplanbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tmoplanpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/datacost"
+                    android:text="@string/datacost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/tmoplan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tmophonebox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tmophonepre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/phonecost"
+                    android:text="@string/phonecost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/tmophone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tmotaxbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tmotaxpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/taxescost"
+                    android:text="@string/taxescost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/tmotax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tmodiscountbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tmodiscountpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/discountcost"
+                    android:text="@string/discountcost"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/tmodiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/lineblue"
+                android:gravity="center"
+                android:hint=""
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/tmototalbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tmototalpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:hint="@string/total"
+                    android:text="@string/total"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/tmototal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dip"
+                    android:gravity="right"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/gototmo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/contentback"
+            android:gravity="center"
+            android:hint="@string/viewplan"
+            android:padding="10dip"
+            android:text="@string/viewplan"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/subtitle_dimens" />
+    </LinearLayout>
+
+</ScrollView>

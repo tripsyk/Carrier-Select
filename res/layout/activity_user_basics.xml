@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/titlenoback"
     android:overScrollFooter="@color/white_color"
     android:overScrollHeader="@color/white_color" >
 
@@ -9,7 +10,6 @@
         android:id="@+id/basics"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/welcome_back"
         android:orientation="vertical"
         android:padding="30dip" >
 
@@ -27,9 +27,8 @@
                 android:gravity="center"
                 android:hint="@string/profile"
                 android:text="@string/profile"
-                android:textColor="@color/titlenoback"
-                android:textSize="@dimen/title_dimens"
-                android:textStyle="bold" />
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/title_dimens"/>
         </LinearLayout>
 
         <LinearLayout
@@ -38,7 +37,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dip"
-            android:background="@drawable/splashborder"
+            android:padding="10dip"
+            android:background="@drawable/contentback"
             android:clickable="true"
             android:orientation="vertical" >
 
@@ -70,7 +70,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="8dip"
-            android:background="@drawable/splashborder"
+            android:padding="10dip"
+            android:background="@drawable/contentback"
             android:clickable="true"
             android:orientation="vertical" >
 
@@ -102,8 +103,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="8dip"
+            android:padding="10dip"
             android:layout_weight="0.00"
-            android:background="@drawable/splashborder"
+            android:background="@drawable/contentback"
             android:clickable="true"
             android:orientation="vertical" >
 
