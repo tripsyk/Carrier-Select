@@ -17,7 +17,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:background="@color/titlenoback"
+            android:gravity="center"
             android:orientation="vertical" >
 
             <TextView
@@ -81,7 +83,7 @@
                 android:id="@+id/verdisplaybox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dip"
+                android:layout_marginTop="10dip"
                 android:background="@drawable/contentback"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -115,7 +117,7 @@
                 android:id="@+id/sprdisplaybox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dip"
+                android:layout_marginTop="10dip"
                 android:background="@drawable/contentback"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -149,7 +151,8 @@
                 android:id="@+id/tmodisplaybox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dip"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
                 android:background="@drawable/contentback"
                 android:gravity="center"
                 android:orientation="vertical"
@@ -178,6 +181,12 @@
                     android:textSize="@dimen/midtitle"
                     android:textStyle="bold" />
             </LinearLayout>
+
+            <com.applovin.adview.AppLovinAdView
+                xmlns:applovin="http://schemas.applovin.com/android/1.0"
+                android:layout_width="250dip"
+                android:layout_height="wrap_content"
+                applovin:loadAdOnCreate="true" />
         </LinearLayout>
 
         <LinearLayout
@@ -188,8 +197,8 @@
             android:layout_marginTop="20dip"
             android:background="@drawable/contentback"
             android:gravity="center"
-            android:padding="10dip"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:padding="10dip" >
 
             <TextView
                 android:id="@+id/breakdown_send"

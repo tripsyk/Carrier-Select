@@ -36,8 +36,8 @@
                 android:id="@+id/ps2subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dip"
                 android:layout_gravity="center"
+                android:layout_marginRight="5dip"
                 android:gravity="center"
                 android:hint="@string/ps2subtitle"
                 android:text="@string/ps2subtitle"
@@ -68,7 +68,7 @@
                 android:id="@+id/ps21"
                 android:layout_width="250dip"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dip"
+                android:layout_marginTop="10dip"
                 android:background="@drawable/contentback"
                 android:gravity="center"
                 android:hint="@string/loadingphone"
@@ -120,7 +120,7 @@
                 android:id="@+id/ps25"
                 android:layout_width="250dip"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dip"
+                android:layout_marginBottom="10dip"
                 android:layout_marginTop="6dip"
                 android:background="@drawable/contentback"
                 android:gravity="center"
@@ -130,6 +130,14 @@
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/breakdown_dimens" />
         </LinearLayout>
+
+        <com.applovin.adview.AppLovinAdView
+            xmlns:applovin="http://schemas.applovin.com/android/1.0"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="10dip"
+            applovin:loadAdOnCreate="true" />
     </LinearLayout>
 
 </ScrollView>

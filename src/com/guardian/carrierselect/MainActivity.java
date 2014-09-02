@@ -15,6 +15,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.applovin.adview.AppLovinInterstitialAd;
+import com.applovin.adview.AppLovinInterstitialAdDialog;
+import com.applovin.sdk.AppLovinSdk;
 import com.parse.Parse;
 import com.parse.ParseAnalytics;
 
@@ -29,9 +32,9 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
 		getActionBar().setTitle("News");
 
+		AppLovinSdk.initializeSdk(getApplicationContext());
 		Parse.initialize(getApplicationContext(),
 				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
 				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");

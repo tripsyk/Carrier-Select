@@ -2,6 +2,7 @@ package com.guardian.carrierselect;
 
 import java.util.List;
 
+import com.applovin.adview.AppLovinInterstitialAd;
 import com.guardian.carrierselect.model.Phone;
 import com.parse.FindCallback;
 import com.parse.Parse;
@@ -124,6 +125,9 @@ public class PhoneSearch3 extends Fragment {
 
 		// Begin startup flow.
 		rootView.startAnimation(lefttoright);
+		
+		AppLovinInterstitialAd.show(getActivity());
+		
 		performSearch();
 
 		return rootView;

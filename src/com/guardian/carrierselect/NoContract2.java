@@ -16,6 +16,10 @@ import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.applovin.adview.AppLovinAdView;
+import com.applovin.adview.AppLovinInterstitialAd;
+import com.applovin.sdk.AppLovinAdSize;
+import com.applovin.sdk.AppLovinSdk;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
@@ -31,13 +35,15 @@ public class NoContract2 extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		rootView = inflater.inflate(R.layout.nocontract2, container, false);
-
+		
 		// Load in animations.
 		final Animation lefttoright = AnimationUtils.loadAnimation(
 				rootView.getContext(), R.anim.left_to_right);
 
 		// Begin startup flow.
 		rootView.startAnimation(lefttoright);
+		
+		AppLovinInterstitialAd.show(getActivity());
 
 		final SharedPreferences sharedPref = getActivity().getPreferences(
 				Context.MODE_PRIVATE);
@@ -257,6 +263,16 @@ public class NoContract2 extends Fragment {
 						nc23data.setText(PlanList.get(2).getString("Data"));
 						nc23throttle.setText(PlanList.get(2).getString(
 								"Throttle"));
+						
+						AppLovinSdk sdk = AppLovinSdk.getInstance(rootView.getContext());
+
+						AppLovinAdView adView = new AppLovinAdView(sdk, AppLovinAdSize.BANNER, getActivity());
+						adView.loadNextAd();
+
+						// Add the view into the layout
+						final ViewGroup adHome = (ViewGroup) rootView.findViewById( R.id.nc23box );
+						adHome.addView( adView );
+					
 					}
 
 					if (PlanList.size() == 4) {
@@ -345,6 +361,23 @@ public class NoContract2 extends Fragment {
 						nc25data.setText(PlanList.get(4).getString("Data"));
 						nc25throttle.setText(PlanList.get(4).getString(
 								"Throttle"));
+						
+						AppLovinSdk sdk = AppLovinSdk.getInstance(rootView.getContext());
+
+						AppLovinAdView adView = new AppLovinAdView(sdk, AppLovinAdSize.BANNER, getActivity());
+						adView.loadNextAd();
+
+						// Add the view into the layout
+						final ViewGroup adHome = (ViewGroup) rootView.findViewById( R.id.nc23box );
+						adHome.addView( adView );
+						
+						
+						AppLovinAdView adView2 = new AppLovinAdView(sdk, AppLovinAdSize.BANNER, getActivity());
+						adView2.loadNextAd();
+
+						// Add the view into the layout
+						final ViewGroup adHome2 = (ViewGroup) rootView.findViewById( R.id.nc25box );
+						adHome2.addView( adView2 );
 					}
 
 					if (PlanList.size() == 6) {
@@ -457,6 +490,30 @@ public class NoContract2 extends Fragment {
 						nc27data.setText(PlanList.get(6).getString("Data"));
 						nc27throttle.setText(PlanList.get(6).getString(
 								"Throttle"));
+						
+						AppLovinSdk sdk = AppLovinSdk.getInstance(rootView.getContext());
+
+						AppLovinAdView adView = new AppLovinAdView(sdk, AppLovinAdSize.BANNER, getActivity());
+						adView.loadNextAd();
+
+						// Add the view into the layout
+						final ViewGroup adHome = (ViewGroup) rootView.findViewById( R.id.nc23box );
+						adHome.addView(adView);
+						
+						
+						AppLovinAdView adView2 = new AppLovinAdView(sdk, AppLovinAdSize.BANNER, getActivity());
+						adView2.loadNextAd();
+
+						// Add the view into the layout
+						final ViewGroup adHome2 = (ViewGroup) rootView.findViewById( R.id.nc25box );
+						adHome2.addView(adView2);
+						
+						AppLovinAdView adView3 = new AppLovinAdView(sdk, AppLovinAdSize.BANNER, getActivity());
+						adView3.loadNextAd();
+
+						// Add the view into the layout
+						final ViewGroup adHome3 = (ViewGroup) rootView.findViewById( R.id.nc27box );
+						adHome3.addView(adView3);
 					}
 					progress.dismiss();
 				}

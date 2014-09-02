@@ -557,6 +557,13 @@
             android:textColor="@color/white_color"
             android:textSize="@dimen/subtitle_dimens" />
 
+        <com.applovin.adview.AppLovinAdView
+            xmlns:applovin="http://schemas.applovin.com/android/1.0"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            applovin:loadAdOnCreate="true" />
+
         <TextView
             android:id="@+id/spr_title"
             android:layout_width="wrap_content"
@@ -1007,6 +1014,13 @@
             android:text="@string/viewplan"
             android:textColor="@color/white_color"
             android:textSize="@dimen/subtitle_dimens" />
+
+        <com.applovin.adview.AppLovinAdView
+            xmlns:applovin="http://schemas.applovin.com/android/1.0"
+            android:layout_width="250dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            applovin:loadAdOnCreate="true" />
     </LinearLayout>
 
 </ScrollView>

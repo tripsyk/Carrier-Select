@@ -2,6 +2,7 @@ package com.guardian.carrierselect;
 
 import java.util.List;
 
+import com.applovin.adview.AppLovinInterstitialAd;
 import com.guardian.carrierselect.model.Phone;
 import com.parse.FindCallback;
 import com.parse.Parse;
@@ -64,6 +65,8 @@ public class BreakdownFragment extends Fragment {
 
 		// Begin startup flow.
 		rootView.startAnimation(lefttoright);
+		
+		AppLovinInterstitialAd.show(getActivity());
 
 		final TextView att_title = (TextView) rootView
 				.findViewById(R.id.att_title);
