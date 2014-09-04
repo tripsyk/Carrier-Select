@@ -16,7 +16,7 @@ import android.widget.TextView;
 public class MyProfile extends Fragment {
 
 	private static View rootView;
-	private static TextView theCarrier, theSmarts, theBasics, theData,
+	private static TextView theCarrier, theSmarts, theBasics, theData, theTabs, 
 			theMonthly;
 
 	@Override
@@ -45,6 +45,7 @@ public class MyProfile extends Fragment {
 		theSmarts = (TextView) rootView.findViewById(R.id.numsmartphones);
 		theBasics = (TextView) rootView.findViewById(R.id.numbasicphones);
 		theData = (TextView) rootView.findViewById(R.id.gigsofdata);
+		theTabs = (TextView) rootView.findViewById(R.id.numtablets);
 		theMonthly = (TextView) rootView.findViewById(R.id.monthlybill);
 		final TextView edit = (TextView) rootView
 				.findViewById(R.id.editprofile);
@@ -116,16 +117,20 @@ public class MyProfile extends Fragment {
 		}
 
 		// Set the appropriate Smartphones on the homescreen
-		int smartphones = sharedPref.getInt("smart", 0);
+		String smartphones = sharedPref.getString("smart", "Not Set");
 		theSmarts.setText(String.valueOf(smartphones));
 
 		// Set the appropriate Basic phones on the homescreen
-		int basicphones = sharedPref.getInt("basic", 0);
+		String basicphones = sharedPref.getString("basic", "Not Set");
 		theBasics.setText(String.valueOf(basicphones));
 
 		// Set the appropriate data usage on the homescreen
-		int thegigs = sharedPref.getInt("data", 0);
-		theData.setText(String.valueOf(thegigs) + "GB");
+		String thegigs = sharedPref.getString("data", "Not Set");
+		theData.setText(thegigs);
+		
+		// Set the appropriate data usage on the homescreen
+		String tabs = sharedPref.getString("tabs", "Not Set");
+		theTabs.setText(tabs);
 
 		// Set the appropriate monthly bill on the homescreen
 		int monthly = sharedPref.getInt("monthly", 0);

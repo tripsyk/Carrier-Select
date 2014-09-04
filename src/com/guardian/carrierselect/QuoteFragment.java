@@ -16,6 +16,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class QuoteFragment extends Fragment {
 
@@ -86,7 +87,16 @@ public class QuoteFragment extends Fragment {
 
 					@Override
 					public void onClick(View arg0) {
-						rootView.startAnimation(righttoleft);
+						
+						int smart = Integer.valueOf(eSmart.getText().toString());
+						int basic = Integer.valueOf(eBasic.getText().toString());
+						
+						if ((smart + basic) == 0){
+							Toast.makeText(rootView.getContext(), "You must have at least 1 phone on a plan.",
+									   Toast.LENGTH_SHORT).show();
+						} else {
+							rootView.startAnimation(righttoleft);
+						}
 					}
 
 				});

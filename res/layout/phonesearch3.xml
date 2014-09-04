@@ -15,14 +15,26 @@
         android:padding="30dip" >
 
         <TextView
-            android:id="@+id/ps3title"
+            android:id="@+id/pstitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint="@string/ps3title"
-            android:text="@string/ps3title"
+            android:gravity="center"
+            android:hint="@string/search"
+            android:text="@string/search"
             android:textColor="@color/white_color"
             android:textSize="@dimen/title_dimens" />
+
+        <TextView
+            android:id="@+id/pssubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/pssubtitle"
+            android:text="@string/pssubtitle"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/subtitle_dimens" />
 
         <LinearLayout
             android:id="@+id/ps3phonebox"
@@ -384,31 +396,31 @@
                     android:text="@string/blankstring"
                     android:textColor="@color/white_color"
                     android:textSize="@dimen/breakdown_dimens" />
+
+                <TextView
+                    android:id="@+id/video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dip"
+                    android:gravity="center"
+                    android:hint="@string/video"
+                    android:text="@string/video"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/readable"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/videotext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/breakdown_dimens" />
             </LinearLayout>
-
-            <TextView
-                android:id="@+id/video"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dip"
-                android:gravity="center"
-                android:hint="@string/video"
-                android:text="@string/video"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/readable"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/videotext"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/blankstring"
-                android:text="@string/blankstring"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/breakdown_dimens" />
 
             <TextView
                 android:id="@+id/hardware"
@@ -555,12 +567,21 @@
                     android:textSize="@dimen/breakdown_dimens" />
             </LinearLayout>
 
+            <com.applovin.adview.AppLovinAdView
+                xmlns:applovin="http://schemas.applovin.com/android/1.0"
+                android:layout_width="250dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip"
+                applovin:loadAdOnCreate="true" />
+
             <TextView
                 android:id="@+id/features"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dip"
+                android:layout_marginTop="10dip"
                 android:gravity="center"
                 android:hint="@string/features"
                 android:text="@string/features"

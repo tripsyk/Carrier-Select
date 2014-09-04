@@ -71,6 +71,7 @@
             android:background="@drawable/contentback"
             android:entries="@array/nocontractarray"
             android:gravity="center"
+            android:spinnerMode="dropdown"
             android:paddingBottom="5dip"
             android:paddingTop="5dip"
             android:popupBackground="@android:color/transparent" />

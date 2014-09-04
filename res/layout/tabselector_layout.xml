@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/titlenoback"
+    android:overScrollFooter="@color/white_color"
+    android:overScrollHeader="@color/white_color" >
+
+    <LinearLayout
+        android:id="@+id/selectortabbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dip" >
+
+        <TextView
+            android:id="@+id/yourtabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/tabstitle"
+            android:text="@string/tabstitle"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/midtitle" />
+
+        <TextView
+            android:id="@+id/tabselectorsub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="75dip"
+            android:gravity="center"
+            android:hint="@string/phonesub"
+            android:text="@string/phonesub"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/subtitle_dimens" />
+
+        <Spinner
+            android:id="@+id/tabspinner"
+            android:layout_width="200dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dip"
+            android:background="@drawable/contentback"
+            android:entries="@array/phonespinner"
+            android:gravity="center"
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:popupBackground="@android:color/transparent"
+            android:spinnerMode="dropdown" />
+
+        <TextView
+            android:id="@+id/next"
+            android:layout_width="70dip"
+            android:layout_height="50dip"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dip"
+            android:background="@drawable/contentback"
+            android:gravity="center"
+            android:hint="@string/next"
+            android:padding="10dip"
+            android:text="@string/next"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/next" />
+    </LinearLayout>
+
+</ScrollView>

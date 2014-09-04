@@ -40,10 +40,10 @@ public class NoContract1 extends Fragment {
 				Context.MODE_PRIVATE);
 		final SharedPreferences.Editor editor = sharedPref.edit();
 
-		final Spinner spinner = (Spinner) rootView
-				.findViewById(R.id.carrierspinner);
 		final LinearLayout next = (LinearLayout) rootView
 				.findViewById(R.id.nextnc1box);
+		final Spinner spinner = (Spinner) rootView
+				.findViewById(R.id.carrierspinner);
 
 		// Create an ArrayAdapter using the string array and a default spinner
 		// layout

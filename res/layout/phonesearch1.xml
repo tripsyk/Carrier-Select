@@ -15,7 +15,7 @@
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/ps1title"
+            android:id="@+id/pstitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -26,13 +26,13 @@
             android:textSize="@dimen/title_dimens" />
 
         <TextView
-            android:id="@+id/ps1subtitle"
+            android:id="@+id/pssubtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:hint="@string/ps1subtitle"
-            android:text="@string/ps1subtitle"
+            android:hint="@string/pssubtitle"
+            android:text="@string/pssubtitle"
             android:textColor="@color/white_color"
             android:textSize="@dimen/subtitle_dimens" />
     </LinearLayout>
@@ -45,13 +45,13 @@
         android:gravity="center" >
 
         <TextView
-            android:id="@+id/pssubtitle"
+            android:id="@+id/ps1searchdesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:hint="@string/pssubtitle"
-            android:text="@string/pssubtitle"
+            android:hint="@string/psdesc"
+            android:text="@string/psdesc"
             android:textColor="@color/white_color"
             android:textSize="@dimen/subtitle_dimens" />
     </LinearLayout>

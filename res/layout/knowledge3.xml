@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/titlenoback"
+    android:overScrollFooter="@color/white_color"
+    android:overScrollHeader="@color/white_color" >
+
+    <LinearLayout
+        android:id="@+id/kb3box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dip" >
+
+        <TextView
+            android:id="@+id/kbtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="@string/kb"
+            android:text="@string/kb"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/title_dimens" />
+
+        <TextView
+            android:id="@+id/kbsubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/kbsub"
+            android:text="@string/kbsub"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/subtitle_dimens" />
+
+        <LinearLayout
+            android:id="@+id/kb3descbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dip"
+            android:background="@drawable/contentback"
+            android:clickable="true"
+            android:orientation="vertical"
+            android:padding="10dip" >
+
+            <TextView
+                android:id="@+id/kb3search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/next" />
+
+            <TextView
+                android:id="@+id/kb3defpre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dip"
+                android:gravity="center"
+                android:hint="@string/definition"
+                android:text="@string/definition"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/midtitle" />
+
+            <TextView
+                android:id="@+id/kb3def"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/breakdown_dimens" />
+
+            <TextView
+                android:id="@+id/kb3def2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/breakdown_dimens" />
+
+            <TextView
+                android:id="@+id/kb3expre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dip"
+                android:gravity="center"
+                android:hint="@string/example"
+                android:text="@string/example"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/midtitle" />
+
+            <TextView
+                android:id="@+id/kb3ex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/breakdown_dimens" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

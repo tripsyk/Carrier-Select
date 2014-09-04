@@ -11,14 +11,15 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
-import android.widget.LinearLayout;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 public class SmartphoneSelector extends Fragment {
 
+	private TextView next;
 	private static View rootView;
-	private static LinearLayout zerosmartbox, onesmartbox, twosmartbox,
-			threesmartbox, foursmartbox, fivesmartbox, sixsmartbox,
-			sevensmartbox, eightsmartbox, ninesmartbox, tensmartbox;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -40,22 +41,45 @@ public class SmartphoneSelector extends Fragment {
 
 		// Begin startup flow.
 		rootView.startAnimation(lefttoright);
+		
+		next = (TextView) rootView.findViewById(R.id.next);
+		final Spinner spinner = (Spinner) rootView
+				.findViewById(R.id.smartspinner);
 
-		// Declare LinearLayouts
-		zerosmartbox = (LinearLayout) rootView.findViewById(R.id.zerosmartbox);
-		onesmartbox = (LinearLayout) rootView.findViewById(R.id.onesmartbox);
-		twosmartbox = (LinearLayout) rootView.findViewById(R.id.twosmartbox);
-		threesmartbox = (LinearLayout) rootView
-				.findViewById(R.id.threesmartbox);
-		foursmartbox = (LinearLayout) rootView.findViewById(R.id.foursmartbox);
-		fivesmartbox = (LinearLayout) rootView.findViewById(R.id.fivesmartbox);
-		sixsmartbox = (LinearLayout) rootView.findViewById(R.id.sixsmartbox);
-		sevensmartbox = (LinearLayout) rootView
-				.findViewById(R.id.sevensmartbox);
-		eightsmartbox = (LinearLayout) rootView
-				.findViewById(R.id.eightsmartbox);
-		ninesmartbox = (LinearLayout) rootView.findViewById(R.id.ninesmartbox);
-		tensmartbox = (LinearLayout) rootView.findViewById(R.id.tensmartbox);
+		// Create an ArrayAdapter using the string array and a default spinner
+		// layout
+		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+				(rootView.getContext()), R.array.phonespinner,
+				R.layout.spinner_item);
+		// Specify the layout to use when the list of choices appears
+		adapter.setDropDownViewResource(R.layout.spinnerdropdown);
+		// Apply the adapter to the spinner
+		spinner.setAdapter(adapter);
+
+		spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
+			public void onItemSelected(AdapterView<?> arg0, View arg1,
+					int arg2, long arg3) {
+				editor.putString(
+						"smart",
+						spinner.getItemAtPosition(
+								spinner.getSelectedItemPosition()).toString());
+				editor.commit();
+
+			}
+
+			public void onNothingSelected(AdapterView<?> arg0) {
+
+			}
+		});
+
+		next.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				rootView.startAnimation(righttoleft);
+			}
+		});
 
 		// Set animation listeners for fragment
 		righttoleft.setAnimationListener(new AnimationListener() {
@@ -80,107 +104,6 @@ public class SmartphoneSelector extends Fragment {
 			@Override
 			public void onAnimationStart(Animation arg0) {
 
-			}
-		});
-
-		zerosmartbox.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				editor.putInt("smart", 0);
-				editor.commit();
-				rootView.startAnimation(righttoleft);
-
-			}
-		});
-
-		onesmartbox.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				editor.putInt("smart", 1);
-				editor.commit();
-				rootView.startAnimation(righttoleft);
-
-			}
-		});
-
-		twosmartbox.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				editor.putInt("smart", 2);
-				editor.commit();
-				rootView.startAnimation(righttoleft);
-			}
-		});
-
-		threesmartbox.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				editor.putInt("smart", 3);
-				editor.commit();
-				rootView.startAnimation(righttoleft);
-			}
-		});
-
-		foursmartbox.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				editor.putInt("smart", 4);
-				editor.commit();
-				rootView.startAnimation(righttoleft);
-			}
-		});
-
-		fivesmartbox.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				editor.putInt("smart", 5);
-				editor.commit();
-				rootView.startAnimation(righttoleft);
-			}
-		});
-
-		sixsmartbox.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				editor.putInt("smart", 6);
-				editor.commit();
-				rootView.startAnimation(righttoleft);
-			}
-		});
-
-		sevensmartbox.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				editor.putInt("smart", 7);
-				editor.commit();
-				rootView.startAnimation(righttoleft);
-			}
-		});
-
-		eightsmartbox.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				editor.putInt("smart", 8);
-				editor.commit();
-				rootView.startAnimation(righttoleft);
-			}
-		});
-
-		ninesmartbox.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				editor.putInt("smart", 9);
-				editor.commit();
-				rootView.startAnimation(righttoleft);
-			}
-		});
-
-		tensmartbox.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				editor.putInt("smart", 10);
-				editor.commit();
-				rootView.startAnimation(righttoleft);
 			}
 		});
 

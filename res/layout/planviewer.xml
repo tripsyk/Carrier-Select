@@ -1118,13 +1118,6 @@
                     android:textSize="@dimen/breakdown_dimens" />
             </LinearLayout>
         </LinearLayout>
-
-        <com.applovin.adview.AppLovinAdView
-            xmlns:applovin="http://schemas.applovin.com/android/1.0"
-            android:layout_width="250dip"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dip"
-            applovin:loadAdOnCreate="true" />
     </LinearLayout>
 
 </ScrollView>

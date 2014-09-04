@@ -34,7 +34,7 @@
 
         <LinearLayout
             android:id="@+id/table"
-            android:layout_width="match_parent"
+            android:layout_width="250dip"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="25dip"
@@ -48,7 +48,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="8dip"
+                android:layout_marginTop="2dip"
                 android:gravity="center"
                 android:orientation="horizontal" >
 
@@ -79,7 +79,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="8dip"
+                android:layout_marginTop="2dip"
                 android:gravity="center"
                 android:orientation="horizontal" >
 
@@ -110,7 +110,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="8dip"
+                android:layout_marginTop="2dip"
                 android:gravity="center"
                 android:orientation="horizontal" >
 
@@ -141,7 +141,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="8dip"
+                android:layout_marginTop="2dip"
                 android:gravity="center"
                 android:orientation="horizontal" >
 
@@ -172,7 +172,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="8dip"
+                android:layout_marginTop="2dip"
                 android:gravity="center"
                 android:orientation="horizontal" >
 
@@ -199,10 +199,82 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/mifibox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/mifipre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profilemifi"
+                    android:text="@string/profilemifi"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:id="@+id/nummifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/discountbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/discountpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profilediscount"
+                    android:text="@string/profilediscount"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:id="@+id/numdiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
+                    android:textColor="@color/white_color"
+                    android:textSize="@dimen/subtitle_dimens" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/lineblue"
+                android:gravity="center"
+                android:hint=""
+                android:text="" />
+
+            <LinearLayout
                 android:id="@+id/monthlybox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dip"
+                android:layout_marginTop="2dip"
                 android:orientation="horizontal" >
 
                 <TextView

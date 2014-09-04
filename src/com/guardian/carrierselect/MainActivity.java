@@ -4,19 +4,19 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.applovin.adview.AppLovinInterstitialAd;
-import com.applovin.adview.AppLovinInterstitialAdDialog;
 import com.applovin.sdk.AppLovinSdk;
 import com.parse.Parse;
 import com.parse.ParseAnalytics;
@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
 	private ListView mDrawerList;
 	private DrawerLayout mDrawerLayout;
 	private ActionBarDrawerToggle mDrawerToggle;
-	private CharSequence abholder = "My Profile";
+	static CharSequence abholder = "My Profile";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +47,8 @@ public class MainActivity extends Activity {
 		abTitle.setTextColor(getResources().getColor(R.color.titlenoback));
 
 		String[] listItems = getResources().getStringArray(R.array.menu_list);
+		
+		
 
 		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		mDrawerList = (ListView) findViewById(R.id.left_drawer);
@@ -67,7 +69,9 @@ public class MainActivity extends Activity {
 		R.drawable.ic_drawer, /* nav drawer image to replace 'Up' caret */
 		R.string.drawer_open, /* "open drawer" description for accessibility */
 		R.string.drawer_close /* "close drawer" description for accessibility */
-		) {
+		) 
+		
+		{
 			public void onDrawerClosed(View view) {
 				getActionBar().setTitle(abholder);
 				invalidateOptionsMenu(); // creates call to
@@ -125,6 +129,11 @@ public class MainActivity extends Activity {
 		// ActionBarDrawerToggle will take care of this.
 
 		getActionBar().setTitle("Carrier Select");
+		
+		if(this.getCurrentFocus() != null && this.getCurrentFocus() instanceof EditText){
+	         InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+	        imm.hideSoftInputFromWindow(this.getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+	     }
 
 		if (mDrawerToggle.onOptionsItemSelected(item)) {
 			return true;
@@ -176,7 +185,7 @@ public class MainActivity extends Activity {
 			mDrawerList.setItemChecked(position, true);
 			mDrawerLayout.closeDrawer(mDrawerList);
 
-		} else if (position == 2) {
+/*		} else if (position == 2) {
 
 			abholder = "PlanBuilder";
 			getActionBar().setTitle("PlanBuilder");
@@ -192,9 +201,9 @@ public class MainActivity extends Activity {
 
 			// update selected item and title, then close the drawer
 			mDrawerList.setItemChecked(position, true);
-			mDrawerLayout.closeDrawer(mDrawerList);
+			mDrawerLayout.closeDrawer(mDrawerList);*/
 
-		} else if (position == 3) {
+		} else if (position == 2) {
 
 			abholder = "Service Plans";
 			getActionBar().setTitle("Service Plans");
@@ -211,7 +220,7 @@ public class MainActivity extends Activity {
 			// update selected item and title, then close the drawer
 			mDrawerList.setItemChecked(position, true);
 			mDrawerLayout.closeDrawer(mDrawerList);
-		} else if (position == 4) {
+		} else if (position == 3) {
 
 			abholder = "No Contract Plans";
 			getActionBar().setTitle("No Contract Plans");
@@ -228,7 +237,7 @@ public class MainActivity extends Activity {
 			// update selected item and title, then close the drawer
 			mDrawerList.setItemChecked(position, true);
 			mDrawerLayout.closeDrawer(mDrawerList);
-		} else if (position == 5) {
+		} else if (position == 4) {
 
 			abholder = "Phone Search";
 			getActionBar().setTitle("Phone Search");
@@ -246,7 +255,7 @@ public class MainActivity extends Activity {
 			mDrawerList.setItemChecked(position, true);
 			mDrawerLayout.closeDrawer(mDrawerList);
 
-		} else if (position == 6) {
+		} else if (position == 5) {
 
 			abholder = "Knowledge Base";
 			getActionBar().setTitle("Knowledge Base");
@@ -263,7 +272,7 @@ public class MainActivity extends Activity {
 			// update selected item and title, then close the drawer
 			mDrawerList.setItemChecked(position, true);
 			mDrawerLayout.closeDrawer(mDrawerList);
-		} else if (position == 7) {
+/*		} else if (position == 7) {
 
 			abholder = "Settings";
 			getActionBar().setTitle("Settings");
@@ -279,8 +288,8 @@ public class MainActivity extends Activity {
 
 			// update selected item and title, then close the drawer
 			mDrawerList.setItemChecked(position, true);
-			mDrawerLayout.closeDrawer(mDrawerList);
-		} else if (position == 8) {
+			mDrawerLayout.closeDrawer(mDrawerList);*/
+		} else if (position == 6) {
 
 			abholder = "About";
 			getActionBar().setTitle("About");
@@ -304,19 +313,6 @@ public class MainActivity extends Activity {
 	protected void onPostCreate(Bundle savedInstanceState) {
 		super.onPostCreate(savedInstanceState);
 		mDrawerToggle.syncState();
-	}
-
-	public int getStatusBarHeight() {
-		int result = 0;
-		int resourceId = getResources().getIdentifier("status_bar_height",
-				"dimen", "android");
-		if (resourceId > 0) {
-			result = getResources().getDimensionPixelSize(resourceId);
-		}
-
-		Toast.makeText(getApplicationContext(), String.valueOf(result),
-				Toast.LENGTH_SHORT).show();
-		return result;
 	}
 
 }

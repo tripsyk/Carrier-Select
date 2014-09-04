@@ -18,285 +18,51 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="30dip"
-            android:layout_marginTop="50dip"
             android:gravity="center"
             android:hint="@string/basicphonestitle"
             android:text="@string/basicphonestitle"
             android:textColor="@color/white_color"
-            android:textSize="@dimen/title_dimens" />
+            android:textSize="@dimen/midtitle" />
 
-            <TextView
-                android:id="@+id/zerobasicbox"
-                android:layout_width="180dip"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@drawable/contentback"
-                android:gravity="center"
-                android:hint="@string/none"
-                android:padding="10dip"
-                android:text="@string/none"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/subtitle_dimens" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dip"
-            android:gravity="center"
-            android:orientation="horizontal" >
-
-            <LinearLayout
-                android:id="@+id/onebasicbox"
-                android:layout_width="85dip"
-                android:layout_height="55dip"
-                android:layout_gravity="center"
-                android:layout_marginRight="8dip"
-                android:background="@drawable/contentback"
-                android:clickable="true"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/onebasic"
-                    android:layout_width="70dip"
-                    android:layout_height="50dip"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/oneword"
-                    android:text="@string/oneword"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/subtitle_dimens" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/twobasicbox"
-                android:layout_width="85dip"
-                android:layout_height="55dip"
-                android:layout_gravity="center"
-                android:background="@drawable/contentback"
-                android:clickable="true"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/twobasic"
-                    android:layout_width="70dip"
-                    android:layout_height="50dip"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/twoword"
-                    android:text="@string/twoword"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/subtitle_dimens" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dip"
-            android:gravity="center"
-            android:orientation="horizontal" >
-
-            <LinearLayout
-                android:id="@+id/threebasicbox"
-                android:layout_width="85dip"
-                android:layout_height="55dip"
-                android:layout_gravity="center"
-                android:layout_marginRight="8dip"
-                android:background="@drawable/contentback"
-                android:clickable="true"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/threebasic"
-                    android:layout_width="70dip"
-                    android:layout_height="50dip"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/threeword"
-                    android:text="@string/threeword"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/subtitle_dimens" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/fourbasicbox"
-                android:layout_width="85dip"
-                android:layout_height="55dip"
-                android:layout_gravity="center"
-                android:background="@drawable/contentback"
-                android:clickable="true"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/fourbasic"
-                    android:layout_width="70dip"
-                    android:layout_height="50dip"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/fourword"
-                    android:text="@string/fourword"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/subtitle_dimens" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dip"
-            android:gravity="center"
-            android:orientation="horizontal" >
-
-            <LinearLayout
-                android:id="@+id/fivebasicbox"
-                android:layout_width="85dip"
-                android:layout_height="55dip"
-                android:layout_gravity="center"
-                android:layout_marginRight="8dip"
-                android:background="@drawable/contentback"
-                android:clickable="true"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/fivebasic"
-                    android:layout_width="70dip"
-                    android:layout_height="50dip"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/fiveword"
-                    android:text="@string/fiveword"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/subtitle_dimens" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/sixbasicbox"
-                android:layout_width="85dip"
-                android:layout_height="55dip"
-                android:layout_gravity="center"
-                android:background="@drawable/contentback"
-                android:clickable="true"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/sixbasic"
-                    android:layout_width="70dip"
-                    android:layout_height="50dip"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/sixword"
-                    android:text="@string/sixword"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/subtitle_dimens" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/basicselectorsub"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="8dip"
+            android:layout_marginTop="75dip"
             android:gravity="center"
-            android:orientation="horizontal" >
+            android:hint="@string/phonesub"
+            android:text="@string/phonesub"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/subtitle_dimens" />
 
-            <LinearLayout
-                android:id="@+id/sevenbasicbox"
-                android:layout_width="85dip"
-                android:layout_height="55dip"
-                android:layout_gravity="center"
-                android:layout_marginRight="8dip"
-                android:background="@drawable/contentback"
-                android:clickable="true"
-                android:gravity="center"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/sevenbasic"
-                    android:layout_width="70dip"
-                    android:layout_height="50dip"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/sevenword"
-                    android:text="@string/sevenword"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/subtitle_dimens" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/eightbasicbox"
-                android:layout_width="85dip"
-                android:layout_height="55dip"
-                android:background="@drawable/contentback"
-                android:clickable="true"
-                android:gravity="center"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/eightbasic"
-                    android:layout_width="70dip"
-                    android:layout_height="50dip"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/eightword"
-                    android:text="@string/eightword"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/subtitle_dimens" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Spinner
+            android:id="@+id/basicspinner"
+            android:layout_width="200dip"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="8dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/contentback"
+            android:entries="@array/phonespinner"
             android:gravity="center"
-            android:orientation="horizontal" >
+            android:paddingBottom="5dip"
+            android:paddingTop="5dip"
+            android:popupBackground="@android:color/transparent"
+            android:spinnerMode="dropdown" />
 
-            <LinearLayout
-                android:id="@+id/ninebasicbox"
-                android:layout_width="85dip"
-                android:layout_height="55dip"
-                android:layout_gravity="center"
-                android:layout_marginRight="8dip"
-                android:background="@drawable/contentback"
-                android:clickable="true"
-                android:gravity="center"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/ninebasic"
-                    android:layout_width="70dip"
-                    android:layout_height="50dip"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/nineword"
-                    android:text="@string/nineword"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/subtitle_dimens" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/tenbasicbox"
-                android:layout_width="85dip"
-                android:layout_height="55dip"
-                android:background="@drawable/contentback"
-                android:clickable="true"
-                android:gravity="center"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/tenbasic"
-                    android:layout_width="70dip"
-                    android:layout_height="50dip"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/tenword"
-                    android:text="@string/tenword"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/subtitle_dimens" />
-            </LinearLayout>
-        </LinearLayout>
+        <TextView
+            android:id="@+id/next"
+            android:layout_width="70dip"
+            android:layout_height="50dip"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dip"
+            android:background="@drawable/contentback"
+            android:gravity="center"
+            android:hint="@string/next"
+            android:padding="10dip"
+            android:text="@string/next"
+            android:textColor="@color/white_color"
+            android:textSize="@dimen/next" />
     </LinearLayout>
 
 </ScrollView>

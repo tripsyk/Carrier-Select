@@ -1,6 +1,7 @@
 package com.guardian.carrierselect;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -51,6 +52,8 @@ public class MonthlySelector extends Fragment {
 				Fragment fragment = new Home();
 				FragmentTransaction fragmenttran = getFragmentManager()
 						.beginTransaction();
+				getFragmentManager().popBackStack(null,
+						FragmentManager.POP_BACK_STACK_INCLUSIVE);
 				fragmenttran.replace(R.id.fragment_container, fragment);
 				fragmenttran.commit();
 				getFragmentManager().executePendingTransactions();
@@ -77,6 +80,8 @@ public class MonthlySelector extends Fragment {
 								Context.INPUT_METHOD_SERVICE);
 				imm.hideSoftInputFromWindow(userMonthly.getWindowToken(), 0);
 
+				MainActivity.abholder = "News";
+				
 				editor.putInt("monthly",
 						Integer.parseInt(userMonthly.getText().toString()));
 				editor.commit();

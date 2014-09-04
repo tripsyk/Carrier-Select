@@ -26,8 +26,6 @@ public class Settings extends Fragment {
 				PREFS_NAME, 0);
 
 		// Load in animations.
-		final Animation righttoleft = AnimationUtils.loadAnimation(
-				rootView.getContext(), R.anim.right_to_left);
 		final Animation lefttoright = AnimationUtils.loadAnimation(
 				rootView.getContext(), R.anim.left_to_right);
 

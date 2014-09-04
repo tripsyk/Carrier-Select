@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +17,6 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
-import com.applovin.adview.AppLovinInterstitialAd;
 import com.guardian.carrierselect.model.Phone;
 import com.parse.FindCallback;
 import com.parse.Parse;
@@ -43,6 +43,7 @@ public class PhoneSearch2 extends Fragment {
 		ps2resultstitle = (TextView) rootView
 				.findViewById(R.id.ps2resultstitle);
 		ps2resultstitle.setText(searchTerm);
+		ps2resultstitle.setTypeface(null, Typeface.BOLD);
 		ps2subtitle = (TextView) rootView.findViewById(R.id.ps2subtitle);
 
 		// Load results TextViews

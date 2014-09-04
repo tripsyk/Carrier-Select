@@ -17,7 +17,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="50dip"
             android:orientation="horizontal" >
 
             <TextView
@@ -28,7 +27,7 @@
                 android:hint="@string/carriertitle"
                 android:text="@string/carriertitle"
                 android:textColor="@color/white_color"
-                android:textSize="@dimen/title_dimens" />
+                android:textSize="@dimen/midtitle" />
         </LinearLayout>
 
         <LinearLayout
@@ -36,7 +35,7 @@
             android:layout_width="115dip"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dip"
+            android:layout_marginTop="75dip"
             android:background="@drawable/contentback"
             android:clickable="true"
             android:orientation="vertical"

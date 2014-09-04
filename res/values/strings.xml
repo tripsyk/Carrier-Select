@@ -14,10 +14,6 @@
     <string name="sp1title">Build Your Plan</string>
     <string name="sp2title">Service Plan Quotes</string>
     <string name="sp3title">Breakdown of Costs</string>
-    <string name="ver_total">Loading Total&#8230;</string>
-    <string name="att_total">Loading Total&#8230;</string>
-    <string name="spr_total">Loading Total&#8230;</string>
-    <string name="tmo_total">Loading Total&#8230;</string>
     <string name="pvtype">Plan Type</string>
     <string name="plandevices">Plan Supports</string>
     <string name="pvtalktext">Talk and Text Amount</string>
@@ -37,12 +33,10 @@
     <string-array name="menu_list">
         <item>News</item>
         <item>My Profile</item>
-        <item>PlanBuilder</item>
         <item>Service Plans</item>
         <item>No Contract Plans</item>
         <item>Phone Search</item>
         <item>Knowledge Base</item>
-        <item>Settings</item>
         <item>About</item>
     </string-array>
 
@@ -68,11 +62,9 @@
     <string name="welcomeback">Welcome back.</string>
     <string name="homenews">News</string>
     <string name="homesubtitle">News &amp; Updates on Everything Mobile</string>
-    <string name="newsupdatetitle">Current Plan Promotions</string>
-    <string name="planupdatetitle">Plan Search Updates</string>
-    <string name="phoneupdatetitle">Phone Search Updates</string>
-    <string name="kbupdatetitle">Knowledge Base Updates</string>
+    <string name="newsupdatetitle">New Plans &amp; Promotions</string>
     <string name="newstest">Loading Updates&#8230;</string>
+    <string name="loading">Loading&#8230;</string>
     <string name="viewbreakdown">View Breakdown</string>
     <string name="tellus">First, tell us a little about yourself.</string>
     <string name="planbuilder1">Using PlanBuilder, you can create your own wireless plan and see which carriers fit your needs.</string>
@@ -90,17 +82,19 @@
     <string name="tab_label">How many tablets?</string>
     <string name="includecarrier">Factor in current carrier</string>
     <string name="search">Phone Search</string>
-    <string name="pssubtitle">Enter a phone to see technical specs</string>
+    <string name="psdesc">Enter a phone to see technical specs</string>
     <string name="searchTermHint">(ex. LG Optimus G Pro)</string>
     <string name="searchGoBox">Search for Phone</string>
     <string name="yourProfile">My Profile</string>
     <string name="notset">Not Set</string>
     <string name="profilecarrier">My Carrier:</string>
-    <string name="profilesmart">My Smartphones:</string>
-    <string name="profilebasic">My Basic phones:</string>
-    <string name="profilegigs">My Data Plan:</string>
-    <string name="profiletablets">My Tablets:</string>
-    <string name="profilemonthly">My Monthly bill:</string>
+    <string name="profilesmart">Smartphones:</string>
+    <string name="profilebasic">Basic Phones:</string>
+    <string name="profilegigs">Total Data:</string>
+    <string name="profiletablets">Connected Tablets:</string>
+    <string name="profilemifi">Hotspot Devices:</string>
+    <string name="profilediscount">Monthly Discount:</string>
+    <string name="profilemonthly">Total Monthly bill:</string>
     <string name="editprofile">Edit My Profile</string>
     <string name="homesave">Save My Profile</string>
     <string name="editplan">Edit PlanBuilder Selections</string>
@@ -153,7 +147,8 @@
     <string name="carriertitle">Which carrier do you currently reside on?</string>
     <string name="smartphonestitle">How many smartphones do you have?</string>
     <string name="basicphonestitle">How many basic phones do you have?</string>
-    <string name="datatitle">How much data do you have/use between all phones?</string>
+    <string name="datatitle">How much data do you have between all phones?</string>
+    <string name="tabstitle">How many tablets do you have on a cellular network?</string>
     <string name="monthlytitle">How much do you pay on average per month for your mobile service?</string>
     <string name="nodatadesc">I don\'t need any internet access.</string>
     <string name="onegigdesc">I\'m a light user. I use maps, e-mail, and web browse occasionally.</string>
@@ -179,7 +174,7 @@
     <string name="yesthrottle">You can slow it down after heavy monthly usage if it reduces the price.</string>
     <string name="nothrottle">I want max speeds at all times, no questions asked. I don\'t mind if it raises the price.</string>
     <string name="equipnotice">Prices include no equipment. Click for more info.</string>
-    <string name="cswebsite">CarrierSelectApp.com</string>
+    <string name="version">Version 1.0</string>
     <string name="writtenby">Created by Steve Gregos</string>
     <string name="updateTV">Check for plan updates</string>
     <string name="kb">Knowledge Base</string>
@@ -188,6 +183,8 @@
     <string name="ncresultsdesc">Plan details</string>
     <string name="ncsubtitle">The Prepaid Plan Browser</string>
     <string name="nctitlesub">Select a plan from the list below</string>
+    <string name="dssub">Select a data amount from the list below</string>
+    <string name="phonesub">Select the number from the list below</string>
     <string name="aboutp1">Carrier Select is an effort from an experienced member of the wireless industry to help everyday people make choices easier. \n\n Carrier Select was built on the pillars of user-friendliness and beautiful design. I wanted to make choosing a mobile plan for people fun, beautiful, exact, and most of all, simple. Talking to someone about mobile plans is like listening to someone speak a different language. Researching them online only leaves you more confused than when you started. \n\n Let me do all of the hard work for you. Welcome to Carrier Select.</string>
 
     <string-array name="nocontractarray">
@@ -220,7 +217,7 @@
     <string name="loadingprices">Loading Prices&#8230;</string>
     <string name="ps2title">Phone Lookup Results</string>
     <string name="ps2subtitle">Showing results for</string>
-    <string name="ps1subtitle">The Phone Detail Database</string>
+    <string name="pssubtitle">The Phone Detail Database</string>
     <string name="loadingphone">Loading Phone&#8230;</string>
     <string name="ps3title">Phone Lookup</string>
     <string name="comparephone">Compare this phone</string>
@@ -256,5 +253,44 @@
     <string name="kbsearchhint">(ex. Installment Billing)</string>
     <string name="kbsearch">Enter a topic you would like to know more about</string>
     <string name="builtplan">Your Built Plan</string>
+    <string name="definition">Definition:</string>
+    <string name="example">Example:</string>
+
+    <string-array name="dataselector">
+        <item>No Data</item>
+        <item>1GB</item>
+        <item>2GB</item>
+        <item>3GB</item>
+        <item>4GB</item>
+        <item>5GB</item>
+        <item>6GB</item>
+        <item>7GB</item>
+        <item>8GB</item>
+        <item>9GB</item>
+        <item>10GB</item>
+        <item>11GB</item>
+        <item>12GB</item>
+        <item>13GB</item>
+        <item>14GB</item>
+        <item>15GB</item>
+        <item>16GB</item>
+        <item>17GB</item>
+        <item>18GB</item>
+        <item>19GB</item>
+        <item>20GB</item>
+    </string-array>
+    <string-array name="phonespinner">
+        <item>None</item>
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+        <item>Six</item>
+        <item>Seven</item>
+        <item>Eight</item>
+        <item>Nine</item>
+        <item>Ten</item>
+    </string-array>
 
 </resources>

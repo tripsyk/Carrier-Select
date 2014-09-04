@@ -126,6 +126,9 @@ public class PhoneSearch3 extends Fragment {
 		// Begin startup flow.
 		rootView.startAnimation(lefttoright);
 		
+		double randomNum = Math.random() * 3;
+		
+		if ((int)randomNum == 1)
 		AppLovinInterstitialAd.show(getActivity());
 		
 		performSearch();

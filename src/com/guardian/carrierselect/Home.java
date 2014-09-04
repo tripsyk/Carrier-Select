@@ -22,8 +22,7 @@ import com.parse.ParseQuery;
 
 public class Home extends Fragment {
 
-	private TextView newstitle, plantitle, phonetitle, kbtitle, news, plan,
-			phone, kb;
+	private TextView newstitle, news;
 	private ProgressDialog progress;
 	private static View rootView;
 
@@ -32,6 +31,8 @@ public class Home extends Fragment {
 			Bundle savedInstanceState) {
 
 		rootView = inflater.inflate(R.layout.home, container, false);
+		
+		getActivity().getActionBar().show();
 
 		getActivity().getActionBar().setTitle("News");
 
@@ -40,13 +41,7 @@ public class Home extends Fragment {
 				rootView.getContext(), R.anim.left_to_right);
 
 		newstitle = (TextView) rootView.findViewById(R.id.newsupdatetitle);
-		plantitle = (TextView) rootView.findViewById(R.id.planupdatetitle);
-		phonetitle = (TextView) rootView.findViewById(R.id.phoneupdatetitle);
-		kbtitle = (TextView) rootView.findViewById(R.id.kbupdatetitle);
 		news = (TextView) rootView.findViewById(R.id.newsupdates);
-		plan = (TextView) rootView.findViewById(R.id.planupdates);
-		phone = (TextView) rootView.findViewById(R.id.phoneupdates);
-		kb = (TextView) rootView.findViewById(R.id.kbupdates);
 
 		// Begin startup flow.
 		rootView.startAnimation(lefttoright);
@@ -76,8 +71,7 @@ public class Home extends Fragment {
 				if (e == null) {
 					newstitle.setText("");
 					newstitle.setText(NewsList.get(0).getString("Title") + "\n"
-							+ NewsList.get(0).getString("Date") + "\n\n"
-							+ NewsList.get(0).getString("Subtitle"));
+							+ NewsList.get(0).getString("Date") + "\n");
 				} else {
 				}
 			}
@@ -98,129 +92,14 @@ public class Home extends Fragment {
 					for (int i = 0; i < NewsList.size(); i++) {
 						news.setText(news.getText()
 								+ NewsList.get(i).getString("PromoAdded")
-								+ "\n");
+								+ "\n\n");
 					}
 				} else {
 				}
-			}
-		});
-
-		ParseObject.registerSubclass(NewsUpdater.class);
-		Parse.initialize(rootView.getContext(),
-				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
-				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
-
-		ParseQuery<ParseObject> queryplans = ParseQuery
-				.getQuery("Changes_Plans");
-		queryplans.whereEqualTo("Tag", "Title");
-		queryplans.findInBackground(new FindCallback<ParseObject>() {
-			public void done(List<ParseObject> PlanList, ParseException e) {
-
-				if (e == null) {
-					plantitle.setText("");
-					plantitle.setText(PlanList.get(0).getString("Title") + "\n"
-							+ PlanList.get(0).getString("Date") + "\n\n"
-							+ PlanList.get(0).getString("Subtitle"));
-				} else {
-				}
-			}
-		});
-
-		// Test Query
-		ParseQuery<ParseObject> queryplans2 = ParseQuery
-				.getQuery("Changes_Plans");
-		queryplans2.whereEqualTo("Top", "1");
-		queryplans2.orderByAscending("PlanAdded");
-		queryplans2.findInBackground(new FindCallback<ParseObject>() {
-			public void done(List<ParseObject> PlanList, ParseException e) {
-
-				if (e == null) {
-
-					plan.setText("");
-
-					for (int i = 0; i < PlanList.size(); i++) {
-						plan.setText(plan.getText()
-								+ PlanList.get(i).getString("PlanAdded") + "\n");
-					}
-				} else {
-				}
-			}
-		});
-
-		// Test Query
-		ParseQuery<ParseObject> queryphone = ParseQuery.getQuery("Changes_PS");
-		queryphone.orderByAscending("PhoneAdded");
-		queryphone.whereEqualTo("NewsID", "1");
-		queryphone.findInBackground(new FindCallback<ParseObject>() {
-			public void done(List<ParseObject> PhoneList, ParseException e) {
-
-				if (e == null) {
-					phonetitle.setText("");
-					phonetitle.setText(PhoneList.get(0).getString("Title")
-							+ "\n" + PhoneList.get(0).getString("Date")
-							+ "\n\n" + PhoneList.get(0).getString("Subtitle"));
-				} else {
-				}
-			}
-		});
-
-		// Test Query
-		ParseQuery<ParseObject> queryphonecontent = ParseQuery
-				.getQuery("Changes_PS");
-		queryphonecontent.whereEqualTo("NewsID", "11");
-		queryphonecontent.findInBackground(new FindCallback<ParseObject>() {
-			public void done(List<ParseObject> PhoneList, ParseException e) {
-
-				if (e == null) {
-
-					phone.setText("");
-
-					for (int i = 0; i < PhoneList.size(); i++) {
-						phone.setText(phone.getText()
-								+ PhoneList.get(i).getString("PhoneAdded")
-								+ "\n");
-					}
-				} else {
-				}
-			}
-		});
-
-		// Test Query
-		ParseQuery<ParseObject> querykb = ParseQuery.getQuery("Changes_KB");
-		querykb.whereEqualTo("Top", "1");
-		querykb.findInBackground(new FindCallback<ParseObject>() {
-			public void done(List<ParseObject> KBList, ParseException e) {
-
-				if (e == null) {
-					kbtitle.setText("");
-					kbtitle.setText(KBList.get(0).getString("Title") + "\n"
-							+ KBList.get(0).getString("Date") + "\n\n"
-							+ KBList.get(0).getString("Subtitle"));
-				} else {
-				}
-			}
-		});
-
-		// Test Query
-		ParseQuery<ParseObject> querykbcontent = ParseQuery
-				.getQuery("Changes_KB");
-		querykbcontent.whereEqualTo("Top", "content");
-		querykbcontent.findInBackground(new FindCallback<ParseObject>() {
-			public void done(List<ParseObject> KBList, ParseException e) {
-
-				if (e == null) {
-					kb.setText("");
-
-					for (int i = 0; i < KBList.size(); i++) {
-						kb.setText(kb.getText()
-								+ KBList.get(i).getString("KBAdded") + "\n");
-					}
-				} else {
-				}
-
+				
 				progress.dismiss();
 			}
-
 		});
+
 	}
 }

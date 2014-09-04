@@ -18,7 +18,8 @@
             android:id="@+id/aboutlayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center" >
+            android:gravity="center"
+            android:orientation="vertical" >
 
             <TextView
                 android:id="@+id/abouttitle"
@@ -30,23 +31,34 @@
                 android:text="@string/about"
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/title_dimens" />
+            
+                        <TextView
+                android:id="@+id/aboutsubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/app_name"
+                android:text="@string/app_name"
+                android:textColor="@color/white_color"
+                android:textSize="@dimen/subtitle_dimens" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/websitebox"
+            android:id="@+id/versionbox"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="18dip"
             android:gravity="center" >
 
             <TextView
-                android:id="@+id/cswebsite"
+                android:id="@+id/version"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:hint="@string/cswebsite"
-                android:text="@string/cswebsite"
+                android:hint="@string/version"
+                android:text="@string/version"
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/subtitle_dimens" />
         </LinearLayout>

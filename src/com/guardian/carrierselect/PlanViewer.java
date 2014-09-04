@@ -2,6 +2,7 @@ package com.guardian.carrierselect;
 
 import java.util.List;
 
+import com.applovin.adview.AppLovinInterstitialAd;
 import com.guardian.carrierselect.model.Phone;
 import com.parse.FindCallback;
 import com.parse.Parse;
@@ -47,7 +48,7 @@ public class PlanViewer extends Fragment {
 	private TextView sprplan, sprsmart, sprbasic, sprtablets, sprmifi, sprtax,
 			sprdiscount, sprtotal;
 	private TextView tmoplan, tmophones, tmotax, tmodiscount, tmototal;
-	private TextView title, pvyourplan;
+	private TextView title;
 
 	private static View rootView;
 
@@ -64,6 +65,11 @@ public class PlanViewer extends Fragment {
 
 		title = (TextView) rootView.findViewById(R.id.pvsubtitle);
 		title.setTypeface(null, Typeface.BOLD);
+		
+		double randomNum = Math.random() * 3;
+		
+		if ((int)randomNum == 1)
+		AppLovinInterstitialAd.show(getActivity());
 
 		final LinearLayout att = (LinearLayout) rootView
 				.findViewById(R.id.attquotebox);
