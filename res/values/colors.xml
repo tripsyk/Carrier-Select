@@ -4,4 +4,5 @@
     <color name="titlenoback">#00ADE1</color>
     <color name="titlecolor">#97E7FF</color>
     <color name="btncolor">#CCFFCC</color>
+    <color name="bg">#00C0E1</color>
 </resources>

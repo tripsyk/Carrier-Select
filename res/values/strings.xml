@@ -11,7 +11,7 @@
     <string name="spr_pretotal">Sprint Monthly Cost</string>
     <string name="tmo_pretotal">T-Mobile Monthly Cost</string>
     <string name="serviceplans">Service Plans</string>
-    <string name="sp1title">Build Your Plan</string>
+    <string name="sp1title">Quotes from the top carriers</string>
     <string name="sp2title">Service Plan Quotes</string>
     <string name="sp3title">Breakdown of Costs</string>
     <string name="pvtype">Plan Type</string>
@@ -278,6 +278,26 @@
         <item>18GB</item>
         <item>19GB</item>
         <item>20GB</item>
+        <item>21GB</item>
+        <item>22GB</item>
+        <item>23GB</item>
+        <item>24GB</item>
+        <item>25GB</item>
+        <item>26GB</item>
+        <item>27GB</item>
+        <item>28GB</item>
+        <item>29GB</item>
+        <item>30GB</item>
+        <item>31GB</item>
+        <item>32GB</item>
+        <item>33GB</item>
+        <item>34GB</item>
+        <item>35GB</item>
+        <item>36GB</item>
+        <item>37GB</item>
+        <item>38GB</item>
+        <item>39GB</item>
+        <item>40GB</item>
     </string-array>
     <string-array name="phonespinner">
         <item>None</item>

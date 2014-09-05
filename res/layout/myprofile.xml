@@ -318,7 +318,7 @@
                 android:background="@drawable/contentback"
                 android:gravity="center"
                 android:hint="@string/editprofile"
-                android:padding="15dip"
+                android:padding="10dip"
                 android:text="@string/editprofile"
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/next" />

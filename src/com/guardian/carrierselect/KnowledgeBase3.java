@@ -55,7 +55,7 @@ public class KnowledgeBase3 extends Fragment {
 		kbexpre = (TextView) rootView.findViewById(R.id.kb3expre);
 		kbexpre.setTypeface(null, Typeface.BOLD);
 
-		double randomNum = Math.random() * 3;
+		double randomNum = Math.random() * 2;
 
 		if ((int) randomNum == 1)
 			AppLovinInterstitialAd.show(getActivity());
