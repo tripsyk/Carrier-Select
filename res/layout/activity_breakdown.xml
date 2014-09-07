@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="30dip" >
+        android:padding="20dip" >
 
         <TextView
             android:id="@+id/contract_plans"
@@ -45,10 +45,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:clickable="true"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <LinearLayout
                 android:id="@+id/attplanbox"
@@ -283,10 +283,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/bbg"
             android:gravity="center"
             android:hint="@string/viewplan"
-            android:padding="10dip"
+            android:padding="15dip"
             android:text="@string/viewplan"
             android:textColor="@color/white_color"
             android:textSize="@dimen/subtitle_dimens" />
@@ -311,10 +311,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:clickable="true"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <LinearLayout
                 android:id="@+id/verplanbox"
@@ -549,10 +549,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/bbg"
             android:gravity="center"
             android:hint="@string/viewplan"
-            android:padding="10dip"
+            android:padding="15dip"
             android:text="@string/viewplan"
             android:textColor="@color/white_color"
             android:textSize="@dimen/subtitle_dimens" />
@@ -584,10 +584,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:clickable="true"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <LinearLayout
                 android:id="@+id/sprplanbox"
@@ -822,10 +822,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/bbg"
             android:gravity="center"
             android:hint="@string/viewplan"
-            android:padding="10dip"
+            android:padding="15dip"
             android:text="@string/viewplan"
             android:textColor="@color/white_color"
             android:textSize="@dimen/subtitle_dimens" />
@@ -850,10 +850,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:clickable="true"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <LinearLayout
                 android:id="@+id/tmoplanbox"
@@ -1007,10 +1007,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/bbg"
             android:gravity="center"
             android:hint="@string/viewplan"
-            android:padding="10dip"
+            android:padding="15dip"
             android:text="@string/viewplan"
             android:textColor="@color/white_color"
             android:textSize="@dimen/subtitle_dimens" />

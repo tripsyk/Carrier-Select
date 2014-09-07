@@ -31,10 +31,10 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:layout_marginTop="16dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="20dip" >
 
             <Switch
                 android:id="@+id/pushtv"

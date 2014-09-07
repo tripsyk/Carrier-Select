@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:background="@color/titlenoback"
         android:orientation="vertical"
-        android:padding="30dip" >
+        android:padding="20dip" >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,10 +38,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="25dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <LinearLayout
                 android:id="@+id/carrierbox"
@@ -315,13 +315,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/contentback"
+                android:background="@drawable/bbg"
                 android:gravity="center"
                 android:hint="@string/editprofile"
-                android:padding="10dip"
+                android:padding="15dip"
                 android:text="@string/editprofile"
                 android:textColor="@color/white_color"
-                android:textSize="@dimen/next" />
+                android:textSize="@dimen/midtitle" />
         </LinearLayout>
     </LinearLayout>
 

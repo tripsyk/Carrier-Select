@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="30dip" >
+        android:padding="20dip" >
 
         <TextView
             android:id="@+id/planviewer"
@@ -42,10 +42,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <LinearLayout
                 android:id="@+id/planinfobox"
@@ -254,10 +254,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:clickable="true"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <LinearLayout
                 android:id="@+id/attplanbox"
@@ -492,10 +492,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:clickable="true"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <LinearLayout
                 android:id="@+id/verplanbox"
@@ -730,10 +730,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:clickable="true"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <LinearLayout
                 android:id="@+id/sprplanbox"
@@ -968,10 +968,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:clickable="true"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <LinearLayout
                 android:id="@+id/tmoplanbox"

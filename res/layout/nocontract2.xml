@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="30dip" >
+        android:padding="20dip" >
 
         <TextView
             android:id="@+id/nocontract"
@@ -28,10 +28,10 @@
             android:layout_width="300dip"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <TextView
                 android:id="@+id/nocontractsub"
@@ -75,10 +75,10 @@
             android:layout_gravity="center"
             android:layout_marginBottom="5dip"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:clickable="true"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <LinearLayout
                 android:id="@+id/nc21sbbox"
@@ -236,10 +236,10 @@
             android:layout_gravity="center"
             android:layout_marginBottom="5dip"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:clickable="true"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <LinearLayout
                 android:id="@+id/nc22sbbox"
@@ -397,10 +397,10 @@
             android:layout_gravity="center"
             android:layout_marginBottom="5dip"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:clickable="true"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <LinearLayout
                 android:id="@+id/nc23sbbox"
@@ -558,10 +558,10 @@
             android:layout_gravity="center"
             android:layout_marginBottom="5dip"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:clickable="true"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <LinearLayout
                 android:id="@+id/nc24sbbox"
@@ -719,10 +719,10 @@
             android:layout_gravity="center"
             android:layout_marginBottom="5dip"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:clickable="true"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <LinearLayout
                 android:id="@+id/nc25sbbox"
@@ -880,10 +880,10 @@
             android:layout_gravity="center"
             android:layout_marginBottom="5dip"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:clickable="true"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <LinearLayout
                 android:id="@+id/nc26sbbox"
@@ -1041,10 +1041,10 @@
             android:layout_gravity="center"
             android:layout_marginBottom="5dip"
             android:layout_marginTop="5dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:clickable="true"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <LinearLayout
                 android:id="@+id/nc27sbbox"

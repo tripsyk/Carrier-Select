@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="30dip" >
+        android:padding="20dip" >
 
         <LinearLayout
             android:id="@+id/pb7titlebox"
@@ -40,10 +40,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="25dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:clickable="true"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <LinearLayout
                 android:id="@+id/pb7sbbox"
@@ -193,7 +193,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/contentback"
+                android:background="@drawable/cbg"
                 android:gravity="center"
                 android:hint="@string/editplan"
                 android:text="@string/editplan"
@@ -206,7 +206,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/contentback"
+                android:background="@drawable/cbg"
                 android:layout_marginTop="8dip"
                 android:gravity="center"
                 android:hint="@string/pb7find"

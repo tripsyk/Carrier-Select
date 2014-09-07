@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="30dip" >
+        android:padding="20dip" >
 
         <TextView
             android:id="@+id/pstitle"
@@ -42,10 +42,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dip"
-            android:background="@drawable/contentback"
+            android:background="@drawable/cbg"
             android:clickable="true"
             android:orientation="vertical"
-            android:padding="10dip" >
+            android:padding="15dip" >
 
             <TextView
                 android:id="@+id/ps3mantitle"
@@ -77,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dip"
-                android:background="@drawable/btnbg"
+                android:background="@drawable/bbg"
                 android:gravity="center"
                 android:hint="@string/comparephone"
                 android:padding="15dip"
@@ -103,10 +103,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/contentback"
+                android:background="@drawable/cbg"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="10dip" >
+                android:padding="15dip" >
 
                 <TextView
                     android:id="@+id/releasedate"
@@ -247,10 +247,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="@drawable/contentback"
+                android:background="@drawable/cbg"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="10dip" >
+                android:padding="15dip" >
 
                 <TextView
                     android:id="@+id/displaysize"
@@ -344,10 +344,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="2dip"
-                android:background="@drawable/contentback"
+                android:background="@drawable/cbg"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="10dip" >
+                android:padding="15dip" >
 
                 <TextView
                     android:id="@+id/backcam"
@@ -441,10 +441,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="2dip"
-                android:background="@drawable/contentback"
+                android:background="@drawable/cbg"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="10dip" >
+                android:padding="15dip" >
 
                 <TextView
                     android:id="@+id/processor"
@@ -596,10 +596,10 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="15dip"
                 android:layout_marginTop="2dip"
-                android:background="@drawable/contentback"
+                android:background="@drawable/cbg"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:padding="10dip" >
+                android:padding="15dip" >
 
                 <TextView
                     android:id="@+id/imagestab"

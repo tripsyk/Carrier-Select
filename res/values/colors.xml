@@ -5,4 +5,6 @@
     <color name="titlecolor">#97E7FF</color>
     <color name="btncolor">#CCFFCC</color>
     <color name="bg">#00C0E1</color>
+    <color name="txt">#000000</color>
+    <drawable name="title">#00ADE1</drawable>
 </resources>

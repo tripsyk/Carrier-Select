@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/titlenoback"
     android:orientation="vertical"
-    android:padding="30dip" >
+    android:padding="20dip" >
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -32,7 +32,7 @@
         android:layout_gravity="center"
         android:layout_marginBottom="20dip"
         android:layout_marginTop="150dip"
-        android:background="@drawable/contentback"
+        android:background="@drawable/bbg"
         android:gravity="center"
         android:orientation="horizontal" >
 

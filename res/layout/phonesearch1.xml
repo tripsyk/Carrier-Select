@@ -5,7 +5,7 @@
     android:layout_gravity="center"
     android:background="@color/titlenoback"
     android:orientation="vertical"
-    android:padding="30dp" >
+    android:padding="20dp" >
 
     <LinearLayout
         android:id="@+id/ps1titlebox"
@@ -61,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:background="@drawable/contentback"
+        android:background="@drawable/cbg"
         android:gravity="center"
         android:padding="15dip" >
 
@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:background="@drawable/contentback"
+        android:background="@drawable/bbg"
         android:gravity="center" >
 
         <TextView
@@ -95,7 +95,7 @@
             android:padding="15dip"
             android:text="@string/searchGoBox"
             android:textColor="@color/white_color"
-            android:textSize="@dimen/subtitle_dimens" >
+            android:textSize="@dimen/midtitle" >
         </TextView>
     </LinearLayout>
 

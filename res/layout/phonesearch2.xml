@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="30dip" >
+        android:padding="20dip" >
 
         <TextView
             android:id="@+id/pstitle"
@@ -80,10 +80,10 @@
                 android:layout_width="250dip"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dip"
-                android:background="@drawable/contentback"
+                android:background="@drawable/cbg"
                 android:gravity="center"
                 android:hint="@string/loadingphone"
-                android:padding="10dip"
+                android:padding="15dip"
                 android:text="@string/loadingphone"
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/breakdown_dimens" />
@@ -93,10 +93,10 @@
                 android:layout_width="250dip"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dip"
-                android:background="@drawable/contentback"
+                android:background="@drawable/cbg"
                 android:gravity="center"
                 android:hint="@string/loadingphone"
-                android:padding="10dip"
+                android:padding="15dip"
                 android:text="@string/loadingphone"
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/breakdown_dimens" />
@@ -106,10 +106,10 @@
                 android:layout_width="250dip"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dip"
-                android:background="@drawable/contentback"
+                android:background="@drawable/cbg"
                 android:gravity="center"
                 android:hint="@string/loadingphone"
-                android:padding="10dip"
+                android:padding="15dip"
                 android:text="@string/loadingphone"
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/breakdown_dimens" />
@@ -119,10 +119,10 @@
                 android:layout_width="250dip"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dip"
-                android:background="@drawable/contentback"
+                android:background="@drawable/cbg"
                 android:gravity="center"
                 android:hint="@string/loadingphone"
-                android:padding="10dip"
+                android:padding="15dip"
                 android:text="@string/loadingphone"
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/breakdown_dimens" />
@@ -132,13 +132,14 @@
                 android:layout_width="250dip"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dip"
-                android:background="@drawable/contentback"
+                android:background="@drawable/cbg"
                 android:gravity="center"
                 android:hint="@string/loadingphone"
-                android:padding="10dip"
+                android:padding="15dip"
                 android:text="@string/loadingphone"
                 android:textColor="@color/white_color"
                 android:textSize="@dimen/breakdown_dimens" />
+
         </LinearLayout>
 
         <com.applovin.adview.AppLovinAdView

@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="30dip" >
+        android:padding="20dip" >
 
         <TextView
             android:id="@+id/pb5title"
@@ -39,10 +39,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="8dip"
-                android:background="@drawable/contentback"
+                android:background="@drawable/cbg"
                 android:clickable="true"
                 android:orientation="vertical"
-                android:padding="10dip" >
+                android:padding="15dip" >
 
                 <TextView
                     android:id="@+id/pb5one"
@@ -72,10 +72,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="8dip"
-                android:background="@drawable/contentback"
+                android:background="@drawable/cbg"
                 android:clickable="true"
                 android:orientation="vertical"
-                android:padding="10dip" >
+                android:padding="15dip" >
 
                 <TextView
                     android:id="@+id/pb5two"
@@ -105,10 +105,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="8dip"
-                android:background="@drawable/contentback"
+                android:background="@drawable/cbg"
                 android:clickable="true"
                 android:orientation="vertical"
-                android:padding="10dip" >
+                android:padding="15dip" >
 
                 <TextView
                     android:id="@+id/pb5three"
@@ -138,10 +138,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="8dip"
-                android:background="@drawable/contentback"
+                android:background="@drawable/cbg"
                 android:clickable="true"
                 android:orientation="vertical"
-                android:padding="10dip" >
+                android:padding="15dip" >
 
                 <TextView
                     android:id="@+id/pb5unl"
