@@ -3,18 +3,18 @@ package com.guardian.carrierselect;
 import java.util.List;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
-import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.guardian.carrierselect.model.Phone;
@@ -26,20 +26,22 @@ import com.parse.ParseQuery;
 
 public class PhoneSearch2 extends Fragment {
 
-	private static final String SEARCHTERM = "search_term";
 	private String searchTerm;
-	private TextView ps2resultstitle, ps2subtitle, ps21, ps22, ps23, ps24,
-			ps25;
+	private TextView ps2resultstitle, ps2subtitle;
+	private Button ps21, ps22, ps23, ps24, ps25;
 	private ProgressDialog progress;
-	private int clicked;
 	private static View rootView;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		rootView = inflater.inflate(R.layout.phonesearch2, container, false);
-		getActivity().getActionBar().show();
 
+		rootView = inflater.inflate(R.layout.phonesearch2, container, false);
+		final SharedPreferences sharedPref = getActivity()
+				.getSharedPreferences("data", Context.MODE_PRIVATE);
+		final SharedPreferences.Editor editor = sharedPref.edit();
+
+		searchTerm = sharedPref.getString("ps1", "");
 		ps2resultstitle = (TextView) rootView
 				.findViewById(R.id.ps2resultstitle);
 		ps2resultstitle.setText(searchTerm);
@@ -47,11 +49,11 @@ public class PhoneSearch2 extends Fragment {
 		ps2subtitle = (TextView) rootView.findViewById(R.id.ps2subtitle);
 
 		// Load results TextViews
-		ps21 = (TextView) rootView.findViewById(R.id.ps21);
-		ps22 = (TextView) rootView.findViewById(R.id.ps22);
-		ps23 = (TextView) rootView.findViewById(R.id.ps23);
-		ps24 = (TextView) rootView.findViewById(R.id.ps24);
-		ps25 = (TextView) rootView.findViewById(R.id.ps25);
+		ps21 = (Button) rootView.findViewById(R.id.ps21);
+		ps22 = (Button) rootView.findViewById(R.id.ps22);
+		ps23 = (Button) rootView.findViewById(R.id.ps23);
+		ps24 = (Button) rootView.findViewById(R.id.ps24);
+		ps25 = (Button) rootView.findViewById(R.id.ps25);
 
 		ps21.setVisibility(View.GONE);
 		ps22.setVisibility(View.GONE);
@@ -59,18 +61,24 @@ public class PhoneSearch2 extends Fragment {
 		ps24.setVisibility(View.GONE);
 		ps25.setVisibility(View.GONE);
 
-		// Load in animations.
-		final Animation righttoleft = AnimationUtils.loadAnimation(
-				rootView.getContext(), R.anim.right_to_left);
-
 		performSearch();
 
 		ps21.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View view) {
-				clicked = 1;
-				rootView.startAnimation(righttoleft);
+
+				editor.putString("ps2", ps21.getText().toString());
+				editor.commit();
+
+				final Fragment fragment = new PhoneSearch3();
+				final FragmentManager fm = getActivity().getFragmentManager();
+				final FragmentTransaction fragmenttran = fm.beginTransaction();
+				fragmenttran.setCustomAnimations(R.animator.right_in_off,
+						R.animator.left_in_off);
+				fragmenttran.replace(R.id.fragment_container, fragment);
+				fragmenttran.addToBackStack(null);
+				fragmenttran.commit();
 			}
 		});
 
@@ -78,8 +86,18 @@ public class PhoneSearch2 extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				clicked = 2;
-				rootView.startAnimation(righttoleft);
+
+				editor.putString("ps2", ps22.getText().toString());
+				editor.commit();
+
+				final Fragment fragment = new PhoneSearch3();
+				final FragmentManager fm = getActivity().getFragmentManager();
+				final FragmentTransaction fragmenttran = fm.beginTransaction();
+				fragmenttran.setCustomAnimations(R.animator.right_in_off,
+						R.animator.left_in_off);
+				fragmenttran.replace(R.id.fragment_container, fragment);
+				fragmenttran.addToBackStack(null);
+				fragmenttran.commit();
 			}
 		});
 
@@ -87,8 +105,18 @@ public class PhoneSearch2 extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				clicked = 3;
-				rootView.startAnimation(righttoleft);
+
+				editor.putString("ps2", ps23.getText().toString());
+				editor.commit();
+
+				final Fragment fragment = new PhoneSearch3();
+				final FragmentManager fm = getActivity().getFragmentManager();
+				final FragmentTransaction fragmenttran = fm.beginTransaction();
+				fragmenttran.setCustomAnimations(R.animator.right_in_off,
+						R.animator.left_in_off);
+				fragmenttran.replace(R.id.fragment_container, fragment);
+				fragmenttran.addToBackStack(null);
+				fragmenttran.commit();
 			}
 		});
 
@@ -96,8 +124,18 @@ public class PhoneSearch2 extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				clicked = 4;
-				rootView.startAnimation(righttoleft);
+
+				editor.putString("ps2", ps24.getText().toString());
+				editor.commit();
+
+				final Fragment fragment = new PhoneSearch3();
+				final FragmentManager fm = getActivity().getFragmentManager();
+				final FragmentTransaction fragmenttran = fm.beginTransaction();
+				fragmenttran.setCustomAnimations(R.animator.right_in_off,
+						R.animator.left_in_off);
+				fragmenttran.replace(R.id.fragment_container, fragment);
+				fragmenttran.addToBackStack(null);
+				fragmenttran.commit();
 			}
 		});
 
@@ -105,82 +143,19 @@ public class PhoneSearch2 extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				clicked = 5;
-				rootView.startAnimation(righttoleft);
+
+				editor.putString("ps2", ps25.getText().toString());
+				editor.commit();
+
+				final Fragment fragment = new PhoneSearch3();
+				final FragmentManager fm = getActivity().getFragmentManager();
+				final FragmentTransaction fragmenttran = fm.beginTransaction();
+				fragmenttran.setCustomAnimations(R.animator.right_in_off,
+						R.animator.left_in_off);
+				fragmenttran.replace(R.id.fragment_container, fragment);
+				fragmenttran.addToBackStack(null);
+				fragmenttran.commit();
 			}
-		});
-
-		righttoleft.setAnimationListener(new AnimationListener() {
-
-			@Override
-			public void onAnimationEnd(Animation arg0) {
-
-				if (clicked == 1) {
-
-					final FragmentTransaction fragmenttran = getFragmentManager()
-							.beginTransaction();
-					fragmenttran.replace(R.id.fragment_container,
-							PhoneSearch3.create(ps21.getText().toString()));
-					fragmenttran.addToBackStack(null);
-					fragmenttran.commit();
-					getFragmentManager().executePendingTransactions();
-
-				} else if (clicked == 2) {
-
-					final FragmentTransaction fragmenttran = getFragmentManager()
-							.beginTransaction();
-					fragmenttran.replace(R.id.fragment_container,
-							PhoneSearch3.create(ps22.getText().toString()));
-					fragmenttran.addToBackStack(null);
-					fragmenttran.commit();
-					getFragmentManager().executePendingTransactions();
-
-				} else if (clicked == 3) {
-
-					final FragmentTransaction fragmenttran = getFragmentManager()
-							.beginTransaction();
-					fragmenttran.replace(R.id.fragment_container,
-							PhoneSearch3.create(ps23.getText().toString()));
-					fragmenttran.addToBackStack(null);
-					fragmenttran.commit();
-					getFragmentManager().executePendingTransactions();
-
-				} else if (clicked == 4) {
-
-					final FragmentTransaction fragmenttran = getFragmentManager()
-							.beginTransaction();
-					fragmenttran.replace(R.id.fragment_container,
-							PhoneSearch3.create(ps24.getText().toString()));
-					fragmenttran.addToBackStack(null);
-					fragmenttran.commit();
-					getFragmentManager().executePendingTransactions();
-
-				} else if (clicked == 5) {
-
-					final FragmentTransaction fragmenttran = getFragmentManager()
-							.beginTransaction();
-					fragmenttran.replace(R.id.fragment_container,
-							PhoneSearch3.create(ps25.getText().toString()));
-					fragmenttran.addToBackStack(null);
-					fragmenttran.commit();
-					getFragmentManager().executePendingTransactions();
-
-				}
-
-			}
-
-			@Override
-			public void onAnimationStart(Animation animation) {
-				// TODO Auto-generated method stub
-
-			}
-
-			@Override
-			public void onAnimationRepeat(Animation animation) {
-				// TODO Auto-generated method stub
-
-			}
-
 		});
 
 		return rootView;
@@ -264,27 +239,6 @@ public class PhoneSearch2 extends Fragment {
 				}
 			}
 		});
-
-	}
-
-	public static PhoneSearch2 create(String searchName) {
-		final PhoneSearch2 fragment = new PhoneSearch2();
-
-		final Bundle args = new Bundle();
-
-		args.putString(SEARCHTERM, searchName);
-		fragment.setArguments(args);
-
-		return fragment;
-	}
-
-	@Override
-	public void onAttach(Activity activity) {
-		super.onAttach(activity);
-
-		final Bundle args = getArguments();
-
-		searchTerm = args.getString(SEARCHTERM);
 
 	}
 

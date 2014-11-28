@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/scroll_view"
-    android:background="@color/titlenoback"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:padding="@dimen/border" >
 
     <LinearLayout
         android:id="@+id/homebox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical"
-        android:padding="20dip" >
+        android:orientation="vertical" >
 
         <LinearLayout
             android:id="@+id/hometitlebox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:gravity="center"
             android:orientation="vertical" >
 
@@ -28,7 +28,7 @@
                 android:gravity="center"
                 android:hint="@string/homenews"
                 android:text="@string/homenews"
-                android:textColor="@color/white_color"
+                android:textColor="@color/txt"
                 android:textSize="@dimen/title_dimens" />
 
             <TextView
@@ -39,62 +39,759 @@
                 android:gravity="center"
                 android:hint="@string/homesubtitle"
                 android:text="@string/homesubtitle"
-                android:textColor="@color/white_color"
+                android:textColor="@color/txt"
                 android:textSize="@dimen/subtitle_dimens" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/mobilenewsbox"
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/attcard"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="25dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/cardmarg"
+            android:layout_marginLeft="@dimen/cardmarg"
+            android:layout_marginRight="@dimen/cardmarg"
+            android:layout_marginTop="@dimen/topcard"
             android:gravity="center"
-            android:orientation="vertical" >
-
-            <TextView
-                android:id="@+id/homenews"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/newsupdatetitle"
-                android:text="@string/newsupdatetitle"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/midtitle" />
+            card_view:cardBackgroundColor="@color/white_color"
+            card_view:cardCornerRadius="@dimen/cardcorner"
+            card_view:cardElevation="@dimen/card_elevation"
+            card_view:contentPadding="@dimen/cardpad" >
 
             <LinearLayout
-                android:id="@+id/desc_dimensbox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/cbg"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:padding="20dip" >
+                android:orientation="vertical" >
 
                 <TextView
-                    android:id="@+id/newsupdatetitle"
+                    android:id="@+id/attnews"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:hint="@string/newstest"
-                    android:text="@string/newstest"
-                    android:textColor="@color/white_color"
+                    android:hint="@string/attnews"
+                    android:text="@string/attnews"
                     android:textSize="@dimen/subtitle_dimens" />
 
                 <TextView
-                    android:id="@+id/newsupdates"
+                    android:layout_width="match_parent"
+                    android:layout_height="12dip"
+                    android:layout_gravity="center"
+                    android:background="@drawable/lineblue"
+                    android:gravity="center"
+                    android:hint=""
+                    android:text="" />
+
+                <LinearLayout
+                    android:id="@+id/att1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/atticon1"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name" />
+
+                    <TextView
+                        android:id="@+id/attupdates1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/att2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/atticon2"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/attupdates2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/att3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/atticon3"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/attupdates3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/att4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/atticon4"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/attupdates4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/att5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/atticon5"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/attupdates5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/vercard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/cardmarg"
+            android:layout_marginLeft="@dimen/cardmarg"
+            android:layout_marginRight="@dimen/cardmarg"
+            android:layout_marginTop="@dimen/cardgut"
+            android:gravity="center"
+            card_view:cardBackgroundColor="@color/white_color"
+            card_view:cardCornerRadius="@dimen/cardcorner"
+            card_view:cardElevation="@dimen/card_elevation"
+            card_view:contentPadding="@dimen/cardpad" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/vernews"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="5dip"
                     android:gravity="center"
-                    android:hint="@string/newstest"
-                    android:text="@string/newstest"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/breakdown_dimens" />
+                    android:hint="@string/vernews"
+                    android:text="@string/vernews"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="12dip"
+                    android:layout_gravity="center"
+                    android:background="@drawable/lineblue"
+                    android:gravity="center"
+                    android:hint=""
+                    android:text="" />
+
+                <LinearLayout
+                    android:id="@+id/ver1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/vericon1"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/verupdates1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ver2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/vericon2"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/verupdates2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ver3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/vericon3"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/verupdates3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ver4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/vericon4"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/verupdates4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ver5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/vericon5"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/verupdates5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/sprcard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/cardmarg"
+            android:layout_marginLeft="@dimen/cardmarg"
+            android:layout_marginRight="@dimen/cardmarg"
+            android:layout_marginTop="@dimen/cardgut"
+            android:gravity="center"
+            card_view:cardBackgroundColor="@color/white_color"
+            card_view:cardCornerRadius="@dimen/cardcorner"
+            card_view:cardElevation="@dimen/card_elevation"
+            card_view:contentPadding="@dimen/cardpad" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/sprnews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/sprnews"
+                    android:text="@string/sprnews"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="12dip"
+                    android:layout_gravity="center"
+                    android:background="@drawable/lineblue"
+                    android:gravity="center"
+                    android:hint=""
+                    android:text="" />
+
+                <LinearLayout
+                    android:id="@+id/spr1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/spricon1"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/sprupdates1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/spr2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/spricon2"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/sprupdates2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/spr3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/spricon3"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/sprupdates3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/spr4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/spricon4"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/sprupdates4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/spr5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/spricon5"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/sprupdates5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/tmocard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/cardmarg"
+            android:layout_marginLeft="@dimen/cardmarg"
+            android:layout_marginRight="@dimen/cardmarg"
+            android:layout_marginTop="@dimen/cardgut"
+            android:gravity="center"
+            card_view:cardBackgroundColor="@color/white_color"
+            card_view:cardCornerRadius="@dimen/cardcorner"
+            card_view:cardElevation="@dimen/card_elevation"
+            card_view:contentPadding="@dimen/cardpad" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tmonews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/tmonews"
+                    android:text="@string/tmonews"
+                    android:textSize="@dimen/subtitle_dimens" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="12dip"
+                    android:layout_gravity="center"
+                    android:background="@drawable/lineblue"
+                    android:gravity="center"
+                    android:hint=""
+                    android:text="" />
+
+                <LinearLayout
+                    android:id="@+id/tmo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/tmoicon1"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tmoupdates1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tmo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/tmoicon2"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tmoupdates2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tmo3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/tmoicon3"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tmoupdates3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tmo4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/tmoicon4"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tmoupdates4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tmo5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dip"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/tmoicon5"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/app_name"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tmoupdates5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/blankstring"
+                        android:text="@string/blankstring"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
     </LinearLayout>
 
 </ScrollView>

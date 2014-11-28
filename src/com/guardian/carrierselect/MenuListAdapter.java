@@ -6,19 +6,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MenuListAdapter extends ArrayAdapter<String> {
 
 	private LayoutInflater inflater;
 	private String[] mMenuItems;
+	private int[] mIcon;
 
-	public MenuListAdapter(Context ctx, int id, String[] menuItems) {
+	public MenuListAdapter(Context ctx, int id, String[] menuItems, int[] icon) {
 
 		super(ctx, id);
 		inflater = (LayoutInflater) ctx
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		mMenuItems = menuItems;
+		this.mIcon = icon;
 	}
 
 	public int getCount() {
@@ -34,6 +37,7 @@ public class MenuListAdapter extends ArrayAdapter<String> {
 
 		if (convertView == null) {
 			convertView = inflater.inflate(R.layout.drawer_list_item, null);
+			holder.icon = (ImageView) convertView.findViewById(R.id.icon);
 			holder.menuTitle = (TextView) convertView
 					.findViewById(R.id.menuTitle);
 
@@ -43,12 +47,14 @@ public class MenuListAdapter extends ArrayAdapter<String> {
 		}
 
 		holder.menuTitle.setText(mMenuItems[position]);
+		holder.icon.setImageResource(mIcon[position]);
 
 		return convertView;
 	}
 
 	static class ViewHolder {
 		TextView menuTitle;
+		ImageView icon;
 	}
 
 }

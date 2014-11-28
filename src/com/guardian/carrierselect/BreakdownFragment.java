@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.app.FragmentManager;
 import android.app.ProgressDialog;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -13,9 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
-import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.guardian.carrierselect.model.Phone;
@@ -41,13 +40,15 @@ public class BreakdownFragment extends Fragment {
 
 	private ProgressDialog progress;
 
-	private TextView attplan, attsmart, attbasic, atttablets, attmifi, atttax,
-			attdiscount, atttotal;
-	private TextView verplan, versmart, verbasic, vertablets, vermifi, vertax,
-			verdiscount, vertotal;
-	private TextView sprplan, sprsmart, sprbasic, sprtablets, sprmifi, sprtax,
-			sprdiscount, sprtotal;
-	private TextView tmoplan, tmophones, tmotax, tmodiscount, tmototal;
+	private TextView attname, attplan, attsmart, attbasic, atttablets, attmifi,
+			atttax, attdiscount, atttotal;
+	private TextView vername, verplan, versmart, verbasic, vertablets, vermifi,
+			vertax, verdiscount, vertotal;
+	private TextView sprname, sprplan, sprsmart, sprbasic, sprtablets, sprmifi,
+			sprtax, sprdiscount, sprtotal;
+	private TextView tmoname, tmoplan, tmophones, tmotax, tmodiscount,
+			tmototal;
+	private TextView equipnotice;
 
 	private static View rootView;
 
@@ -57,35 +58,16 @@ public class BreakdownFragment extends Fragment {
 		rootView = inflater.inflate(R.layout.activity_breakdown, container,
 				false);
 
-		final Animation righttoleft = AnimationUtils.loadAnimation(
-				rootView.getContext(), R.anim.right_to_left);
-		final Animation lefttoright = AnimationUtils.loadAnimation(
-				rootView.getContext(), R.anim.left_to_right);
+		final Button attviewer = (Button) rootView.findViewById(R.id.gotoatt);
+		final Button verviewer = (Button) rootView.findViewById(R.id.gotover);
+		final Button sprviewer = (Button) rootView.findViewById(R.id.gotospr);
+		final Button tmoviewer = (Button) rootView.findViewById(R.id.gototmo);
+		equipnotice = (TextView) rootView.findViewById(R.id.equipnotice);
 
-		// Begin startup flow.
-		rootView.startAnimation(lefttoright);
-
-		final TextView att_title = (TextView) rootView
-				.findViewById(R.id.att_title);
-		att_title.setTypeface(null, Typeface.BOLD);
-		final TextView ver_title = (TextView) rootView
-				.findViewById(R.id.ver_title);
-		ver_title.setTypeface(null, Typeface.BOLD);
-		final TextView spr_title = (TextView) rootView
-				.findViewById(R.id.spr_title);
-		spr_title.setTypeface(null, Typeface.BOLD);
-		final TextView tmo_title = (TextView) rootView
-				.findViewById(R.id.tmo_title);
-		tmo_title.setTypeface(null, Typeface.BOLD);
-
-		final TextView attviewer = (TextView) rootView
-				.findViewById(R.id.gotoatt);
-		final TextView verviewer = (TextView) rootView
-				.findViewById(R.id.gotover);
-		final TextView sprviewer = (TextView) rootView
-				.findViewById(R.id.gotospr);
-		final TextView tmoviewer = (TextView) rootView
-				.findViewById(R.id.gototmo);
+		attname = (TextView) rootView.findViewById(R.id.attname);
+		vername = (TextView) rootView.findViewById(R.id.vername);
+		sprname = (TextView) rootView.findViewById(R.id.sprname);
+		tmoname = (TextView) rootView.findViewById(R.id.tmoname);
 
 		attplan = (TextView) rootView.findViewById(R.id.attplan);
 		verplan = (TextView) rootView.findViewById(R.id.verplan);
@@ -129,30 +111,20 @@ public class BreakdownFragment extends Fragment {
 		buildSpr();
 		buildTmo();
 
-		righttoleft.setAnimationListener(new AnimationListener() {
+		equipnotice.setOnClickListener(new OnClickListener() {
 
 			@Override
-			public void onAnimationEnd(Animation arg0) {
-
-				final FragmentTransaction ft = getFragmentManager()
-						.beginTransaction();
-				ft.replace(R.id.fragment_container, PlanViewer.create(
-						smartphones, basicphones, gigs, tabs, hotspotprice,
-						discount, carrier));
-				ft.addToBackStack(null);
-				ft.commit();
-				getFragmentManager().executePendingTransactions();
+			public void onClick(View arg0) {
+				final FragmentManager fm = getActivity().getFragmentManager();
+				final FragmentTransaction fragmenttran = fm.beginTransaction();
+				fragmenttran.setCustomAnimations(R.animator.right_in_off,
+						R.animator.left_in_off);
+				fragmenttran.replace(R.id.fragment_container,
+						KnowledgeBase3.create("Installment Billing"));
+				fragmenttran.addToBackStack(null);
+				fragmenttran.commit();
 			}
 
-			@Override
-			public void onAnimationRepeat(Animation arg0) {
-
-			}
-
-			@Override
-			public void onAnimationStart(Animation arg0) {
-
-			}
 		});
 
 		attviewer.setOnClickListener(new OnClickListener() {
@@ -160,7 +132,7 @@ public class BreakdownFragment extends Fragment {
 			@Override
 			public void onClick(View arg0) {
 				carrier = "AT&T";
-				rootView.startAnimation(righttoleft);
+				next();
 			}
 
 		});
@@ -170,7 +142,7 @@ public class BreakdownFragment extends Fragment {
 			@Override
 			public void onClick(View arg0) {
 				carrier = "Verizon Wireless";
-				rootView.startAnimation(righttoleft);
+				next();
 			}
 
 		});
@@ -180,7 +152,7 @@ public class BreakdownFragment extends Fragment {
 			@Override
 			public void onClick(View arg0) {
 				carrier = "Sprint";
-				rootView.startAnimation(righttoleft);
+				next();
 			}
 
 		});
@@ -190,12 +162,25 @@ public class BreakdownFragment extends Fragment {
 			@Override
 			public void onClick(View arg0) {
 				carrier = "T-Mobile";
-				rootView.startAnimation(righttoleft);
+				next();
 			}
 
 		});
 
 		return rootView;
+	}
+
+	public void next() {
+
+		final FragmentManager fm = getActivity().getFragmentManager();
+		final FragmentTransaction fragmenttran = fm.beginTransaction();
+		fragmenttran.setCustomAnimations(R.animator.right_in_off,
+				R.animator.left_in_off);
+		fragmenttran.replace(R.id.fragment_container, PlanViewer.create(
+				smartphones, basicphones, gigs, tabs, hotspotprice, discount,
+				carrier));
+		fragmenttran.addToBackStack(null);
+		fragmenttran.commit();
 	}
 
 	@SuppressLint("DefaultLocale")
@@ -220,6 +205,7 @@ public class BreakdownFragment extends Fragment {
 
 				if (e == null) {
 
+					final String name = PlanList.get(0).getString("Name");
 					int plan = Integer.valueOf(PlanList.get(0).getString(
 							"PlanCost"));
 					int smart = Integer.valueOf(PlanList.get(0).getString(
@@ -240,6 +226,7 @@ public class BreakdownFragment extends Fragment {
 							+ tablets + mifi) * .16) * 100) / 100;
 					dis = Math.round(plan - (plan * dis));
 
+					attname.setText(name);
 					attplan.setText("$" + plan);
 					attsmart.setText("$" + smart);
 					attbasic.setText("$" + basic);
@@ -282,6 +269,7 @@ public class BreakdownFragment extends Fragment {
 
 				if (e == null) {
 
+					final String name = PlanList.get(0).getString("Name");
 					int plan = Integer.valueOf(PlanList.get(0).getString(
 							"PlanCost"));
 					int smart = Integer.valueOf(PlanList.get(0).getString(
@@ -302,6 +290,7 @@ public class BreakdownFragment extends Fragment {
 							+ tablets + mifi) * .16) * 100) / 100;
 					dis = Math.round(plan - (plan * dis));
 
+					vername.setText(name);
 					verplan.setText("$" + plan);
 					versmart.setText("$" + smart);
 					verbasic.setText("$" + basic);
@@ -343,6 +332,7 @@ public class BreakdownFragment extends Fragment {
 
 				if (e == null) {
 
+					final String name = PlanList.get(0).getString("Name");
 					int plan = Integer.valueOf(PlanList.get(0).getString(
 							"PlanCost"));
 					int smart = Integer.valueOf(PlanList.get(0).getString(
@@ -363,6 +353,7 @@ public class BreakdownFragment extends Fragment {
 							+ tablets + mifi) * .16) * 100) / 100;
 					dis = Math.round(plan - (plan * dis));
 
+					sprname.setText(name);
 					sprplan.setText("$" + plan);
 					sprsmart.setText("$" + smart);
 					sprbasic.setText("$" + basic);
@@ -416,16 +407,18 @@ public class BreakdownFragment extends Fragment {
 
 				if (e == null) {
 
-					int plan = Integer.parseInt(PlanList.get(0).getString(
-							"PlanCost"));
-					int smart = Integer.parseInt(PlanList.get(0).getString(
-							"SmartPrice"));
+					final String name = PlanList.get(0).getString("Name");
+					final int plan = Integer.parseInt(PlanList.get(0)
+							.getString("PlanCost"));
+					final int smart = Integer.parseInt(PlanList.get(0)
+							.getString("SmartPrice"));
 
 					double dis = 1 - (discount / 100);
 					int tax = (int) Math
 							.round((((smart * dis) + plan) * .16) * 100) / 100;
 					dis = Math.round(smart - (smart * dis));
 
+					tmoname.setText(name);
 					tmoplan.setText("$" + plan);
 					tmophones.setText("$" + smart);
 					tmodiscount.setText("-$" + Math.round(dis));

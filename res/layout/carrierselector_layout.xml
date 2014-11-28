@@ -2,143 +2,85 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/titlenoback"
-    android:overScrollFooter="@color/white_color"
-    android:overScrollHeader="@color/white_color" >
+    android:padding="@dimen/border" >
 
     <LinearLayout
         android:id="@+id/selectorbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dip" >
+        android:orientation="vertical" >
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/carriertitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:orientation="horizontal" >
+            android:gravity="center"
+            android:hint="@string/carriertitle"
+            android:paddingTop="16dip"
+            android:text="@string/carriertitle"
+            android:textSize="@dimen/midtitle" />
 
-            <TextView
-                android:id="@+id/carriertitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:hint="@string/carriertitle"
-                android:text="@string/carriertitle"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/midtitle" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/attbox"
-            android:layout_width="115dip"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/att"
+            android:layout_width="@dimen/btnw"
+            android:layout_height="@dimen/btnh"
             android:layout_gravity="center"
-            android:layout_marginTop="75dip"
-            android:background="@drawable/bbg"
-            android:clickable="true"
-            android:orientation="vertical"
-            android:padding="15dip" >
+            android:layout_marginTop="80dip"
+            android:background="@color/accent"
+            android:gravity="center"
+            android:hint="@string/att"
+            android:padding="8dip"
+            android:text="@string/att"
+            android:textColor="@color/white_color" />
 
-            <TextView
-                android:id="@+id/att"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:hint="@string/att"
-                android:text="@string/att"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/subtitle_dimens" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/verizonbox"
-            android:layout_width="115dip"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/verizon"
+            android:layout_width="@dimen/btnw"
+            android:layout_height="@dimen/btnh"
             android:layout_gravity="center"
             android:layout_marginTop="8dip"
-            android:background="@drawable/bbg"
-            android:clickable="true"
-            android:orientation="vertical"
-            android:padding="15dip" >
+            android:background="@color/accent"
+            android:gravity="center"
+            android:hint="@string/verizon"
+            android:text="@string/verizon"
+            android:textColor="@color/white_color" />
 
-            <TextView
-                android:id="@+id/verizon"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:hint="@string/verizon"
-                android:text="@string/verizon"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/subtitle_dimens" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/sprintbox"
-            android:layout_width="115dip"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/sprint"
+            android:layout_width="@dimen/btnw"
+            android:layout_height="@dimen/btnh"
             android:layout_gravity="center"
             android:layout_marginTop="8dip"
-            android:background="@drawable/bbg"
-            android:clickable="true"
-            android:orientation="vertical"
-            android:padding="15dip" >
+            android:background="@color/accent"
+            android:gravity="center"
+            android:hint="@string/sprint"
+            android:text="@string/sprint"
+            android:textColor="@color/white_color" />
 
-            <TextView
-                android:id="@+id/sprint"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:hint="@string/sprint"
-                android:text="@string/sprint"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/subtitle_dimens" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/tmobox"
-            android:layout_width="115dip"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/tmobile"
+            android:layout_width="@dimen/btnw"
+            android:layout_height="@dimen/btnh"
             android:layout_gravity="center"
             android:layout_marginTop="8dip"
-            android:background="@drawable/bbg"
-            android:clickable="true"
-            android:orientation="vertical"
-            android:padding="15dip" >
+            android:background="@color/accent"
+            android:gravity="center"
+            android:hint="@string/tmobile"
+            android:text="@string/tmobile"
+            android:textColor="@color/white_color" />
 
-            <TextView
-                android:id="@+id/tmobile"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:hint="@string/tmobile"
-                android:text="@string/tmobile"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/subtitle_dimens" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/otherbox"
-            android:layout_width="115dip"
-            android:layout_height="wrap_content"
+        <Button
+            android:id="@+id/other"
+            android:layout_width="@dimen/btnw"
+            android:layout_height="@dimen/btnh"
             android:layout_gravity="center"
             android:layout_marginTop="8dip"
-            android:background="@drawable/bbg"
-            android:clickable="true"
-            android:orientation="vertical"
-            android:padding="15dip" >
-
-            <TextView
-                android:id="@+id/other"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:hint="@string/other"
-                android:text="@string/other"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/subtitle_dimens" />
-        </LinearLayout>
+            android:background="@color/accent"
+            android:gravity="center"
+            android:hint="@string/other"
+            android:text="@string/other"
+            android:textColor="@color/white_color" />
     </LinearLayout>
 
 </ScrollView>

@@ -2,18 +2,16 @@ package com.guardian.carrierselect;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
-import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
+import android.widget.Button;
 import android.widget.Spinner;
 
 public class NoContract1 extends Fragment {
@@ -23,25 +21,13 @@ public class NoContract1 extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+
 		rootView = inflater.inflate(R.layout.nocontract1, container, false);
-
-		getActivity().getActionBar().setTitle("No Contract Plans");
-
-		// Load in animations.
-		final Animation righttoleft = AnimationUtils.loadAnimation(
-				rootView.getContext(), R.anim.right_to_left);
-		final Animation lefttoright = AnimationUtils.loadAnimation(
-				rootView.getContext(), R.anim.left_to_right);
-
-		// Begin startup flow.
-		rootView.startAnimation(lefttoright);
 
 		final SharedPreferences sharedPref = getActivity().getPreferences(
 				Context.MODE_PRIVATE);
 		final SharedPreferences.Editor editor = sharedPref.edit();
-
-		final LinearLayout next = (LinearLayout) rootView
-				.findViewById(R.id.nextnc1box);
+		final Button next = (Button) rootView.findViewById(R.id.nextnc1);
 		final Spinner spinner = (Spinner) rootView
 				.findViewById(R.id.carrierspinner);
 
@@ -49,9 +35,9 @@ public class NoContract1 extends Fragment {
 		// layout
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
 				(rootView.getContext()), R.array.nocontractarray,
-				R.layout.spinner_item);
+				R.layout.widespinnerdropdown);
 		// Specify the layout to use when the list of choices appears
-		adapter.setDropDownViewResource(R.layout.spinnerdropdown);
+		adapter.setDropDownViewResource(R.layout.widespinnerdropdown);
 		// Apply the adapter to the spinner
 		spinner.setAdapter(adapter);
 
@@ -80,35 +66,16 @@ public class NoContract1 extends Fragment {
 
 			@Override
 			public void onClick(View v) {
-				long response = sharedPref.getLong("nc1", 0);
-				if (response > 0 && response < 19)
-					rootView.startAnimation(righttoleft);
-			}
-		});
 
-		righttoleft.setAnimationListener(new AnimationListener() {
-
-			@Override
-			public void onAnimationEnd(Animation arg0) {
 				final Fragment fragment = new NoContract2();
-
-				final FragmentTransaction fragmenttran = getFragmentManager()
-						.beginTransaction();
+				final FragmentManager fm = getActivity()
+						.getFragmentManager();
+				final FragmentTransaction fragmenttran = fm.beginTransaction();
+				fragmenttran.setCustomAnimations(R.animator.right_in_off,
+						R.animator.left_in_off);
 				fragmenttran.replace(R.id.fragment_container, fragment);
 				fragmenttran.addToBackStack(null);
 				fragmenttran.commit();
-				getFragmentManager().executePendingTransactions();
-
-			}
-
-			@Override
-			public void onAnimationRepeat(Animation arg0) {
-
-			}
-
-			@Override
-			public void onAnimationStart(Animation arg0) {
-
 			}
 		});
 

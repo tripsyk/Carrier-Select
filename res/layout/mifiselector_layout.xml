@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/border" >
+
+    <LinearLayout
+        android:id="@+id/selectormifibox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/yourmifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/mifititle"
+            android:text="@string/mifititle"
+            android:textSize="@dimen/title_dimens" />
+
+        <TextView
+            android:id="@+id/mifiselectorsub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="96dip"
+            android:gravity="center"
+            android:hint="@string/phonesub"
+            android:text="@string/phonesub"
+            android:textSize="@dimen/body" />
+
+        <Spinner
+            android:id="@+id/mifispinner"
+            android:layout_width="@dimen/btnw"
+            android:layout_height="@dimen/btnh"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dip"
+            android:background="@color/accent"
+            android:entries="@array/phonespinner"
+            android:gravity="center"
+            android:spinnerMode="dropdown"
+            android:textAllCaps="true"
+            android:textColor="@color/white_color"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="@dimen/btnw"
+            android:layout_height="@dimen/btnh"
+            android:layout_gravity="center"
+            android:layout_marginTop="150dip"
+            android:background="@color/accent"
+            android:gravity="center"
+            android:hint="@string/next"
+            android:text="@string/next"
+            android:textColor="@color/white_color" />
+    </LinearLayout>
+
+</ScrollView>

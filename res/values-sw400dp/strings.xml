@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Carrier Select</string>
+    <string name="sphone_label">Number of smartphones? </string>
+    <string name="data_label">How many GB of data? </string>
+    <string name="bphone_label">Number of basic phones? </string>
+    <string name="extras_label">Extras</string>
+    <string name="quotetop_label">Core Plan</string>
+    <string name="ver_pretotal">Verizon Monthly Cost</string>
+    <string name="att_pretotal">AT&amp;T Monthly Cost</string>
+    <string name="spr_pretotal">Sprint Monthly Cost</string>
+    <string name="tmo_pretotal">T-Mobile Monthly Cost</string>
+    <string name="serviceplans">Service Plans</string>
+    <string name="sp1title">Quotes from the top carriers</string>
+    <string name="sp2title">Service Plan Quotes</string>
+    <string name="quotecompare">Compare bottom line pricing</string>
+    <string name="sp3title">Breakdown of Costs</string>
+    <string name="sp3sub">Where your money is going</string>
+    <string name="pvsub">The fine print</string>
+    <string name="pvtype">Plan Type</string>
+    <string name="plandevices">Plan Supports</string>
+    <string name="pvtalktext">Talk and Text Amount</string>
+    <string name="pvdata">Shared Data Limit</string>
+    <string name="pvoverages">Data Overage Costs</string>
+    <string name="pvetf">Early Termination Fee \n (Contracts)</string>
+    <string name="pvetfinstall">Early Termination Fee \n (Phone Installments)</string>
+    <string name="checkbox_hotspot">Mobile Broadband?</string>
+    <string name="att_breakdowntitle">AT&amp;T Breakdown</string>
+    <string name="ver_breakdowntitle">Verizon Breakdown</string>
+    <string name="spr_breakdowntitle">Sprint Breakdown</string>
+    <string name="tmo_breakdowntitle">T-Mobile Breakdown</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">close</string>
+
+    <string-array name="menu_list">
+        <item>News</item>
+        <item>My Profile</item>
+        <item>Service Plans</item>
+        <item>No Contract Plans</item>
+        <item>Phone Search</item>
+        <item>Knowledge Base</item>
+        <item>About</item>
+    </string-array>
+
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="zero">0</string>
+    <string name="discount_text">Bill discount (employer, etc)?</string>
+    <string name="dis_value">0%</string>
+    <string name="plancost">Core Plan Cost:</string>
+    <string name="smartcost">Line Access - Smart:</string>
+    <string name="basiccost">Line Access - Basic:</string>
+    <string name="phonecost">Line Access - Devices:</string>
+    <string name="datacost">Cost of Data:</string>
+    <string name="tabletcost">Line Access - Tablets:</string>
+    <string name="hotspotcost">Line Access - Hotspots:</string>
+    <string name="taxescost">Taxes &amp; Charges:</string>
+    <string name="discountcost">Employer Discount:</string>
+    <string name="total">Total:</string>
+    <string name="viewplan">Plan Details</string>
+    <string name="pvtitle">Service Plan Viewer</string>
+    <string name="welcome">Welcome to Carrier Select</string>
+    <string name="homenews">News</string>
+    <string name="homesubtitle">News &amp; Updates on Everything Mobile</string>
+    <string name="loading">Loading&#8230;</string>
+    <string name="viewbreakdown">Breakdown</string>
+    <string name="tellus">First, tell us a little about yourself.</string>
+    <string name="about">About</string>
+    <string name="next">Next</string>
+    <string name="tab_label">How many tablets?</string>
+    <string name="contractpricing">2 year contract pricing</string>
+    <string name="search">Phone Search</string>
+    <string name="psdesc">Enter a phone to see technical specs</string>
+    <string name="pscomparedesc">Enter the phone you would like to compare</string>
+    <string name="searchTermHint">(ex. LG Optimus G Pro)</string>
+    <string name="searchGoBox">Search</string>
+    <string name="yourProfile">My Profile</string>
+    <string name="profsubtitle">What I\'ve got now</string>
+    <string name="notset">Not Set</string>
+    <string name="profilecarrier">My Carrier:</string>
+    <string name="profilesmart">Smartphones:</string>
+    <string name="profilebasic">Basic Phones:</string>
+    <string name="profilegigs">Total Data:</string>
+    <string name="profiletablets">Connected Tablets:</string>
+    <string name="profilemifi">Hotspot Devices:</string>
+    <string name="mifititle">How many hotspot devices do you have on your plan?</string>
+    <string name="profilediscount">Monthly Discount:</string>
+    <string name="profilemonthly">Total Monthly bill:</string>
+    <string name="editprofile">Edit</string>
+    <string name="planphone">Phones Supported:</string>
+    <string name="planmins">Minutes Included:</string>
+    <string name="plantext">Texting Included:</string>
+    <string name="plandata">Data Included:</string>
+    <string name="planthrottle">Slows Data:</string>
+    <string name="att">AT&amp;T</string>
+    <string name="sprint">Sprint</string>
+    <string name="tmobile">T-Mobile</string>
+    <string name="verizon">Verizon</string>
+    <string name="vzw">Verizon Wireless</string>
+    <string name="other">Other</string>
+    <string name="carriertitle">Which carrier do you currently reside on?</string>
+    <string name="smartphonestitle">How many smartphones do you have?</string>
+    <string name="basicphonestitle">How many basic phones do you have?</string>
+    <string name="datatitle">How much data do you have between all phones?</string>
+    <string name="tabstitle">How many tablets do you have on a cellular network?</string>
+    <string name="monthlytitle">How much do you pay on average per month for your mobile service?</string>
+    <string name="blankstring"></string>
+    <string name="monthlyhint">Enter monthly bill</string>
+    <string name="equipnotice">Prices include no equipment. Click for more info.</string>
+    <string name="version">Version 1.0</string>
+    <string name="writtenby">Created by Steve Gregos</string>
+    <string name="kb">Knowledge Base</string>
+    <string name="kbsub">The mobile plan Q&amp;A center</string>
+    <string name="kbsearchtext">I would like to know about</string>
+    <string name="nocontracttitle">No Contract Plans</string>
+    <string name="ncsubtitle">The Prepaid Plan Browser</string>
+    <string name="nctitlesub">Select a plan from the list below</string>
+    <string name="dssub">Select a data amount from the list below</string>
+    <string name="phonesub">Select the number from the list below</string>
+    <string name="aboutp1">Carrier Select is an effort from an experienced member of the wireless industry to help everyday people make choices easier.</string>
+    <string name="aboutp2">Carrier Select was built on the pillars of user-friendliness and beautiful design. I wanted to make choosing a mobile plan for people fun, beautiful, exact, and most of all, simple. Talking to someone about mobile plans is like listening to someone speak a different language. Researching them online only leaves you more confused than when you started.</string>
+    <string name="aboutp3">Let me do all of the hard work for you. Welcome to Carrier Select.</string>
+
+    <string-array name="nocontractarray">
+        <item>AT&amp;T</item>
+        <item>Verizon Wireless</item>
+        <item>T-Mobile</item>
+        <item>Sprint</item>
+        <item>Boost Mobile</item>
+        <item>Virgin Mobile</item>
+        <item>Net10</item>
+        <item>MetroPCS</item>
+        <item>PayLo</item>
+        <item>Tracfone</item>
+        <item>SIMple Mobile</item>
+        <item>H20</item>
+        <item>Republic Wireless</item>
+        <item>Straight Talk</item>
+        <item>Page Plus</item>
+        <item>Platinum Tel</item>
+        <item>Kajeet</item>
+        <item>Red Pocket Mobile</item>
+        <item>Cricket</item>
+        <item>EcoMobile</item>
+        <item>GoSmart Mobile</item>
+        <item>Pure TalkUSA</item>
+    </string-array>
+
+    <string name="nc2title">No Contract Plan Results</string>
+    <string name="loadingplan">Loading Plan&#8230;</string>
+    <string name="loadingprices">Loading Prices&#8230;</string>
+    <string name="ps2subtitle">Showing results for</string>
+    <string name="pssubtitle">The Phone Detail Database</string>
+    <string name="ps2sub">Phone Search Results</string>
+    <string name="ps3sub">Phone Specifications</string>
+    <string name="ps4sub">Compare Phones</string>
+    <string name="ps5sub">Compare Phone Search Results</string>
+    <string name="ps6sub">Phone Comparison</string>
+    <string name="loadingphone">Loading Phone&#8230;</string>
+    <string name="comparephone">Compare</string>
+    <string name="designinfo">Design &amp; Info</string>
+    <string name="releasedate">Release Date:</string>
+    <string name="os">Operating System:</string>
+    <string name="dimensions">Dimensions:</string>
+    <string name="thickness">Thickness:</string>
+    <string name="weight">Weight:</string>
+    <string name="display">Display</string>
+    <string name="displaysize">Display Size:</string>
+    <string name="resolution">Screen Resolution:</string>
+    <string name="pixden">Pixel Density:</string>
+    <string name="camera">Camera</string>
+    <string name="backcam">Rear Camera:</string>
+    <string name="frontcam">Front-facing Camera:</string>
+    <string name="video">Video Quality:</string>
+    <string name="hardware">Hardware</string>
+    <string name="processor">Processor:</string>
+    <string name="ram">RAM:</string>
+    <string name="storage">Built-in Storage:</string>
+    <string name="battery">Battery Size:</string>
+    <string name="microsd">MicroSD Slot:</string>
+    <string name="features">Features</string>
+    <string name="imagestab">Image Stabilizing:</string>
+    <string name="nfc">NFC:</string>
+    <string name="infra">Infrared Shooter:</string>
+    <string name="wireless">Wireless Charging:</string>
+    <string name="bt">Bluetooth:</string>
+    <string name="noisecanceling">Active Noise Canceling:</string>
+    <string name="sensors">Device Sensors:</string>
+    <string name="kbsearchgo">Search</string>
+    <string name="kbsearchhint">Enter search term</string>
+    <string name="definition">Definition:</string>
+    <string name="example">Example:</string>
+    <string name="drawer_title">Carrier Select</string>
+    <string name="getstarted">Get Started</string>
+    <string name="attnews">AT&amp;T News</string>
+    <string name="vernews">Verizon News</string>
+    <string name="sprnews">Sprint News</string>
+    <string name="tmonews">T-Mobile News</string>
+    <string name="prenews">Prepaid News</string>
+    <string name="phonenews">Phone News</string>
+    <string name="mcarriertitle">Carrier</string>
+    <string name="mdevicestitle">Devices</string>
+    <string name="mdatatitle">Data</string>
+    <string name="mtotaltitle">Total</string>
+    <string name="savecheck">Check for potential savings</string>
+
+    <string-array name="dataselector">
+        <item>No Data</item>
+        <item>1GB</item>
+        <item>2GB</item>
+        <item>3GB</item>
+        <item>4GB</item>
+        <item>5GB</item>
+        <item>6GB</item>
+        <item>7GB</item>
+        <item>8GB</item>
+        <item>9GB</item>
+        <item>10GB</item>
+        <item>11GB</item>
+        <item>12GB</item>
+        <item>13GB</item>
+        <item>14GB</item>
+        <item>15GB</item>
+        <item>16GB</item>
+        <item>17GB</item>
+        <item>18GB</item>
+        <item>19GB</item>
+        <item>20GB</item>
+        <item>21GB</item>
+        <item>22GB</item>
+        <item>23GB</item>
+        <item>24GB</item>
+        <item>25GB</item>
+        <item>26GB</item>
+        <item>27GB</item>
+        <item>28GB</item>
+        <item>29GB</item>
+        <item>30GB</item>
+        <item>31GB</item>
+        <item>32GB</item>
+        <item>33GB</item>
+        <item>34GB</item>
+        <item>35GB</item>
+        <item>36GB</item>
+        <item>37GB</item>
+        <item>38GB</item>
+        <item>39GB</item>
+        <item>40GB</item>
+        <item>41GB</item>
+        <item>42GB</item>
+        <item>43GB</item>
+        <item>44GB</item>
+        <item>45GB</item>
+        <item>46GB</item>
+        <item>47GB</item>
+        <item>48GB</item>
+        <item>49GB</item>
+        <item>50GB</item>
+        <item>51GB</item>
+        <item>52GB</item>
+        <item>53GB</item>
+        <item>54GB</item>
+        <item>55GB</item>
+        <item>56GB</item>
+        <item>57GB</item>
+        <item>58GB</item>
+        <item>59GB</item>
+        <item>60GB</item>
+        <item>71GB</item>
+        <item>72GB</item>
+        <item>73GB</item>
+        <item>74GB</item>
+        <item>75GB</item>
+        <item>76GB</item>
+        <item>77GB</item>
+        <item>78GB</item>
+        <item>79GB</item>
+        <item>80GB</item>
+    </string-array>
+    <string-array name="phonespinner">
+        <item>None</item>
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+        <item>Six</item>
+        <item>Seven</item>
+        <item>Eight</item>
+        <item>Nine</item>
+        <item>Ten</item>
+    </string-array>
+
+</resources>

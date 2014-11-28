@@ -2,6 +2,21 @@ package com.guardian.carrierselect;
 
 import java.util.List;
 
+import android.annotation.SuppressLint;
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.graphics.Typeface;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
+
 import com.applovin.adview.AppLovinInterstitialAd;
 import com.guardian.carrierselect.model.Phone;
 import com.parse.FindCallback;
@@ -10,22 +25,8 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.ProgressDialog;
-import android.graphics.Typeface;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.TextView;
-
 public class PhoneSearch3 extends Fragment {
 
-	private static final String SEARCHTERM = "search_term";
 	private String searchTerm;
 	private ProgressDialog progress;
 	private TextView ps3mantitle, ps3carrier, release, os, size, thickness,
@@ -34,13 +35,21 @@ public class PhoneSearch3 extends Fragment {
 			sensors;
 	private TextView t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13,
 			t14, t15, t16, t17, t18, t19, t20, t21, t22, t23;
+	private Button compare;
 	private View rootView;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		rootView = inflater.inflate(R.layout.phonesearch3, container, false);
 
+		rootView = inflater.inflate(R.layout.phonesearch3, container, false);
+		
+		final SharedPreferences sharedPref = getActivity()
+				.getSharedPreferences("data", Context.MODE_PRIVATE);
+
+		searchTerm = sharedPref.getString("ps2", "");
+
+		compare = (Button) rootView.findViewById(R.id.compare);
 		ps3mantitle = (TextView) rootView.findViewById(R.id.ps3mantitle);
 		ps3mantitle.setText(searchTerm);
 		ps3mantitle.setTypeface(null, Typeface.BOLD);
@@ -118,20 +127,28 @@ public class PhoneSearch3 extends Fragment {
 		t22.setTypeface(null, Typeface.BOLD);
 		t23 = (TextView) rootView.findViewById(R.id.sensors);
 		t23.setTypeface(null, Typeface.BOLD);
-
-		// Load in animations.
-		final Animation lefttoright = AnimationUtils.loadAnimation(
-				rootView.getContext(), R.anim.left_to_right);
-
-		// Begin startup flow.
-		rootView.startAnimation(lefttoright);
-		
 		double randomNum = Math.random() * 3;
-		
-		if ((int)randomNum == 1)
-		AppLovinInterstitialAd.show(getActivity());
-		
+
+		if ((int) randomNum == 1)
+			AppLovinInterstitialAd.show(getActivity());
+
 		performSearch();
+		
+		compare.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+				final Fragment fragment = new PhoneSearch4();
+				final FragmentManager fm = getActivity().getFragmentManager();
+				final FragmentTransaction fragmenttran = fm.beginTransaction();
+				fragmenttran.setCustomAnimations(R.animator.right_in_off,
+						R.animator.left_in_off);
+				fragmenttran.replace(R.id.fragment_container, fragment);
+				fragmenttran.addToBackStack(null);
+				fragmenttran.commit();
+
+			}
+		});
 
 		return rootView;
 	}
@@ -212,27 +229,6 @@ public class PhoneSearch3 extends Fragment {
 				}
 			}
 		});
-
-	}
-
-	public static PhoneSearch3 create(String searchName) {
-		final PhoneSearch3 fragment = new PhoneSearch3();
-
-		final Bundle args = new Bundle();
-
-		args.putString(SEARCHTERM, searchName);
-		fragment.setArguments(args);
-
-		return fragment;
-	}
-
-	@Override
-	public void onAttach(Activity activity) {
-		super.onAttach(activity);
-
-		final Bundle args = getArguments();
-
-		searchTerm = args.getString(SEARCHTERM);
 
 	}
 

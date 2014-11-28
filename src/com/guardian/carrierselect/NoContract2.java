@@ -8,12 +8,10 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.applovin.adview.AppLovinInterstitialAd;
@@ -31,14 +29,8 @@ public class NoContract2 extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+
 		rootView = inflater.inflate(R.layout.nocontract2, container, false);
-
-		// Load in animations.
-		final Animation lefttoright = AnimationUtils.loadAnimation(
-				rootView.getContext(), R.anim.left_to_right);
-
-		// Begin startup flow.
-		rootView.startAnimation(lefttoright);
 
 		double randomNum = Math.random() * 3;
 
@@ -73,18 +65,18 @@ public class NoContract2 extends Fragment {
 		querypre.findInBackground(new FindCallback<ParseObject>() {
 			public void done(List<ParseObject> PlanList, ParseException e) {
 
-				final LinearLayout nc22box2 = (LinearLayout) rootView
-						.findViewById(R.id.nc22box);
-				final LinearLayout nc23box2 = (LinearLayout) rootView
-						.findViewById(R.id.nc23box);
-				final LinearLayout nc24box2 = (LinearLayout) rootView
-						.findViewById(R.id.nc24box);
-				final LinearLayout nc25box2 = (LinearLayout) rootView
-						.findViewById(R.id.nc25box);
-				final LinearLayout nc26box2 = (LinearLayout) rootView
-						.findViewById(R.id.nc26box);
-				final LinearLayout nc27box2 = (LinearLayout) rootView
-						.findViewById(R.id.nc27box);
+				final CardView nc22box2 = (CardView) rootView
+						.findViewById(R.id.nc22card);
+				final CardView nc23box2 = (CardView) rootView
+						.findViewById(R.id.nc23card);
+				final CardView nc24box2 = (CardView) rootView
+						.findViewById(R.id.nc24card);
+				final CardView nc25box2 = (CardView) rootView
+						.findViewById(R.id.nc25card);
+				final CardView nc26box2 = (CardView) rootView
+						.findViewById(R.id.nc26card);
+				final CardView nc27box2 = (CardView) rootView
+						.findViewById(R.id.nc27card);
 				final TextView nc21title = (TextView) rootView
 						.findViewById(R.id.nc21title);
 				final TextView nc22title = (TextView) rootView

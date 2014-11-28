@@ -2,16 +2,13 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/titlenoback"
-    android:overScrollFooter="@color/white_color"
-    android:overScrollHeader="@color/white_color" >
+    android:padding="@dimen/border" >
 
     <LinearLayout
         android:id="@+id/selectorbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dip" >
+        android:orientation="vertical" >
 
         <TextView
             android:id="@+id/yoursmartphones"
@@ -21,48 +18,46 @@
             android:gravity="center"
             android:hint="@string/smartphonestitle"
             android:text="@string/smartphonestitle"
-            android:textColor="@color/white_color"
-            android:textSize="@dimen/midtitle" />
+            android:textSize="@dimen/title_dimens" />
 
         <TextView
             android:id="@+id/smartselectorsub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="75dip"
+            android:layout_marginTop="96dip"
             android:gravity="center"
             android:hint="@string/phonesub"
             android:text="@string/phonesub"
-            android:textColor="@color/white_color"
-            android:textSize="@dimen/subtitle_dimens" />
+            android:textSize="@dimen/body" />
 
         <Spinner
             android:id="@+id/smartspinner"
-            android:layout_width="200dip"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/btnw"
+            android:layout_height="@dimen/btnh"
             android:layout_gravity="center"
-            android:layout_marginTop="5dip"
-            android:background="@drawable/cbg"
+            android:layout_marginTop="16dip"
+            android:background="@color/accent"
             android:entries="@array/phonespinner"
             android:gravity="center"
-            android:paddingBottom="5dip"
-            android:paddingTop="5dip"
-            android:popupBackground="@android:color/transparent"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown"
+            android:textAllCaps="true"
+            android:textColor="@color/white_color"
+            android:textStyle="bold"
+            android:textSize="14sp" />
 
-        <TextView
+        <Button
             android:id="@+id/next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/btnw"
+            android:layout_height="@dimen/btnh"
             android:layout_gravity="center"
-            android:layout_marginTop="50dip"
-            android:background="@drawable/bbg"
+            android:layout_marginTop="150dip"
+            android:background="@color/accent"
             android:gravity="center"
             android:hint="@string/next"
-            android:padding="15dip"
+            android:padding="8dip"
             android:text="@string/next"
-            android:textColor="@color/white_color"
-            android:textSize="@dimen/next" />
+            android:textColor="@color/white_color" />
     </LinearLayout>
 
 </ScrollView>

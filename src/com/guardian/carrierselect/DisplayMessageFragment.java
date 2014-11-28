@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.app.FragmentManager;
 import android.app.ProgressDialog;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -13,10 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
-import android.view.animation.AnimationUtils;
-import android.widget.LinearLayout;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.guardian.carrierselect.model.Phone;
@@ -43,6 +41,8 @@ public class DisplayMessageFragment extends Fragment {
 
 	private View rootView;
 
+	private TextView equipnotice;
+
 	public static DisplayMessageFragment create(int smartphones,
 			int basicphones, int gigs, int tabs, int hotspotprice,
 			double discount) {
@@ -68,53 +68,45 @@ public class DisplayMessageFragment extends Fragment {
 		rootView = inflater.inflate(R.layout.activity_display_message,
 				container, false);
 
-		// Load in animations.
-		final Animation righttoleft = AnimationUtils.loadAnimation(
-				rootView.getContext(), R.anim.right_to_left);
-		final Animation lefttoright = AnimationUtils.loadAnimation(
-				rootView.getContext(), R.anim.left_to_right);
+		final Button sendbox = (Button) rootView
+				.findViewById(R.id.breakdown_send);
 
-		rootView.startAnimation(lefttoright);
-
-		final LinearLayout sendbox = (LinearLayout) rootView
-				.findViewById(R.id.breakdownbox);
+		equipnotice = (TextView) rootView.findViewById(R.id.equipnotice);
 
 		buildATT();
 		buildVer();
 		buildSpr();
 		buildTmo();
 
-		righttoleft.setAnimationListener(new AnimationListener() {
-
-			@Override
-			public void onAnimationEnd(Animation arg0) {
-
-				final FragmentTransaction ft = getFragmentManager()
-						.beginTransaction();
-				ft.replace(R.id.fragment_container, BreakdownFragment.create(
-						smartphones, basicphones, gigs, tabs, hotspotprice,
-						discount));
-				ft.addToBackStack(null);
-				ft.commit();
-				getFragmentManager().executePendingTransactions();
-			}
-
-			@Override
-			public void onAnimationRepeat(Animation arg0) {
-
-			}
-
-			@Override
-			public void onAnimationStart(Animation arg0) {
-
-			}
-		});
-
 		sendbox.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
-				rootView.startAnimation(righttoleft);
+				final FragmentManager fm = getActivity().getFragmentManager();
+				final FragmentTransaction fragmenttran = fm.beginTransaction();
+				fragmenttran.setCustomAnimations(R.animator.right_in_off,
+						R.animator.left_in_off);
+				fragmenttran.replace(R.id.fragment_container, BreakdownFragment
+						.create(smartphones, basicphones, gigs, tabs,
+								hotspotprice, discount));
+				fragmenttran.addToBackStack(null);
+				fragmenttran.commit();
+			}
+
+		});
+		
+		equipnotice.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				final FragmentManager fm = getActivity().getFragmentManager();
+				final FragmentTransaction fragmenttran = fm.beginTransaction();
+				fragmenttran.setCustomAnimations(R.animator.right_in_off,
+						R.animator.left_in_off);
+				fragmenttran.replace(R.id.fragment_container,
+						KnowledgeBase3.create("Installment Billing"));
+				fragmenttran.addToBackStack(null);
+				fragmenttran.commit();
 			}
 
 		});

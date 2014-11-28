@@ -2,58 +2,67 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/titlenoback"
-    android:overScrollFooter="@color/white_color"
-    android:overScrollHeader="@color/white_color" >
+    android:padding="@dimen/border" >
 
     <LinearLayout
-        android:id="@+id/displaylayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical"
-        android:padding="20dip" >
+        android:orientation="vertical" >
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/contract_plans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:hint="@string/sp2title"
+            android:text="@string/sp2title"
+            android:textSize="@dimen/title_dimens" />
+
+        <TextView
+            android:id="@+id/contract_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/quotecompare"
+            android:text="@string/quotecompare"
+            android:textSize="@dimen/subtitle_dimens" />
+
+        <TextView
+            android:id="@+id/equipnotice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/instruction"
+            android:gravity="center"
+            android:hint="@string/equipnotice"
+            android:text="@string/equipnotice"
+            android:textSize="@dimen/caption" />
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/displaycard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@color/titlenoback"
+            android:layout_marginBottom="@dimen/cardmarg"
+            android:layout_marginLeft="@dimen/cardmarg"
+            android:layout_marginRight="@dimen/cardmarg"
+            android:layout_marginTop="@dimen/topcard"
             android:gravity="center"
-            android:orientation="vertical" >
-
-            <TextView
-                android:id="@+id/contract_plans"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:hint="@string/sp2title"
-                android:text="@string/sp2title"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/title_dimens" />
-
-            <TextView
-                android:id="@+id/equipnotice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dip"
-                android:gravity="center"
-                android:hint="@string/equipnotice"
-                android:text="@string/equipnotice"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/desc_dimens" />
+            card_view:cardBackgroundColor="@color/white_color"
+            card_view:cardCornerRadius="@dimen/cardcorner"
+            card_view:cardElevation="@dimen/card_elevation"
+            card_view:contentPadding="@dimen/cardpad" >
 
             <LinearLayout
-                android:id="@+id/attdisplaybox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dip"
-                android:background="@drawable/cbg"
+                android:layout_gravity="center"
                 android:gravity="center"
-                android:orientation="vertical"
-                android:padding="15dip" >
+                android:orientation="vertical" >
 
                 <TextView
                     android:id="@+id/att_pretotal"
@@ -63,8 +72,7 @@
                     android:gravity="center"
                     android:hint="@string/att_pretotal"
                     android:text="@string/att_pretotal"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/subtitle_dimens" />
+                    android:textSize="@dimen/body" />
 
                 <TextView
                     android:id="@+id/att_total"
@@ -74,31 +82,19 @@
                     android:gravity="center"
                     android:hint="@string/loadingprices"
                     android:text="@string/loadingprices"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/midtitle"
+                    android:textSize="@dimen/subtitle_dimens"
                     android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/verdisplaybox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dip"
-                android:background="@drawable/cbg"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="15dip" >
 
                 <TextView
                     android:id="@+id/ver_pretotal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/topbotpad"
                     android:gravity="center"
                     android:hint="@string/ver_pretotal"
                     android:text="@string/ver_pretotal"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/subtitle_dimens" />
+                    android:textSize="@dimen/body" />
 
                 <TextView
                     android:id="@+id/ver_total"
@@ -108,31 +104,19 @@
                     android:gravity="center"
                     android:hint="@string/loadingprices"
                     android:text="@string/loadingprices"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/midtitle"
+                    android:textSize="@dimen/subtitle_dimens"
                     android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/sprdisplaybox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dip"
-                android:background="@drawable/cbg"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="15dip" >
 
                 <TextView
                     android:id="@+id/spr_pretotal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/topbotpad"
                     android:gravity="center"
                     android:hint="@string/spr_pretotal"
                     android:text="@string/spr_pretotal"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/subtitle_dimens" />
+                    android:textSize="@dimen/body" />
 
                 <TextView
                     android:id="@+id/spr_total"
@@ -142,32 +126,19 @@
                     android:gravity="center"
                     android:hint="@string/loadingprices"
                     android:text="@string/loadingprices"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/midtitle"
+                    android:textSize="@dimen/subtitle_dimens"
                     android:textStyle="bold" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/tmodisplaybox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dip"
-                android:layout_marginTop="10dip"
-                android:background="@drawable/cbg"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="15dip" >
 
                 <TextView
                     android:id="@+id/tmo_pretotal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/topbotpad"
                     android:gravity="center"
                     android:hint="@string/tmo_pretotal"
                     android:text="@string/tmo_pretotal"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/subtitle_dimens" />
+                    android:textSize="@dimen/body" />
 
                 <TextView
                     android:id="@+id/tmo_total"
@@ -177,40 +148,22 @@
                     android:gravity="center"
                     android:hint="@string/loadingprices"
                     android:text="@string/loadingprices"
-                    android:textColor="@color/white_color"
-                    android:textSize="@dimen/midtitle"
+                    android:textSize="@dimen/subtitle_dimens"
                     android:textStyle="bold" />
             </LinearLayout>
+        </android.support.v7.widget.CardView>
 
-            <com.applovin.adview.AppLovinAdView
-                xmlns:applovin="http://schemas.applovin.com/android/1.0"
-                android:layout_width="250dip"
-                android:layout_height="wrap_content"
-                applovin:loadAdOnCreate="true" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/breakdownbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center|bottom"
-            android:layout_marginTop="10dip"
-            android:background="@drawable/bbg"
+        <Button
+            android:id="@+id/breakdown_send"
+            android:layout_width="@dimen/btnw"
+            android:layout_height="@dimen/btnh"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/btnspace"
+            android:background="@color/accent"
             android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="15dip" >
-
-            <TextView
-                android:id="@+id/breakdown_send"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/viewbreakdown"
-                android:text="@string/viewbreakdown"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/subtitle_dimens" />
-        </LinearLayout>
+            android:hint="@string/viewbreakdown"
+            android:text="@string/viewbreakdown"
+            android:textColor="@color/white_color" />
     </LinearLayout>
 
 </ScrollView>

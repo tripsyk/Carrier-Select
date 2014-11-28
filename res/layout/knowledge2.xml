@@ -2,17 +2,14 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/titlenoback"
-    android:overScrollFooter="@color/white_color"
-    android:overScrollHeader="@color/white_color" >
+    android:padding="16dip" >
 
     <LinearLayout
         android:id="@+id/kb2box"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical"
-        android:padding="20dip" >
+        android:orientation="vertical" >
 
         <TextView
             android:id="@+id/kb2title"
@@ -21,7 +18,7 @@
             android:layout_gravity="center"
             android:hint="@string/kb"
             android:text="@string/kb"
-            android:textColor="@color/white_color"
+            android:textColor="@color/txt"
             android:textSize="@dimen/title_dimens" />
 
         <TextView
@@ -32,118 +29,91 @@
             android:gravity="center"
             android:hint="@string/kbsub"
             android:text="@string/kbsub"
-            android:textColor="@color/white_color"
+            android:textColor="@color/txt"
             android:textSize="@dimen/subtitle_dimens" />
 
-        <LinearLayout
-            android:id="@+id/ps2subtitlebox"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/kb2subtitle"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
             android:gravity="center"
-            android:orientation="vertical" >
+            android:hint="@string/ps2subtitle"
+            android:text="@string/ps2subtitle"
+            android:textColor="@color/txt"
+            android:textSize="@dimen/body" />
 
-            <TextView
-                android:id="@+id/kb2subtitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/ps2subtitle"
-                android:text="@string/ps2subtitle"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/midtitle" />
-
-            <TextView
-                android:id="@+id/kb2resultstitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:hint="@string/blankstring"
-                android:text="@string/blankstring"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/next"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ps2resultsbox"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
+        <TextView
+            android:id="@+id/kb2resultstitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="vertical" >
+            android:hint="@string/blankstring"
+            android:text="@string/blankstring"
+            android:textColor="@color/txt"
+            android:textSize="@dimen/body"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/kb21"
-                android:layout_width="250dip"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dip"
-                android:background="@drawable/cbg"
-                android:gravity="center"
-                android:hint="@string/loading"
-                android:padding="15dip"
-                android:text="@string/loading"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/breakdown_dimens" />
+        <Button
+            android:id="@+id/kb21"
+            android:layout_width="@dimen/resultw"
+            android:layout_height="@dimen/resulth"
+            android:layout_marginTop="8dip"
+            android:background="@color/accent"
+            android:gravity="center"
+            android:hint="@string/loading"
+            android:text="@string/loading"
+            android:textColor="@color/white_color" />
 
-            <TextView
-                android:id="@+id/kb22"
-                android:layout_width="250dip"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dip"
-                android:background="@drawable/cbg"
-                android:gravity="center"
-                android:hint="@string/loading"
-                android:padding="15dip"
-                android:text="@string/loading"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/breakdown_dimens" />
+        <Button
+            android:id="@+id/kb22"
+            android:layout_width="@dimen/resultw"
+            android:layout_height="@dimen/resulth"
+            android:layout_marginTop="8dip"
+            android:background="@color/accent"
+            android:gravity="center"
+            android:hint="@string/loading"
+            android:text="@string/loading"
+            android:textColor="@color/white_color" />
 
-            <TextView
-                android:id="@+id/kb23"
-                android:layout_width="250dip"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dip"
-                android:background="@drawable/cbg"
-                android:gravity="center"
-                android:hint="@string/loading"
-                android:padding="15dip"
-                android:text="@string/loading"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/breakdown_dimens" />
+        <Button
+            android:id="@+id/kb23"
+            android:layout_width="@dimen/resultw"
+            android:layout_height="@dimen/resulth"
+            android:layout_marginTop="8dip"
+            android:background="@color/accent"
+            android:gravity="center"
+            android:hint="@string/loading"
+            android:text="@string/loading"
+            android:textColor="@color/white_color" />
 
-            <TextView
-                android:id="@+id/kb24"
-                android:layout_width="250dip"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dip"
-                android:background="@drawable/cbg"
-                android:gravity="center"
-                android:hint="@string/loading"
-                android:padding="15dip"
-                android:text="@string/loading"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/breakdown_dimens" />
+        <Button
+            android:id="@+id/kb24"
+            android:layout_width="@dimen/resultw"
+            android:layout_height="@dimen/resulth"
+            android:layout_marginTop="8dip"
+            android:background="@color/accent"
+            android:gravity="center"
+            android:hint="@string/loading"
+            android:text="@string/loading"
+            android:textColor="@color/white_color" />
 
-            <TextView
-                android:id="@+id/kb25"
-                android:layout_width="250dip"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dip"
-                android:background="@drawable/cbg"
-                android:gravity="center"
-                android:hint="@string/loading"
-                android:padding="15dip"
-                android:text="@string/loading"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/breakdown_dimens" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/kb25"
+            android:layout_width="@dimen/resultw"
+            android:layout_height="@dimen/resulth"
+            android:layout_marginTop="8dip"
+            android:background="@color/accent"
+            android:gravity="center"
+            android:hint="@string/loading"
+            android:text="@string/loading"
+            android:textColor="@color/white_color" />
 
         <com.applovin.adview.AppLovinAdView
             xmlns:applovin="http://schemas.applovin.com/android/1.0"
-            android:layout_width="250dip"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/resultw"
+            android:layout_height="@dimen/resulth"
             android:layout_marginBottom="10dip"
             android:layout_marginTop="10dip"
             applovin:loadAdOnCreate="true" />

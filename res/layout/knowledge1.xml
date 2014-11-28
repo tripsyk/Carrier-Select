@@ -2,17 +2,14 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="fill_parent"
-    android:background="@color/titlenoback"
-    android:overScrollFooter="@color/white_color"
-    android:overScrollHeader="@color/white_color" >
+    android:padding="16dip" >
 
     <LinearLayout
         android:id="@+id/kbbox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical"
-        android:padding="20dip" >
+        android:orientation="vertical" >
 
         <LinearLayout
             android:id="@+id/kbtitlebox"
@@ -29,7 +26,7 @@
                 android:gravity="center"
                 android:hint="@string/kb"
                 android:text="@string/kb"
-                android:textColor="@color/white_color"
+                android:textColor="@color/txt"
                 android:textSize="@dimen/title_dimens" />
 
             <TextView
@@ -40,65 +37,48 @@
                 android:gravity="center"
                 android:hint="@string/kbsub"
                 android:text="@string/kbsub"
-                android:textColor="@color/white_color"
+                android:textColor="@color/txt"
                 android:textSize="@dimen/subtitle_dimens" />
         </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/kbcontentbox"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="50dip"
-            android:gravity="center" >
-
+        
             <TextView
-                android:id="@+id/kbsearch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/kbsearch"
-                android:text="@string/kbsearch"
-                android:textColor="@color/white_color"
-                android:textSize="@dimen/subtitle_dimens" />
-        </LinearLayout>
+        android:id="@+id/kb1searchtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="72dip"
+        android:gravity="center"
+        android:hint="@string/kbsearchtext"
+        android:text="@string/kbsearchtext"
+        android:textColor="@color/txt"
+        android:textSize="@dimen/body" />
 
-        <LinearLayout
-            android:id="@+id/searchbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <EditText
+            android:id="@+id/searchTerm"
+            android:layout_width="200dip"
+            android:layout_height="@dimen/btnh"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/cbg"
+            android:layout_marginTop="10dip"
+            android:background="@color/accent"
             android:gravity="center"
-            android:padding="15dip" >
+            android:hint="@string/kbsearchhint"
+            android:singleLine="true"
+            android:textColor="@color/txt"
+            android:textColorHint="@color/txt"
+            android:textSize="@dimen/body" >
+        </EditText>
 
-            <EditText
-                android:id="@+id/searchTerm"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:singleLine="true"
-                android:hint="@string/kbsearchhint"
-                android:textColor="@color/white_color"
-                android:textColorHint="@color/white_color" >
-            </EditText>
-        </LinearLayout>
-
-        <TextView
+        <Button
             android:id="@+id/kbsearchgo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/btnw"
+            android:layout_height="@dimen/btnh"
             android:layout_gravity="center"
+            android:layout_marginTop="16dip"
+            android:background="@color/accent"
             android:gravity="center"
-            android:layout_marginTop="20dip"
-            android:background="@drawable/bbg"
-            android:padding="15dip"
             android:text="@string/kbsearchgo"
-            android:textColor="@color/white_color"
-            android:textSize="@dimen/midtitle" >
-        </TextView>
+            android:textColor="@color/white_color" >
+        </Button>
     </LinearLayout>
 
 </ScrollView>

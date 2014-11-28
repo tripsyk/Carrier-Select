@@ -2,23 +2,21 @@ package com.guardian.carrierselect;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
-import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.TextView;
 
 public class SmartphoneSelector extends Fragment {
 
-	private TextView next;
+	private Button next;
 	private static View rootView;
 
 	@Override
@@ -26,23 +24,12 @@ public class SmartphoneSelector extends Fragment {
 			Bundle savedInstanceState) {
 		rootView = inflater.inflate(R.layout.smartphone_layout, container,
 				false);
-		getActivity().getActionBar().hide();
 
 		// Declare preferences
-		final SharedPreferences sharedPref = getActivity().getPreferences(
-				Context.MODE_PRIVATE);
+		final SharedPreferences sharedPref = getActivity().getSharedPreferences(
+				"profile", Context.MODE_PRIVATE);
 		final SharedPreferences.Editor editor = sharedPref.edit();
-
-		// Load in animations.
-		final Animation righttoleft = AnimationUtils.loadAnimation(
-				rootView.getContext(), R.anim.right_to_left);
-		final Animation lefttoright = AnimationUtils.loadAnimation(
-				rootView.getContext(), R.anim.left_to_right);
-
-		// Begin startup flow.
-		rootView.startAnimation(lefttoright);
-		
-		next = (TextView) rootView.findViewById(R.id.next);
+		next = (Button) rootView.findViewById(R.id.next);
 		final Spinner spinner = (Spinner) rootView
 				.findViewById(R.id.smartspinner);
 
@@ -50,7 +37,7 @@ public class SmartphoneSelector extends Fragment {
 		// layout
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
 				(rootView.getContext()), R.array.phonespinner,
-				R.layout.spinner_item);
+				R.layout.spinnerdropdown);
 		// Specify the layout to use when the list of choices appears
 		adapter.setDropDownViewResource(R.layout.spinnerdropdown);
 		// Apply the adapter to the spinner
@@ -77,38 +64,22 @@ public class SmartphoneSelector extends Fragment {
 
 			@Override
 			public void onClick(View v) {
-				rootView.startAnimation(righttoleft);
-			}
-		});
 
-		// Set animation listeners for fragment
-		righttoleft.setAnimationListener(new AnimationListener() {
+				final Fragment fragment = new BasicphoneSelector();
 
-			@Override
-			public void onAnimationEnd(Animation arg0) {
-				Fragment fragment = new BasicphoneSelector();
-				FragmentTransaction fragmenttran = getFragmentManager()
-						.beginTransaction();
+				final FragmentManager fm = getActivity().getFragmentManager();
+
+				final FragmentTransaction fragmenttran = fm.beginTransaction();
+
+				fragmenttran.setCustomAnimations(R.animator.right_in_off,
+						R.animator.left_in_off);
 				fragmenttran.replace(R.id.fragment_container, fragment);
 				fragmenttran.addToBackStack(null);
 				fragmenttran.commit();
-				getFragmentManager().executePendingTransactions();
-
-			}
-
-			@Override
-			public void onAnimationRepeat(Animation arg0) {
-
-			}
-
-			@Override
-			public void onAnimationStart(Animation arg0) {
-
 			}
 		});
 
 		return rootView;
-
 	}
 
 	public void onDestroy() {

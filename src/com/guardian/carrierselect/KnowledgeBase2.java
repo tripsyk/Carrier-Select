@@ -6,15 +6,14 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.app.FragmentManager;
 import android.app.ProgressDialog;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
-import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.guardian.carrierselect.model.Phone;
@@ -28,9 +27,8 @@ public class KnowledgeBase2 extends Fragment {
 
 	private static final String SEARCHTERM = "search_term";
 	private String searchTerm;
-	private TextView kb2resultstitle, kb2subtitle, kb21, kb22, kb23, kb24,
-			kb25;
-	private int clicked;
+	private TextView kb2resultstitle, kb2subtitle;
+	private Button kb21, kb22, kb23, kb24, kb25;
 	private ProgressDialog progress;
 	private static View rootView;
 
@@ -39,16 +37,6 @@ public class KnowledgeBase2 extends Fragment {
 			Bundle savedInstanceState) {
 		rootView = inflater.inflate(R.layout.knowledge2, container, false);
 
-		getActivity().getActionBar().setTitle("Knowledge Base");
-		// Load in animations.
-		final Animation righttoleft = AnimationUtils.loadAnimation(
-				rootView.getContext(), R.anim.right_to_left);
-		final Animation lefttoright = AnimationUtils.loadAnimation(
-				rootView.getContext(), R.anim.left_to_right);
-
-		// Begin startup flow.
-		rootView.startAnimation(lefttoright);
-
 		kb2subtitle = (TextView) rootView.findViewById(R.id.kb2subtitle);
 		kb2resultstitle = (TextView) rootView
 				.findViewById(R.id.kb2resultstitle);
@@ -56,11 +44,11 @@ public class KnowledgeBase2 extends Fragment {
 		kb2resultstitle.setTypeface(null, Typeface.BOLD);
 
 		// Load results TextViews
-		kb21 = (TextView) rootView.findViewById(R.id.kb21);
-		kb22 = (TextView) rootView.findViewById(R.id.kb22);
-		kb23 = (TextView) rootView.findViewById(R.id.kb23);
-		kb24 = (TextView) rootView.findViewById(R.id.kb24);
-		kb25 = (TextView) rootView.findViewById(R.id.kb25);
+		kb21 = (Button) rootView.findViewById(R.id.kb21);
+		kb22 = (Button) rootView.findViewById(R.id.kb22);
+		kb23 = (Button) rootView.findViewById(R.id.kb23);
+		kb24 = (Button) rootView.findViewById(R.id.kb24);
+		kb25 = (Button) rootView.findViewById(R.id.kb25);
 
 		kb21.setVisibility(View.GONE);
 		kb22.setVisibility(View.GONE);
@@ -74,8 +62,15 @@ public class KnowledgeBase2 extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				clicked = 1;
-				rootView.startAnimation(righttoleft);
+				final FragmentManager fm = getActivity()
+						.getFragmentManager();
+				final FragmentTransaction fragmenttran = fm.beginTransaction();
+				fragmenttran.setCustomAnimations(R.animator.right_in_off,
+						R.animator.left_in_off);
+				fragmenttran.replace(R.id.fragment_container,
+						KnowledgeBase3.create(kb21.getText().toString()));
+				fragmenttran.addToBackStack(null);
+				fragmenttran.commit();
 			}
 		});
 
@@ -83,8 +78,15 @@ public class KnowledgeBase2 extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				clicked = 2;
-				rootView.startAnimation(righttoleft);
+				final FragmentManager fm = getActivity()
+						.getFragmentManager();
+				final FragmentTransaction fragmenttran = fm.beginTransaction();
+				fragmenttran.setCustomAnimations(R.animator.right_in_off,
+						R.animator.left_in_off);
+				fragmenttran.replace(R.id.fragment_container,
+						KnowledgeBase3.create(kb22.getText().toString()));
+				fragmenttran.addToBackStack(null);
+				fragmenttran.commit();
 			}
 		});
 
@@ -92,8 +94,15 @@ public class KnowledgeBase2 extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				clicked = 3;
-				rootView.startAnimation(righttoleft);
+				final FragmentManager fm = getActivity()
+						.getFragmentManager();
+				final FragmentTransaction fragmenttran = fm.beginTransaction();
+				fragmenttran.setCustomAnimations(R.animator.right_in_off,
+						R.animator.left_in_off);
+				fragmenttran.replace(R.id.fragment_container,
+						KnowledgeBase3.create(kb23.getText().toString()));
+				fragmenttran.addToBackStack(null);
+				fragmenttran.commit();
 			}
 		});
 
@@ -101,8 +110,15 @@ public class KnowledgeBase2 extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				clicked = 4;
-				rootView.startAnimation(righttoleft);
+				final FragmentManager fm = getActivity()
+						.getFragmentManager();
+				final FragmentTransaction fragmenttran = fm.beginTransaction();
+				fragmenttran.setCustomAnimations(R.animator.right_in_off,
+						R.animator.left_in_off);
+				fragmenttran.replace(R.id.fragment_container,
+						KnowledgeBase3.create(kb24.getText().toString()));
+				fragmenttran.addToBackStack(null);
+				fragmenttran.commit();
 			}
 		});
 
@@ -110,80 +126,16 @@ public class KnowledgeBase2 extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				clicked = 5;
-				rootView.startAnimation(righttoleft);
+				final FragmentManager fm = getActivity()
+						.getFragmentManager();
+				final FragmentTransaction fragmenttran = fm.beginTransaction();
+				fragmenttran.setCustomAnimations(R.animator.right_in_off,
+						R.animator.left_in_off);
+				fragmenttran.replace(R.id.fragment_container,
+						KnowledgeBase3.create(kb25.getText().toString()));
+				fragmenttran.addToBackStack(null);
+				fragmenttran.commit();
 			}
-		});
-
-		righttoleft.setAnimationListener(new AnimationListener() {
-
-			@Override
-			public void onAnimationEnd(Animation arg0) {
-
-				if (clicked == 1) {
-
-					final FragmentTransaction fragmenttran = getFragmentManager()
-							.beginTransaction();
-					fragmenttran.replace(R.id.fragment_container,
-							KnowledgeBase3.create(kb21.getText().toString()));
-					fragmenttran.addToBackStack(null);
-					fragmenttran.commit();
-					getFragmentManager().executePendingTransactions();
-
-				} else if (clicked == 2) {
-
-					final FragmentTransaction fragmenttran = getFragmentManager()
-							.beginTransaction();
-					fragmenttran.replace(R.id.fragment_container,
-							KnowledgeBase3.create(kb22.getText().toString()));
-					fragmenttran.addToBackStack(null);
-					fragmenttran.commit();
-					getFragmentManager().executePendingTransactions();
-
-				} else if (clicked == 3) {
-
-					final FragmentTransaction fragmenttran = getFragmentManager()
-							.beginTransaction();
-					fragmenttran.replace(R.id.fragment_container,
-							KnowledgeBase3.create(kb23.getText().toString()));
-					fragmenttran.addToBackStack(null);
-					fragmenttran.commit();
-					getFragmentManager().executePendingTransactions();
-
-				} else if (clicked == 4) {
-
-					final FragmentTransaction fragmenttran = getFragmentManager()
-							.beginTransaction();
-					fragmenttran.replace(R.id.fragment_container,
-							KnowledgeBase3.create(kb24.getText().toString()));
-					fragmenttran.addToBackStack(null);
-					fragmenttran.commit();
-					getFragmentManager().executePendingTransactions();
-
-				} else if (clicked == 5) {
-
-					final FragmentTransaction fragmenttran = getFragmentManager()
-							.beginTransaction();
-					fragmenttran.replace(R.id.fragment_container,
-							KnowledgeBase3.create(kb25.getText().toString()));
-					fragmenttran.addToBackStack(null);
-					fragmenttran.commit();
-					getFragmentManager().executePendingTransactions();
-
-				}
-
-			}
-
-			@Override
-			public void onAnimationStart(Animation animation) {
-
-			}
-
-			@Override
-			public void onAnimationRepeat(Animation animation) {
-
-			}
-
 		});
 
 		return rootView;

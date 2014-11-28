@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="unspecified" >
+        <source path="/Users/Steve/Documents/workspace/Carrier Select/build/intermediates/exploded-aar/Steve.Downloads.adt-bundle-mac-x86_64-20130917.sdk.extras.android.support.v7/cardview/unspecified/assets" />
+    </dataSet>
+    <dataSet config="unspecified" >
+        <source path="/Users/Steve/Documents/workspace/Carrier Select/build/intermediates/exploded-aar/Steve.Downloads.adt-bundle-mac-x86_64-20130917.sdk.extras.android.support.v7/appcompat/unspecified/assets" />
+    </dataSet>
+    <dataSet config="unspecified" >
+        <source path="/Users/Steve/Documents/workspace/Carrier Select/build/intermediates/exploded-aar/Steve.Documents.workspace/google-play-services_lib/unspecified/assets" />
+    </dataSet>
+    <dataSet config="main" >
+        <source path="/Users/Steve/Documents/workspace/Carrier Select/assets" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/Steve/Documents/workspace/Carrier Select/build-types/debug/assets" />
+    </dataSet>
+
+</merger>

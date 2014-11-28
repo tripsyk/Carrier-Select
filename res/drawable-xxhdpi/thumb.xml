@@ -3,9 +3,9 @@
     android:shape="oval">
 
     <gradient
-        android:startColor="#00ADE1"
-        android:centerColor="#FFFFFF"
-        android:endColor="#00ADE1"
+        android:startColor="@color/accent"
+        android:centerColor="@color/accent"
+        android:endColor="@color/accent"
         android:angle="90"/>
 
     <stroke

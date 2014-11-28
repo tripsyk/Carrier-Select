@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -30,25 +29,16 @@ public class QuoteFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		rootView = inflater.inflate(R.layout.quote_layout, container, false);
-		getActivity().getActionBar().setTitle("Service Plans");
 
-		// Load in animations.
-		final Animation righttoleft = AnimationUtils.loadAnimation(
-				rootView.getContext(), R.anim.right_to_left);
-		final Animation lefttoright = AnimationUtils.loadAnimation(
-				rootView.getContext(), R.anim.left_to_right);
 		final Animation animScale = AnimationUtils.loadAnimation(
 				rootView.getContext(), R.anim.scale);
 		final Animation animScalet = AnimationUtils.loadAnimation(
 				rootView.getContext(), R.anim.scaleinput);
 
-		// Begin startup flow.
-		rootView.startAnimation(lefttoright);
-
 		seekBar = (SeekBar) rootView.findViewById(R.id.discount_bar);
 		seekBar.setProgressDrawable(getResources().getDrawable(
 				R.drawable.progressbar));
-		Drawable mDrawable = getResources().getDrawable(R.drawable.thumb);
+		final Drawable mDrawable = getResources().getDrawable(R.drawable.thumb);
 		mDrawable.setBounds(0, 0, mDrawable.getIntrinsicWidth(),
 				mDrawable.getIntrinsicHeight());
 		seekBar.setThumb(mDrawable);
@@ -82,20 +72,26 @@ public class QuoteFragment extends Fragment {
 		});
 
 		// When a user selects the button to receive their plan quotes.
-		((TextView) rootView.findViewById(R.id.button_send))
+		((Button) rootView.findViewById(R.id.button_send))
 				.setOnClickListener(new OnClickListener() {
 
 					@Override
 					public void onClick(View arg0) {
-						
-						int smart = Integer.valueOf(eSmart.getText().toString());
-						int basic = Integer.valueOf(eBasic.getText().toString());
-						
-						if ((smart + basic) == 0){
-							Toast.makeText(rootView.getContext(), "You must have at least 1 phone on a plan.",
-									   Toast.LENGTH_SHORT).show();
+
+						int smart = Integer
+								.valueOf(eSmart.getText().toString());
+						int basic = Integer
+								.valueOf(eBasic.getText().toString());
+
+						if ((smart + basic) == 0) {
+							Toast.makeText(
+									rootView.getContext(),
+									"You must have at least 1 phone on a plan.",
+									Toast.LENGTH_SHORT).show();
 						} else {
-							rootView.startAnimation(righttoleft);
+
+							next();
+
 						}
 					}
 
@@ -231,53 +227,6 @@ public class QuoteFragment extends Fragment {
 
 				});
 
-		righttoleft.setAnimationListener(new AnimationListener() {
-
-			@Override
-			public void onAnimationEnd(Animation arg0) {
-
-				getCheckBoxes();
-
-				final TextView eSmart = (TextView) rootView
-						.findViewById(R.id.sphone_input);
-				final TextView eBasic = (TextView) rootView
-						.findViewById(R.id.bphone_input);
-				final TextView eData = (TextView) rootView
-						.findViewById(R.id.data_input);
-				final TextView eTab = (TextView) rootView
-						.findViewById(R.id.tab_input);
-
-				final String smartString = eSmart.getText().toString();
-				final String basicString = eBasic.getText().toString();
-				final String gigsString = eData.getText().toString();
-				final String tabString = eTab.getText().toString();
-
-				final int smart = Integer.parseInt(smartString);
-				final int basic = Integer.parseInt(basicString);
-				final int gigs = Integer.parseInt(gigsString);
-				final int tabs = Integer.parseInt(tabString);
-
-				final FragmentTransaction ft = getFragmentManager()
-						.beginTransaction();
-				ft.replace(R.id.fragment_container,
-						DisplayMessageFragment.create(smart, basic, gigs, tabs,
-								hotspotCost, discount));
-				ft.addToBackStack(null);
-				ft.commit();
-				getFragmentManager().executePendingTransactions();
-			}
-
-			@Override
-			public void onAnimationRepeat(Animation arg0) {
-
-			}
-
-			@Override
-			public void onAnimationStart(Animation arg0) {
-
-			}
-		});
-
 		return rootView;
 	}
 
@@ -297,6 +246,37 @@ public class QuoteFragment extends Fragment {
 
 		}
 
+	}
+
+	public void next() {
+
+		getCheckBoxes();
+
+		final TextView eSmart = (TextView) rootView
+				.findViewById(R.id.sphone_input);
+		final TextView eBasic = (TextView) rootView
+				.findViewById(R.id.bphone_input);
+		final TextView eData = (TextView) rootView
+				.findViewById(R.id.data_input);
+		final TextView eTab = (TextView) rootView.findViewById(R.id.tab_input);
+
+		final String smartString = eSmart.getText().toString();
+		final String basicString = eBasic.getText().toString();
+		final String gigsString = eData.getText().toString();
+		final String tabString = eTab.getText().toString();
+
+		final int smart = Integer.parseInt(smartString);
+		final int basic = Integer.parseInt(basicString);
+		final int gigs = Integer.parseInt(gigsString);
+		final int tabs = Integer.parseInt(tabString);
+
+		final FragmentTransaction ft = getActivity().getFragmentManager()
+				.beginTransaction();
+		ft.setCustomAnimations(R.animator.right_in_off, R.animator.left_in_off);
+		ft.replace(R.id.fragment_container, DisplayMessageFragment.create(
+				smart, basic, gigs, tabs, hotspotCost, discount));
+		ft.addToBackStack(null);
+		ft.commit();
 	}
 
 	public void onDestroy() {

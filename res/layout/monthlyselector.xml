@@ -1,77 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/startuplayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/titlenoback"
-    android:orientation="vertical"
-    android:padding="20dip" >
+    android:padding="@dimen/border"
+    android:orientation="vertical" >
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/monthlyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/monthlytitle"
+        android:paddingTop="16dip"
+        android:text="@string/monthlytitle"
+        android:textSize="@dimen/title_dimens" />
+
+    <EditText
+        android:id="@+id/theMonthly"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="96dip"
         android:gravity="center"
-        android:layout_marginTop="30dip"
-        android:orientation="horizontal" >
+        android:hint="@string/monthlyhint"
+        android:inputType="number"
+        android:padding="15dip"
+        android:text="@string/blankstring"
+        android:textSize="@dimen/body" />
 
-        <TextView
-            android:id="@+id/monthlyTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:hint="@string/monthlytitle"
-            android:text="@string/monthlytitle"
-            android:textColor="@color/white_color"
-            android:textSize="@dimen/midtitle" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/next"
+        android:layout_width="@dimen/btnw"
+        android:layout_height="@dimen/btnh"
         android:layout_gravity="center"
-        android:layout_marginTop="80dip"
-        android:background="@drawable/cbg"
+        android:layout_marginTop="56dip"
+        android:background="@color/accent"
         android:gravity="center"
-        android:orientation="horizontal" >
-
-        <EditText
-            android:id="@+id/theMonthly"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:hint="@string/monthlyhint"
-            android:inputType="number"
-            android:text="@string/blankstring"
-            android:padding="15dip"
-            android:textColor="@color/white_color"
-            android:textColorHint="@color/white_color"
-            android:textSize="@dimen/next" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center|bottom"
-        android:layout_marginBottom="20dip"
-        android:layout_marginTop="50dip"
-        android:background="@drawable/bbg"
-        android:gravity="center"
-        android:orientation="horizontal" >
-
-        <TextView
-            android:id="@+id/next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:padding="15dip"
-            android:hint="@string/next"
-            android:text="@string/next"
-            android:textColor="@color/white_color"
-            android:textSize="@dimen/next" />
-    </LinearLayout>
+        android:hint="@string/next"
+        android:text="@string/next"
+        android:textColor="@color/white_color" />
 
 </LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/border" >
+
+    <TextView
+        android:id="@+id/pstitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:hint="@string/search"
+        android:text="@string/search"
+        android:textColor="@color/txt"
+        android:textSize="@dimen/title_dimens" />
+
+    <TextView
+        android:id="@+id/pssubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:hint="@string/ps4sub"
+        android:text="@string/ps4sub"
+        android:textColor="@color/txt"
+        android:textSize="@dimen/subtitle_dimens" />
+
+    <TextView
+        android:id="@+id/ps1searchdesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="72dip"
+        android:gravity="center"
+        android:hint="@string/pscomparedesc"
+        android:text="@string/pscomparedesc"
+        android:textColor="@color/txt"
+        android:textSize="@dimen/body" />
+
+    <EditText
+        android:id="@+id/searchTerm"
+        android:layout_width="200dip"
+        android:layout_height="@dimen/btnh"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@color/accent"
+        android:gravity="center"
+        android:hint="@string/searchTermHint"
+        android:singleLine="true"
+        android:textColor="@color/white_color" >
+    </EditText>
+
+    <Button
+        android:id="@+id/searchGo"
+        android:layout_width="@dimen/btnw"
+        android:layout_height="@dimen/btnh"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@color/accent"
+        android:gravity="center"
+        android:text="@string/searchGoBox"
+        android:textColor="@color/white_color" >
+    </Button>
+
+</LinearLayout>

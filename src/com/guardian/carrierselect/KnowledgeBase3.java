@@ -2,14 +2,6 @@ package com.guardian.carrierselect;
 
 import java.util.List;
 
-import com.applovin.adview.AppLovinInterstitialAd;
-import com.guardian.carrierselect.model.Phone;
-import com.parse.FindCallback;
-import com.parse.Parse;
-import com.parse.ParseException;
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.Fragment;
@@ -19,9 +11,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.TextView;
+
+import com.applovin.adview.AppLovinInterstitialAd;
+import com.guardian.carrierselect.model.Phone;
+import com.parse.FindCallback;
+import com.parse.Parse;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
 
 public class KnowledgeBase3 extends Fragment {
 
@@ -35,15 +33,6 @@ public class KnowledgeBase3 extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		rootView = inflater.inflate(R.layout.knowledge3, container, false);
-
-		getActivity().getActionBar().setTitle("Knowledge Base");
-
-		// Load in animations.
-		final Animation lefttoright = AnimationUtils.loadAnimation(
-				rootView.getContext(), R.anim.left_to_right);
-
-		// Begin startup flow.
-		rootView.startAnimation(lefttoright);
 
 		kbtitle = (TextView) rootView.findViewById(R.id.kb3search);
 		kbdef = (TextView) rootView.findViewById(R.id.kb3def);
