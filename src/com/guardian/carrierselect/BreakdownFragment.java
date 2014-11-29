@@ -1,6 +1,8 @@
 package com.guardian.carrierselect;
 
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -189,6 +191,7 @@ public class BreakdownFragment extends Fragment {
 		progress = new ProgressDialog(getActivity());
 		progress.setTitle("Building your plans");
 		progress.setMessage("Just a sec...");
+		progress.setCancelable(false);
 		progress.show();
 
 		ParseObject.registerSubclass(Phone.class);
@@ -427,7 +430,14 @@ public class BreakdownFragment extends Fragment {
 							+ Math.round(((plan + smart) + tax - dis)));
 					tmototal.setTypeface(null, Typeface.BOLD);
 
-					progress.dismiss();
+					final long delayInMillis = 250;
+					Timer timer = new Timer();
+					timer.schedule(new TimerTask() {
+						@Override
+						public void run() {
+							progress.dismiss();
+						}
+					}, delayInMillis);
 				} else {
 				}
 			}

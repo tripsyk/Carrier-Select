@@ -2,15 +2,16 @@
 <resources>
 
     <string name="app_name">Carrier Select</string>
-    <string name="sphone_label">Number of smartphones? </string>
+    <string name="sphone_label">How many smartphones? </string>
     <string name="data_label">How many GB of data? </string>
-    <string name="bphone_label">Number of basic phones? </string>
+    <string name="bphone_label">How many basic phones? </string>
     <string name="extras_label">Extras</string>
     <string name="quotetop_label">Core Plan</string>
     <string name="ver_pretotal">Verizon Monthly Cost</string>
     <string name="att_pretotal">AT&amp;T Monthly Cost</string>
     <string name="spr_pretotal">Sprint Monthly Cost</string>
     <string name="tmo_pretotal">T-Mobile Monthly Cost</string>
+    <string name="additionaldata">Additional High-Speed Data:</string>
     <string name="serviceplans">Service Plans</string>
     <string name="sp1title">Quotes from the top carriers</string>
     <string name="sp2title">Service Plan Quotes</string>
@@ -19,7 +20,7 @@
     <string name="sp3sub">Where your money is going</string>
     <string name="pvsub">The fine print</string>
     <string name="pvtype">Plan Type</string>
-    <string name="plandevices">Plan Supports</string>
+    <string name="plandevices">Devices this Plan Supports</string>
     <string name="pvtalktext">Talk and Text Amount</string>
     <string name="pvdata">Shared Data Limit</string>
     <string name="pvoverages">Data Overage Costs</string>
@@ -38,7 +39,7 @@
         <item>My Profile</item>
         <item>Service Plans</item>
         <item>No Contract Plans</item>
-        <item>Phone Search</item>
+        <item>Device Search</item>
         <item>Knowledge Base</item>
         <item>About</item>
     </string-array>
@@ -46,6 +47,7 @@
     <string name="plus">+</string>
     <string name="minus">-</string>
     <string name="zero">0</string>
+    <string name="zerodollar">$0</string>
     <string name="discount_text">Bill discount (employer, etc)?</string>
     <string name="dis_value">0%</string>
     <string name="plancost">Core Plan Cost:</string>
@@ -54,6 +56,8 @@
     <string name="phonecost">Line Access - Devices:</string>
     <string name="datacost">Cost of Data:</string>
     <string name="tabletcost">Line Access - Tablets:</string>
+    <string name="tmotabletcost">Data Cost - Tablets:</string>
+    <string name="tmomificost">Data Cost - Hotspots:</string>
     <string name="hotspotcost">Line Access - Hotspots:</string>
     <string name="taxescost">Taxes &amp; Charges:</string>
     <string name="discountcost">Employer Discount:</string>
@@ -71,7 +75,8 @@
     <string name="tellus">First, tell us a little about yourself.</string>
     <string name="about">About</string>
     <string name="next">Next</string>
-    <string name="tab_label">How many tablets?</string>
+    <string name="tab_label">How many connected tablets?</string>
+    <string name="mifi_label">How many mifi devices (hotspots)?</string>
     <string name="contractpricing">2 year contract pricing</string>
     <string name="search">Phone Search</string>
     <string name="psdesc">Enter a phone to see technical specs</string>
@@ -80,6 +85,9 @@
     <string name="searchGoBox">Search</string>
     <string name="yourProfile">My Profile</string>
     <string name="profsubtitle">What I\'ve got now</string>
+    <string name="profiletopbox">The Basics</string>
+    <string name="profileadvanced">The Details (Optional)</string>
+    <string name="profileadvancedsub">Provides more accuate plan savings options</string>
     <string name="notset">Not Set</string>
     <string name="profilecarrier">My Carrier:</string>
     <string name="profilesmart">Smartphones:</string>
@@ -87,6 +95,10 @@
     <string name="profilegigs">Total Data:</string>
     <string name="profiletablets">Connected Tablets:</string>
     <string name="profilemifi">Hotspot Devices:</string>
+    <string name="profileinsurance">Number of devices insured:</string>
+    <string name="profileetf">Estimated Early Termination Fees:</string>
+    <string name="profileinstalls">Estimated Cost to Pay off Phones:</string>
+    <string name="profilereuse">Devices to use on other carriers:</string>
     <string name="mifititle">How many hotspot devices do you have on your plan?</string>
     <string name="profilediscount">Monthly Discount:</string>
     <string name="profilemonthly">Total Monthly bill:</string>
@@ -119,7 +131,9 @@
     <string name="nocontracttitle">No Contract Plans</string>
     <string name="ncsubtitle">The Prepaid Plan Browser</string>
     <string name="nctitlesub">Select a plan from the list below</string>
-    <string name="dssub">Select a data amount from the list below</string>
+    <string name="dssub">Select your data amount from the list below</string>
+    <string name="dissub">Select your discount amount from the list below</string>
+    <string name="discounttitle">What is your monthly discount through your employer (if any)?</string>
     <string name="phonesub">Select the number from the list below</string>
     <string name="aboutp1">Carrier Select is an effort from an experienced member of the wireless industry to help everyday people make choices easier.</string>
     <string name="aboutp2">Carrier Select was built on the pillars of user-friendliness and beautiful design. I wanted to make choosing a mobile plan for people fun, beautiful, exact, and most of all, simple. Talking to someone about mobile plans is like listening to someone speak a different language. Researching them online only leaves you more confused than when you started.</string>
@@ -150,7 +164,8 @@
         <item>Pure TalkUSA</item>
     </string-array>
 
-    <string name="nc2title">No Contract Plan Results</string>
+    <string name="monthlycost">Monthly cost:</string>
+    <string name="nc2subtitle">Here are the plans you were looking for</string>
     <string name="loadingplan">Loading Plan&#8230;</string>
     <string name="loadingprices">Loading Prices&#8230;</string>
     <string name="ps2subtitle">Showing results for</string>
@@ -280,6 +295,39 @@
         <item>78GB</item>
         <item>79GB</item>
         <item>80GB</item>
+    </string-array>
+    <string-array name="discountspinner">
+        <item>5%%</item>
+        <item>6%</item>
+        <item>7%</item>
+        <item>8%</item>
+        <item>9%</item>
+        <item>10%</item>
+        <item>11%</item>
+        <item>12%</item>
+        <item>13%</item>
+        <item>14%</item>
+        <item>15%</item>
+        <item>16%</item>
+        <item>17%</item>
+        <item>18%</item>
+        <item>19%</item>
+        <item>20%</item>
+        <item>21%</item>
+        <item>22%</item>
+        <item>23%</item>
+        <item>24%</item>
+        <item>25%</item>
+        <item>26%</item>
+        <item>27%</item>
+        <item>28%</item>
+        <item>29%</item>
+        <item>30%</item>
+        <item>31%</item>
+        <item>32%</item>
+        <item>33%</item>
+        <item>34%</item>
+        <item>35%</item>
     </string-array>
     <string-array name="phonespinner">
         <item>None</item>

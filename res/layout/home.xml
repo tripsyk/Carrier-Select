@@ -96,8 +96,8 @@
 
                     <ImageView
                         android:id="@+id/atticon1"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name" />
 
@@ -123,8 +123,8 @@
 
                     <ImageView
                         android:id="@+id/atticon2"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"
@@ -152,8 +152,8 @@
 
                     <ImageView
                         android:id="@+id/atticon3"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"
@@ -181,8 +181,8 @@
 
                     <ImageView
                         android:id="@+id/atticon4"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"
@@ -210,8 +210,8 @@
 
                     <ImageView
                         android:id="@+id/atticon5"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"
@@ -283,8 +283,8 @@
 
                     <ImageView
                         android:id="@+id/vericon1"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"
@@ -312,8 +312,8 @@
 
                     <ImageView
                         android:id="@+id/vericon2"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"
@@ -341,8 +341,8 @@
 
                     <ImageView
                         android:id="@+id/vericon3"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"
@@ -370,8 +370,8 @@
 
                     <ImageView
                         android:id="@+id/vericon4"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"
@@ -399,8 +399,8 @@
 
                     <ImageView
                         android:id="@+id/vericon5"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"
@@ -470,8 +470,8 @@
 
                     <ImageView
                         android:id="@+id/spricon1"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"
@@ -499,8 +499,8 @@
 
                     <ImageView
                         android:id="@+id/spricon2"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"
@@ -528,8 +528,8 @@
 
                     <ImageView
                         android:id="@+id/spricon3"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"
@@ -557,8 +557,8 @@
 
                     <ImageView
                         android:id="@+id/spricon4"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"
@@ -586,8 +586,8 @@
 
                     <ImageView
                         android:id="@+id/spricon5"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"
@@ -657,8 +657,8 @@
 
                     <ImageView
                         android:id="@+id/tmoicon1"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"
@@ -686,8 +686,8 @@
 
                     <ImageView
                         android:id="@+id/tmoicon2"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"
@@ -715,8 +715,8 @@
 
                     <ImageView
                         android:id="@+id/tmoicon3"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"
@@ -744,8 +744,8 @@
 
                     <ImageView
                         android:id="@+id/tmoicon4"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"
@@ -773,8 +773,8 @@
 
                     <ImageView
                         android:id="@+id/tmoicon5"
-                        android:layout_width="30dip"
-                        android:layout_height="30dip"
+                        android:layout_width="@dimen/icon"
+                        android:layout_height="@dimen/icon"
                         android:layout_gravity="center"
                         android:adjustViewBounds="true"
                         android:contentDescription="@string/app_name"

@@ -21,23 +21,34 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:hint="@string/nc2title"
-                android:text="@string/nc2title"
+                android:hint="@string/nocontracttitle"
+                android:text="@string/nocontracttitle"
                 android:textColor="@color/txt"
                 android:textSize="@dimen/title_dimens" />
 
             <TextView
-                android:id="@+id/nocontractsub"
+                android:id="@+id/ncsubtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dip"
+                android:layout_gravity="center"
                 android:gravity="center"
-                android:hint="@string/blankstring"
-                android:text="@string/blankstring"
+                android:hint="@string/nc2subtitle"
+                android:text="@string/nc2subtitle"
                 android:textColor="@color/txt"
-                android:textSize="@dimen/body"
-                android:textStyle="bold" />
+                android:textSize="@dimen/subtitle_dimens" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/nocontractsub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dip"
+            android:gravity="center"
+            android:hint="@string/blankstring"
+            android:text="@string/blankstring"
+            android:textColor="@color/txt"
+            android:textSize="@dimen/body"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/ncnetwork"

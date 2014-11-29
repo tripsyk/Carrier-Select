@@ -1,9 +1,0 @@
-<resources>
-
-    <!-- NAV DRAWER DIMENS -->
-    <dimen name="drawerw">360dip</dimen>
-    <dimen name="topicon">40dip</dimen>
-    <dimen name="colorboxh">96dip</dimen>
-    <dimen name="listmarg">8dip</dimen>
-
-</resources>

@@ -65,7 +65,7 @@ public class MifiSelector extends Fragment {
 			@Override
 			public void onClick(View v) {
 
-				final Fragment fragment = new MonthlySelector();
+				final Fragment fragment = new DiscountSelector();
 
 				final FragmentManager fm = getActivity().getFragmentManager();
 

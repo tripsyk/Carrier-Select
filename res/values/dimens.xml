@@ -10,25 +10,26 @@
     <dimen name="resulth">40dip</dimen>
     <dimen name="btnw">112dip</dimen>
     <dimen name="btnh">40dip</dimen>
-    <dimen name="plusminbtn">44dip</dimen>
+    <dimen name="plusminbtn">40dip</dimen>
     <dimen name="titlespace">72dip</dimen>
+    <dimen name="icon">32dip</dimen>
     <dimen name="card_elevation">2dip</dimen>
     <dimen name="cardmarg">4dip</dimen>
     <dimen name="cardgut">8dip</dimen>
     <dimen name="topcard">16dip</dimen>
     <dimen name="cardpad">16dip</dimen>
-    <dimen name="cardcorner">2dip</dimen>
+    <dimen name="cardcorner">4dip</dimen>
     <dimen name="instruction">24dip</dimen>
     <dimen name="border">16dip</dimen>
     <dimen name="topbotpad">16dip</dimen>
-    <dimen name="btnspace">8dip</dimen>
+    <dimen name="btnspace">2dip</dimen>
     <dimen name="elmtspace">8dip</dimen>
 
     <!-- NAV DRAWER DIMENS -->
-    <dimen name="drawerw">312dip</dimen>
+    <dimen name="drawerw">320dip</dimen>
     <dimen name="topicon">32dip</dimen>
     <dimen name="colorboxh">80dip</dimen>
-    <dimen name="listmarg">4dip</dimen>
+    <dimen name="listmarg">8dip</dimen>
     <dimen name="savecheckh">56dip</dimen>
 
 </resources>

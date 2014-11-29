@@ -1,6 +1,8 @@
 package com.guardian.carrierselect;
 
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -31,9 +33,7 @@ public class PlanViewer extends Fragment {
 	private static final String ARGS_DISCOUNT = "discount";
 	private static final String ARGS_CARRIER = "carrier";
 
-	@SuppressWarnings("unused")
 	private static int smartphones, basicphones, gigs, tabs, hotspotprice;
-	@SuppressWarnings("unused")
 	private double discount;
 
 	private String carrier;
@@ -75,6 +75,7 @@ public class PlanViewer extends Fragment {
 		progress = new ProgressDialog(getActivity());
 		progress.setTitle("Building your plan");
 		progress.setMessage("Just a sec...");
+		progress.setCancelable(false);
 		progress.show();
 
 		ParseObject.registerSubclass(Phone.class);
@@ -132,33 +133,34 @@ public class PlanViewer extends Fragment {
 					final TextView b1etfinstall = (TextView) rootView
 							.findViewById(R.id.box1etfinstall);
 
-					String type = PlanList.get(0).getString("Type");
-					String devices = PlanList.get(0).getString("Devices");
-					String data = PlanList.get(0).getString("Data");
-					String overage = PlanList.get(0).getString("Overage");
-					String smartetf = PlanList.get(0).getString("SmartETF");
-					String smartetflower = PlanList.get(0).getString(
-							"SmartETFDown");
-					String basicetf = PlanList.get(0).getString("BasicETF");
-					String basicetflower = PlanList.get(0).getString(
-							"BasicETFDown");
-					String installetf = PlanList.get(0).getString(
-							"ETFInstallments");
-
-					b1type.setText(type);
-					b1devices.setText(devices);
+					b1type.setText(PlanList.get(0).getString("Type"));
+					b1devices.setText(PlanList.get(0).getString("Devices"));
 					b1tt.setText("Unlimited Talk & Text Nationwide");
-					b1data.setText(data + " shared for group");
-					b1over.setText(overage);
-					b1etfsmart.setText("Smartphones - $" + smartetf
-							+ " and declines $" + smartetflower
+					b1data.setText(PlanList.get(0).getString("Data")
+							+ " shared for group");
+					b1over.setText(PlanList.get(0).getString("Overage"));
+					b1etfsmart.setText("Smartphones - $"
+							+ PlanList.get(0).getString("SmartETF")
+							+ " and declines $"
+							+ PlanList.get(0).getString("SmartETFDown")
 							+ " per month into contract.");
 					b1etfbasic.setText("Basic phones, Tablets, Hotspots - $"
-							+ basicetf + " and declines $" + basicetflower
+							+ PlanList.get(0).getString("BasicETF")
+							+ " and declines $"
+							+ PlanList.get(0).getString("BasicETFDown")
 							+ " per month into contract.");
-					b1etfinstall.setText(installetf);
+					b1etfinstall.setText(PlanList.get(0).getString(
+							"ETFInstallments"));
 
-					progress.dismiss();
+					final long delayInMillis = 250;
+					Timer timer = new Timer();
+					timer.schedule(new TimerTask() {
+						@Override
+						public void run() {
+							progress.dismiss();
+						}
+					}, delayInMillis);
+
 				} else {
 				}
 
@@ -173,6 +175,7 @@ public class PlanViewer extends Fragment {
 		progress = new ProgressDialog(getActivity());
 		progress.setTitle("Building your plan");
 		progress.setMessage("Just a sec...");
+		progress.setCancelable(false);
 		progress.show();
 
 		ParseObject.registerSubclass(Phone.class);
@@ -269,7 +272,14 @@ public class PlanViewer extends Fragment {
 							+ " per month into contract.");
 					b1etfinstall.setText(installetf);
 
-					progress.dismiss();
+					final long delayInMillis = 250;
+					Timer timer = new Timer();
+					timer.schedule(new TimerTask() {
+						@Override
+						public void run() {
+							progress.dismiss();
+						}
+					}, delayInMillis);
 				} else {
 				}
 			}
@@ -283,6 +293,7 @@ public class PlanViewer extends Fragment {
 		progress = new ProgressDialog(getActivity());
 		progress.setTitle("Building your plan");
 		progress.setMessage("Just a sec...");
+		progress.setCancelable(false);
 		progress.show();
 
 		ParseObject.registerSubclass(Phone.class);
@@ -372,7 +383,14 @@ public class PlanViewer extends Fragment {
 							+ " per starting at 19 months.");
 					b1etfinstall.setText(installetf);
 
-					progress.dismiss();
+					final long delayInMillis = 250;
+					Timer timer = new Timer();
+					timer.schedule(new TimerTask() {
+						@Override
+						public void run() {
+							progress.dismiss();
+						}
+					}, delayInMillis);
 				} else {
 				}
 			}
@@ -385,6 +403,7 @@ public class PlanViewer extends Fragment {
 		progress = new ProgressDialog(getActivity());
 		progress.setTitle("Building your plan");
 		progress.setMessage("Just a sec...");
+		progress.setCancelable(false);
 		progress.show();
 
 		String phones = String.valueOf(smartphones + basicphones + tabs);
@@ -483,7 +502,14 @@ public class PlanViewer extends Fragment {
 							+ " if less than 3 months remain.");
 					b1etfinstall.setText(installetf);
 
-					progress.dismiss();
+					final long delayInMillis = 250;
+					Timer timer = new Timer();
+					timer.schedule(new TimerTask() {
+						@Override
+						public void run() {
+							progress.dismiss();
+						}
+					}, delayInMillis);
 				} else {
 				}
 			}

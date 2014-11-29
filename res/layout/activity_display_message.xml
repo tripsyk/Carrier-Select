@@ -72,13 +72,24 @@
                 android:orientation="vertical" >
 
                 <TextView
+                    android:id="@+id/attplan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold" />
+
+                <TextView
                     android:id="@+id/att_pretotal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:hint="@string/att_pretotal"
-                    android:text="@string/att_pretotal"
+                    android:hint="@string/monthlycost"
+                    android:text="@string/monthlycost"
                     android:textSize="@dimen/body" />
 
                 <TextView
@@ -89,7 +100,19 @@
                     android:gravity="center"
                     android:hint="@string/loadingprices"
                     android:text="@string/loadingprices"
-                    android:textSize="@dimen/subtitle_dimens"
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/verplan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/topbotpad"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
                     android:textStyle="bold" />
 
                 <TextView
@@ -97,10 +120,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/topbotpad"
                     android:gravity="center"
-                    android:hint="@string/ver_pretotal"
-                    android:text="@string/ver_pretotal"
+                    android:hint="@string/monthlycost"
+                    android:text="@string/monthlycost"
                     android:textSize="@dimen/body" />
 
                 <TextView
@@ -111,7 +133,19 @@
                     android:gravity="center"
                     android:hint="@string/loadingprices"
                     android:text="@string/loadingprices"
-                    android:textSize="@dimen/subtitle_dimens"
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/sprplan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/topbotpad"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
                     android:textStyle="bold" />
 
                 <TextView
@@ -119,10 +153,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/topbotpad"
                     android:gravity="center"
-                    android:hint="@string/spr_pretotal"
-                    android:text="@string/spr_pretotal"
+                    android:hint="@string/monthlycost"
+                    android:text="@string/monthlycost"
                     android:textSize="@dimen/body" />
 
                 <TextView
@@ -133,7 +166,19 @@
                     android:gravity="center"
                     android:hint="@string/loadingprices"
                     android:text="@string/loadingprices"
-                    android:textSize="@dimen/subtitle_dimens"
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tmoplan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/topbotpad"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
                     android:textStyle="bold" />
 
                 <TextView
@@ -141,10 +186,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/topbotpad"
                     android:gravity="center"
-                    android:hint="@string/tmo_pretotal"
-                    android:text="@string/tmo_pretotal"
+                    android:hint="@string/monthlycost"
+                    android:text="@string/monthlycost"
                     android:textSize="@dimen/body" />
 
                 <TextView
@@ -155,7 +199,7 @@
                     android:gravity="center"
                     android:hint="@string/loadingprices"
                     android:text="@string/loadingprices"
-                    android:textSize="@dimen/subtitle_dimens"
+                    android:textSize="@dimen/body"
                     android:textStyle="bold" />
             </LinearLayout>
         </android.support.v7.widget.CardView>

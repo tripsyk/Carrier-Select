@@ -1,8 +1,8 @@
 package com.guardian.carrierselect;
 
 import android.app.Fragment;
-import android.app.FragmentTransaction;
 import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -16,18 +16,13 @@ public class MyProfile extends Fragment {
 
 	private static View rootView;
 	private static TextView theCarrier, theSmarts, theBasics, theData, theTabs,
-			theMifi, theMonthly;
+			theMifi, theDiscount, theInstalls, theMonthly;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 
 		rootView = inflater.inflate(R.layout.myprofile, container, false);
-
-		// Declare preferences
-		final String PREFS_NAME = "MyPrefsFile";
-		SharedPreferences settings = getActivity().getSharedPreferences(
-				PREFS_NAME, 0);
 
 		// Declare TextViews
 		theCarrier = (TextView) rootView.findViewById(R.id.yourcarrier);
@@ -36,10 +31,11 @@ public class MyProfile extends Fragment {
 		theData = (TextView) rootView.findViewById(R.id.gigsofdata);
 		theTabs = (TextView) rootView.findViewById(R.id.numtablets);
 		theMifi = (TextView) rootView.findViewById(R.id.nummifi);
+		theDiscount = (TextView) rootView.findViewById(R.id.numdiscount);
+		theInstalls = (TextView) rootView.findViewById(R.id.numinstall);
 		theMonthly = (TextView) rootView.findViewById(R.id.monthlybill);
 		final Button edit = (Button) rootView.findViewById(R.id.editprofile);
-		
-		
+
 		edit.setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -106,6 +102,14 @@ public class MyProfile extends Fragment {
 		// Set the appropriate mifi devices on the homescreen
 		String mifi = sharedPref.getString("mifi", "Not Set");
 		theMifi.setText(mifi);
+
+		// Set the appropriate data usage on the homescreen
+		String discount = sharedPref.getString("discount", "Not Set");
+		theDiscount.setText(discount);
+
+		// Set the appropriate monthly bill on the homescreen
+		int installs = sharedPref.getInt("installments", 0);
+		theInstalls.setText("$" + String.valueOf(installs) + "/month");
 
 		// Set the appropriate monthly bill on the homescreen
 		int monthly = sharedPref.getInt("monthly", 0);

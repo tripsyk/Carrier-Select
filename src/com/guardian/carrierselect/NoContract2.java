@@ -1,6 +1,8 @@
 package com.guardian.carrierselect;
 
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import android.app.Fragment;
 import android.app.ProgressDialog;
@@ -54,8 +56,9 @@ public class NoContract2 extends Fragment {
 	public void grabPlans() {
 
 		progress = new ProgressDialog(getActivity());
-		progress.setTitle("Looking up no-contract plan");
+		progress.setTitle("Looking up plans");
 		progress.setMessage("Just a sec...");
+		progress.setCancelable(false);
 		progress.show();
 
 		// Test Query
@@ -456,7 +459,16 @@ public class NoContract2 extends Fragment {
 						nc27throttle.setText(PlanList.get(6).getString(
 								"Throttle"));
 					}
-					progress.dismiss();
+
+					final long delayInMillis = 250;
+					Timer timer = new Timer();
+					timer.schedule(new TimerTask() {
+						@Override
+						public void run() {
+							progress.dismiss();
+						}
+					}, delayInMillis);
+
 				}
 			}
 		});

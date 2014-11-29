@@ -1,6 +1,8 @@
 package com.guardian.carrierselect;
 
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -62,8 +64,7 @@ public class KnowledgeBase2 extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				final FragmentManager fm = getActivity()
-						.getFragmentManager();
+				final FragmentManager fm = getActivity().getFragmentManager();
 				final FragmentTransaction fragmenttran = fm.beginTransaction();
 				fragmenttran.setCustomAnimations(R.animator.right_in_off,
 						R.animator.left_in_off);
@@ -78,8 +79,7 @@ public class KnowledgeBase2 extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				final FragmentManager fm = getActivity()
-						.getFragmentManager();
+				final FragmentManager fm = getActivity().getFragmentManager();
 				final FragmentTransaction fragmenttran = fm.beginTransaction();
 				fragmenttran.setCustomAnimations(R.animator.right_in_off,
 						R.animator.left_in_off);
@@ -94,8 +94,7 @@ public class KnowledgeBase2 extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				final FragmentManager fm = getActivity()
-						.getFragmentManager();
+				final FragmentManager fm = getActivity().getFragmentManager();
 				final FragmentTransaction fragmenttran = fm.beginTransaction();
 				fragmenttran.setCustomAnimations(R.animator.right_in_off,
 						R.animator.left_in_off);
@@ -110,8 +109,7 @@ public class KnowledgeBase2 extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				final FragmentManager fm = getActivity()
-						.getFragmentManager();
+				final FragmentManager fm = getActivity().getFragmentManager();
 				final FragmentTransaction fragmenttran = fm.beginTransaction();
 				fragmenttran.setCustomAnimations(R.animator.right_in_off,
 						R.animator.left_in_off);
@@ -126,8 +124,7 @@ public class KnowledgeBase2 extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				final FragmentManager fm = getActivity()
-						.getFragmentManager();
+				final FragmentManager fm = getActivity().getFragmentManager();
 				final FragmentTransaction fragmenttran = fm.beginTransaction();
 				fragmenttran.setCustomAnimations(R.animator.right_in_off,
 						R.animator.left_in_off);
@@ -147,6 +144,7 @@ public class KnowledgeBase2 extends Fragment {
 		progress = new ProgressDialog(getActivity());
 		progress.setTitle("Knowledge Base Search");
 		progress.setMessage("Just a sec...");
+		progress.setCancelable(false);
 		progress.show();
 
 		ParseObject.registerSubclass(Phone.class);
@@ -160,7 +158,6 @@ public class KnowledgeBase2 extends Fragment {
 		query.whereContains("Tag", searchTerm.toLowerCase());
 		query.findInBackground(new FindCallback<ParseObject>() {
 			public void done(List<ParseObject> PhoneList, ParseException e) {
-				progress.dismiss();
 
 				if (e == null) {
 					if (PhoneList.size() == 1) {
@@ -213,6 +210,16 @@ public class KnowledgeBase2 extends Fragment {
 						kb24.setVisibility(View.VISIBLE);
 						kb25.setVisibility(View.VISIBLE);
 					}
+
+					final long delayInMillis = 250;
+					Timer timer = new Timer();
+					timer.schedule(new TimerTask() {
+						@Override
+						public void run() {
+							progress.dismiss();
+						}
+					}, delayInMillis);
+
 				} else {
 					kb21.setText("No term found.");
 				}

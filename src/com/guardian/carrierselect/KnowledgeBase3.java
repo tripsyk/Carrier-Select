@@ -1,6 +1,8 @@
 package com.guardian.carrierselect;
 
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -60,6 +62,7 @@ public class KnowledgeBase3 extends Fragment {
 		progress = new ProgressDialog(getActivity());
 		progress.setTitle("Knowledge Base Search");
 		progress.setMessage("Just a sec...");
+		progress.setCancelable(false);
 		progress.show();
 
 		ParseObject.registerSubclass(Phone.class);
@@ -81,10 +84,17 @@ public class KnowledgeBase3 extends Fragment {
 							+ KBResult.get(0).getString("Definition2"));
 					kbex.setText("\t\t" + KBResult.get(0).getString("Example"));
 
+					final long delayInMillis = 250;
+					Timer timer = new Timer();
+					timer.schedule(new TimerTask() {
+						@Override
+						public void run() {
+							progress.dismiss();
+						}
+					}, delayInMillis);
+
 				} else {
 				}
-
-				progress.dismiss();
 			}
 		});
 

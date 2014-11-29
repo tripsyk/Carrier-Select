@@ -865,8 +865,8 @@
                         android:id="@+id/tmoplanpre"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:hint="@string/datacost"
-                        android:text="@string/datacost"
+                        android:hint="@string/additionaldata"
+                        android:text="@string/additionaldata"
                         android:textSize="@dimen/body" />
 
                     <TextView

@@ -61,12 +61,24 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical" >
 
+                <TextView
+                    android:id="@+id/basicboxtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profiletopbox"
+                    android:text="@string/profiletopbox"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold" />
+
                 <LinearLayout
                     android:id="@+id/carrierbox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="2dip"
+                    android:layout_marginTop="@dimen/cardmarg"
                     android:gravity="center"
                     android:orientation="horizontal" >
 
@@ -355,8 +367,190 @@
             android:layout_width="@dimen/btnw"
             android:layout_height="@dimen/btnh"
             android:layout_gravity="center"
-            android:layout_marginBottom="16dip"
-            android:layout_marginTop="16dip"
+            android:layout_marginTop="@dimen/btnspace"
+            android:background="@color/accent"
+            android:gravity="center"
+            android:hint="@string/editprofile"
+            android:text="@string/editprofile"
+            android:textColor="@color/white_color" />
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/advancedcard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/cardmarg"
+            android:layout_marginLeft="@dimen/cardmarg"
+            android:layout_marginRight="@dimen/cardmarg"
+            android:layout_marginTop="@dimen/topcard"
+            android:gravity="center"
+            card_view:cardBackgroundColor="@color/white_color"
+            card_view:cardCornerRadius="@dimen/cardcorner"
+            card_view:cardElevation="@dimen/card_elevation"
+            card_view:contentPadding="@dimen/cardpad" >
+
+            <LinearLayout
+                android:id="@+id/advancedbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/advancedtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profileadvanced"
+                    android:text="@string/profileadvanced"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/advancedsub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profileadvancedsub"
+                    android:text="@string/profileadvancedsub"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <LinearLayout
+                    android:id="@+id/insurancebox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/elmtspace"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/insurancetitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/profileinsurance"
+                        android:text="@string/profileinsurance"
+                        android:textColor="@color/txt"
+                        android:textSize="@dimen/body" />
+
+                    <TextView
+                        android:id="@+id/yourinsurances"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:hint="@string/notset"
+                        android:text="@string/notset"
+                        android:textColor="@color/txt"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/etfbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dip"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/etf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/profileetf"
+                        android:text="@string/profileetf"
+                        android:textColor="@color/txt"
+                        android:textSize="@dimen/body" />
+
+                    <TextView
+                        android:id="@+id/youretf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:hint="@string/notset"
+                        android:text="@string/notset"
+                        android:textColor="@color/txt"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/installpaybox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dip"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/installpay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/profileinstalls"
+                        android:text="@string/profileinstalls"
+                        android:textColor="@color/txt"
+                        android:textSize="@dimen/body" />
+
+                    <TextView
+                        android:id="@+id/yourinstall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:hint="@string/notset"
+                        android:text="@string/notset"
+                        android:textColor="@color/txt"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/reusebox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dip"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/reuse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:hint="@string/profilereuse"
+                        android:text="@string/profilereuse"
+                        android:textColor="@color/txt"
+                        android:textSize="@dimen/body" />
+
+                    <TextView
+                        android:id="@+id/yourreuse"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:hint="@string/notset"
+                        android:text="@string/notset"
+                        android:textColor="@color/txt"
+                        android:textSize="@dimen/body" />
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/editadvanced"
+            android:layout_width="@dimen/btnw"
+            android:layout_height="@dimen/btnh"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/btnspace"
             android:background="@color/accent"
             android:gravity="center"
             android:hint="@string/editprofile"

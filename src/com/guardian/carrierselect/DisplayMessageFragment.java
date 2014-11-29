@@ -1,6 +1,8 @@
 package com.guardian.carrierselect;
 
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -94,7 +96,7 @@ public class DisplayMessageFragment extends Fragment {
 			}
 
 		});
-		
+
 		equipnotice.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -131,11 +133,12 @@ public class DisplayMessageFragment extends Fragment {
 	}
 
 	@SuppressLint("DefaultLocale")
-	public void buildATT() {
+	private void buildATT() {
 
 		progress = new ProgressDialog(getActivity());
 		progress.setTitle("Building your plans");
 		progress.setMessage("Just a sec...");
+		progress.setCancelable(false);
 		progress.show();
 
 		ParseObject.registerSubclass(Phone.class);
@@ -163,6 +166,11 @@ public class DisplayMessageFragment extends Fragment {
 					int mifi = Integer.parseInt(PlanList.get(0).getString(
 							"MifiPrice"));
 
+					final TextView attplan = (TextView) rootView
+							.findViewById(R.id.attplan);
+
+					attplan.setText(PlanList.get(0).getString("Name"));
+
 					final TextView att = (TextView) rootView
 							.findViewById(R.id.att_total);
 
@@ -188,7 +196,7 @@ public class DisplayMessageFragment extends Fragment {
 	}
 
 	@SuppressLint("DefaultLocale")
-	public void buildVer() {
+	private void buildVer() {
 		ParseObject.registerSubclass(Phone.class);
 		Parse.initialize(rootView.getContext(),
 				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
@@ -221,6 +229,11 @@ public class DisplayMessageFragment extends Fragment {
 					int mifi = Integer.parseInt(PlanList.get(0).getString(
 							"MifiPrice"));
 
+					final TextView verplan = (TextView) rootView
+							.findViewById(R.id.verplan);
+
+					verplan.setText(PlanList.get(0).getString("Name"));
+
 					final TextView ver = (TextView) rootView
 							.findViewById(R.id.ver_total);
 
@@ -246,7 +259,7 @@ public class DisplayMessageFragment extends Fragment {
 	}
 
 	@SuppressLint("DefaultLocale")
-	public void buildSpr() {
+	private void buildSpr() {
 		ParseObject.registerSubclass(Phone.class);
 		Parse.initialize(rootView.getContext(),
 				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
@@ -278,6 +291,11 @@ public class DisplayMessageFragment extends Fragment {
 					int mifi = Integer.parseInt(PlanList.get(0).getString(
 							"MifiPrice"));
 
+					final TextView sprplan = (TextView) rootView
+							.findViewById(R.id.sprplan);
+
+					sprplan.setText(PlanList.get(0).getString("Name"));
+
 					final TextView spr = (TextView) rootView
 							.findViewById(R.id.spr_total);
 
@@ -301,7 +319,7 @@ public class DisplayMessageFragment extends Fragment {
 	}
 
 	@SuppressLint("DefaultLocale")
-	public void buildTmo() {
+	private void buildTmo() {
 		ParseObject.registerSubclass(Phone.class);
 		Parse.initialize(rootView.getContext(),
 				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
@@ -339,6 +357,11 @@ public class DisplayMessageFragment extends Fragment {
 					int smart = Integer.parseInt(PlanList.get(0).getString(
 							"SmartPrice"));
 
+					final TextView tmoplan = (TextView) rootView
+							.findViewById(R.id.tmoplan);
+
+					tmoplan.setText(PlanList.get(0).getString("Name"));
+
 					final TextView tmo = (TextView) rootView
 							.findViewById(R.id.tmo_total);
 
@@ -350,7 +373,14 @@ public class DisplayMessageFragment extends Fragment {
 					tmo.setText("$" + Math.round(smart + plan + tax - dis));
 					tmo.setTypeface(null, Typeface.BOLD);
 
-					progress.dismiss();
+					final long delayInMillis = 250;
+					final Timer timer = new Timer();
+					timer.schedule(new TimerTask() {
+						@Override
+						public void run() {
+							progress.dismiss();
+						}
+					}, delayInMillis);
 				} else {
 				}
 			}

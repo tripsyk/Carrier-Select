@@ -663,7 +663,7 @@ public class Home extends Fragment {
 
 					}
 
-					long delayInMillis = 250;
+					final long delayInMillis = 250;
 					Timer timer = new Timer();
 					timer.schedule(new TimerTask() {
 						@Override

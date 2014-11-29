@@ -169,6 +169,7 @@ public class PhoneSearch2 extends Fragment {
 		progress = new ProgressDialog(getActivity());
 		progress.setTitle("Phone Search");
 		progress.setMessage("Just a sec...");
+		progress.setCancelable(false);
 		progress.show();
 
 		ParseObject.registerSubclass(Phone.class);
@@ -236,7 +237,7 @@ public class PhoneSearch2 extends Fragment {
 						ps25.setVisibility(View.VISIBLE);
 					}
 
-					long delayInMillis = 250;
+					final long delayInMillis = 250;
 					Timer timer = new Timer();
 					timer.schedule(new TimerTask() {
 						@Override
