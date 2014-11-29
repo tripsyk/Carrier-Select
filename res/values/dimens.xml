@@ -6,8 +6,6 @@
     <dimen name="body">14sp</dimen>
     <dimen name="button">14sp</dimen>
     <dimen name="caption">12sp</dimen>
-    <dimen name="desc_dimens">14sp</dimen>
-    <dimen name="midtitle">20sp</dimen>
     <dimen name="resultw">168dip</dimen>
     <dimen name="resulth">40dip</dimen>
     <dimen name="btnw">128dip</dimen>
@@ -28,7 +26,6 @@
     <dimen name="drawerw">312dip</dimen>
     <dimen name="topicon">32dip</dimen>
     <dimen name="colorboxh">80dip</dimen>
-    <dimen name="profilew">74dip</dimen>
     <dimen name="listmarg">4dip</dimen>
     <dimen name="savecheckh">56dip</dimen>
 

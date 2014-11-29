@@ -1820,19 +1820,19 @@ containing a value of this type.
         public static final int abc_config_showMenuShortcutsWhenKeyboardPresent=0x7f0b0003;
     }
     public static final class color {
-        public static final int abc_background_cache_hint_selector_material_dark=0x7f070053;
-        public static final int abc_background_cache_hint_selector_material_light=0x7f070054;
+        public static final int abc_background_cache_hint_selector_material_dark=0x7f070052;
+        public static final int abc_background_cache_hint_selector_material_light=0x7f070053;
         public static final int abc_input_method_navigation_guard=0x7f07001e;
-        public static final int abc_primary_text_disable_only_material_dark=0x7f070055;
-        public static final int abc_primary_text_disable_only_material_light=0x7f070056;
-        public static final int abc_primary_text_material_dark=0x7f070057;
-        public static final int abc_primary_text_material_light=0x7f070058;
-        public static final int abc_search_url_text=0x7f070059;
+        public static final int abc_primary_text_disable_only_material_dark=0x7f070054;
+        public static final int abc_primary_text_disable_only_material_light=0x7f070055;
+        public static final int abc_primary_text_material_dark=0x7f070056;
+        public static final int abc_primary_text_material_light=0x7f070057;
+        public static final int abc_search_url_text=0x7f070058;
         public static final int abc_search_url_text_normal=0x7f07001b;
         public static final int abc_search_url_text_pressed=0x7f07001d;
         public static final int abc_search_url_text_selected=0x7f07001c;
-        public static final int abc_secondary_text_material_dark=0x7f07005a;
-        public static final int abc_secondary_text_material_light=0x7f07005b;
+        public static final int abc_secondary_text_material_dark=0x7f070059;
+        public static final int abc_secondary_text_material_light=0x7f07005a;
         public static final int accent=0x7f07004f;
         public static final int accent_material_dark=0x7f07002a;
         public static final int accent_material_light=0x7f070029;
@@ -1877,8 +1877,8 @@ containing a value of this type.
         public static final int common_signin_btn_light_text_disabled=0x7f070006;
         public static final int common_signin_btn_light_text_focused=0x7f070007;
         public static final int common_signin_btn_light_text_pressed=0x7f070005;
-        public static final int common_signin_btn_text_dark=0x7f07005c;
-        public static final int common_signin_btn_text_light=0x7f07005d;
+        public static final int common_signin_btn_text_dark=0x7f07005b;
+        public static final int common_signin_btn_text_light=0x7f07005c;
         public static final int dim_foreground_disabled_material_dark=0x7f070037;
         public static final int dim_foreground_disabled_material_light=0x7f070038;
         public static final int dim_foreground_material_dark=0x7f070035;
@@ -1898,7 +1898,6 @@ containing a value of this type.
         public static final int material_blue_grey_950=0x7f07004b;
         public static final int material_deep_teal_200=0x7f070047;
         public static final int material_deep_teal_500=0x7f070048;
-        public static final int menunormal=0x7f070052;
         public static final int primary=0x7f07004c;
         public static final int primary_dark_material_dark=0x7f070025;
         public static final int primary_dark_material_light=0x7f070026;
@@ -1940,8 +1939,8 @@ containing a value of this type.
         public static final int wallet_hint_foreground_holo_light=0x7f070011;
         public static final int wallet_holo_blue_light=0x7f070015;
         public static final int wallet_link_text_light=0x7f070016;
-        public static final int wallet_primary_text_holo_light=0x7f07005e;
-        public static final int wallet_secondary_text_holo_dark=0x7f07005f;
+        public static final int wallet_primary_text_holo_light=0x7f07005d;
+        public static final int wallet_secondary_text_holo_dark=0x7f07005e;
         public static final int white_color=0x7f070050;
     }
     public static final class dimen {
@@ -2034,17 +2033,17 @@ containing a value of this type.
          */
         public static final int abc_text_size_title_material_toolbar=0x7f0a0015;
         public static final int body=0x7f0a0030;
-        public static final int border=0x7f0a0040;
-        public static final int btnh=0x7f0a0038;
-        public static final int btnspace=0x7f0a0042;
-        public static final int btnw=0x7f0a0037;
+        public static final int border=0x7f0a003e;
+        public static final int btnh=0x7f0a0036;
+        public static final int btnspace=0x7f0a0040;
+        public static final int btnw=0x7f0a0035;
         public static final int button=0x7f0a0031;
         public static final int caption=0x7f0a0032;
-        public static final int card_elevation=0x7f0a0039;
-        public static final int cardcorner=0x7f0a003e;
-        public static final int cardgut=0x7f0a003b;
-        public static final int cardmarg=0x7f0a003a;
-        public static final int cardpad=0x7f0a003d;
+        public static final int card_elevation=0x7f0a0037;
+        public static final int cardcorner=0x7f0a003c;
+        public static final int cardgut=0x7f0a0039;
+        public static final int cardmarg=0x7f0a0038;
+        public static final int cardpad=0x7f0a003b;
         /**  Inset shadow for RoundRectDrawableWithShadow. It is used to avoid gaps between the card
      and the shadow. 
          */
@@ -2055,8 +2054,7 @@ containing a value of this type.
         /**  Default radius for CardView corners. 
          */
         public static final int cardview_default_radius=0x7f0a0000;
-        public static final int colorboxh=0x7f0a0046;
-        public static final int desc_dimens=0x7f0a0033;
+        public static final int colorboxh=0x7f0a0044;
         /**  The platform's desired fixed height for a dialog along the major axis
          (the screen is in portrait). This may be either a fraction or a dimension.
  The platform's desired fixed height for a dialog along the major axis
@@ -2094,23 +2092,21 @@ containing a value of this type.
         /**  NAV DRAWER DIMENS 
  NAV DRAWER DIMENS 
          */
-        public static final int drawerw=0x7f0a0044;
-        public static final int elmtspace=0x7f0a0043;
-        public static final int instruction=0x7f0a003f;
-        public static final int listmarg=0x7f0a0048;
-        public static final int midtitle=0x7f0a0034;
-        public static final int profilew=0x7f0a0047;
-        public static final int resulth=0x7f0a0036;
-        public static final int resultw=0x7f0a0035;
-        public static final int savecheckh=0x7f0a0049;
+        public static final int drawerw=0x7f0a0042;
+        public static final int elmtspace=0x7f0a0041;
+        public static final int instruction=0x7f0a003d;
+        public static final int listmarg=0x7f0a0045;
+        public static final int resulth=0x7f0a0034;
+        public static final int resultw=0x7f0a0033;
+        public static final int savecheckh=0x7f0a0046;
         public static final int subtitle_dimens=0x7f0a002f;
         /**  Default screen margins, per the Android Design guidelines. 
  Default screen margins, per the Android Design guidelines. 
          */
         public static final int title_dimens=0x7f0a002e;
-        public static final int topbotpad=0x7f0a0041;
-        public static final int topcard=0x7f0a003c;
-        public static final int topicon=0x7f0a0045;
+        public static final int topbotpad=0x7f0a003f;
+        public static final int topcard=0x7f0a003a;
+        public static final int topicon=0x7f0a0043;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_holo_dark=0x7f020000;
@@ -3361,7 +3357,6 @@ containing a value of this type.
     }
     public static final class style {
         /**  Application theme. 
- Application theme. 
          */
         public static final int AppTheme=0x7f0600f3;
         public static final int Base_TextAppearance_AppCompat=0x7f0600a0;

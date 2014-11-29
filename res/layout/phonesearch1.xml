@@ -42,15 +42,17 @@
 
     <EditText
         android:id="@+id/searchTerm"
-        android:layout_width="200dip"
-        android:layout_height="@dimen/btnh"
+        android:layout_width="@dimen/resultw"
+        android:layout_height="@dimen/resulth"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:background="@color/accent"
-        android:gravity="center"
         android:hint="@string/searchTermHint"
+        android:padding="@dimen/elmtspace"
         android:singleLine="true"
-        android:textColor="@color/white_color" >
+        android:textColor="@color/white_color"
+        android:textColorHint="@color/white_color"
+        android:textSize="@dimen/body" >
     </EditText>
 
     <Button

@@ -1,6 +1,8 @@
 package com.guardian.carrierselect;
 
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
@@ -112,6 +114,7 @@ public class Home extends Fragment {
 		progress = new ProgressDialog(getActivity());
 		progress.setTitle("Just a sec...");
 		progress.setMessage("Updating your news...");
+		progress.setCancelable(false);
 		progress.show();
 
 		ParseObject.registerSubclass(NewsUpdaterr.class);
@@ -661,7 +664,14 @@ public class Home extends Fragment {
 
 					}
 
-					progress.dismiss();
+					long delayInMillis = 250;
+					Timer timer = new Timer();
+					timer.schedule(new TimerTask() {
+						@Override
+						public void run() {
+							progress.dismiss();
+						}
+					}, delayInMillis);
 
 				} else {
 				}

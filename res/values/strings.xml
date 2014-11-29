@@ -73,7 +73,7 @@
     <string name="search">Phone Search</string>
     <string name="psdesc">Enter a phone to see technical specs</string>
     <string name="pscomparedesc">Enter the phone you would like to compare</string>
-    <string name="searchTermHint">(ex. LG Optimus G Pro)</string>
+    <string name="searchTermHint">(ex. iPhone 6)</string>
     <string name="searchGoBox">Search</string>
     <string name="yourProfile">My Profile</string>
     <string name="profsubtitle">What I\'ve got now</string>

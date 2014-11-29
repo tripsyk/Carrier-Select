@@ -6,30 +6,15 @@
     <dimen name="body">16sp</dimen>
     <dimen name="button">16sp</dimen>
     <dimen name="caption">14sp</dimen>
-    <dimen name="desc_dimens">14sp</dimen>
-    <dimen name="midtitle">20sp</dimen>
     <dimen name="resultw">189dip</dimen>
     <dimen name="resulth">45dip</dimen>
     <dimen name="btnw">144dip</dimen>
     <dimen name="btnh">45dip</dimen>
-    <dimen name="card_elevation">2dip</dimen>
-    <dimen name="cardmarg">4dip</dimen>
-    <dimen name="cardgut">8dip</dimen>
-    <dimen name="topcard">16dip</dimen>
-    <dimen name="cardpad">16dip</dimen>
-    <dimen name="cardcorner">2dip</dimen>
-    <dimen name="instruction">24dip</dimen>
-    <dimen name="border">16dip</dimen>
-    <dimen name="topbotpad">16dip</dimen>
-    <dimen name="btnspace">8dip</dimen>
-    <dimen name="elmtspace">8dip</dimen>
 
     <!-- NAV DRAWER DIMENS -->
     <dimen name="drawerw">360dip</dimen>
     <dimen name="topicon">32dip</dimen>
     <dimen name="colorboxh">96dip</dimen>
-    <dimen name="profilew">86dip</dimen>
     <dimen name="listmarg">8dip</dimen>
-    <dimen name="savecheckh">56dip</dimen>
 
 </resources>

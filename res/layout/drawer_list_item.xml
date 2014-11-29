@@ -22,7 +22,7 @@
         android:layout_height="48dip"
         android:layout_marginStart="12dip"
         android:gravity="center_vertical"
-        android:textColor="@color/menunormal"
+        android:textColor="@color/txt"
         android:textSize="@dimen/body" />
 
 </LinearLayout>

@@ -62,10 +62,9 @@ public class InteractiveAct extends ActionBarActivity {
 		mActionBar.init();
 		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
 				R.string.drawer_open, R.string.drawer_close);
-		
+
 		final String PREFS_NAME = "MyPrefsFile";
-		final SharedPreferences settings = getSharedPreferences(
-				PREFS_NAME, 0);
+		final SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 		final SharedPreferences.Editor editor = settings.edit();
 		editor.putBoolean("my_first_time", false);
 		editor.commit();
@@ -140,6 +139,8 @@ public class InteractiveAct extends ActionBarActivity {
 			getFragmentManager().executePendingTransactions();
 			mDrawerList.setItemChecked(position, true);
 			mDrawerLayout.closeDrawer(mDrawer);
+			
+
 		} else if (position == 1) {
 
 			final Fragment fragment = new MyProfile();
@@ -220,7 +221,7 @@ public class InteractiveAct extends ActionBarActivity {
 			View v = mDrawerList.getChildAt(i);
 			TextView txtview = ((TextView) v.findViewById(R.id.menuTitle));
 			txtview.setTypeface(Typeface.DEFAULT);
-			txtview.setTextColor(getResources().getColor(R.color.menunormal));
+			txtview.setTextColor(getResources().getColor(R.color.txt));
 		}
 	}
 

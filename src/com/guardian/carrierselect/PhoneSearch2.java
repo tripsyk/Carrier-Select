@@ -1,6 +1,8 @@
 package com.guardian.carrierselect;
 
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import android.annotation.SuppressLint;
 import android.app.Fragment;
@@ -181,7 +183,6 @@ public class PhoneSearch2 extends Fragment {
 		query.whereContains("SearchName", searchTerm.toLowerCase());
 		query.findInBackground(new FindCallback<ParseObject>() {
 			public void done(List<ParseObject> PhoneList, ParseException e) {
-				progress.dismiss();
 
 				if (e == null) {
 					if (PhoneList.size() == 1) {
@@ -234,6 +235,15 @@ public class PhoneSearch2 extends Fragment {
 						ps24.setVisibility(View.VISIBLE);
 						ps25.setVisibility(View.VISIBLE);
 					}
+
+					long delayInMillis = 250;
+					Timer timer = new Timer();
+					timer.schedule(new TimerTask() {
+						@Override
+						public void run() {
+							progress.dismiss();
+						}
+					}, delayInMillis);
 				} else {
 					ps21.setText("No phone found.");
 				}

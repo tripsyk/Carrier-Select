@@ -1,6 +1,8 @@
 package com.guardian.carrierselect;
 
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import android.annotation.SuppressLint;
 import android.app.Fragment;
@@ -43,7 +45,7 @@ public class PhoneSearch3 extends Fragment {
 			Bundle savedInstanceState) {
 
 		rootView = inflater.inflate(R.layout.phonesearch3, container, false);
-		
+
 		final SharedPreferences sharedPref = getActivity()
 				.getSharedPreferences("data", Context.MODE_PRIVATE);
 
@@ -133,7 +135,7 @@ public class PhoneSearch3 extends Fragment {
 			AppLovinInterstitialAd.show(getActivity());
 
 		performSearch();
-		
+
 		compare.setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -172,7 +174,6 @@ public class PhoneSearch3 extends Fragment {
 		query.whereContains("Name", searchTerm);
 		query.findInBackground(new FindCallback<ParseObject>() {
 			public void done(List<ParseObject> PhoneList, ParseException e) {
-				progress.dismiss();
 
 				if (e == null) {
 					ps3carrier.setText(PhoneList.get(0).getString("Carriers"));
@@ -225,6 +226,15 @@ public class PhoneSearch3 extends Fragment {
 						nc.setText("No");
 					}
 					sensors.setText(PhoneList.get(0).getString("Sensors"));
+
+					long delayInMillis = 250;
+					Timer timer = new Timer();
+					timer.schedule(new TimerTask() {
+						@Override
+						public void run() {
+							progress.dismiss();
+						}
+					}, delayInMillis);
 				} else {
 				}
 			}

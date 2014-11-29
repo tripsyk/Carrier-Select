@@ -6,7 +6,6 @@
     <color name="background">#E3F2FD</color>
     <color name="accent">#2979FF</color>
     <color name="white_color">#FFFFFF</color>
-    <color name="txt">#212121</color>
-    <color name="menunormal">#727272</color>
+    <color name="txt">#93000000</color>
 
 </resources>

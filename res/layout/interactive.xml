@@ -50,12 +50,14 @@
             android:layout_gravity="start"
             android:background="@color/primary"
             android:gravity="center"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:weightSum="4" >
 
             <LinearLayout
-                android:layout_width="@dimen/profilew"
+                android:layout_width="0dip"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical" >
 
@@ -91,9 +93,10 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="@dimen/profilew"
+                android:layout_width="0dip"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical" >
 
@@ -129,9 +132,10 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="@dimen/profilew"
+                android:layout_width="0dip"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical" >
 
@@ -167,9 +171,10 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="@dimen/profilew"
+                android:layout_width="0dip"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical" >
 

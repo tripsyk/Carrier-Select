@@ -1,6 +1,8 @@
 package com.guardian.carrierselect;
 
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import android.annotation.SuppressLint;
 import android.app.Fragment;
@@ -263,11 +265,7 @@ public class PhoneSearch6 extends Fragment {
 		query.findInBackground(new FindCallback<ParseObject>() {
 			public void done(List<ParseObject> PhoneList, ParseException e) {
 
-				progress.dismiss();
-
 				if (e == null) {
-
-					progress.dismiss();
 
 					phone2carrier.setText(PhoneList.get(0)
 							.getString("Carriers"));
@@ -325,6 +323,15 @@ public class PhoneSearch6 extends Fragment {
 						nc2.setText("No");
 					}
 					sensors2.setText(PhoneList.get(0).getString("Sensors"));
+
+					long delayInMillis = 250;
+					Timer timer = new Timer();
+					timer.schedule(new TimerTask() {
+						@Override
+						public void run() {
+							progress.dismiss();
+						}
+					}, delayInMillis);
 				} else {
 				}
 			}

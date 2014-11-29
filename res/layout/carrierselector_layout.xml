@@ -19,7 +19,7 @@
             android:hint="@string/carriertitle"
             android:paddingTop="16dip"
             android:text="@string/carriertitle"
-            android:textSize="@dimen/midtitle" />
+            android:textSize="@dimen/title_dimens" />
 
         <Button
             android:id="@+id/att"
