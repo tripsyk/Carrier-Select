@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/border" >
+
+    <TextView
+        android:id="@+id/installtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/titlespace"
+        android:gravity="center"
+        android:hint="@string/installtitle"
+        android:text="@string/installtitle"
+        android:textSize="@dimen/title_dimens" />
+
+    <EditText
+        android:id="@+id/theinstalls"
+        android:layout_width="@dimen/resultw"
+        android:layout_height="@dimen/resulth"
+        android:layout_gravity="center"
+        android:layout_marginTop="96dip"
+        android:background="@color/accent"
+        android:hint="@string/installhint"
+        android:inputType="number"
+        android:padding="@dimen/elmtspace"
+        android:text="@string/blankstring"
+        android:textColor="@color/white_color"
+        android:textColorHint="@color/white_color"
+        android:textSize="@dimen/body" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="@dimen/btnw"
+        android:layout_height="@dimen/btnh"
+        android:layout_gravity="center"
+        android:layout_marginTop="56dip"
+        android:background="@color/accent"
+        android:gravity="center"
+        android:hint="@string/next"
+        android:text="@string/next"
+        android:textColor="@color/white_color" />
+
+</LinearLayout>

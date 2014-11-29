@@ -57,7 +57,10 @@
     <string name="hotspotcost">Line Access - Hotspots:</string>
     <string name="taxescost">Taxes &amp; Charges:</string>
     <string name="discountcost">Employer Discount:</string>
+    <string name="installments">Financed Equipment:</string>
     <string name="total">Total:</string>
+    <string name="installhint">Enter amount here</string>
+    <string name="installtitle">How much do you pay each month for equipment you have financed (if any?)</string>
     <string name="viewplan">Details</string>
     <string name="pvtitle">Service Plan Viewer</string>
     <string name="welcome">Welcome to Carrier Select</string>
@@ -108,7 +111,7 @@
     <string name="blankstring"></string>
     <string name="monthlyhint">Enter monthly bill</string>
     <string name="equipnotice">Prices include no equipment. Click for more info.</string>
-    <string name="version">Version 1.0</string>
+    <string name="version">Version 0.5 ALPHA</string>
     <string name="writtenby">Created by Steve Gregos</string>
     <string name="kb">Knowledge Base</string>
     <string name="kbsub">The mobile plan Q&amp;A center</string>

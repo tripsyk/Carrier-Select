@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="48dip"
-        android:layout_height="48dip"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
         android:layout_gravity="center"
         android:layout_marginStart="@dimen/border"
         android:adjustViewBounds="true"

@@ -35,6 +35,7 @@ public class QuoteFragment extends Fragment {
 		final Animation animScalet = AnimationUtils.loadAnimation(
 				rootView.getContext(), R.anim.scaleinput);
 
+		disValue = (TextView) rootView.findViewById(R.id.dis_value);
 		seekBar = (SeekBar) rootView.findViewById(R.id.discount_bar);
 		seekBar.setProgressDrawable(getResources().getDrawable(
 				R.drawable.progressbar));
@@ -52,7 +53,6 @@ public class QuoteFragment extends Fragment {
 		final TextView extras = (TextView) rootView
 				.findViewById(R.id.extras_label);
 		extras.setTypeface(null, Typeface.BOLD);
-		disValue = (TextView) rootView.findViewById(R.id.dis_value);
 
 		seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 

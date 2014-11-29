@@ -119,8 +119,8 @@
 
         <com.applovin.adview.AppLovinAdView
             xmlns:applovin="http://schemas.applovin.com/android/1.0"
-            android:layout_width="@dimen/resultw"
-            android:layout_height="@dimen/resulth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="10dip"
             android:layout_marginTop="10dip"
             applovin:loadAdOnCreate="true" />
