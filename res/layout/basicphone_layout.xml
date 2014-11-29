@@ -13,7 +13,7 @@
         <TextView
             android:id="@+id/yourbasicphones"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/titlespace"
             android:layout_gravity="center"
             android:gravity="center"
             android:hint="@string/basicphonestitle"
@@ -33,8 +33,8 @@
 
         <Spinner
             android:id="@+id/basicspinner"
-            android:layout_width="@dimen/btnw"
-            android:layout_height="@dimen/btnh"
+            android:layout_width="@dimen/resultw"
+            android:layout_height="@dimen/resulth"
             android:layout_gravity="center"
             android:layout_marginTop="16dip"
             android:background="@color/accent"

@@ -11,26 +11,33 @@
         android:gravity="center"
         android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/kb2title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:hint="@string/kb"
-            android:text="@string/kb"
-            android:textColor="@color/txt"
-            android:textSize="@dimen/title_dimens" />
-
-        <TextView
-            android:id="@+id/kbsubtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlespace"
             android:gravity="center"
-            android:hint="@string/kbsub"
-            android:text="@string/kbsub"
-            android:textColor="@color/txt"
-            android:textSize="@dimen/subtitle_dimens" />
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/kb2title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/kb"
+                android:text="@string/kb"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/title_dimens" />
+
+            <TextView
+                android:id="@+id/kbsubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/kbsub"
+                android:text="@string/kbsub"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/subtitle_dimens" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/kb2subtitle"

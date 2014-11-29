@@ -1,19 +1,8 @@
 <resources>
 
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="title_dimens">24sp</dimen>
-    <dimen name="subtitle_dimens">20sp</dimen>
-    <dimen name="body">16sp</dimen>
-    <dimen name="button">16sp</dimen>
-    <dimen name="caption">14sp</dimen>
-    <dimen name="resultw">189dip</dimen>
-    <dimen name="resulth">45dip</dimen>
-    <dimen name="btnw">144dip</dimen>
-    <dimen name="btnh">45dip</dimen>
-
     <!-- NAV DRAWER DIMENS -->
     <dimen name="drawerw">360dip</dimen>
-    <dimen name="topicon">32dip</dimen>
+    <dimen name="topicon">40dip</dimen>
     <dimen name="colorboxh">96dip</dimen>
     <dimen name="listmarg">8dip</dimen>
 

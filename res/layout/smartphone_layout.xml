@@ -13,7 +13,7 @@
         <TextView
             android:id="@+id/yoursmartphones"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/titlespace"
             android:layout_gravity="center"
             android:gravity="center"
             android:hint="@string/smartphonestitle"
@@ -33,8 +33,8 @@
 
         <Spinner
             android:id="@+id/smartspinner"
-            android:layout_width="@dimen/btnw"
-            android:layout_height="@dimen/btnh"
+            android:layout_width="@dimen/resultw"
+            android:layout_height="@dimen/resulth"
             android:layout_gravity="center"
             android:layout_marginTop="16dip"
             android:background="@color/accent"
@@ -43,8 +43,8 @@
             android:spinnerMode="dropdown"
             android:textAllCaps="true"
             android:textColor="@color/white_color"
-            android:textStyle="bold"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/next"

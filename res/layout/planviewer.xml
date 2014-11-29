@@ -11,23 +11,30 @@
         android:gravity="center"
         android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/planviewer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlespace"
             android:gravity="center"
-            android:hint="@string/pvtitle"
-            android:text="@string/pvtitle"
-            android:textSize="@dimen/title_dimens" />
+            android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/planviewersub"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:hint="@string/pvsub"
-            android:text="@string/pvsub"
-            android:textSize="@dimen/subtitle_dimens" />
+            <TextView
+                android:id="@+id/planviewer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/pvtitle"
+                android:text="@string/pvtitle"
+                android:textSize="@dimen/title_dimens" />
+
+            <TextView
+                android:id="@+id/planviewersub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="@string/pvsub"
+                android:text="@string/pvsub"
+                android:textSize="@dimen/subtitle_dimens" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/pvsubtitle"

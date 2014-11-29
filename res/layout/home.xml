@@ -15,7 +15,7 @@
         <LinearLayout
             android:id="@+id/hometitlebox"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/titlespace"
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="vertical" >

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@android:id/text1"
-    android:layout_width="@dimen/btnw"
-    android:layout_height="@dimen/btnh"
+    android:layout_width="@dimen/resultw"
+    android:layout_height="@dimen/resulth"
     android:background="@color/accent"
     android:gravity="center"
-    android:padding="8dip"
+    android:padding="4dip"
     android:singleLine="true"
     android:spinnerMode="dropdown"
     android:textAllCaps="true"
     android:textColor="@color/white_color"
-    android:textSize="14sp"
+    android:textSize="@dimen/body"
     android:textStyle="bold" />

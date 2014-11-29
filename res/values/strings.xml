@@ -58,7 +58,7 @@
     <string name="taxescost">Taxes &amp; Charges:</string>
     <string name="discountcost">Employer Discount:</string>
     <string name="total">Total:</string>
-    <string name="viewplan">Plan Details</string>
+    <string name="viewplan">Details</string>
     <string name="pvtitle">Service Plan Viewer</string>
     <string name="welcome">Welcome to Carrier Select</string>
     <string name="homenews">News</string>
@@ -291,7 +291,5 @@
         <item>Nine</item>
         <item>Ten</item>
     </string-array>
-
-    <string name="font_fontFamily">sans-serif</string>
 
 </resources>

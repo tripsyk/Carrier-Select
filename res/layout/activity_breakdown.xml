@@ -11,25 +11,32 @@
         android:gravity="center"
         android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/contract_plans"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlespace"
             android:gravity="center"
-            android:hint="@string/sp3title"
-            android:text="@string/sp3title"
-            android:textSize="@dimen/title_dimens" />
+            android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/contract_sub"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:hint="@string/sp3sub"
-            android:text="@string/sp3sub"
-            android:textSize="@dimen/subtitle_dimens" />
+            <TextView
+                android:id="@+id/contract_plans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:hint="@string/sp3title"
+                android:text="@string/sp3title"
+                android:textSize="@dimen/title_dimens" />
+
+            <TextView
+                android:id="@+id/contract_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/sp3sub"
+                android:text="@string/sp3sub"
+                android:textSize="@dimen/subtitle_dimens" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/equipnotice"
@@ -303,7 +310,7 @@
             android:layout_marginBottom="@dimen/cardmarg"
             android:layout_marginLeft="@dimen/cardmarg"
             android:layout_marginRight="@dimen/cardmarg"
-            android:layout_marginTop="@dimen/cardgut"
+            android:layout_marginTop="@dimen/topbotpad"
             android:gravity="center"
             card_view:cardBackgroundColor="@color/white_color"
             card_view:cardCornerRadius="@dimen/cardcorner"
@@ -562,7 +569,7 @@
             android:layout_marginBottom="@dimen/cardmarg"
             android:layout_marginLeft="@dimen/cardmarg"
             android:layout_marginRight="@dimen/cardmarg"
-            android:layout_marginTop="@dimen/cardgut"
+            android:layout_marginTop="@dimen/topbotpad"
             android:gravity="center"
             card_view:cardBackgroundColor="@color/white_color"
             card_view:cardCornerRadius="@dimen/cardcorner"
@@ -814,7 +821,7 @@
             android:layout_marginBottom="@dimen/cardmarg"
             android:layout_marginLeft="@dimen/cardmarg"
             android:layout_marginRight="@dimen/cardmarg"
-            android:layout_marginTop="@dimen/cardgut"
+            android:layout_marginTop="@dimen/topbotpad"
             android:gravity="center"
             card_view:cardBackgroundColor="@color/white_color"
             card_view:cardCornerRadius="@dimen/cardcorner"

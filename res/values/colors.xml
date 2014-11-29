@@ -3,9 +3,9 @@
 
     <color name="primary">#2196F3</color>
     <color name="secondary">#1976D2</color>
-    <color name="background">#E3F2FD</color>
+    <color name="background">#ECEFF1</color>
     <color name="accent">#2979FF</color>
     <color name="white_color">#FFFFFF</color>
-    <color name="txt">#93000000</color>
+    <color name="txt">#95000000</color>
 
 </resources>

@@ -2033,17 +2033,17 @@ containing a value of this type.
          */
         public static final int abc_text_size_title_material_toolbar=0x7f0a0015;
         public static final int body=0x7f0a0030;
-        public static final int border=0x7f0a003e;
+        public static final int border=0x7f0a0040;
         public static final int btnh=0x7f0a0036;
-        public static final int btnspace=0x7f0a0040;
+        public static final int btnspace=0x7f0a0042;
         public static final int btnw=0x7f0a0035;
         public static final int button=0x7f0a0031;
         public static final int caption=0x7f0a0032;
-        public static final int card_elevation=0x7f0a0037;
-        public static final int cardcorner=0x7f0a003c;
-        public static final int cardgut=0x7f0a0039;
-        public static final int cardmarg=0x7f0a0038;
-        public static final int cardpad=0x7f0a003b;
+        public static final int card_elevation=0x7f0a0039;
+        public static final int cardcorner=0x7f0a003e;
+        public static final int cardgut=0x7f0a003b;
+        public static final int cardmarg=0x7f0a003a;
+        public static final int cardpad=0x7f0a003d;
         /**  Inset shadow for RoundRectDrawableWithShadow. It is used to avoid gaps between the card
      and the shadow. 
          */
@@ -2054,7 +2054,7 @@ containing a value of this type.
         /**  Default radius for CardView corners. 
          */
         public static final int cardview_default_radius=0x7f0a0000;
-        public static final int colorboxh=0x7f0a0044;
+        public static final int colorboxh=0x7f0a0046;
         /**  The platform's desired fixed height for a dialog along the major axis
          (the screen is in portrait). This may be either a fraction or a dimension.
  The platform's desired fixed height for a dialog along the major axis
@@ -2092,21 +2092,22 @@ containing a value of this type.
         /**  NAV DRAWER DIMENS 
  NAV DRAWER DIMENS 
          */
-        public static final int drawerw=0x7f0a0042;
-        public static final int elmtspace=0x7f0a0041;
-        public static final int instruction=0x7f0a003d;
-        public static final int listmarg=0x7f0a0045;
+        public static final int drawerw=0x7f0a0044;
+        public static final int elmtspace=0x7f0a0043;
+        public static final int instruction=0x7f0a003f;
+        public static final int listmarg=0x7f0a0047;
+        public static final int plusminbtn=0x7f0a0037;
         public static final int resulth=0x7f0a0034;
         public static final int resultw=0x7f0a0033;
-        public static final int savecheckh=0x7f0a0046;
+        public static final int savecheckh=0x7f0a0048;
         public static final int subtitle_dimens=0x7f0a002f;
         /**  Default screen margins, per the Android Design guidelines. 
- Default screen margins, per the Android Design guidelines. 
          */
         public static final int title_dimens=0x7f0a002e;
-        public static final int topbotpad=0x7f0a003f;
-        public static final int topcard=0x7f0a003a;
-        public static final int topicon=0x7f0a0043;
+        public static final int titlespace=0x7f0a0038;
+        public static final int topbotpad=0x7f0a0041;
+        public static final int topcard=0x7f0a003c;
+        public static final int topicon=0x7f0a0045;
     }
     public static final class drawable {
         public static final int abc_ab_share_pack_holo_dark=0x7f020000;

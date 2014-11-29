@@ -8,10 +8,9 @@
     <TextView
         android:id="@+id/monthlyTitle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/titlespace"
         android:gravity="center"
         android:hint="@string/monthlytitle"
-        android:paddingTop="16dip"
         android:text="@string/monthlytitle"
         android:textSize="@dimen/title_dimens" />
 
@@ -26,6 +25,7 @@
         android:inputType="number"
         android:padding="@dimen/elmtspace"
         android:text="@string/blankstring"
+        android:textColor="@color/white_color"
         android:textColorHint="@color/white_color"
         android:textSize="@dimen/body" />
 

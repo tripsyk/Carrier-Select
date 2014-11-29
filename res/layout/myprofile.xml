@@ -10,27 +10,34 @@
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/yourProfile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlespace"
             android:gravity="center"
-            android:hint="@string/yourProfile"
-            android:text="@string/yourProfile"
-            android:textColor="@color/txt"
-            android:textSize="@dimen/title_dimens" />
+            android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/profilesubtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:hint="@string/profsubtitle"
-            android:text="@string/profsubtitle"
-            android:textColor="@color/txt"
-            android:textSize="@dimen/subtitle_dimens" />
+            <TextView
+                android:id="@+id/yourProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/yourProfile"
+                android:text="@string/yourProfile"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/title_dimens" />
+
+            <TextView
+                android:id="@+id/profilesubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/profsubtitle"
+                android:text="@string/profsubtitle"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/subtitle_dimens" />
+        </LinearLayout>
 
         <android.support.v7.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"

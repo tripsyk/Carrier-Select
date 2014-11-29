@@ -11,27 +11,34 @@
         android:gravity="center"
         android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/pstitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlespace"
             android:gravity="center"
-            android:hint="@string/search"
-            android:text="@string/search"
-            android:textColor="@color/txt"
-            android:textSize="@dimen/title_dimens" />
+            android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/ps2sub"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:hint="@string/ps2sub"
-            android:text="@string/ps2sub"
-            android:textColor="@color/txt"
-            android:textSize="@dimen/subtitle_dimens" />
+            <TextView
+                android:id="@+id/pstitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/search"
+                android:text="@string/search"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/title_dimens" />
+
+            <TextView
+                android:id="@+id/ps2sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/ps2sub"
+                android:text="@string/ps2sub"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/subtitle_dimens" />
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/ps2subtitlebox"

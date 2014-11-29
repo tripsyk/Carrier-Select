@@ -38,10 +38,8 @@ public class MyProfile extends Fragment {
 		theMifi = (TextView) rootView.findViewById(R.id.nummifi);
 		theMonthly = (TextView) rootView.findViewById(R.id.monthlybill);
 		final Button edit = (Button) rootView.findViewById(R.id.editprofile);
-
-		// Initial operations on View Create
-		settings.edit().putBoolean("my_first_time", false).commit();
-
+		
+		
 		edit.setOnClickListener(new View.OnClickListener() {
 
 			@Override
