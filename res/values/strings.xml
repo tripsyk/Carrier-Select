@@ -123,7 +123,7 @@
     <string name="blankstring"></string>
     <string name="monthlyhint">Enter monthly bill</string>
     <string name="equipnotice">Prices include no equipment. Click for more info.</string>
-    <string name="tmonotice">T-Mobile does not do contracts and pricing for tablets and hotspots are separate.</string>
+    <string name="tmonotice">T-Mobile no longer offers contracts and pricing for tablets and hotspots are separate.</string>
     <string name="version">Version 0.5 ALPHA</string>
     <string name="writtenby">Created by Steve Gregos</string>
     <string name="kb">Knowledge Base</string>
@@ -165,8 +165,16 @@
         <item>Pure TalkUSA</item>
     </string-array>
 
+    <string name="planwarning">Rates are subject to change at any time</string>
     <string name="monthlycost">Monthly cost:</string>
     <string name="nc2subtitle">Here are the plans you were looking for</string>
+    <string name="infosec">Information</string>
+    <string name="plansec">Plans</string>
+    <string name="nc2carriertitle">Provider Info</string>
+    <string name="nc2carrier">Carrier:</string>
+    <string name="nc2network">Network Type:</string>
+    <string name="nc2bands">Network bands supported:</string>
+    <string name="nc2towers">Cell towers used:</string>
     <string name="loadingplan">Loading Plan&#8230;</string>
     <string name="loadingprices">Loading Prices&#8230;</string>
     <string name="ps2subtitle">Showing results for</string>

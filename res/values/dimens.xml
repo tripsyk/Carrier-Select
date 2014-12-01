@@ -24,6 +24,7 @@
     <dimen name="topbotpad">16dip</dimen>
     <dimen name="btnspace">2dip</dimen>
     <dimen name="elmtspace">8dip</dimen>
+    <dimen name="contentspace">4dip</dimen>
 
     <!-- NAV DRAWER DIMENS -->
     <dimen name="drawerw">320dip</dimen>

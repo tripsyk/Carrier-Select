@@ -8,7 +8,6 @@ import android.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
@@ -44,9 +43,8 @@ public class NoContract2 extends Fragment {
 
 		carrier = sharedPref.getString("nc1carrier", "");
 		final TextView title = (TextView) rootView
-				.findViewById(R.id.nocontractsub);
+				.findViewById(R.id.nc2carrier);
 		title.setText(carrier);
-		title.setTypeface(null, Typeface.BOLD);
 
 		grabPlans();
 		return rootView;
@@ -173,13 +171,22 @@ public class NoContract2 extends Fragment {
 				final TextView nc27throttle = (TextView) rootView
 						.findViewById(R.id.nc27throttle);
 
-				final TextView ncnetwork = (TextView) rootView
-						.findViewById(R.id.ncnetwork);
+				final TextView network = (TextView) rootView
+						.findViewById(R.id.nc2network);
+				final TextView towers = (TextView) rootView
+						.findViewById(R.id.nc2towers);
 
 				if (e == null) {
 
-					ncnetwork.setText(PlanList.get(0).getString("Network"));
-					other.setText("NOTE: " + PlanList.get(0).getString("Other"));
+					network.setText(PlanList.get(0).getString("Network"));
+					towers.setText(PlanList.get(0).getString("Towers"));
+
+					if (PlanList.get(0).getString("Other") == null) {
+						other.setVisibility(View.GONE);
+					} else {
+						other.setText("NOTE: "
+								+ PlanList.get(0).getString("Other"));
+					}
 
 					// Set Visibility based on size of carriers returned
 					if (PlanList.size() == 1) {
