@@ -49,6 +49,7 @@
             android:layout_height="@dimen/colorboxh"
             android:layout_gravity="start"
             android:background="@color/primary"
+            android:baselineAligned="false"
             android:gravity="center"
             android:orientation="horizontal"
             android:weightSum="4" >

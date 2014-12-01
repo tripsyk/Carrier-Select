@@ -183,7 +183,7 @@ public class PlanViewer extends Fragment {
 				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
 				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
 
-		String phones = "Shared / Individual";
+		String phones = "Individual or Family";
 
 		if (smartphones + basicphones + tabs == 1 && gigs < 3) {
 			phones = "Individual";
@@ -494,7 +494,7 @@ public class PlanViewer extends Fragment {
 					b1type.setText(type);
 					b1devices.setText(devices);
 					b1tt.setText("Unlimited Talk & Text Nationwide");
-					b1data.setText(data);
+					b1data.setText(data + " total. Each line differs.");
 					b1over.setText(overage + " " + data);
 					b1etfsmart.setText("Smartphones - $" + smartetf
 							+ " if 6 months or longer remain, $" + basicetf

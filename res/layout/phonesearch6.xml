@@ -42,6 +42,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/border"
             android:gravity="center" >
 
             <LinearLayout
@@ -65,7 +66,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="30dip"
                         android:gravity="center"
                         android:hint="@string/blankstring"
                         android:text="@string/blankstring"
@@ -99,7 +99,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginTop="30dip"
                         android:gravity="center"
                         android:hint="@string/blankstring"
                         android:text="@string/blankstring"

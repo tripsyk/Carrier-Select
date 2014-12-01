@@ -340,7 +340,7 @@
                     android:textStyle="bold" />
 
                 <CheckBox
-                    android:id="@+id/includecarrier"
+                    android:id="@+id/twoyear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/elmtspace"
@@ -376,7 +376,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/elmtspace"
                     android:maxHeight="3dip"
-                    android:minHeight="3dip" />
+                    android:minHeight="3dip"
+                    android:progressDrawable="@drawable/progressbar"
+                    android:thumb="@drawable/thumb" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 

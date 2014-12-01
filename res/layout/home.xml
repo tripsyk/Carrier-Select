@@ -85,148 +85,64 @@
                     android:hint=""
                     android:text="" />
 
-                <LinearLayout
-                    android:id="@+id/att1"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/attupdates1"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="8dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
 
-                    <ImageView
-                        android:id="@+id/atticon1"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name" />
-
-                    <TextView
-                        android:id="@+id/attupdates1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/att2"
-                    android:layout_width="match_parent"
+                <TextView
+                    android:id="@+id/attupdates2"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
 
-                    <ImageView
-                        android:id="@+id/atticon2"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:layout_gravity="center"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/attupdates2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/att3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/attupdates3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
 
-                    <ImageView
-                        android:id="@+id/atticon3"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:layout_gravity="center"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/attupdates3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/att4"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/attupdates4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
 
-                    <ImageView
-                        android:id="@+id/atticon4"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:layout_gravity="center"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/attupdates4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/att5"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/attupdates5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
-
-                    <ImageView
-                        android:id="@+id/atticon5"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:layout_gravity="center"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/attupdates5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -272,150 +188,64 @@
                     android:hint=""
                     android:text="" />
 
-                <LinearLayout
-                    android:id="@+id/ver1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/verupdates1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="8dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
 
-                    <ImageView
-                        android:id="@+id/vericon1"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:layout_gravity="center"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/verupdates1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/ver2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/verupdates2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
 
-                    <ImageView
-                        android:id="@+id/vericon2"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:layout_gravity="center"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/verupdates2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/ver3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/verupdates3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
 
-                    <ImageView
-                        android:id="@+id/vericon3"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:layout_gravity="center"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/verupdates3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/ver4"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/verupdates4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
 
-                    <ImageView
-                        android:id="@+id/vericon4"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:layout_gravity="center"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/verupdates4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/ver5"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/verupdates5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
-
-                    <ImageView
-                        android:id="@+id/vericon5"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:layout_gravity="center"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/verupdates5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -459,150 +289,64 @@
                     android:hint=""
                     android:text="" />
 
-                <LinearLayout
-                    android:id="@+id/spr1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/sprupdates1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="8dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
 
-                    <ImageView
-                        android:id="@+id/spricon1"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:layout_gravity="center"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/sprupdates1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/spr2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/sprupdates2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
 
-                    <ImageView
-                        android:id="@+id/spricon2"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:layout_gravity="center"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/sprupdates2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/spr3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/sprupdates3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
 
-                    <ImageView
-                        android:id="@+id/spricon3"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:layout_gravity="center"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/sprupdates3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/spr4"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/sprupdates4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
 
-                    <ImageView
-                        android:id="@+id/spricon4"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:layout_gravity="center"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/sprupdates4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/spr5"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/sprupdates5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
-
-                    <ImageView
-                        android:id="@+id/spricon5"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:layout_gravity="center"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/sprupdates5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
 
@@ -646,150 +390,64 @@
                     android:hint=""
                     android:text="" />
 
-                <LinearLayout
-                    android:id="@+id/tmo1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/tmoupdates1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="8dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
 
-                    <ImageView
-                        android:id="@+id/tmoicon1"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:layout_gravity="center"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/tmoupdates1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tmo2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/tmoupdates2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
 
-                    <ImageView
-                        android:id="@+id/tmoicon2"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:layout_gravity="center"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/tmoupdates2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tmo3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/tmoupdates3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
 
-                    <ImageView
-                        android:id="@+id/tmoicon3"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:layout_gravity="center"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/tmoupdates3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tmo4"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/tmoupdates4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
 
-                    <ImageView
-                        android:id="@+id/tmoicon4"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:layout_gravity="center"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/tmoupdates4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tmo5"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                <TextView
+                    android:id="@+id/tmoupdates5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="16dip"
                     android:gravity="center"
-                    android:orientation="vertical" >
-
-                    <ImageView
-                        android:id="@+id/tmoicon5"
-                        android:layout_width="@dimen/icon"
-                        android:layout_height="@dimen/icon"
-                        android:layout_gravity="center"
-                        android:adjustViewBounds="true"
-                        android:contentDescription="@string/app_name"
-                        android:gravity="center" />
-
-                    <TextView
-                        android:id="@+id/tmoupdates5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body"
+                    android:visibility="gone" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>

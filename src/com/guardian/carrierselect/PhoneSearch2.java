@@ -176,7 +176,6 @@ public class PhoneSearch2 extends Fragment {
 		Parse.initialize(rootView.getContext(),
 				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
 				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
-
 		// Test Query
 		ParseQuery<ParseObject> query = ParseQuery.getQuery("Phones");
 		query.setLimit(5);

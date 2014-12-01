@@ -28,6 +28,7 @@ import com.parse.ParseQuery;
 
 public class DisplayMessageFragment extends Fragment {
 
+	private static final String ARGS_TWOYEAR = "twoyear";
 	private static final String ARGS_HOT_SPOT = "hot_spot";
 	private static final String ARGS_SMARTPHONES = "smartphones";
 	private static final String ARGS_BASICPHONES = "basicphones";
@@ -35,7 +36,9 @@ public class DisplayMessageFragment extends Fragment {
 	private static final String ARGS_TABS = "tabs";
 	private static final String ARGS_DISCOUNT = "discount";
 
-	private static int smartphones, basicphones, gigs, tabs, hotspotprice;
+	private static int smartphones, basicphones, gigs, tabs, hotspots;
+
+	private boolean twoyear;
 
 	private double discount;
 
@@ -43,20 +46,21 @@ public class DisplayMessageFragment extends Fragment {
 
 	private View rootView;
 
-	private TextView equipnotice;
+	private TextView equipnotice, tmonotice;
 
-	public static DisplayMessageFragment create(int smartphones,
-			int basicphones, int gigs, int tabs, int hotspotprice,
+	public static DisplayMessageFragment create(boolean twoyear,
+			int smartphones, int basicphones, int gigs, int tabs, int hotspots,
 			double discount) {
 		final DisplayMessageFragment fragment = new DisplayMessageFragment();
 
 		final Bundle args = new Bundle();
 
-		args.putInt(ARGS_HOT_SPOT, hotspotprice);
+		args.putBoolean(ARGS_TWOYEAR, twoyear);
 		args.putInt(ARGS_SMARTPHONES, smartphones);
 		args.putInt(ARGS_BASICPHONES, basicphones);
 		args.putInt(ARGS_GIGS, gigs);
 		args.putInt(ARGS_TABS, tabs);
+		args.putInt(ARGS_HOT_SPOT, hotspots);
 		args.putDouble(ARGS_DISCOUNT, discount);
 		fragment.setArguments(args);
 
@@ -74,6 +78,7 @@ public class DisplayMessageFragment extends Fragment {
 				.findViewById(R.id.breakdown_send);
 
 		equipnotice = (TextView) rootView.findViewById(R.id.equipnotice);
+		tmonotice = (TextView) rootView.findViewById(R.id.tmonotice);
 
 		buildATT();
 		buildVer();
@@ -89,8 +94,8 @@ public class DisplayMessageFragment extends Fragment {
 				fragmenttran.setCustomAnimations(R.animator.right_in_off,
 						R.animator.left_in_off);
 				fragmenttran.replace(R.id.fragment_container, BreakdownFragment
-						.create(smartphones, basicphones, gigs, tabs,
-								hotspotprice, discount));
+						.create(twoyear, smartphones, basicphones, gigs, tabs,
+								hotspots, discount));
 				fragmenttran.addToBackStack(null);
 				fragmenttran.commit();
 			}
@@ -123,7 +128,8 @@ public class DisplayMessageFragment extends Fragment {
 
 		final Bundle args = getArguments();
 
-		hotspotprice = args.getInt(ARGS_HOT_SPOT);
+		twoyear = args.getBoolean(ARGS_TWOYEAR);
+		hotspots = args.getInt(ARGS_HOT_SPOT);
 		smartphones = args.getInt(ARGS_SMARTPHONES);
 		basicphones = args.getInt(ARGS_BASICPHONES);
 		gigs = args.getInt(ARGS_GIGS);
@@ -155,10 +161,28 @@ public class DisplayMessageFragment extends Fragment {
 
 				if (e == null) {
 
+					int smart;
+
 					int plan = Integer.parseInt(PlanList.get(0).getString(
 							"PlanCost"));
-					int smart = Integer.parseInt(PlanList.get(0).getString(
-							"SmartPrice"));
+
+					if (twoyear == false) {
+
+						smart = Integer.parseInt(PlanList.get(0).getString(
+								"SmartPrice"));
+
+					} else {
+
+						smart = Integer.parseInt(PlanList.get(0).getString(
+								"ContractLine"));
+						equipnotice.setVisibility(View.GONE);
+
+					}
+
+					if (hotspots + tabs == 0) {
+						tmonotice.setVisibility(View.GONE);
+					}
+
 					int basic = Integer.parseInt(PlanList.get(0).getString(
 							"BasicPrice"));
 					int tablets = Integer.parseInt(PlanList.get(0).getString(
@@ -177,7 +201,7 @@ public class DisplayMessageFragment extends Fragment {
 					smart = smart * smartphones;
 					basic = basic * basicphones;
 					tablets = tablets * tabs;
-					mifi = mifi * hotspotprice;
+					mifi = mifi * hotspots;
 					double dis = 1 - (discount / 100);
 					int tax = (int) Math.round((((plan * dis) + smart + basic
 							+ tablets + mifi) * .16) * 100) / 100;
@@ -202,7 +226,7 @@ public class DisplayMessageFragment extends Fragment {
 				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
 				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
 
-		String phones = "Shared / Individual";
+		String phones = "Individual or Family";
 
 		if (smartphones + basicphones + tabs == 1 && gigs < 3) {
 			phones = "Individual";
@@ -218,10 +242,23 @@ public class DisplayMessageFragment extends Fragment {
 
 				if (e == null) {
 
+					int smart;
+
 					int plan = Integer.parseInt(PlanList.get(0).getString(
 							"PlanCost"));
-					int smart = Integer.parseInt(PlanList.get(0).getString(
-							"SmartPrice"));
+
+					if (twoyear == false) {
+
+						smart = Integer.parseInt(PlanList.get(0).getString(
+								"SmartPrice"));
+
+					} else {
+
+						smart = Integer.parseInt(PlanList.get(0).getString(
+								"ContractLine"));
+
+					}
+
 					int basic = Integer.parseInt(PlanList.get(0).getString(
 							"BasicPrice"));
 					int tablets = Integer.parseInt(PlanList.get(0).getString(
@@ -240,7 +277,7 @@ public class DisplayMessageFragment extends Fragment {
 					smart = smart * smartphones;
 					basic = basic * basicphones;
 					tablets = tablets * tabs;
-					mifi = mifi * hotspotprice;
+					mifi = mifi * hotspots;
 					double dis = 1 - (discount / 100);
 					int tax = (int) Math.round((((plan * dis) + smart + basic
 							+ tablets + mifi) * .16) * 100) / 100;
@@ -280,10 +317,23 @@ public class DisplayMessageFragment extends Fragment {
 
 				if (e == null) {
 
+					int smart;
+
 					int plan = Integer.parseInt(PlanList.get(0).getString(
 							"PlanCost"));
-					int smart = Integer.parseInt(PlanList.get(0).getString(
-							"SmartPrice"));
+
+					if (twoyear == false) {
+
+						smart = Integer.parseInt(PlanList.get(0).getString(
+								"SmartPrice"));
+
+					} else {
+
+						smart = Integer.parseInt(PlanList.get(0).getString(
+								"ContractLine"));
+
+					}
+
 					int basic = Integer.parseInt(PlanList.get(0).getString(
 							"BasicPrice"));
 					int tablets = Integer.parseInt(PlanList.get(0).getString(
@@ -302,7 +352,7 @@ public class DisplayMessageFragment extends Fragment {
 					smart = smart * smartphones;
 					basic = basic * basicphones;
 					tablets = tablets * tabs;
-					mifi = mifi * hotspotprice;
+					mifi = mifi * hotspots;
 					double dis = 1 - (discount / 100);
 					int tax = (int) Math.round((((plan * dis) + smart + basic
 							+ tablets + mifi) * .16) * 100) / 100;
@@ -312,6 +362,7 @@ public class DisplayMessageFragment extends Fragment {
 							+ Math.round(((plan + smart + basic + tablets + mifi)
 									+ tax - dis)));
 					spr.setTypeface(null, Typeface.BOLD);
+
 				} else {
 				}
 			}

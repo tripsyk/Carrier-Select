@@ -22,7 +22,7 @@
     <string name="pvtype">Plan Type</string>
     <string name="plandevices">Devices this Plan Supports</string>
     <string name="pvtalktext">Talk and Text Amount</string>
-    <string name="pvdata">Shared Data Limit</string>
+    <string name="pvdata">Data Limit</string>
     <string name="pvoverages">Data Overage Costs</string>
     <string name="pvetf">Early Termination Fee \n (Contracts)</string>
     <string name="pvetfinstall">Early Termination Fee \n (Phone Installments)</string>
@@ -104,8 +104,8 @@
     <string name="profilemonthly">Total Monthly bill:</string>
     <string name="editprofile">Edit</string>
     <string name="planphone">Phones Supported:</string>
-    <string name="planmins">Minutes Included:</string>
-    <string name="plantext">Texting Included:</string>
+    <string name="planmins">Minutes:</string>
+    <string name="plantext">Texting:</string>
     <string name="plandata">Data Included:</string>
     <string name="planthrottle">Slows Data:</string>
     <string name="att">AT&amp;T</string>
@@ -123,6 +123,7 @@
     <string name="blankstring"></string>
     <string name="monthlyhint">Enter monthly bill</string>
     <string name="equipnotice">Prices include no equipment. Click for more info.</string>
+    <string name="tmonotice">T-Mobile does not do contracts and pricing for tablets and hotspots are separate.</string>
     <string name="version">Version 0.5 ALPHA</string>
     <string name="writtenby">Created by Steve Gregos</string>
     <string name="kb">Knowledge Base</string>
@@ -297,7 +298,7 @@
         <item>80GB</item>
     </string-array>
     <string-array name="discountspinner">
-        <item>5%%</item>
+        <item>5%</item>
         <item>6%</item>
         <item>7%</item>
         <item>8%</item>

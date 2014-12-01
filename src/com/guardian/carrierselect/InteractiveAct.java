@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -139,7 +138,6 @@ public class InteractiveAct extends ActionBarActivity {
 			getFragmentManager().executePendingTransactions();
 			mDrawerList.setItemChecked(position, true);
 			mDrawerLayout.closeDrawer(mDrawer);
-			
 
 		} else if (position == 1) {
 
@@ -300,28 +298,6 @@ public class InteractiveAct extends ActionBarActivity {
 		}
 	}
 
-	public String getDeviceName() {
-		String manufacturer = Build.MANUFACTURER;
-		String model = Build.MODEL;
-		if (model.startsWith(manufacturer)) {
-			return capitalize(model);
-		} else {
-			return capitalize(manufacturer) + " " + model;
-		}
-	}
-
-	private String capitalize(String s) {
-		if (s == null || s.length() == 0) {
-			return "";
-		}
-		char first = s.charAt(0);
-		if (Character.isUpperCase(first)) {
-			return s;
-		} else {
-			return Character.toUpperCase(first) + s.substring(1);
-		}
-	}
-
 	private void initHomePrefs() {
 
 		// Declare preferences
@@ -329,7 +305,7 @@ public class InteractiveAct extends ActionBarActivity {
 				Context.MODE_PRIVATE);
 
 		// Set the appropriate Carrier on the homescreen
-		int carrier = sharedPref.getInt("carrier", 0);
+		final int carrier = sharedPref.getInt("carrier", 0);
 		if (carrier == 1) {
 			mCarrier.setText("AT&T");
 
@@ -347,32 +323,18 @@ public class InteractiveAct extends ActionBarActivity {
 
 		}
 
-		// Set the appropriate Smartphones on the homescreen
-		String smartphones = sharedPref.getString("smart", "Not Set");
-		int numsmart = convertWord(smartphones);
-
-		// Set the appropriate Basic phones on the homescreen
-		String basicphones = sharedPref.getString("basic", "Not Set");
-		int numbasic = convertWord(basicphones);
-
-		// Set the appropriate data usage on the homescreen
-		String thegigs = sharedPref.getString("data", "Not Set");
-		mData.setText(thegigs);
-
-		// Set the appropriate data usage on the homescreen
-		String tabs = sharedPref.getString("tabs", "Not Set");
-		int numtabs = convertWord(tabs);
-
-		// Set the appropriate mifi devices on the homescreen
-		String mifi = sharedPref.getString("mifi", "Not Set");
-		int nummifi = convertWord(mifi);
+		final int numsmart = convertWord(sharedPref.getString("smart",
+				"Not Set"));
+		final int numbasic = convertWord(sharedPref.getString("basic",
+				"Not Set"));
+		mData.setText(sharedPref.getString("data", "Not Set"));
+		final int numtabs = convertWord(sharedPref.getString("tabs", "Not Set"));
+		final int nummifi = convertWord(sharedPref.getString("mifi", "Not Set"));
 
 		mDevices.setText(String
 				.valueOf(numsmart + numbasic + numtabs + nummifi));
 
-		// Set the appropriate monthly bill on the homescreen
-		int monthly = sharedPref.getInt("monthly", 0);
-		mCost.setText("$" + String.valueOf(monthly));
+		mCost.setText("$" + String.valueOf(sharedPref.getInt("monthly", 0)));
 	}
 
 	private int convertWord(String word) {

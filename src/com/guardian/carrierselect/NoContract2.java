@@ -94,6 +94,10 @@ public class NoContract2 extends Fragment {
 						.findViewById(R.id.nc26title);
 				final TextView nc27title = (TextView) rootView
 						.findViewById(R.id.nc27title);
+
+				final TextView other = (TextView) rootView
+						.findViewById(R.id.ncother);
+
 				final TextView nc21sb = (TextView) rootView
 						.findViewById(R.id.nc21sb);
 				final TextView nc22sb = (TextView) rootView
@@ -108,6 +112,7 @@ public class NoContract2 extends Fragment {
 						.findViewById(R.id.nc26sb);
 				final TextView nc27sb = (TextView) rootView
 						.findViewById(R.id.nc27sb);
+
 				final TextView nc21min = (TextView) rootView
 						.findViewById(R.id.nc21min);
 				final TextView nc22min = (TextView) rootView
@@ -122,6 +127,7 @@ public class NoContract2 extends Fragment {
 						.findViewById(R.id.nc26min);
 				final TextView nc27min = (TextView) rootView
 						.findViewById(R.id.nc27min);
+
 				final TextView nc21text = (TextView) rootView
 						.findViewById(R.id.nc21text);
 				final TextView nc22text = (TextView) rootView
@@ -136,6 +142,7 @@ public class NoContract2 extends Fragment {
 						.findViewById(R.id.nc26text);
 				final TextView nc27text = (TextView) rootView
 						.findViewById(R.id.nc27text);
+
 				final TextView nc21data = (TextView) rootView
 						.findViewById(R.id.nc21data);
 				final TextView nc22data = (TextView) rootView
@@ -150,6 +157,7 @@ public class NoContract2 extends Fragment {
 						.findViewById(R.id.nc26data);
 				final TextView nc27data = (TextView) rootView
 						.findViewById(R.id.nc27data);
+
 				final TextView nc21throttle = (TextView) rootView
 						.findViewById(R.id.nc21throttle);
 				final TextView nc22throttle = (TextView) rootView
@@ -164,12 +172,14 @@ public class NoContract2 extends Fragment {
 						.findViewById(R.id.nc26throttle);
 				final TextView nc27throttle = (TextView) rootView
 						.findViewById(R.id.nc27throttle);
+
 				final TextView ncnetwork = (TextView) rootView
 						.findViewById(R.id.ncnetwork);
 
 				if (e == null) {
 
 					ncnetwork.setText(PlanList.get(0).getString("Network"));
+					other.setText("NOTE: " + PlanList.get(0).getString("Other"));
 
 					// Set Visibility based on size of carriers returned
 					if (PlanList.size() == 1) {

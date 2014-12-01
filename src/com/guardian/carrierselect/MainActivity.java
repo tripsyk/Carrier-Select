@@ -1,5 +1,7 @@
 package com.guardian.carrierselect;
 
+import com.applovin.sdk.AppLovinSdk;
+
 import android.app.FragmentTransaction;
 import android.app.FragmentManager;
 import android.content.Intent;
@@ -17,17 +19,19 @@ public class MainActivity extends ActionBarActivity {
 
 		getSupportActionBar().hide();
 
+		AppLovinSdk.initializeSdk(getApplicationContext());
+
 		final String PREFS_NAME = "MyPrefsFile";
 		SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
 
 		if (settings.getBoolean("my_first_time", true) != true) {
 
-			Intent intent = new Intent(this, InteractiveAct.class);
+			final Intent intent = new Intent(this, InteractiveAct.class);
 			startActivity(intent);
 
 		} else {
 
-			FragmentManager fm = getFragmentManager();
+			final FragmentManager fm = getFragmentManager();
 			fm.popBackStack();
 			FragmentTransaction ft = fm.beginTransaction();
 			ft.add(R.id.fragment_container, new StartScreen());

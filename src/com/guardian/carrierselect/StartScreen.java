@@ -25,7 +25,7 @@ public class StartScreen extends Fragment {
 		next = (Button) rootView.findViewById(R.id.next1);
 
 		// Begin startup flow.
-		AlphaAnimation animation1 = new AlphaAnimation(0.0f, 1.0f);
+		final AlphaAnimation animation1 = new AlphaAnimation(0.0f, 1.0f);
 		animation1.setDuration(1250);
 		rootView.startAnimation(animation1);
 

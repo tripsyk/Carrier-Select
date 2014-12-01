@@ -1,9 +1,7 @@
 package com.guardian.carrierselect;
 
 import android.app.Fragment;
-import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,6 +22,7 @@ public class QuoteFragment extends Fragment {
 	private static SeekBar seekBar;
 	private static TextView disValue;
 	private static int discount;;
+	private static boolean twoyear;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -37,12 +36,7 @@ public class QuoteFragment extends Fragment {
 
 		disValue = (TextView) rootView.findViewById(R.id.dis_value);
 		seekBar = (SeekBar) rootView.findViewById(R.id.discount_bar);
-		seekBar.setProgressDrawable(getResources().getDrawable(
-				R.drawable.progressbar));
-		final Drawable mDrawable = getResources().getDrawable(R.drawable.thumb);
-		mDrawable.setBounds(0, 0, mDrawable.getIntrinsicWidth(),
-				mDrawable.getIntrinsicHeight());
-		seekBar.setThumb(mDrawable);
+
 		final TextView eSmart = (TextView) rootView
 				.findViewById(R.id.sphone_input);
 		final TextView eBasic = (TextView) rootView
@@ -207,23 +201,44 @@ public class QuoteFragment extends Fragment {
 
 		});
 
+		mifim.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				final int number = Integer.parseInt(eMifi.getText().toString());
+				if (number > 0) {
+					eMifi.setText(String.valueOf(number - 1));
+				}
+				arg0.startAnimation(animScale);
+				eMifi.startAnimation(animScalet);
+			}
+
+		});
+
+		mifip.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				final int number = Integer.parseInt(eMifi.getText().toString());
+				eMifi.setText(String.valueOf(number + 1));
+				arg0.startAnimation(animScale);
+				eMifi.startAnimation(animScalet);
+			}
+
+		});
+
 		return rootView;
-	}
-
-	private static void getCheckBoxes() {
-
-		final CheckBox currentcarrier = (CheckBox) rootView
-				.findViewById(R.id.includecarrier);
-
-		if (currentcarrier.isChecked()) {
-
-		}
-
 	}
 
 	private void next() {
 
 		// getCheckBoxes();
+		final CheckBox checkBox = (CheckBox) rootView.findViewById(R.id.twoyear);
+		if (checkBox.isChecked()) {
+			twoyear = true;
+		} else {
+			twoyear = false;
+		}
 
 		final TextView eSmart = (TextView) rootView
 				.findViewById(R.id.sphone_input);
@@ -235,17 +250,17 @@ public class QuoteFragment extends Fragment {
 		final TextView eMifi = (TextView) rootView
 				.findViewById(R.id.mifi_input);
 
-		final int smart = Integer.parseInt(eSmart.getText().toString());
-		final int basic = Integer.parseInt(eBasic.getText().toString());
-		final int gigs = Integer.parseInt(eData.getText().toString());
-		final int tabs = Integer.parseInt(eTab.getText().toString());
-		final int mifi = Integer.parseInt(eMifi.getText().toString());
-
 		final FragmentTransaction ft = getActivity().getFragmentManager()
 				.beginTransaction();
 		ft.setCustomAnimations(R.animator.right_in_off, R.animator.left_in_off);
-		ft.replace(R.id.fragment_container, DisplayMessageFragment.create(
-				smart, basic, gigs, tabs, hotspotCost, discount));
+		ft.replace(
+				R.id.fragment_container,
+				DisplayMessageFragment.create(twoyear,
+						Integer.parseInt(eSmart.getText().toString()),
+						Integer.parseInt(eBasic.getText().toString()),
+						Integer.parseInt(eData.getText().toString()),
+						Integer.parseInt(eTab.getText().toString()),
+						Integer.parseInt(eMifi.getText().toString()), discount));
 		ft.addToBackStack(null);
 		ft.commit();
 	}
