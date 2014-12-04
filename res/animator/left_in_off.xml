@@ -3,11 +3,11 @@
 
     <objectAnimator
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:duration="300"
+        android:duration="250"
         android:interpolator="@android:anim/accelerate_interpolator"
         android:propertyName="x"
-        android:valueFrom="0"
-        android:valueTo="-1920"
+        android:valueFrom="0dip"
+        android:valueTo="-2000"
         android:valueType="floatType" />
 
 </set>

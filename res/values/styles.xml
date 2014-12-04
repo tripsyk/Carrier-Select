@@ -1,25 +1,30 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Application theme. -->
-    <style name="AppTheme" parent="@style/Theme.AppCompat.Light">
+    <style name="AppTheme" parent="@style/Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/secondary</item>
         <item name="android:windowBackground">@color/background</item>
         <item name="colorAccent">@color/accent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorControlHighlight">@color/accent</item>
+        <item name="actionBarStyle">@style/MyActionBar</item>
         <item name="android:textColor">@color/txt</item>
         <item name="android:fontFamily">@string/font_fontFamily</item>
         <item name="android:buttonStyle">@style/ButtonStyle</item>
     </style>
 
-    <style name="MyActionBar" parent="@style/Theme.AppCompat.Light">
-        <item name="android:background">#FFFFFF</item>
+    <style name="MyActionBar" parent="@style/Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/primary</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/secondary</item>
         <item name="android:textSize">20sp</item>
         <item name="android:fontFamily">@string/font_fontFamily_medium</item>
-        <item name="android:windowContentOverlay">@null</item>
-        <item name="windowActionBarOverlay">true</item>
+        <item name="android:textColor">@color/white_color</item>
     </style>
 
-    <style name="ButtonStyle" parent="@style/Widget.AppCompat.Light.ActionButton">
+    <style name="ButtonStyle" parent="@style/Widget.AppCompat.ActionButton">
         <item name="android:textSize">@dimen/button</item>
         <item name="android:textColor">@color/white_color</item>
         <item name="android:fontFamily">@string/font_fontFamily_medium</item>

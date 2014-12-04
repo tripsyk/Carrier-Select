@@ -6,9 +6,9 @@ import java.util.TimerTask;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentTransaction;
-import android.app.FragmentManager;
+import android.app.AlertDialog;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -64,10 +64,11 @@ public class KnowledgeBase2 extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				final FragmentManager fm = getActivity().getFragmentManager();
-				final FragmentTransaction fragmenttran = fm.beginTransaction();
-				fragmenttran.setCustomAnimations(R.animator.right_in_off,
-						R.animator.left_in_off);
+				final FragmentTransaction fragmenttran = getActivity()
+						.getSupportFragmentManager().beginTransaction();
+				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+						R.anim.slide_out_left, R.anim.slide_in_left,
+						R.anim.slide_out_right);
 				fragmenttran.replace(R.id.fragment_container,
 						KnowledgeBase3.create(kb21.getText().toString()));
 				fragmenttran.addToBackStack(null);
@@ -79,10 +80,11 @@ public class KnowledgeBase2 extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				final FragmentManager fm = getActivity().getFragmentManager();
-				final FragmentTransaction fragmenttran = fm.beginTransaction();
-				fragmenttran.setCustomAnimations(R.animator.right_in_off,
-						R.animator.left_in_off);
+				final FragmentTransaction fragmenttran = getActivity()
+						.getSupportFragmentManager().beginTransaction();
+				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+						R.anim.slide_out_left, R.anim.slide_in_left,
+						R.anim.slide_out_right);
 				fragmenttran.replace(R.id.fragment_container,
 						KnowledgeBase3.create(kb22.getText().toString()));
 				fragmenttran.addToBackStack(null);
@@ -94,10 +96,11 @@ public class KnowledgeBase2 extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				final FragmentManager fm = getActivity().getFragmentManager();
-				final FragmentTransaction fragmenttran = fm.beginTransaction();
-				fragmenttran.setCustomAnimations(R.animator.right_in_off,
-						R.animator.left_in_off);
+				final FragmentTransaction fragmenttran = getActivity()
+						.getSupportFragmentManager().beginTransaction();
+				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+						R.anim.slide_out_left, R.anim.slide_in_left,
+						R.anim.slide_out_right);
 				fragmenttran.replace(R.id.fragment_container,
 						KnowledgeBase3.create(kb23.getText().toString()));
 				fragmenttran.addToBackStack(null);
@@ -109,10 +112,11 @@ public class KnowledgeBase2 extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				final FragmentManager fm = getActivity().getFragmentManager();
-				final FragmentTransaction fragmenttran = fm.beginTransaction();
-				fragmenttran.setCustomAnimations(R.animator.right_in_off,
-						R.animator.left_in_off);
+				final FragmentTransaction fragmenttran = getActivity()
+						.getSupportFragmentManager().beginTransaction();
+				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+						R.anim.slide_out_left, R.anim.slide_in_left,
+						R.anim.slide_out_right);
 				fragmenttran.replace(R.id.fragment_container,
 						KnowledgeBase3.create(kb24.getText().toString()));
 				fragmenttran.addToBackStack(null);
@@ -124,10 +128,11 @@ public class KnowledgeBase2 extends Fragment {
 
 			@Override
 			public void onClick(View view) {
-				final FragmentManager fm = getActivity().getFragmentManager();
-				final FragmentTransaction fragmenttran = fm.beginTransaction();
-				fragmenttran.setCustomAnimations(R.animator.right_in_off,
-						R.animator.left_in_off);
+				final FragmentTransaction fragmenttran = getActivity()
+						.getSupportFragmentManager().beginTransaction();
+				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+						R.anim.slide_out_left, R.anim.slide_in_left,
+						R.anim.slide_out_right);
 				fragmenttran.replace(R.id.fragment_container,
 						KnowledgeBase3.create(kb25.getText().toString()));
 				fragmenttran.addToBackStack(null);
@@ -141,7 +146,8 @@ public class KnowledgeBase2 extends Fragment {
 	@SuppressLint("DefaultLocale")
 	public void performSearch() {
 
-		progress = new ProgressDialog(getActivity());
+		progress = new ProgressDialog(getActivity(),
+				AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
 		progress.setTitle("Knowledge Base Search");
 		progress.setMessage("Just a sec...");
 		progress.setCancelable(false);
@@ -211,14 +217,13 @@ public class KnowledgeBase2 extends Fragment {
 						kb25.setVisibility(View.VISIBLE);
 					}
 
-					final long delayInMillis = 250;
-					Timer timer = new Timer();
+					final Timer timer = new Timer();
 					timer.schedule(new TimerTask() {
 						@Override
 						public void run() {
 							progress.dismiss();
 						}
-					}, delayInMillis);
+					}, 200);
 
 				} else {
 					kb21.setText("No term found.");

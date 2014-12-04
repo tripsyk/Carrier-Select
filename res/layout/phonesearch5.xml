@@ -1,147 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/border" >
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
 
     <LinearLayout
-        android:id="@+id/ps2box"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/titlespace"
         android:gravity="center"
         android:orientation="vertical" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/titlespace"
-            android:gravity="center"
-            android:orientation="vertical" >
-
-            <TextView
-                android:id="@+id/pstitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/search"
-                android:text="@string/search"
-                android:textColor="@color/txt"
-                android:textSize="@dimen/title_dimens" />
-
-            <TextView
-                android:id="@+id/ps2sub"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/ps5sub"
-                android:text="@string/ps5sub"
-                android:textColor="@color/txt"
-                android:textSize="@dimen/subtitle_dimens" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ps2subtitlebox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:gravity="center"
-            android:orientation="vertical" >
-
-            <TextView
-                android:id="@+id/ps2subtitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/ps2subtitle"
-                android:text="@string/ps2subtitle"
-                android:textColor="@color/txt"
-                android:textSize="@dimen/body" />
-
-            <TextView
-                android:id="@+id/ps2resultstitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:hint="@string/blankstring"
-                android:text="@string/blankstring"
-                android:textColor="@color/txt"
-                android:textSize="@dimen/body"
-                android:textStyle="bold" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ps2resultsbox"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center"
-            android:orientation="vertical" >
-
-            <Button
-                android:id="@+id/ps21"
-                android:layout_width="@dimen/resultw"
-                android:layout_height="@dimen/resulth"
-                android:layout_marginTop="@dimen/cardgut"
-                android:background="@color/accent"
-                android:gravity="center"
-                android:hint="@string/loadingphone"
-                android:text="@string/loadingphone"
-                android:textColor="@color/white_color" />
-
-            <Button
-                android:id="@+id/ps22"
-                android:layout_width="@dimen/resultw"
-                android:layout_height="@dimen/resulth"
-                android:layout_marginTop="@dimen/cardgut"
-                android:background="@color/accent"
-                android:gravity="center"
-                android:hint="@string/loadingphone"
-                android:text="@string/loadingphone"
-                android:textColor="@color/white_color" />
-
-            <Button
-                android:id="@+id/ps23"
-                android:layout_width="@dimen/resultw"
-                android:layout_height="@dimen/resulth"
-                android:layout_marginTop="@dimen/cardgut"
-                android:background="@color/accent"
-                android:gravity="center"
-                android:hint="@string/loadingphone"
-                android:text="@string/loadingphone"
-                android:textColor="@color/white_color" />
-
-            <Button
-                android:id="@+id/ps24"
-                android:layout_width="@dimen/resultw"
-                android:layout_height="@dimen/resulth"
-                android:layout_marginTop="@dimen/cardgut"
-                android:background="@color/accent"
-                android:gravity="center"
-                android:hint="@string/loadingphone"
-                android:text="@string/loadingphone"
-                android:textColor="@color/white_color" />
-
-            <Button
-                android:id="@+id/ps25"
-                android:layout_width="@dimen/resultw"
-                android:layout_height="@dimen/resulth"
-                android:layout_marginTop="@dimen/cardgut"
-                android:background="@color/accent"
-                android:gravity="center"
-                android:hint="@string/loadingphone"
-                android:text="@string/loadingphone"
-                android:textColor="@color/white_color" />
-        </LinearLayout>
-
-        <com.applovin.adview.AppLovinAdView
-            xmlns:applovin="http://schemas.applovin.com/android/1.0"
+        <TextView
+            android:id="@+id/pstitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/cardgut"
-            android:layout_marginTop="@dimen/cardgut"
-            applovin:loadAdOnCreate="true" />
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/search"
+            android:text="@string/search"
+            android:textColor="@color/txt"
+            android:textSize="@dimen/title_dimens" />
+
+        <TextView
+            android:id="@+id/ps2sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/ps5sub"
+            android:text="@string/ps5sub"
+            android:textColor="@color/txt"
+            android:textSize="@dimen/subtitle_dimens" />
     </LinearLayout>
 
-</ScrollView>
+    <LinearLayout
+        android:id="@+id/ps2subtitlebox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/ps2subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/ps2subtitle"
+            android:text="@string/ps2subtitle"
+            android:textColor="@color/txt"
+            android:textSize="@dimen/body" />
+
+        <TextView
+            android:id="@+id/ps2resultstitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/blankstring"
+            android:text="@string/blankstring"
+            android:textColor="@color/txt"
+            android:textSize="@dimen/body"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ps2resultsbox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/ps21"
+            android:layout_width="@dimen/resultw"
+            android:layout_height="@dimen/resulth"
+            android:layout_marginTop="@dimen/cardgut"
+            android:gravity="center"
+            android:hint="@string/loadingphone"
+            android:text="@string/loadingphone" />
+
+        <Button
+            android:id="@+id/ps22"
+            android:layout_width="@dimen/resultw"
+            android:layout_height="@dimen/resulth"
+            android:layout_marginTop="@dimen/cardgut"
+            android:gravity="center"
+            android:hint="@string/loadingphone"
+            android:text="@string/loadingphone" />
+
+        <Button
+            android:id="@+id/ps23"
+            android:layout_width="@dimen/resultw"
+            android:layout_height="@dimen/resulth"
+            android:layout_marginTop="@dimen/cardgut"
+            android:gravity="center"
+            android:hint="@string/loadingphone"
+            android:text="@string/loadingphone" />
+
+        <Button
+            android:id="@+id/ps24"
+            android:layout_width="@dimen/resultw"
+            android:layout_height="@dimen/resulth"
+            android:layout_marginTop="@dimen/cardgut"
+            android:gravity="center"
+            android:hint="@string/loadingphone"
+            android:text="@string/loadingphone" />
+
+        <Button
+            android:id="@+id/ps25"
+            android:layout_width="@dimen/resultw"
+            android:layout_height="@dimen/resulth"
+            android:layout_marginTop="@dimen/cardgut"
+            android:gravity="center"
+            android:hint="@string/loadingphone"
+            android:text="@string/loadingphone" />
+    </LinearLayout>
+
+    <com.applovin.adview.AppLovinAdView
+        xmlns:applovin="http://schemas.applovin.com/android/1.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/cardgut"
+        android:layout_marginTop="@dimen/cardgut"
+        applovin:loadAdOnCreate="true" />
+
+</LinearLayout>

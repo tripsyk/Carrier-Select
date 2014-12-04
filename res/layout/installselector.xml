@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="@dimen/border" >
+    android:orientation="vertical" >
 
     <TextView
         android:id="@+id/installtitle"
@@ -35,10 +34,8 @@
         android:layout_height="@dimen/btnh"
         android:layout_gravity="center"
         android:layout_marginTop="56dip"
-        android:background="@color/accent"
         android:gravity="center"
         android:hint="@string/next"
-        android:text="@string/next"
-        android:textColor="@color/white_color" />
+        android:text="@string/next" />
 
 </LinearLayout>

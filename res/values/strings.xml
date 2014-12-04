@@ -78,7 +78,7 @@
     <string name="tab_label">How many connected tablets?</string>
     <string name="mifi_label">How many mifi devices (hotspots)?</string>
     <string name="contractpricing">2 year contract pricing</string>
-    <string name="search">Phone Search</string>
+    <string name="search">Device Search</string>
     <string name="psdesc">Enter a phone to see technical specs</string>
     <string name="pscomparedesc">Enter the phone you would like to compare</string>
     <string name="searchTermHint">(ex. iPhone 6)</string>
@@ -178,12 +178,12 @@
     <string name="loadingplan">Loading Plan&#8230;</string>
     <string name="loadingprices">Loading Prices&#8230;</string>
     <string name="ps2subtitle">Showing results for</string>
-    <string name="pssubtitle">The Phone Detail Database</string>
-    <string name="ps2sub">Phone Search Results</string>
-    <string name="ps3sub">Phone Specifications</string>
-    <string name="ps4sub">Compare Phones</string>
-    <string name="ps5sub">Compare Phone Search Results</string>
-    <string name="ps6sub">Phone Comparison</string>
+    <string name="pssubtitle">The Device Detail Database</string>
+    <string name="ps2sub">Device Search Results</string>
+    <string name="ps3sub">Device Specifications</string>
+    <string name="ps4sub">Compare Devices</string>
+    <string name="ps5sub">Compare Device Search Results</string>
+    <string name="ps6sub">Device Comparison</string>
     <string name="loadingphone">Loading Phone&#8230;</string>
     <string name="comparephone">Compare</string>
     <string name="designinfo">Design &amp; Info</string>

@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MenuListAdapter extends ArrayAdapter<String> {
@@ -20,7 +19,7 @@ public class MenuListAdapter extends ArrayAdapter<String> {
 		super(ctx, id);
 		inflater = (LayoutInflater) ctx
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		mMenuItems = menuItems;
+		this.mMenuItems = menuItems;
 		this.mIcon = icon;
 	}
 
@@ -29,32 +28,28 @@ public class MenuListAdapter extends ArrayAdapter<String> {
 	}
 
 	@SuppressLint("InflateParams")
-	public View getView(int position, View convertView, ViewGroup parent) {
+	public View getView(int position, View v, ViewGroup parent) {
 
-		ViewHolder holder;
+		ViewHolder holder = new ViewHolder();
 
-		holder = new ViewHolder();
-
-		if (convertView == null) {
-			convertView = inflater.inflate(R.layout.drawer_list_item, null);
-			holder.icon = (ImageView) convertView.findViewById(R.id.icon);
-			holder.menuTitle = (TextView) convertView
-					.findViewById(R.id.menuTitle);
-
-			convertView.setTag(holder);
+		if (v == null) {
+			v = inflater.inflate(R.layout.drawer_list_item, null);
+			holder.menuTitle = (TextView) v.findViewById(R.id.menuTitle);
+			v.setTag(holder);
 		} else {
-			holder = (ViewHolder) convertView.getTag();
+			holder = (ViewHolder) v.getTag();
 		}
 
 		holder.menuTitle.setText(mMenuItems[position]);
-		holder.icon.setImageResource(mIcon[position]);
+		holder.menuTitle.setCompoundDrawablesWithIntrinsicBounds(
+				mIcon[position], 0, 0, 0);
 
-		return convertView;
+		return v;
 	}
 
 	static class ViewHolder {
 		TextView menuTitle;
-		ImageView icon;
+		int icon;
 	}
 
 }

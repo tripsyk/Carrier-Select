@@ -1,62 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/border" >
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
 
-    <LinearLayout
-        android:id="@+id/selectordiscbox"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/yourdiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/titlespace"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:hint="@string/discounttitle"
+        android:text="@string/discounttitle"
+        android:textSize="@dimen/title_dimens" />
+
+    <TextView
+        android:id="@+id/discountselectorsub"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:layout_gravity="center"
+        android:layout_marginTop="96dip"
+        android:gravity="center"
+        android:hint="@string/dissub"
+        android:text="@string/dissub"
+        android:textSize="@dimen/body" />
 
-        <TextView
-            android:id="@+id/yourdiscount"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/titlespace"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:hint="@string/discounttitle"
-            android:text="@string/discounttitle"
-            android:textSize="@dimen/title_dimens" />
+    <Spinner
+        android:id="@+id/discountspinner"
+        android:layout_width="@dimen/resultw"
+        android:layout_height="@dimen/resulth"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dip"
+        android:background="@color/accent"
+        android:entries="@array/discountspinner"
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        android:textAllCaps="true"
+        android:textColor="@color/white_color"
+        android:textSize="@dimen/body"
+        android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/discountselectorsub"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="96dip"
-            android:gravity="center"
-            android:hint="@string/dissub"
-            android:text="@string/dissub"
-            android:textSize="@dimen/body" />
+    <Button
+        android:id="@+id/next"
+        android:layout_width="@dimen/btnw"
+        android:layout_height="@dimen/btnh"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dip"
+        android:gravity="center"
+        android:hint="@string/next"
+        android:text="@string/next" />
 
-        <Spinner
-            android:id="@+id/discountspinner"
-            android:layout_width="@dimen/resultw"
-            android:layout_height="@dimen/resulth"
-            android:layout_gravity="center"
-            android:layout_marginTop="16dip"
-            android:background="@color/accent"
-            android:entries="@array/discountspinner"
-            android:gravity="center"
-            android:spinnerMode="dropdown"
-            android:textAllCaps="true"
-            android:textColor="@color/white_color"
-            android:textSize="@dimen/body"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/next"
-            android:layout_width="@dimen/btnw"
-            android:layout_height="@dimen/btnh"
-            android:layout_gravity="center"
-            android:layout_marginTop="150dip"
-            android:background="@color/accent"
-            android:gravity="center"
-            android:hint="@string/next"
-            android:text="@string/next"
-            android:textColor="@color/white_color" />
-    </LinearLayout>
-
-</ScrollView>
+</LinearLayout>

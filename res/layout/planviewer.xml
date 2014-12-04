@@ -1,246 +1,241 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/planviewerbox"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/border" >
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
 
     <LinearLayout
-        android:id="@+id/planviewerbox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/titlespace"
         android:gravity="center"
         android:orientation="vertical" >
 
+        <TextView
+            android:id="@+id/planviewer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/pvtitle"
+            android:text="@string/pvtitle"
+            android:textSize="@dimen/title_dimens" />
+
+        <TextView
+            android:id="@+id/planviewersub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/pvsub"
+            android:text="@string/pvsub"
+            android:textSize="@dimen/subtitle_dimens" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pvsubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/topbotpad"
+        android:gravity="center"
+        android:hint="@string/blankstring"
+        android:text="@string/blankstring"
+        android:textSize="@dimen/subtitle_dimens"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/planviewcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginLeft="@dimen/cardmarg"
+        android:layout_marginRight="@dimen/cardmarg"
+        android:layout_marginTop="@dimen/cardgut"
+        android:gravity="center"
+        card_view:cardBackgroundColor="@color/white_color"
+        card_view:cardCornerRadius="@dimen/cardcorner"
+        card_view:cardElevation="@dimen/card_elevation"
+        card_view:contentPadding="@dimen/cardpad" >
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/titlespace"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:gravity="center"
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/planviewer"
+                android:id="@+id/box1typepre"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:hint="@string/pvtitle"
-                android:text="@string/pvtitle"
-                android:textSize="@dimen/title_dimens" />
-
-            <TextView
-                android:id="@+id/planviewersub"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:hint="@string/pvsub"
-                android:text="@string/pvsub"
-                android:textSize="@dimen/subtitle_dimens" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/pvsubtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/topbotpad"
-            android:gravity="center"
-            android:hint="@string/blankstring"
-            android:text="@string/blankstring"
-            android:textSize="@dimen/subtitle_dimens" />
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/planviewcard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/cardmarg"
-            android:layout_marginLeft="@dimen/cardmarg"
-            android:layout_marginRight="@dimen/cardmarg"
-            android:layout_marginTop="@dimen/cardgut"
-            android:gravity="center"
-            card_view:cardBackgroundColor="@color/white_color"
-            card_view:cardCornerRadius="@dimen/cardcorner"
-            card_view:cardElevation="@dimen/card_elevation"
-            card_view:contentPadding="@dimen/cardpad" >
-
-            <LinearLayout
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:orientation="vertical" >
+                android:hint="@string/pvtype"
+                android:text="@string/pvtype"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/box1typepre"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/pvtype"
-                    android:text="@string/pvtype"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/box1type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/loadingplan"
+                android:text="@string/loadingplan"
+                android:textSize="@dimen/body" />
 
-                <TextView
-                    android:id="@+id/box1type"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/loadingplan"
-                    android:text="@string/loadingplan"
-                    android:textSize="@dimen/body" />
+            <TextView
+                android:id="@+id/box1devicespre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/elmtspace"
+                android:gravity="center"
+                android:hint="@string/plandevices"
+                android:text="@string/plandevices"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/box1devicespre"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/elmtspace"
-                    android:gravity="center"
-                    android:hint="@string/plandevices"
-                    android:text="@string/plandevices"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/box1devices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/loadingplan"
+                android:text="@string/loadingplan"
+                android:textSize="@dimen/body" />
 
-                <TextView
-                    android:id="@+id/box1devices"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/loadingplan"
-                    android:text="@string/loadingplan"
-                    android:textSize="@dimen/body" />
+            <TextView
+                android:id="@+id/box1ttpre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/elmtspace"
+                android:gravity="center"
+                android:hint="@string/pvtalktext"
+                android:text="@string/pvtalktext"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/box1ttpre"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/elmtspace"
-                    android:gravity="center"
-                    android:hint="@string/pvtalktext"
-                    android:text="@string/pvtalktext"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/box1tt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/loadingplan"
+                android:text="@string/loadingplan"
+                android:textSize="@dimen/body" />
 
-                <TextView
-                    android:id="@+id/box1tt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/loadingplan"
-                    android:text="@string/loadingplan"
-                    android:textSize="@dimen/body" />
+            <TextView
+                android:id="@+id/box1datapre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/elmtspace"
+                android:gravity="center"
+                android:hint="@string/pvdata"
+                android:text="@string/pvdata"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/box1datapre"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/elmtspace"
-                    android:gravity="center"
-                    android:hint="@string/pvdata"
-                    android:text="@string/pvdata"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/box1data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/loadingplan"
+                android:text="@string/loadingplan"
+                android:textSize="@dimen/body" />
 
-                <TextView
-                    android:id="@+id/box1data"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/loadingplan"
-                    android:text="@string/loadingplan"
-                    android:textSize="@dimen/body" />
+            <TextView
+                android:id="@+id/box1overagepre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/elmtspace"
+                android:gravity="center"
+                android:hint="@string/pvoverages"
+                android:text="@string/pvoverages"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/box1overagepre"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/elmtspace"
-                    android:gravity="center"
-                    android:hint="@string/pvoverages"
-                    android:text="@string/pvoverages"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/box1overage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/loadingplan"
+                android:text="@string/loadingplan"
+                android:textSize="@dimen/body" />
 
-                <TextView
-                    android:id="@+id/box1overage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/loadingplan"
-                    android:text="@string/loadingplan"
-                    android:textSize="@dimen/body" />
+            <TextView
+                android:id="@+id/box1etfpre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/elmtspace"
+                android:gravity="center"
+                android:hint="@string/pvetf"
+                android:text="@string/pvetf"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/box1etfpre"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/elmtspace"
-                    android:gravity="center"
-                    android:hint="@string/pvetf"
-                    android:text="@string/pvetf"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/box1etfsmart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/loadingplan"
+                android:text="@string/loadingplan"
+                android:textSize="@dimen/body" />
 
-                <TextView
-                    android:id="@+id/box1etfsmart"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/loadingplan"
-                    android:text="@string/loadingplan"
-                    android:textSize="@dimen/body" />
+            <TextView
+                android:id="@+id/box1etfbasic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/loadingplan"
+                android:text="@string/loadingplan"
+                android:textSize="@dimen/body" />
 
-                <TextView
-                    android:id="@+id/box1etfbasic"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/loadingplan"
-                    android:text="@string/loadingplan"
-                    android:textSize="@dimen/body" />
+            <TextView
+                android:id="@+id/box1etfinstallpre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/elmtspace"
+                android:gravity="center"
+                android:hint="@string/pvetfinstall"
+                android:text="@string/pvetfinstall"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/box1etfinstallpre"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/elmtspace"
-                    android:gravity="center"
-                    android:hint="@string/pvetfinstall"
-                    android:text="@string/pvetfinstall"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
+            <TextView
+                android:id="@+id/box1etfinstall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/loadingplan"
+                android:text="@string/loadingplan"
+                android:textSize="@dimen/body" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 
-                <TextView
-                    android:id="@+id/box1etfinstall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/loadingplan"
-                    android:text="@string/loadingplan"
-                    android:textSize="@dimen/body" />
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
+    <com.applovin.adview.AppLovinAdView
+        xmlns:applovin="http://schemas.applovin.com/android/1.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/elmtspace"
+        applovin:loadAdOnCreate="true" />
 
-        <com.applovin.adview.AppLovinAdView
-            xmlns:applovin="http://schemas.applovin.com/android/1.0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/elmtspace"
-            applovin:loadAdOnCreate="true" />
-    </LinearLayout>
-
-</ScrollView>
+</LinearLayout>

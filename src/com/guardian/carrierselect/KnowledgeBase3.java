@@ -6,7 +6,8 @@ import java.util.TimerTask;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.Fragment;
+import android.app.AlertDialog;
+import android.support.v4.app.Fragment;
 import android.app.ProgressDialog;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -59,7 +60,8 @@ public class KnowledgeBase3 extends Fragment {
 	@SuppressLint("DefaultLocale")
 	public void performSearch() {
 
-		progress = new ProgressDialog(getActivity());
+		progress = new ProgressDialog(getActivity(),
+				AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
 		progress.setTitle("Knowledge Base Search");
 		progress.setMessage("Just a sec...");
 		progress.setCancelable(false);
@@ -84,14 +86,13 @@ public class KnowledgeBase3 extends Fragment {
 							+ KBResult.get(0).getString("Definition2"));
 					kbex.setText("\t\t" + KBResult.get(0).getString("Example"));
 
-					final long delayInMillis = 250;
-					Timer timer = new Timer();
+					final Timer timer = new Timer();
 					timer.schedule(new TimerTask() {
 						@Override
 						public void run() {
 							progress.dismiss();
 						}
-					}, delayInMillis);
+					}, 200);
 
 				} else {
 				}

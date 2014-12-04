@@ -1,8 +1,7 @@
 package com.guardian.carrierselect;
 
-import android.app.Fragment;
-import android.app.FragmentTransaction;
-import android.app.FragmentManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -67,12 +66,12 @@ public class MifiSelector extends Fragment {
 
 				final Fragment fragment = new DiscountSelector();
 
-				final FragmentManager fm = getActivity().getFragmentManager();
+				final FragmentTransaction fragmenttran = getActivity()
+						.getSupportFragmentManager().beginTransaction();
 
-				final FragmentTransaction fragmenttran = fm.beginTransaction();
-
-				fragmenttran.setCustomAnimations(R.animator.right_in_off,
-						R.animator.left_in_off);
+				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+						R.anim.slide_out_left, R.anim.slide_in_left,
+						R.anim.slide_out_right);
 				fragmenttran.replace(R.id.fragment_container, fragment);
 				fragmenttran.addToBackStack(null);
 				fragmenttran.commit();

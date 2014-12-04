@@ -29,7 +29,7 @@
     <!-- NAV DRAWER DIMENS -->
     <dimen name="drawerw">320dip</dimen>
     <dimen name="topicon">32dip</dimen>
-    <dimen name="colorboxh">80dip</dimen>
+    <dimen name="colorboxh">60dip</dimen>
     <dimen name="listmarg">8dip</dimen>
     <dimen name="savecheckh">56dip</dimen>
 

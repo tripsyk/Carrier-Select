@@ -1,561 +1,551 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/homeprofile"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/border" >
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
 
     <LinearLayout
-        android:id="@+id/homeprofile"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/titlespace"
+        android:gravity="center"
         android:orientation="vertical" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/titlespace"
+        <TextView
+            android:id="@+id/yourProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:gravity="center"
+            android:hint="@string/yourProfile"
+            android:text="@string/yourProfile"
+            android:textColor="@color/txt"
+            android:textSize="@dimen/title_dimens" />
+
+        <TextView
+            android:id="@+id/profilesubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/profsubtitle"
+            android:text="@string/profsubtitle"
+            android:textColor="@color/txt"
+            android:textSize="@dimen/subtitle_dimens" />
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profilecard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginLeft="@dimen/cardmarg"
+        android:layout_marginRight="@dimen/cardmarg"
+        android:layout_marginTop="@dimen/topcard"
+        android:gravity="center"
+        card_view:cardBackgroundColor="@color/white_color"
+        card_view:cardCornerRadius="@dimen/cardcorner"
+        card_view:cardElevation="@dimen/card_elevation"
+        card_view:contentPadding="@dimen/cardpad" >
+
+        <LinearLayout
+            android:id="@+id/attplanbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/yourProfile"
+                android:id="@+id/basicboxtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:hint="@string/yourProfile"
-                android:text="@string/yourProfile"
+                android:hint="@string/profiletopbox"
+                android:text="@string/profiletopbox"
                 android:textColor="@color/txt"
-                android:textSize="@dimen/title_dimens" />
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/profilesubtitle"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/carrierbox"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginTop="@dimen/cardmarg"
                 android:gravity="center"
-                android:hint="@string/profsubtitle"
-                android:text="@string/profsubtitle"
-                android:textColor="@color/txt"
-                android:textSize="@dimen/subtitle_dimens" />
-        </LinearLayout>
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/profilecard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/cardmarg"
-            android:layout_marginLeft="@dimen/cardmarg"
-            android:layout_marginRight="@dimen/cardmarg"
-            android:layout_marginTop="@dimen/topcard"
-            android:gravity="center"
-            card_view:cardBackgroundColor="@color/white_color"
-            card_view:cardCornerRadius="@dimen/cardcorner"
-            card_view:cardElevation="@dimen/card_elevation"
-            card_view:contentPadding="@dimen/cardpad" >
-
-            <LinearLayout
-                android:id="@+id/attplanbox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:orientation="horizontal" >
 
                 <TextView
-                    android:id="@+id/basicboxtitle"
+                    android:id="@+id/carriertitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:hint="@string/profiletopbox"
-                    android:text="@string/profiletopbox"
-                    android:textColor="@color/txt"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:id="@+id/carrierbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/cardmarg"
-                    android:gravity="center"
-                    android:orientation="horizontal" >
-
-                    <TextView
-                        android:id="@+id/carriertitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/profilecarrier"
-                        android:text="@string/profilecarrier"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/yourcarrier"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/notset"
-                        android:text="@string/notset"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/smartphonesbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="2dip"
-                    android:gravity="center"
-                    android:orientation="horizontal" >
-
-                    <TextView
-                        android:id="@+id/numsmartphonespre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/profilesmart"
-                        android:text="@string/profilesmart"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/numsmartphones"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/notset"
-                        android:text="@string/notset"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/basicphonesbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="2dip"
-                    android:gravity="center"
-                    android:orientation="horizontal" >
-
-                    <TextView
-                        android:id="@+id/numbasicphonespre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/profilebasic"
-                        android:text="@string/profilebasic"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/numbasicphones"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/notset"
-                        android:text="@string/notset"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/databox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="2dip"
-                    android:gravity="center"
-                    android:orientation="horizontal" >
-
-                    <TextView
-                        android:id="@+id/datapre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/profilegigs"
-                        android:text="@string/profilegigs"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/gigsofdata"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/notset"
-                        android:text="@string/notset"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tabletbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="2dip"
-                    android:gravity="center"
-                    android:orientation="horizontal" >
-
-                    <TextView
-                        android:id="@+id/tabletpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/profiletablets"
-                        android:text="@string/profiletablets"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/numtablets"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/notset"
-                        android:text="@string/notset"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/mifibox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="2dip"
-                    android:gravity="center"
-                    android:orientation="horizontal" >
-
-                    <TextView
-                        android:id="@+id/mifipre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/profilemifi"
-                        android:text="@string/profilemifi"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nummifi"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/notset"
-                        android:text="@string/notset"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/discountbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="2dip"
-                    android:gravity="center"
-                    android:orientation="horizontal" >
-
-                    <TextView
-                        android:id="@+id/discountpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/profilediscount"
-                        android:text="@string/profilediscount"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/numdiscount"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/notset"
-                        android:text="@string/notset"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/installbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="2dip"
-                    android:gravity="center"
-                    android:orientation="horizontal" >
-
-                    <TextView
-                        android:id="@+id/installpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/installments"
-                        android:text="@string/installments"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/numinstall"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/notset"
-                        android:text="@string/notset"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/line"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/lineblue"
-                    android:gravity="center"
-                    android:hint=""
-                    android:text="" />
-
-                <LinearLayout
-                    android:id="@+id/monthlybox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="2dip"
-                    android:orientation="horizontal" >
-
-                    <TextView
-                        android:id="@+id/monthlybillpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/profilemonthly"
-                        android:text="@string/profilemonthly"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/monthlybill"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/notset"
-                        android:text="@string/notset"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <Button
-            android:id="@+id/editprofile"
-            android:layout_width="@dimen/btnw"
-            android:layout_height="@dimen/btnh"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/btnspace"
-            android:background="@color/accent"
-            android:gravity="center"
-            android:hint="@string/editprofile"
-            android:text="@string/editprofile"
-            android:textColor="@color/white_color" />
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/advancedcard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/cardmarg"
-            android:layout_marginLeft="@dimen/cardmarg"
-            android:layout_marginRight="@dimen/cardmarg"
-            android:layout_marginTop="@dimen/topcard"
-            android:gravity="center"
-            card_view:cardBackgroundColor="@color/white_color"
-            card_view:cardCornerRadius="@dimen/cardcorner"
-            card_view:cardElevation="@dimen/card_elevation"
-            card_view:contentPadding="@dimen/cardpad" >
-
-            <LinearLayout
-                android:id="@+id/advancedbox"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
-
-                <TextView
-                    android:id="@+id/advancedtitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/profileadvanced"
-                    android:text="@string/profileadvanced"
-                    android:textColor="@color/txt"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/advancedsub"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/profileadvancedsub"
-                    android:text="@string/profileadvancedsub"
+                    android:hint="@string/profilecarrier"
+                    android:text="@string/profilecarrier"
                     android:textColor="@color/txt"
                     android:textSize="@dimen/body" />
 
-                <LinearLayout
-                    android:id="@+id/insurancebox"
+                <TextView
+                    android:id="@+id/yourcarrier"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/elmtspace"
-                    android:gravity="center"
-                    android:orientation="horizontal" >
-
-                    <TextView
-                        android:id="@+id/insurancetitle"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/profileinsurance"
-                        android:text="@string/profileinsurance"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/yourinsurances"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/notset"
-                        android:text="@string/notset"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/etfbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="2dip"
-                    android:gravity="center"
-                    android:orientation="horizontal" >
-
-                    <TextView
-                        android:id="@+id/etf"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/profileetf"
-                        android:text="@string/profileetf"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/youretf"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/notset"
-                        android:text="@string/notset"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/installpaybox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="2dip"
-                    android:gravity="center"
-                    android:orientation="horizontal" >
-
-                    <TextView
-                        android:id="@+id/installpay"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/profileinstalls"
-                        android:text="@string/profileinstalls"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/yourinstall"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/notset"
-                        android:text="@string/notset"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/reusebox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="2dip"
-                    android:gravity="center"
-                    android:orientation="horizontal" >
-
-                    <TextView
-                        android:id="@+id/reuse"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:gravity="center"
-                        android:hint="@string/profilereuse"
-                        android:text="@string/profilereuse"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/yourreuse"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/notset"
-                        android:text="@string/notset"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
+                    android:gravity="end"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
             </LinearLayout>
-        </android.support.v7.widget.CardView>
 
-        <Button
-            android:id="@+id/editadvanced"
-            android:layout_width="@dimen/btnw"
-            android:layout_height="@dimen/btnh"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/btnspace"
-            android:background="@color/accent"
-            android:gravity="center"
-            android:hint="@string/editprofile"
-            android:text="@string/editprofile"
-            android:textColor="@color/white_color" />
-    </LinearLayout>
+            <LinearLayout
+                android:id="@+id/smartphonesbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
 
-</ScrollView>
+                <TextView
+                    android:id="@+id/numsmartphonespre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profilesmart"
+                    android:text="@string/profilesmart"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/numsmartphones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/basicphonesbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/numbasicphonespre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profilebasic"
+                    android:text="@string/profilebasic"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/numbasicphones"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/databox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/datapre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profilegigs"
+                    android:text="@string/profilegigs"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/gigsofdata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tabletbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tabletpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profiletablets"
+                    android:text="@string/profiletablets"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/numtablets"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/mifibox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/mifipre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profilemifi"
+                    android:text="@string/profilemifi"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nummifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/discountbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/discountpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profilediscount"
+                    android:text="@string/profilediscount"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/numdiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/installbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/installpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/installments"
+                    android:text="@string/installments"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/numinstall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/lineblue"
+                android:gravity="center"
+                android:hint=""
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/monthlybox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/monthlybillpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profilemonthly"
+                    android:text="@string/profilemonthly"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/monthlybill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/editprofile"
+        android:layout_width="@dimen/btnw"
+        android:layout_height="@dimen/btnh"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/btnspace"
+        android:gravity="center"
+        android:hint="@string/editprofile"
+        android:text="@string/editprofile" />
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/advancedcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginLeft="@dimen/cardmarg"
+        android:layout_marginRight="@dimen/cardmarg"
+        android:layout_marginTop="@dimen/topcard"
+        android:gravity="center"
+        card_view:cardBackgroundColor="@color/white_color"
+        card_view:cardCornerRadius="@dimen/cardcorner"
+        card_view:cardElevation="@dimen/card_elevation"
+        card_view:contentPadding="@dimen/cardpad" >
+
+        <LinearLayout
+            android:id="@+id/advancedbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/advancedtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/profileadvanced"
+                android:text="@string/profileadvanced"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/advancedsub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/profileadvancedsub"
+                android:text="@string/profileadvancedsub"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body" />
+
+            <LinearLayout
+                android:id="@+id/insurancebox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/elmtspace"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/insurancetitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profileinsurance"
+                    android:text="@string/profileinsurance"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/yourinsurances"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/etfbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/etf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profileetf"
+                    android:text="@string/profileetf"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/youretf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/installpaybox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/installpay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profileinstalls"
+                    android:text="@string/profileinstalls"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/yourinstall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reusebox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dip"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/reuse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/profilereuse"
+                    android:text="@string/profilereuse"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/yourreuse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/notset"
+                    android:text="@string/notset"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/editadvanced"
+        android:layout_width="@dimen/btnw"
+        android:layout_height="@dimen/btnh"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/btnspace"
+        android:gravity="center"
+        android:hint="@string/editprofile"
+        android:text="@string/editprofile" />
+
+</LinearLayout>

@@ -1,83 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nc1titlebox"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/border" >
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
 
     <LinearLayout
-        android:id="@+id/nc1titlebox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/titlespace"
         android:gravity="center"
         android:orientation="vertical" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/titlespace"
-            android:gravity="center"
-            android:orientation="vertical" >
-
-            <TextView
-                android:id="@+id/nocontract"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/nocontracttitle"
-                android:text="@string/nocontracttitle"
-                android:textColor="@color/txt"
-                android:textSize="@dimen/title_dimens" />
-
-            <TextView
-                android:id="@+id/ncsubtitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/ncsubtitle"
-                android:text="@string/ncsubtitle"
-                android:textColor="@color/txt"
-                android:textSize="@dimen/subtitle_dimens" />
-        </LinearLayout>
-
         <TextView
-            android:id="@+id/nctitlesub"
+            android:id="@+id/nocontract"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="96dip"
             android:gravity="center"
-            android:hint="@string/nctitlesub"
-            android:text="@string/nctitlesub"
+            android:hint="@string/nocontracttitle"
+            android:text="@string/nocontracttitle"
             android:textColor="@color/txt"
-            android:textSize="@dimen/body" />
+            android:textSize="@dimen/title_dimens" />
 
-        <Spinner
-            android:id="@+id/carrierspinner"
-            android:layout_width="@dimen/resultw"
-            android:layout_height="@dimen/resulth"
-            android:layout_marginTop="16dip"
-            android:background="@color/accent"
-            android:dropDownWidth="@dimen/resultw"
-            android:entries="@array/nocontractarray"
-            android:gravity="center"
-            android:spinnerMode="dropdown"
-            android:textAllCaps="true"
-            android:textColor="@color/white_color"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/nextnc1"
-            android:layout_width="@dimen/btnw"
-            android:layout_height="@dimen/btnh"
+        <TextView
+            android:id="@+id/ncsubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="150dip"
-            android:background="@color/accent"
             android:gravity="center"
-            android:hint="@string/next"
-            android:text="@string/next"
-            android:textColor="@color/white_color" />
+            android:hint="@string/ncsubtitle"
+            android:text="@string/ncsubtitle"
+            android:textColor="@color/txt"
+            android:textSize="@dimen/subtitle_dimens" />
     </LinearLayout>
 
-</ScrollView>
+    <TextView
+        android:id="@+id/nctitlesub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="96dip"
+        android:gravity="center"
+        android:hint="@string/nctitlesub"
+        android:text="@string/nctitlesub"
+        android:textColor="@color/txt"
+        android:textSize="@dimen/body" />
+
+    <Spinner
+        android:id="@+id/carrierspinner"
+        android:layout_width="@dimen/resultw"
+        android:layout_height="@dimen/resulth"
+        android:layout_marginTop="16dip"
+        android:background="@color/accent"
+        android:dropDownWidth="@dimen/resultw"
+        android:entries="@array/nocontractarray"
+        android:gravity="center"
+        android:spinnerMode="dropdown"
+        android:textAllCaps="true"
+        android:textColor="@color/white_color"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/nextnc1"
+        android:layout_width="@dimen/btnw"
+        android:layout_height="@dimen/btnh"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dip"
+        android:gravity="center"
+        android:hint="@string/next"
+        android:text="@string/next" />
+
+</LinearLayout>

@@ -7,5 +7,6 @@
     <color name="accent">#2979FF</color>
     <color name="white_color">#FFFFFF</color>
     <color name="txt">#95000000</color>
+    <color name="controlhigh">#0D47A1</color>
 
 </resources>

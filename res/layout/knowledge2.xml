@@ -1,129 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/kb2box"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dip" >
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
 
     <LinearLayout
-        android:id="@+id/kb2box"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/titlespace"
         android:gravity="center"
         android:orientation="vertical" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/titlespace"
-            android:gravity="center"
-            android:orientation="vertical" >
-
-            <TextView
-                android:id="@+id/kb2title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:hint="@string/kb"
-                android:text="@string/kb"
-                android:textColor="@color/txt"
-                android:textSize="@dimen/title_dimens" />
-
-            <TextView
-                android:id="@+id/kbsubtitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/kbsub"
-                android:text="@string/kbsub"
-                android:textColor="@color/txt"
-                android:textSize="@dimen/subtitle_dimens" />
-        </LinearLayout>
-
         <TextView
-            android:id="@+id/kb2subtitle"
+            android:id="@+id/kb2title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="24dp"
-            android:gravity="center"
-            android:hint="@string/ps2subtitle"
-            android:text="@string/ps2subtitle"
+            android:hint="@string/kb"
+            android:text="@string/kb"
             android:textColor="@color/txt"
-            android:textSize="@dimen/body" />
+            android:textSize="@dimen/title_dimens" />
 
         <TextView
-            android:id="@+id/kb2resultstitle"
+            android:id="@+id/kbsubtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:gravity="center"
-            android:hint="@string/blankstring"
-            android:text="@string/blankstring"
+            android:hint="@string/kbsub"
+            android:text="@string/kbsub"
             android:textColor="@color/txt"
-            android:textSize="@dimen/body"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/kb21"
-            android:layout_width="@dimen/resultw"
-            android:layout_height="@dimen/resulth"
-            android:layout_marginTop="8dip"
-            android:background="@color/accent"
-            android:gravity="center"
-            android:hint="@string/loading"
-            android:text="@string/loading"
-            android:textColor="@color/white_color" />
-
-        <Button
-            android:id="@+id/kb22"
-            android:layout_width="@dimen/resultw"
-            android:layout_height="@dimen/resulth"
-            android:layout_marginTop="8dip"
-            android:background="@color/accent"
-            android:gravity="center"
-            android:hint="@string/loading"
-            android:text="@string/loading"
-            android:textColor="@color/white_color" />
-
-        <Button
-            android:id="@+id/kb23"
-            android:layout_width="@dimen/resultw"
-            android:layout_height="@dimen/resulth"
-            android:layout_marginTop="8dip"
-            android:background="@color/accent"
-            android:gravity="center"
-            android:hint="@string/loading"
-            android:text="@string/loading"
-            android:textColor="@color/white_color" />
-
-        <Button
-            android:id="@+id/kb24"
-            android:layout_width="@dimen/resultw"
-            android:layout_height="@dimen/resulth"
-            android:layout_marginTop="8dip"
-            android:background="@color/accent"
-            android:gravity="center"
-            android:hint="@string/loading"
-            android:text="@string/loading"
-            android:textColor="@color/white_color" />
-
-        <Button
-            android:id="@+id/kb25"
-            android:layout_width="@dimen/resultw"
-            android:layout_height="@dimen/resulth"
-            android:layout_marginTop="8dip"
-            android:background="@color/accent"
-            android:gravity="center"
-            android:hint="@string/loading"
-            android:text="@string/loading"
-            android:textColor="@color/white_color" />
-
-        <com.applovin.adview.AppLovinAdView
-            xmlns:applovin="http://schemas.applovin.com/android/1.0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dip"
-            android:layout_marginTop="10dip"
-            applovin:loadAdOnCreate="true" />
+            android:textSize="@dimen/subtitle_dimens" />
     </LinearLayout>
 
-</ScrollView>
+    <TextView
+        android:id="@+id/kb2subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:hint="@string/ps2subtitle"
+        android:text="@string/ps2subtitle"
+        android:textColor="@color/txt"
+        android:textSize="@dimen/body" />
+
+    <TextView
+        android:id="@+id/kb2resultstitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/blankstring"
+        android:text="@string/blankstring"
+        android:textColor="@color/txt"
+        android:textSize="@dimen/body"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/kb21"
+        android:layout_width="@dimen/resultw"
+        android:layout_height="@dimen/resulth"
+        android:layout_marginTop="8dip"
+        android:gravity="center"
+        android:hint="@string/loading"
+        android:text="@string/loading" />
+
+    <Button
+        android:id="@+id/kb22"
+        android:layout_width="@dimen/resultw"
+        android:layout_height="@dimen/resulth"
+        android:layout_marginTop="8dip"
+        android:gravity="center"
+        android:hint="@string/loading"
+        android:text="@string/loading" />
+
+    <Button
+        android:id="@+id/kb23"
+        android:layout_width="@dimen/resultw"
+        android:layout_height="@dimen/resulth"
+        android:layout_marginTop="8dip"
+        android:gravity="center"
+        android:hint="@string/loading"
+        android:text="@string/loading" />
+
+    <Button
+        android:id="@+id/kb24"
+        android:layout_width="@dimen/resultw"
+        android:layout_height="@dimen/resulth"
+        android:layout_marginTop="8dip"
+        android:gravity="center"
+        android:hint="@string/loading"
+        android:text="@string/loading" />
+
+    <Button
+        android:id="@+id/kb25"
+        android:layout_width="@dimen/resultw"
+        android:layout_height="@dimen/resulth"
+        android:layout_marginTop="8dip"
+        android:gravity="center"
+        android:hint="@string/loading"
+        android:text="@string/loading" />
+
+    <com.applovin.adview.AppLovinAdView
+        xmlns:applovin="http://schemas.applovin.com/android/1.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dip"
+        android:layout_marginTop="10dip"
+        applovin:loadAdOnCreate="true" />
+
+</LinearLayout>

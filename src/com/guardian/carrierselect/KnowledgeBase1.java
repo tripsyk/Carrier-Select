@@ -1,8 +1,7 @@
 package com.guardian.carrierselect;
 
-import android.app.Fragment;
-import android.app.FragmentTransaction;
-import android.app.FragmentManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -48,10 +47,11 @@ public class KnowledgeBase1 extends Fragment {
 								Context.INPUT_METHOD_SERVICE);
 				imm.hideSoftInputFromWindow(searchTerm.getWindowToken(), 0);
 
-				final FragmentManager fm = getActivity().getFragmentManager();
-				final FragmentTransaction fragmenttran = fm.beginTransaction();
-				fragmenttran.setCustomAnimations(R.animator.right_in_off,
-						R.animator.left_in_off);
+				final FragmentTransaction fragmenttran = getActivity()
+						.getSupportFragmentManager().beginTransaction();
+				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+						R.anim.slide_out_left, R.anim.slide_in_left,
+						R.anim.slide_out_right);
 				fragmenttran.replace(R.id.fragment_container,
 						KnowledgeBase2.create(searchTerm.getText().toString()));
 				fragmenttran.addToBackStack(null);

@@ -6,11 +6,10 @@ import java.util.TimerTask;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentTransaction;
-import android.app.FragmentManager;
+import android.app.AlertDialog;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.app.ProgressDialog;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -74,25 +73,24 @@ public class DisplayMessageFragment extends Fragment {
 		rootView = inflater.inflate(R.layout.activity_display_message,
 				container, false);
 
+		// init next
 		final Button sendbox = (Button) rootView
 				.findViewById(R.id.breakdown_send);
 
 		equipnotice = (TextView) rootView.findViewById(R.id.equipnotice);
 		tmonotice = (TextView) rootView.findViewById(R.id.tmonotice);
 
-		buildATT();
-		buildVer();
-		buildSpr();
-		buildTmo();
+		buildPlans();
 
 		sendbox.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
-				final FragmentManager fm = getActivity().getFragmentManager();
-				final FragmentTransaction fragmenttran = fm.beginTransaction();
-				fragmenttran.setCustomAnimations(R.animator.right_in_off,
-						R.animator.left_in_off);
+				final FragmentTransaction fragmenttran = getActivity()
+						.getSupportFragmentManager().beginTransaction();
+				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+						R.anim.slide_out_left, R.anim.slide_in_left,
+						R.anim.slide_out_right);
 				fragmenttran.replace(R.id.fragment_container, BreakdownFragment
 						.create(twoyear, smartphones, basicphones, gigs, tabs,
 								hotspots, discount));
@@ -106,10 +104,11 @@ public class DisplayMessageFragment extends Fragment {
 
 			@Override
 			public void onClick(View arg0) {
-				final FragmentManager fm = getActivity().getFragmentManager();
-				final FragmentTransaction fragmenttran = fm.beginTransaction();
-				fragmenttran.setCustomAnimations(R.animator.right_in_off,
-						R.animator.left_in_off);
+				final FragmentTransaction fragmenttran = getActivity()
+						.getSupportFragmentManager().beginTransaction();
+				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+						R.anim.slide_out_left, R.anim.slide_in_left,
+						R.anim.slide_out_right);
 				fragmenttran.replace(R.id.fragment_container,
 						KnowledgeBase3.create("Installment Billing"));
 				fragmenttran.addToBackStack(null);
@@ -139,9 +138,10 @@ public class DisplayMessageFragment extends Fragment {
 	}
 
 	@SuppressLint("DefaultLocale")
-	private void buildATT() {
+	private void buildPlans() {
 
-		progress = new ProgressDialog(getActivity());
+		progress = new ProgressDialog(getActivity(),
+				AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
 		progress.setTitle("Building your plans");
 		progress.setMessage("Just a sec...");
 		progress.setCancelable(false);
@@ -152,8 +152,8 @@ public class DisplayMessageFragment extends Fragment {
 				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
 				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
 
-		// Test Query
-		ParseQuery<ParseObject> query = ParseQuery.getQuery("Postpaid");
+		// begin att search
+		final ParseQuery<ParseObject> query = ParseQuery.getQuery("Postpaid");
 		query.whereContains("Carrier", "AT&T");
 		query.whereContains("DataFinder", "A" + Integer.toString(gigs) + "GB");
 		query.findInBackground(new FindCallback<ParseObject>() {
@@ -161,26 +161,21 @@ public class DisplayMessageFragment extends Fragment {
 
 				if (e == null) {
 
+					final TextView attplan = (TextView) rootView
+							.findViewById(R.id.attplan);
+					final TextView att = (TextView) rootView
+							.findViewById(R.id.att_total);
 					int smart;
-
-					int plan = Integer.parseInt(PlanList.get(0).getString(
-							"PlanCost"));
+					final int plan = Integer.parseInt(PlanList.get(0)
+							.getString("PlanCost"));
 
 					if (twoyear == false) {
-
 						smart = Integer.parseInt(PlanList.get(0).getString(
 								"SmartPrice"));
-
 					} else {
-
 						smart = Integer.parseInt(PlanList.get(0).getString(
 								"ContractLine"));
 						equipnotice.setVisibility(View.GONE);
-
-					}
-
-					if (hotspots + tabs == 0) {
-						tmonotice.setVisibility(View.GONE);
 					}
 
 					int basic = Integer.parseInt(PlanList.get(0).getString(
@@ -190,62 +185,60 @@ public class DisplayMessageFragment extends Fragment {
 					int mifi = Integer.parseInt(PlanList.get(0).getString(
 							"MifiPrice"));
 
-					final TextView attplan = (TextView) rootView
-							.findViewById(R.id.attplan);
+					if (hotspots + tabs == 0 && twoyear == false) {
+						tmonotice.setVisibility(View.GONE);
+					}
 
 					attplan.setText(PlanList.get(0).getString("Name"));
-
-					final TextView att = (TextView) rootView
-							.findViewById(R.id.att_total);
 
 					smart = smart * smartphones;
 					basic = basic * basicphones;
 					tablets = tablets * tabs;
 					mifi = mifi * hotspots;
 					double dis = 1 - (discount / 100);
-					int tax = (int) Math.round((((plan * dis) + smart + basic
-							+ tablets + mifi) * .16) * 100) / 100;
-					dis = Math.round(plan - (plan * dis));
 
+					final int tax = (int) Math
+							.round((((plan * (1 - (discount / 100))) + smart
+									+ basic + tablets + mifi) * .16) * 100) / 100;
+
+					dis = Math.round(plan - (plan * dis));
 					att.setText("$"
 							+ Math.round(((plan + smart + basic + tablets + mifi)
 									+ tax - dis)));
-					att.setTypeface(null, Typeface.BOLD);
 
 				} else {
 				}
+
 			}
 		});
 
-	}
-
-	@SuppressLint("DefaultLocale")
-	private void buildVer() {
-		ParseObject.registerSubclass(Phone.class);
-		Parse.initialize(rootView.getContext(),
-				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
-				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
-
+		// begin verizon search
 		String phones = "Individual or Family";
 
 		if (smartphones + basicphones + tabs == 1 && gigs < 3) {
 			phones = "Individual";
 		}
 
-		// Test Query
-		ParseQuery<ParseObject> query = ParseQuery.getQuery("Postpaid");
-		query.whereContains("Carrier", "Verizon Wireless");
-		query.whereEqualTo("Type", phones);
-		query.whereContains("DataFinder", "A" + Integer.toString(gigs) + "GB");
-		query.findInBackground(new FindCallback<ParseObject>() {
+		final ParseQuery<ParseObject> queryVZW = ParseQuery
+				.getQuery("Postpaid");
+		queryVZW.whereContains("Carrier", "Verizon Wireless");
+		queryVZW.whereEqualTo("Type", phones);
+		queryVZW.whereContains("DataFinder", "A" + Integer.toString(gigs)
+				+ "GB");
+		queryVZW.findInBackground(new FindCallback<ParseObject>() {
 			public void done(List<ParseObject> PlanList, ParseException e) {
 
 				if (e == null) {
 
+					final TextView verplan = (TextView) rootView
+							.findViewById(R.id.verplan);
+					final TextView ver = (TextView) rootView
+							.findViewById(R.id.ver_total);
+
 					int smart;
 
-					int plan = Integer.parseInt(PlanList.get(0).getString(
-							"PlanCost"));
+					final int plan = Integer.parseInt(PlanList.get(0)
+							.getString("PlanCost"));
 
 					if (twoyear == false) {
 
@@ -266,41 +259,25 @@ public class DisplayMessageFragment extends Fragment {
 					int mifi = Integer.parseInt(PlanList.get(0).getString(
 							"MifiPrice"));
 
-					final TextView verplan = (TextView) rootView
-							.findViewById(R.id.verplan);
-
 					verplan.setText(PlanList.get(0).getString("Name"));
-
-					final TextView ver = (TextView) rootView
-							.findViewById(R.id.ver_total);
 
 					smart = smart * smartphones;
 					basic = basic * basicphones;
 					tablets = tablets * tabs;
 					mifi = mifi * hotspots;
 					double dis = 1 - (discount / 100);
-					int tax = (int) Math.round((((plan * dis) + smart + basic
-							+ tablets + mifi) * .16) * 100) / 100;
+					final int tax = (int) Math.round((((plan * dis) + smart
+							+ basic + tablets + mifi) * .16) * 100) / 100;
 					dis = Math.round(plan - (plan * dis));
 
 					ver.setText("$"
 							+ Math.round(((plan + smart + basic + tablets + mifi)
 									+ tax - dis)));
-					ver.setTypeface(null, Typeface.BOLD);
 
 				} else {
 				}
 			}
 		});
-
-	}
-
-	@SuppressLint("DefaultLocale")
-	private void buildSpr() {
-		ParseObject.registerSubclass(Phone.class);
-		Parse.initialize(rootView.getContext(),
-				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
-				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
 
 		String adjustedGB = String.valueOf(gigs);
 
@@ -308,19 +285,26 @@ public class DisplayMessageFragment extends Fragment {
 			adjustedGB = "Unlimited";
 		}
 
-		// Test Query
-		ParseQuery<ParseObject> query = ParseQuery.getQuery("Postpaid");
-		query.whereContains("Carrier", "Sprint");
-		query.whereContains("DataFinder", "A" + adjustedGB + "GB");
-		query.findInBackground(new FindCallback<ParseObject>() {
+		// begin sprint search
+		final ParseQuery<ParseObject> querySpr = ParseQuery
+				.getQuery("Postpaid");
+		querySpr.whereContains("Carrier", "Sprint");
+		querySpr.whereContains("DataFinder", "A" + adjustedGB + "GB");
+		querySpr.findInBackground(new FindCallback<ParseObject>() {
 			public void done(List<ParseObject> PlanList, ParseException e) {
 
 				if (e == null) {
 
+					final TextView sprplan = (TextView) rootView
+							.findViewById(R.id.sprplan);
+
+					final TextView spr = (TextView) rootView
+							.findViewById(R.id.spr_total);
+
 					int smart;
 
-					int plan = Integer.parseInt(PlanList.get(0).getString(
-							"PlanCost"));
+					final int plan = Integer.parseInt(PlanList.get(0)
+							.getString("PlanCost"));
 
 					if (twoyear == false) {
 
@@ -341,43 +325,28 @@ public class DisplayMessageFragment extends Fragment {
 					int mifi = Integer.parseInt(PlanList.get(0).getString(
 							"MifiPrice"));
 
-					final TextView sprplan = (TextView) rootView
-							.findViewById(R.id.sprplan);
-
 					sprplan.setText(PlanList.get(0).getString("Name"));
-
-					final TextView spr = (TextView) rootView
-							.findViewById(R.id.spr_total);
 
 					smart = smart * smartphones;
 					basic = basic * basicphones;
 					tablets = tablets * tabs;
 					mifi = mifi * hotspots;
 					double dis = 1 - (discount / 100);
-					int tax = (int) Math.round((((plan * dis) + smart + basic
-							+ tablets + mifi) * .16) * 100) / 100;
+					final int tax = (int) Math.round((((plan * dis) + smart
+							+ basic + tablets + mifi) * .16) * 100) / 100;
 					dis = Math.round(plan - (plan * dis));
 
 					spr.setText("$"
 							+ Math.round(((plan + smart + basic + tablets + mifi)
 									+ tax - dis)));
-					spr.setTypeface(null, Typeface.BOLD);
 
 				} else {
 				}
 			}
 		});
-	}
 
-	@SuppressLint("DefaultLocale")
-	private void buildTmo() {
-		ParseObject.registerSubclass(Phone.class);
-		Parse.initialize(rootView.getContext(),
-				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
-				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
-
-		String phones = String.valueOf(smartphones + basicphones + tabs);
-		String adjustedGB = String.valueOf(gigs);
+		phones = String.valueOf(smartphones + basicphones + tabs);
+		adjustedGB = String.valueOf(gigs);
 
 		if (phones.equals("1") && gigs > 5) {
 			adjustedGB = "Unlimited";
@@ -393,48 +362,47 @@ public class DisplayMessageFragment extends Fragment {
 			adjustedGB = "Unlimited";
 		}
 
-		// Test Query
-		ParseQuery<ParseObject> query = ParseQuery.getQuery("Postpaid");
-		query.whereContains("Carrier", "T-Mobile");
-		query.whereContains("Name", phones + " Lines");
-		query.whereContains("DataFinder", "A" + adjustedGB + "GB");
-		query.findInBackground(new FindCallback<ParseObject>() {
+		// init tmo search
+		final ParseQuery<ParseObject> queryTmo = ParseQuery
+				.getQuery("Postpaid");
+		queryTmo.whereContains("Carrier", "T-Mobile");
+		queryTmo.whereContains("Name", phones + " Lines");
+		queryTmo.whereContains("DataFinder", "A" + adjustedGB + "GB");
+		queryTmo.findInBackground(new FindCallback<ParseObject>() {
 			public void done(List<ParseObject> PlanList, ParseException e) {
 
 				if (e == null) {
 
-					int plan = Integer.parseInt(PlanList.get(0).getString(
-							"PlanCost"));
-					int smart = Integer.parseInt(PlanList.get(0).getString(
-							"SmartPrice"));
-
 					final TextView tmoplan = (TextView) rootView
 							.findViewById(R.id.tmoplan);
-
-					tmoplan.setText(PlanList.get(0).getString("Name"));
-
 					final TextView tmo = (TextView) rootView
 							.findViewById(R.id.tmo_total);
 
+					final int plan = Integer.parseInt(PlanList.get(0)
+							.getString("PlanCost"));
+					final int smart = Integer.parseInt(PlanList.get(0)
+							.getString("SmartPrice"));
+
+					tmoplan.setText(PlanList.get(0).getString("Name"));
+
 					double dis = 1 - (discount / 100);
-					int tax = (int) Math
+					final int tax = (int) Math
 							.round((((smart * dis) + plan) * .16) * 100) / 100;
 					dis = Math.round(smart - (smart * dis));
 
 					tmo.setText("$" + Math.round(smart + plan + tax - dis));
-					tmo.setTypeface(null, Typeface.BOLD);
 
-					final long delayInMillis = 250;
 					final Timer timer = new Timer();
 					timer.schedule(new TimerTask() {
 						@Override
 						public void run() {
 							progress.dismiss();
 						}
-					}, delayInMillis);
+					}, 200);
 				} else {
 				}
 			}
 		});
 	}
+
 }

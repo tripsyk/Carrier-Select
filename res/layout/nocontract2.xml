@@ -1,1356 +1,1361 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/border" >
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/titlespace"
         android:gravity="center"
         android:orientation="vertical" >
 
+        <TextView
+            android:id="@+id/nocontract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/nocontracttitle"
+            android:text="@string/nocontracttitle"
+            android:textColor="@color/txt"
+            android:textSize="@dimen/title_dimens" />
+
+        <TextView
+            android:id="@+id/ncsubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/nc2subtitle"
+            android:text="@string/nc2subtitle"
+            android:textColor="@color/txt"
+            android:textSize="@dimen/subtitle_dimens" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/nc2information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/elmtspace"
+        android:gravity="center"
+        android:hint="@string/infosec"
+        android:text="@string/infosec"
+        android:textColor="@color/txt"
+        android:textSize="@dimen/subtitle_dimens"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="100dip"
+        android:layout_height="12dip"
+        android:layout_gravity="center"
+        android:background="@drawable/lineblue"
+        android:gravity="center"
+        android:hint=""
+        android:text="" />
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nc2carriercard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginLeft="@dimen/cardmarg"
+        android:layout_marginRight="@dimen/cardmarg"
+        android:layout_marginTop="@dimen/cardmarg"
+        android:gravity="center"
+        card_view:cardBackgroundColor="@color/white_color"
+        card_view:cardCornerRadius="@dimen/cardcorner"
+        card_view:cardElevation="@dimen/card_elevation"
+        card_view:contentPadding="@dimen/cardpad" >
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/titlespace"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/nocontract"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:hint="@string/nocontracttitle"
-                android:text="@string/nocontracttitle"
-                android:textColor="@color/txt"
-                android:textSize="@dimen/title_dimens" />
-
-            <TextView
-                android:id="@+id/ncsubtitle"
+                android:id="@+id/nc2carriertitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:hint="@string/nc2subtitle"
-                android:text="@string/nc2subtitle"
-                android:textColor="@color/txt"
-                android:textSize="@dimen/subtitle_dimens" />
-        </LinearLayout>
+                android:hint="@string/nc2carriertitle"
+                android:text="@string/nc2carriertitle"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/nc2information"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/elmtspace"
-            android:gravity="center"
-            android:hint="@string/infosec"
-            android:text="@string/infosec"
-            android:textColor="@color/txt"
-            android:textSize="@dimen/subtitle_dimens"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="100dip"
-            android:layout_height="12dip"
-            android:layout_gravity="center"
-            android:background="@drawable/lineblue"
-            android:gravity="center"
-            android:hint=""
-            android:text="" />
-
-        <TextView
-            android:id="@+id/ncwarning"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/contentspace"
-            android:gravity="center"
-            android:hint="@string/planwarning"
-            android:text="@string/planwarning"
-            android:textSize="@dimen/body" />
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/nc2carriercard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/cardmarg"
-            android:layout_marginLeft="@dimen/cardmarg"
-            android:layout_marginRight="@dimen/cardmarg"
-            android:layout_marginTop="@dimen/cardmarg"
-            android:gravity="center"
-            card_view:cardBackgroundColor="@color/white_color"
-            card_view:cardCornerRadius="@dimen/cardcorner"
-            card_view:cardElevation="@dimen/card_elevation"
-            card_view:contentPadding="@dimen/cardpad" >
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/nc2carrierpre"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dip"
                 android:gravity="center"
-                android:orientation="vertical" >
+                android:hint="@string/nc2carrier"
+                android:text="@string/nc2carrier"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/nc2carrier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body" />
+
+            <TextView
+                android:id="@+id/nc2networkpre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/nc2network"
+                android:text="@string/nc2network"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/nc2network"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body" />
+
+            <TextView
+                android:id="@+id/nc2towerspre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/nc2towers"
+                android:text="@string/nc2towers"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/nc2towers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body" />
+
+            <TextView
+                android:id="@+id/nc2bandspre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/nc2bands"
+                android:text="@string/nc2bands"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/nc2bands"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/nc2planssec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/topbotpad"
+        android:gravity="center"
+        android:hint="@string/plansec"
+        android:text="@string/plansec"
+        android:textColor="@color/txt"
+        android:textSize="@dimen/subtitle_dimens"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="100dip"
+        android:layout_height="12dip"
+        android:layout_gravity="center"
+        android:background="@drawable/lineblue"
+        android:gravity="center"
+        android:hint=""
+        android:text="" />
+
+    <TextView
+        android:id="@+id/ncwarning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/contentspace"
+        android:gravity="center"
+        android:hint="@string/planwarning"
+        android:text="@string/planwarning"
+        android:textSize="@dimen/body" />
+
+    <TextView
+        android:id="@+id/ncother"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="@string/blankstring"
+        android:text="@string/blankstring"
+        android:textSize="@dimen/body" />
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nc21card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginLeft="@dimen/cardmarg"
+        android:layout_marginRight="@dimen/cardmarg"
+        android:layout_marginTop="@dimen/cardgut"
+        android:gravity="center"
+        card_view:cardBackgroundColor="@color/white_color"
+        card_view:cardCornerRadius="@dimen/cardcorner"
+        card_view:cardElevation="@dimen/card_elevation"
+        card_view:contentPadding="@dimen/cardpad" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/nc21title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/nc21sbbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip" >
 
                 <TextView
-                    android:id="@+id/nc2carriertitle"
+                    android:id="@+id/nc21sbpre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/nc2carriertitle"
-                    android:text="@string/nc2carriertitle"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/nc2carrierpre"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dip"
-                    android:hint="@string/nc2carrier"
-                    android:text="@string/nc2carrier"
-                    android:textColor="@color/txt"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/nc2carrier"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
+                    android:hint="@string/planphone"
+                    android:text="@string/planphone"
                     android:textColor="@color/txt"
                     android:textSize="@dimen/body" />
 
                 <TextView
-                    android:id="@+id/nc2networkpre"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/nc2network"
-                    android:text="@string/nc2network"
-                    android:textColor="@color/txt"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/nc2network"
+                    android:id="@+id/nc21sb"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
-                    android:textColor="@color/txt"
-                    android:textSize="@dimen/body" />
-
-                <TextView
-                    android:id="@+id/nc2towerspre"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/nc2towers"
-                    android:text="@string/nc2towers"
-                    android:textColor="@color/txt"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/nc2towers"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
-                    android:textColor="@color/txt"
-                    android:textSize="@dimen/body" />
-
-                <TextView
-                    android:id="@+id/nc2bandspre"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/nc2bands"
-                    android:text="@string/nc2bands"
-                    android:textColor="@color/txt"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/nc2bands"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:gravity="end"
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/txt"
                     android:textSize="@dimen/body" />
             </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <TextView
-            android:id="@+id/nc2planssec"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/topbotpad"
-            android:gravity="center"
-            android:hint="@string/plansec"
-            android:text="@string/plansec"
-            android:textColor="@color/txt"
-            android:textSize="@dimen/subtitle_dimens"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="100dip"
-            android:layout_height="12dip"
-            android:layout_gravity="center"
-            android:background="@drawable/lineblue"
-            android:gravity="center"
-            android:hint=""
-            android:text="" />
-
-        <TextView
-            android:id="@+id/ncother"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/contentspace"
-            android:gravity="center"
-            android:hint="@string/blankstring"
-            android:text="@string/blankstring"
-            android:textSize="@dimen/body" />
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/nc21card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/cardmarg"
-            android:layout_marginLeft="@dimen/cardmarg"
-            android:layout_marginRight="@dimen/cardmarg"
-            android:layout_marginTop="@dimen/cardgut"
-            android:gravity="center"
-            card_view:cardBackgroundColor="@color/white_color"
-            card_view:cardCornerRadius="@dimen/cardcorner"
-            card_view:cardElevation="@dimen/card_elevation"
-            card_view:contentPadding="@dimen/cardpad" >
 
             <LinearLayout
+                android:id="@+id/nc21minbox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/nc21title"
+                    android:id="@+id/nc21minpre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:hint="@string/planmins"
+                    android:text="@string/planmins"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc21min"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/txt"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:id="@+id/nc21sbbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dip" >
-
-                    <TextView
-                        android:id="@+id/nc21sbpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planphone"
-                        android:text="@string/planphone"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc21sb"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc21minbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc21minpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planmins"
-                        android:text="@string/planmins"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc21min"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc21textbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc21textpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/plantext"
-                        android:text="@string/plantext"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc21text"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc21databox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc21datapre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/plandata"
-                        android:text="@string/plandata"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc21data"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc21throttlebox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc21throttlepre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planthrottle"
-                        android:text="@string/planthrottle"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc21throttle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
+                    android:textSize="@dimen/body" />
             </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/nc22card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/cardmarg"
-            android:layout_marginLeft="@dimen/cardmarg"
-            android:layout_marginRight="@dimen/cardmarg"
-            android:layout_marginTop="@dimen/cardgut"
-            android:gravity="center"
-            card_view:cardBackgroundColor="@color/white_color"
-            card_view:cardCornerRadius="@dimen/cardcorner"
-            card_view:cardElevation="@dimen/card_elevation"
-            card_view:contentPadding="@dimen/cardpad" >
 
             <LinearLayout
+                android:id="@+id/nc21textbox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/nc22title"
+                    android:id="@+id/nc21textpre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:hint="@string/plantext"
+                    android:text="@string/plantext"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc21text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/txt"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:id="@+id/nc22sbbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dip" >
-
-                    <TextView
-                        android:id="@+id/nc22sbpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planphone"
-                        android:text="@string/planphone"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc22sb"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc22minbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc22minpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planmins"
-                        android:text="@string/planmins"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc22min"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc22textbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc22textpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/plantext"
-                        android:text="@string/plantext"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc22text"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc22databox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc22datapre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/plandata"
-                        android:text="@string/plandata"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc22data"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc22throttlebox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc22throttlepre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planthrottle"
-                        android:text="@string/planthrottle"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc22throttle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
+                    android:textSize="@dimen/body" />
             </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/nc23card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/cardmarg"
-            android:layout_marginLeft="@dimen/cardmarg"
-            android:layout_marginRight="@dimen/cardmarg"
-            android:layout_marginTop="@dimen/cardgut"
-            android:gravity="center"
-            card_view:cardBackgroundColor="@color/white_color"
-            card_view:cardCornerRadius="@dimen/cardcorner"
-            card_view:cardElevation="@dimen/card_elevation"
-            card_view:contentPadding="@dimen/cardpad" >
 
             <LinearLayout
+                android:id="@+id/nc21databox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/nc23title"
+                    android:id="@+id/nc21datapre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:hint="@string/plandata"
+                    android:text="@string/plandata"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc21data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/txt"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:id="@+id/nc23sbbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dip" >
-
-                    <TextView
-                        android:id="@+id/nc23sbpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planphone"
-                        android:text="@string/planphone"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc23sb"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc23minbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc23minpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planmins"
-                        android:text="@string/planmins"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc23min"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc23textbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc23textpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/plantext"
-                        android:text="@string/plantext"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc23text"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc23databox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc23datapre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/plandata"
-                        android:text="@string/plandata"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc23data"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc23throttlebox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc23throttlepre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planthrottle"
-                        android:text="@string/planthrottle"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc23throttle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
+                    android:textSize="@dimen/body" />
             </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/nc24card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/cardmarg"
-            android:layout_marginLeft="@dimen/cardmarg"
-            android:layout_marginRight="@dimen/cardmarg"
-            android:layout_marginTop="@dimen/cardgut"
-            android:gravity="center"
-            card_view:cardBackgroundColor="@color/white_color"
-            card_view:cardCornerRadius="@dimen/cardcorner"
-            card_view:cardElevation="@dimen/card_elevation"
-            card_view:contentPadding="@dimen/cardpad" >
 
             <LinearLayout
+                android:id="@+id/nc21throttlebox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/nc24title"
+                    android:id="@+id/nc21throttlepre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:hint="@string/planthrottle"
+                    android:text="@string/planthrottle"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc21throttle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/txt"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:id="@+id/nc24sbbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dip" >
-
-                    <TextView
-                        android:id="@+id/nc24sbpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planphone"
-                        android:text="@string/planphone"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc24sb"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc24minbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc24minpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planmins"
-                        android:text="@string/planmins"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc24min"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc24textbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc24textpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/plantext"
-                        android:text="@string/plantext"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc24text"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc24databox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc24datapre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/plandata"
-                        android:text="@string/plandata"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc24data"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc24throttlebox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc24throttlepre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planthrottle"
-                        android:text="@string/planthrottle"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc24throttle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
+                    android:textSize="@dimen/body" />
             </LinearLayout>
-        </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/nc25card"
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nc22card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginLeft="@dimen/cardmarg"
+        android:layout_marginRight="@dimen/cardmarg"
+        android:layout_marginTop="@dimen/cardgut"
+        android:gravity="center"
+        card_view:cardBackgroundColor="@color/white_color"
+        card_view:cardCornerRadius="@dimen/cardcorner"
+        card_view:cardElevation="@dimen/card_elevation"
+        card_view:contentPadding="@dimen/cardpad" >
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/cardmarg"
-            android:layout_marginLeft="@dimen/cardmarg"
-            android:layout_marginRight="@dimen/cardmarg"
-            android:layout_marginTop="@dimen/cardgut"
-            android:gravity="center"
-            card_view:cardBackgroundColor="@color/white_color"
-            card_view:cardCornerRadius="@dimen/cardcorner"
-            card_view:cardElevation="@dimen/card_elevation"
-            card_view:contentPadding="@dimen/cardpad" >
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/nc22title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
 
             <LinearLayout
+                android:id="@+id/nc22sbbox"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_marginTop="8dip" >
 
                 <TextView
-                    android:id="@+id/nc25title"
+                    android:id="@+id/nc22sbpre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:hint="@string/planphone"
+                    android:text="@string/planphone"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc22sb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/txt"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:id="@+id/nc25sbbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dip" >
-
-                    <TextView
-                        android:id="@+id/nc25sbpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planphone"
-                        android:text="@string/planphone"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc25sb"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc25minbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc25minpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planmins"
-                        android:text="@string/planmins"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc25min"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc25textbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc25textpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/plantext"
-                        android:text="@string/plantext"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc25text"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc25databox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc25datapre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/plandata"
-                        android:text="@string/plandata"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc25data"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc25throttlebox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc25throttlepre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planthrottle"
-                        android:text="@string/planthrottle"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc25throttle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
+                    android:textSize="@dimen/body" />
             </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/nc26card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/cardmarg"
-            android:layout_marginLeft="@dimen/cardmarg"
-            android:layout_marginRight="@dimen/cardmarg"
-            android:layout_marginTop="@dimen/cardgut"
-            android:gravity="center"
-            card_view:cardBackgroundColor="@color/white_color"
-            card_view:cardCornerRadius="@dimen/cardcorner"
-            card_view:cardElevation="@dimen/card_elevation"
-            card_view:contentPadding="@dimen/cardpad" >
 
             <LinearLayout
+                android:id="@+id/nc22minbox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/nc26title"
+                    android:id="@+id/nc22minpre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:hint="@string/planmins"
+                    android:text="@string/planmins"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc22min"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/txt"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:id="@+id/nc26sbbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dip" >
-
-                    <TextView
-                        android:id="@+id/nc26sbpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planphone"
-                        android:text="@string/planphone"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc26sb"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc26minbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc26minpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planmins"
-                        android:text="@string/planmins"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc26min"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc26textbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc26textpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/plantext"
-                        android:text="@string/plantext"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc26text"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc26databox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc26datapre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/plandata"
-                        android:text="@string/plandata"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc26data"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc26throttlebox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc26throttlepre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planthrottle"
-                        android:text="@string/planthrottle"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc26throttle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
+                    android:textSize="@dimen/body" />
             </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/nc27card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/cardmarg"
-            android:layout_marginLeft="@dimen/cardmarg"
-            android:layout_marginRight="@dimen/cardmarg"
-            android:layout_marginTop="@dimen/cardgut"
-            android:gravity="center"
-            card_view:cardBackgroundColor="@color/white_color"
-            card_view:cardCornerRadius="@dimen/cardcorner"
-            card_view:cardElevation="@dimen/card_elevation"
-            card_view:contentPadding="@dimen/cardpad" >
 
             <LinearLayout
+                android:id="@+id/nc22textbox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/nc27title"
+                    android:id="@+id/nc22textpre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:hint="@string/plantext"
+                    android:text="@string/plantext"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc22text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textColor="@color/txt"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/nc27sbbox"
+            <LinearLayout
+                android:id="@+id/nc22databox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc22datapre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/plandata"
+                    android:text="@string/plandata"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc22data"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dip" >
-
-                    <TextView
-                        android:id="@+id/nc27sbpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planphone"
-                        android:text="@string/planphone"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc27sb"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc27minbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc27minpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planmins"
-                        android:text="@string/planmins"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc27min"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc27textbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc27textpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/plantext"
-                        android:text="@string/plantext"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc27text"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc27databox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc27datapre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/plandata"
-                        android:text="@string/plandata"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc27data"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/nc27throttlebox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/nc27throttlepre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/planthrottle"
-                        android:text="@string/planthrottle"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/nc27throttle"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textColor="@color/txt"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
             </LinearLayout>
-        </android.support.v7.widget.CardView>
 
-        <com.applovin.adview.AppLovinAdView
-            xmlns:applovin="http://schemas.applovin.com/android/1.0"
-            android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/nc22throttlebox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc22throttlepre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/planthrottle"
+                    android:text="@string/planthrottle"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc22throttle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nc23card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginLeft="@dimen/cardmarg"
+        android:layout_marginRight="@dimen/cardmarg"
+        android:layout_marginTop="@dimen/cardgut"
+        android:gravity="center"
+        card_view:cardBackgroundColor="@color/white_color"
+        card_view:cardCornerRadius="@dimen/cardcorner"
+        card_view:cardElevation="@dimen/card_elevation"
+        card_view:contentPadding="@dimen/cardpad" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dip"
-            applovin:loadAdOnCreate="true" />
-    </LinearLayout>
+            android:orientation="vertical" >
 
-</ScrollView>
+            <TextView
+                android:id="@+id/nc23title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/nc23sbbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip" >
+
+                <TextView
+                    android:id="@+id/nc23sbpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/planphone"
+                    android:text="@string/planphone"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc23sb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc23minbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc23minpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/planmins"
+                    android:text="@string/planmins"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc23min"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc23textbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc23textpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/plantext"
+                    android:text="@string/plantext"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc23text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc23databox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc23datapre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/plandata"
+                    android:text="@string/plandata"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc23data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc23throttlebox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc23throttlepre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/planthrottle"
+                    android:text="@string/planthrottle"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc23throttle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nc24card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginLeft="@dimen/cardmarg"
+        android:layout_marginRight="@dimen/cardmarg"
+        android:layout_marginTop="@dimen/cardgut"
+        android:gravity="center"
+        card_view:cardBackgroundColor="@color/white_color"
+        card_view:cardCornerRadius="@dimen/cardcorner"
+        card_view:cardElevation="@dimen/card_elevation"
+        card_view:contentPadding="@dimen/cardpad" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/nc24title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/nc24sbbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip" >
+
+                <TextView
+                    android:id="@+id/nc24sbpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/planphone"
+                    android:text="@string/planphone"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc24sb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc24minbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc24minpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/planmins"
+                    android:text="@string/planmins"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc24min"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc24textbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc24textpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/plantext"
+                    android:text="@string/plantext"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc24text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc24databox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc24datapre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/plandata"
+                    android:text="@string/plandata"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc24data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc24throttlebox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc24throttlepre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/planthrottle"
+                    android:text="@string/planthrottle"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc24throttle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nc25card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginLeft="@dimen/cardmarg"
+        android:layout_marginRight="@dimen/cardmarg"
+        android:layout_marginTop="@dimen/cardgut"
+        android:gravity="center"
+        card_view:cardBackgroundColor="@color/white_color"
+        card_view:cardCornerRadius="@dimen/cardcorner"
+        card_view:cardElevation="@dimen/card_elevation"
+        card_view:contentPadding="@dimen/cardpad" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/nc25title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/nc25sbbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip" >
+
+                <TextView
+                    android:id="@+id/nc25sbpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/planphone"
+                    android:text="@string/planphone"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc25sb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc25minbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc25minpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/planmins"
+                    android:text="@string/planmins"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc25min"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc25textbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc25textpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/plantext"
+                    android:text="@string/plantext"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc25text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc25databox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc25datapre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/plandata"
+                    android:text="@string/plandata"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc25data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc25throttlebox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc25throttlepre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/planthrottle"
+                    android:text="@string/planthrottle"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc25throttle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nc26card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginLeft="@dimen/cardmarg"
+        android:layout_marginRight="@dimen/cardmarg"
+        android:layout_marginTop="@dimen/cardgut"
+        android:gravity="center"
+        card_view:cardBackgroundColor="@color/white_color"
+        card_view:cardCornerRadius="@dimen/cardcorner"
+        card_view:cardElevation="@dimen/card_elevation"
+        card_view:contentPadding="@dimen/cardpad" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/nc26title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/nc26sbbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip" >
+
+                <TextView
+                    android:id="@+id/nc26sbpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/planphone"
+                    android:text="@string/planphone"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc26sb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc26minbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc26minpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/planmins"
+                    android:text="@string/planmins"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc26min"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc26textbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc26textpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/plantext"
+                    android:text="@string/plantext"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc26text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc26databox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc26datapre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/plandata"
+                    android:text="@string/plandata"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc26data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc26throttlebox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc26throttlepre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/planthrottle"
+                    android:text="@string/planthrottle"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc26throttle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nc27card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginLeft="@dimen/cardmarg"
+        android:layout_marginRight="@dimen/cardmarg"
+        android:layout_marginTop="@dimen/cardgut"
+        android:gravity="center"
+        card_view:cardBackgroundColor="@color/white_color"
+        card_view:cardCornerRadius="@dimen/cardcorner"
+        card_view:cardElevation="@dimen/card_elevation"
+        card_view:contentPadding="@dimen/cardpad" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/nc27title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/nc27sbbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip" >
+
+                <TextView
+                    android:id="@+id/nc27sbpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/planphone"
+                    android:text="@string/planphone"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc27sb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc27minbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc27minpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/planmins"
+                    android:text="@string/planmins"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc27min"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc27textbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc27textpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/plantext"
+                    android:text="@string/plantext"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc27text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc27databox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc27datapre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/plandata"
+                    android:text="@string/plandata"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc27data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nc27throttlebox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/nc27throttlepre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/planthrottle"
+                    android:text="@string/planthrottle"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/nc27throttle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/txt"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <com.applovin.adview.AppLovinAdView
+        xmlns:applovin="http://schemas.applovin.com/android/1.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dip"
+        applovin:loadAdOnCreate="true" />
+
+</LinearLayout>

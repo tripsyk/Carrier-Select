@@ -5,7 +5,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import android.annotation.SuppressLint;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -28,13 +29,13 @@ public class PhoneSearch6 extends Fragment {
 
 	private String initial, compare;
 	private ProgressDialog progress;
-	private TextView phone1, phone1carrier, phone2, phone2carrier, release1,
-			os1, size1, thickness1, weight1, release2, os2, size2, thickness2,
-			weight2, display1, pixden1, reso1, display2, pixden2, reso2,
-			backcam1, frontcam1, video1, backcam2, frontcam2, video2, pc1,
-			ram1, storage1, battery1, microsd1, pc2, ram2, storage2, battery2,
-			microsd2, imagestab1, bt1, nfc1, infra1, nc1, wireless1, sensors1,
-			imagestab2, bt2, nfc2, infra2, nc2, wireless2, sensors2;
+	private TextView phone1, phone2, release1, os1, size1, thickness1, weight1,
+			release2, os2, size2, thickness2, weight2, display1, pixden1,
+			reso1, display2, pixden2, reso2, backcam1, frontcam1, video1,
+			backcam2, frontcam2, video2, pc1, ram1, storage1, battery1,
+			microsd1, pc2, ram2, storage2, battery2, microsd2, imagestab1, bt1,
+			nfc1, infra1, nc1, wireless1, sensors1, imagestab2, bt2, nfc2,
+			infra2, nc2, wireless2, sensors2;
 	private TextView t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13,
 			t14, t15, t16, t17, t18, t19, t20, t21, t22, t23;
 	private View rootView;
@@ -53,10 +54,8 @@ public class PhoneSearch6 extends Fragment {
 
 		phone1 = (TextView) rootView.findViewById(R.id.phone1);
 		phone1.setText(initial);
-		phone1carrier = (TextView) rootView.findViewById(R.id.phone1carrier);
 		phone2 = (TextView) rootView.findViewById(R.id.phone2);
 		phone2.setText(compare);
-		phone2carrier = (TextView) rootView.findViewById(R.id.phone2carrier);
 
 		// Load results TextViews
 		release1 = (TextView) rootView.findViewById(R.id.releasetext1);
@@ -170,7 +169,8 @@ public class PhoneSearch6 extends Fragment {
 	@SuppressLint("DefaultLocale")
 	public void grabInitial() {
 
-		progress = new ProgressDialog(getActivity());
+		progress = new ProgressDialog(getActivity(),
+				AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
 		progress.setTitle("Phone Search");
 		progress.setMessage("Just a sec...");
 		progress.setCancelable(false);
@@ -189,8 +189,6 @@ public class PhoneSearch6 extends Fragment {
 			public void done(List<ParseObject> PhoneList, ParseException e) {
 
 				if (e == null) {
-					phone1carrier.setText(PhoneList.get(0)
-							.getString("Carriers"));
 					release1.setText(PhoneList.get(0).getString("ReleaseDate"));
 					os1.setText(PhoneList.get(0).getString("OS"));
 					size1.setText(PhoneList.get(0).getString("Dimensions"));
@@ -268,9 +266,6 @@ public class PhoneSearch6 extends Fragment {
 
 				if (e == null) {
 
-					phone2carrier.setText(PhoneList.get(0)
-							.getString("Carriers"));
-
 					release2.setText(PhoneList.get(0).getString("ReleaseDate"));
 					os2.setText(PhoneList.get(0).getString("OS"));
 					size2.setText(PhoneList.get(0).getString("Dimensions"));
@@ -325,14 +320,13 @@ public class PhoneSearch6 extends Fragment {
 					}
 					sensors2.setText(PhoneList.get(0).getString("Sensors"));
 
-					final long delayInMillis = 250;
-					Timer timer = new Timer();
+					final Timer timer = new Timer();
 					timer.schedule(new TimerTask() {
 						@Override
 						public void run() {
 							progress.dismiss();
 						}
-					}, delayInMillis);
+					}, 200);
 				} else {
 				}
 			}

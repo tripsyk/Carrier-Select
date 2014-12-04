@@ -1,8 +1,7 @@
 package com.guardian.carrierselect;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -42,10 +41,11 @@ public class MyProfile extends Fragment {
 			public void onClick(View view) {
 
 				final Fragment fragment = new CarrierSelector();
-				final FragmentManager fm = getActivity().getFragmentManager();
-				final FragmentTransaction fragmenttran = fm.beginTransaction();
-				fragmenttran.setCustomAnimations(R.animator.right_in_off,
-						R.animator.left_in_off);
+				final FragmentTransaction fragmenttran = getActivity()
+						.getSupportFragmentManager().beginTransaction();
+				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+						R.anim.slide_out_left, R.anim.slide_in_left,
+						R.anim.slide_out_right);
 				fragmenttran.replace(R.id.fragment_container, fragment);
 				fragmenttran.addToBackStack(null);
 				fragmenttran.commit();

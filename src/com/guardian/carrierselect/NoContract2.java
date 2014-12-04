@@ -4,7 +4,8 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -53,7 +54,8 @@ public class NoContract2 extends Fragment {
 
 	public void grabPlans() {
 
-		progress = new ProgressDialog(getActivity());
+		progress = new ProgressDialog(getActivity(),
+				AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
 		progress.setTitle("Looking up plans");
 		progress.setMessage("Just a sec...");
 		progress.setCancelable(false);
@@ -63,6 +65,7 @@ public class NoContract2 extends Fragment {
 		ParseQuery<ParseObject> querypre = ParseQuery.getQuery("Prepaid");
 		querypre.orderByAscending("Price");
 		querypre.whereContains("Carrier", carrier);
+		querypre.whereEqualTo("SearchType", 0);
 		querypre.findInBackground(new FindCallback<ParseObject>() {
 			public void done(List<ParseObject> PlanList, ParseException e) {
 
@@ -175,11 +178,14 @@ public class NoContract2 extends Fragment {
 						.findViewById(R.id.nc2network);
 				final TextView towers = (TextView) rootView
 						.findViewById(R.id.nc2towers);
+				final TextView bands = (TextView) rootView
+						.findViewById(R.id.nc2bands);
 
 				if (e == null) {
 
 					network.setText(PlanList.get(0).getString("Network"));
 					towers.setText(PlanList.get(0).getString("Towers"));
+					bands.setText(PlanList.get(0).getString("Bands"));
 
 					if (PlanList.get(0).getString("Other") == null) {
 						other.setVisibility(View.GONE);
@@ -477,14 +483,13 @@ public class NoContract2 extends Fragment {
 								"Throttle"));
 					}
 
-					final long delayInMillis = 250;
 					Timer timer = new Timer();
 					timer.schedule(new TimerTask() {
 						@Override
 						public void run() {
 							progress.dismiss();
 						}
-					}, delayInMillis);
+					}, 200);
 
 				}
 			}

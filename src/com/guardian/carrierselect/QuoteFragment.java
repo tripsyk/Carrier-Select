@@ -1,7 +1,7 @@
 package com.guardian.carrierselect;
 
-import android.app.Fragment;
-import android.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,10 +17,7 @@ import android.widget.Toast;
 
 public class QuoteFragment extends Fragment {
 
-	private static final int hotspotCost = 0;
 	private static View rootView;
-	private static SeekBar seekBar;
-	private static TextView disValue;
 	private static int discount;;
 	private static boolean twoyear;
 
@@ -29,14 +26,19 @@ public class QuoteFragment extends Fragment {
 			Bundle savedInstanceState) {
 		rootView = inflater.inflate(R.layout.quote_layout, container, false);
 
+		// init animations for '-' and '+'
 		final Animation animScale = AnimationUtils.loadAnimation(
 				rootView.getContext(), R.anim.scale);
 		final Animation animScalet = AnimationUtils.loadAnimation(
 				rootView.getContext(), R.anim.scaleinput);
 
-		disValue = (TextView) rootView.findViewById(R.id.dis_value);
-		seekBar = (SeekBar) rootView.findViewById(R.id.discount_bar);
+		// init SeekBar and value TV
+		final TextView disValue = (TextView) rootView
+				.findViewById(R.id.dis_value);
+		final SeekBar discBar = (SeekBar) rootView
+				.findViewById(R.id.discount_bar);
 
+		// init TVs for retrieving values
 		final TextView eSmart = (TextView) rootView
 				.findViewById(R.id.sphone_input);
 		final TextView eBasic = (TextView) rootView
@@ -46,6 +48,8 @@ public class QuoteFragment extends Fragment {
 		final TextView eTab = (TextView) rootView.findViewById(R.id.tab_input);
 		final TextView eMifi = (TextView) rootView
 				.findViewById(R.id.mifi_input);
+
+		// init buttons for - and +
 		final Button sphonem = (Button) rootView.findViewById(R.id.sphone_m);
 		final Button sphonep = (Button) rootView.findViewById(R.id.sphone_p);
 		final Button bphonem = (Button) rootView.findViewById(R.id.bphone_m);
@@ -58,7 +62,7 @@ public class QuoteFragment extends Fragment {
 		final Button mifip = (Button) rootView.findViewById(R.id.mifi_p);
 		final Button send = (Button) rootView.findViewById(R.id.button_send);
 
-		seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+		discBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
 			public void onStopTrackingTouch(SeekBar bar) {
 
@@ -75,15 +79,14 @@ public class QuoteFragment extends Fragment {
 			}
 		});
 
+		// user hits next
 		send.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View arg0) {
 
-				final int smart = Integer.valueOf(eSmart.getText().toString());
-				final int basic = Integer.valueOf(eBasic.getText().toString());
-
-				if ((smart + basic) == 0) {
+				if (Integer.valueOf(eSmart.getText().toString())
+						+ Integer.valueOf(eBasic.getText().toString()) == 0) {
 					Toast.makeText(rootView.getContext(),
 							"You must have at least 1 phone on a plan.",
 							Toast.LENGTH_SHORT).show();
@@ -93,6 +96,7 @@ public class QuoteFragment extends Fragment {
 			}
 		});
 
+		// -1 smartphone
 		sphonem.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -112,9 +116,8 @@ public class QuoteFragment extends Fragment {
 
 			@Override
 			public void onClick(View arg0) {
-				final int number = Integer
-						.parseInt(eSmart.getText().toString());
-				eSmart.setText(String.valueOf(number + 1));
+				eSmart.setText(String.valueOf(Integer.parseInt(eSmart.getText()
+						.toString()) + 1));
 				arg0.startAnimation(animScale);
 				eSmart.startAnimation(animScalet);
 			}
@@ -140,9 +143,8 @@ public class QuoteFragment extends Fragment {
 
 			@Override
 			public void onClick(View arg0) {
-				final int number = Integer
-						.parseInt(eBasic.getText().toString());
-				eBasic.setText(String.valueOf(number + 1));
+				eBasic.setText(String.valueOf(Integer.parseInt(eBasic.getText()
+						.toString()) + 1));
 				arg0.startAnimation(animScale);
 				eBasic.startAnimation(animScalet);
 			}
@@ -167,8 +169,8 @@ public class QuoteFragment extends Fragment {
 
 			@Override
 			public void onClick(View arg0) {
-				final int number = Integer.parseInt(eData.getText().toString());
-				eData.setText(String.valueOf(number + 1));
+				eData.setText(String.valueOf(Integer.parseInt(eData.getText()
+						.toString()) + 1));
 				arg0.startAnimation(animScale);
 				eData.startAnimation(animScalet);
 			}
@@ -193,8 +195,8 @@ public class QuoteFragment extends Fragment {
 
 			@Override
 			public void onClick(View arg0) {
-				final int number = Integer.parseInt(eTab.getText().toString());
-				eTab.setText(String.valueOf(number + 1));
+				eTab.setText(String.valueOf(Integer.parseInt(eTab.getText()
+						.toString() + 1)));
 				arg0.startAnimation(animScale);
 				eTab.startAnimation(animScalet);
 			}
@@ -207,7 +209,8 @@ public class QuoteFragment extends Fragment {
 			public void onClick(View arg0) {
 				final int number = Integer.parseInt(eMifi.getText().toString());
 				if (number > 0) {
-					eMifi.setText(String.valueOf(number - 1));
+					eMifi.setText(String.valueOf(Integer.parseInt(eMifi
+							.getText().toString()) - 1));
 				}
 				arg0.startAnimation(animScale);
 				eMifi.startAnimation(animScalet);
@@ -219,8 +222,8 @@ public class QuoteFragment extends Fragment {
 
 			@Override
 			public void onClick(View arg0) {
-				final int number = Integer.parseInt(eMifi.getText().toString());
-				eMifi.setText(String.valueOf(number + 1));
+				eMifi.setText(String.valueOf(Integer.parseInt(eMifi.getText()
+						.toString()) + 1));
 				arg0.startAnimation(animScale);
 				eMifi.startAnimation(animScalet);
 			}
@@ -232,14 +235,16 @@ public class QuoteFragment extends Fragment {
 
 	private void next() {
 
-		// getCheckBoxes();
-		final CheckBox checkBox = (CheckBox) rootView.findViewById(R.id.twoyear);
+		// assign twoyear boolean
+		final CheckBox checkBox = (CheckBox) rootView
+				.findViewById(R.id.twoyear);
 		if (checkBox.isChecked()) {
 			twoyear = true;
 		} else {
 			twoyear = false;
 		}
 
+		// retrieve final values from user input
 		final TextView eSmart = (TextView) rootView
 				.findViewById(R.id.sphone_input);
 		final TextView eBasic = (TextView) rootView
@@ -250,9 +255,12 @@ public class QuoteFragment extends Fragment {
 		final TextView eMifi = (TextView) rootView
 				.findViewById(R.id.mifi_input);
 
-		final FragmentTransaction ft = getActivity().getFragmentManager()
-				.beginTransaction();
-		ft.setCustomAnimations(R.animator.right_in_off, R.animator.left_in_off);
+		// begin fragment trans
+		final FragmentTransaction ft = getActivity()
+				.getSupportFragmentManager().beginTransaction();
+		ft.setCustomAnimations(R.anim.slide_in_right,
+				R.anim.slide_out_left, R.anim.slide_in_left,
+				R.anim.slide_out_right);
 		ft.replace(
 				R.id.fragment_container,
 				DisplayMessageFragment.create(twoyear,

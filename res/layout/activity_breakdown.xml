@@ -1,1009 +1,994 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/border" >
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
 
     <LinearLayout
-        android:id="@+id/breakdownlayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/titlespace"
         android:gravity="center"
         android:orientation="vertical" >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/titlespace"
+        <TextView
+            android:id="@+id/contract_plans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:gravity="center"
+            android:hint="@string/sp3title"
+            android:text="@string/sp3title"
+            android:textSize="@dimen/title_dimens" />
+
+        <TextView
+            android:id="@+id/contract_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/sp3sub"
+            android:text="@string/sp3sub"
+            android:textSize="@dimen/subtitle_dimens" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/equipnotice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/instruction"
+        android:gravity="center"
+        android:hint="@string/equipnotice"
+        android:text="@string/equipnotice"
+        android:textSize="@dimen/caption" />
+
+    <TextView
+        android:id="@+id/tmonotice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:hint="@string/tmonotice"
+        android:text="@string/tmonotice"
+        android:textSize="@dimen/caption" />
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/breakdowncard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginLeft="@dimen/cardmarg"
+        android:layout_marginRight="@dimen/cardmarg"
+        android:layout_marginTop="@dimen/topcard"
+        android:gravity="center"
+        card_view:cardBackgroundColor="@color/white_color"
+        card_view:cardCornerRadius="@dimen/cardcorner"
+        card_view:cardElevation="@dimen/card_elevation"
+        card_view:contentPadding="@dimen/cardpad" >
+
+        <LinearLayout
+            android:id="@+id/attplanbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical" >
 
             <TextView
-                android:id="@+id/contract_plans"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:hint="@string/sp3title"
-                android:text="@string/sp3title"
-                android:textSize="@dimen/title_dimens" />
-
-            <TextView
-                android:id="@+id/contract_sub"
+                android:id="@+id/att_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:hint="@string/sp3sub"
-                android:text="@string/sp3sub"
-                android:textSize="@dimen/subtitle_dimens" />
+                android:hint="@string/att_breakdowntitle"
+                android:text="@string/att_breakdowntitle"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/attname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textSize="@dimen/body" />
+
+            <LinearLayout
+                android:id="@+id/attplanboxx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/btnspace" >
+
+                <TextView
+                    android:id="@+id/attplanpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/plancost"
+                    android:text="@string/plancost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/attplan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/attsmartbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/attsmartpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/smartcost"
+                    android:text="@string/smartcost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/attsmart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/attbasicbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/attbasicpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/basiccost"
+                    android:text="@string/basiccost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/attbasic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/atttabletbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/atttabletpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/tabletcost"
+                    android:text="@string/tabletcost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/atttablet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/attmifibox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/attmifipre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hotspotcost"
+                    android:text="@string/hotspotcost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/attmifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/atttaxbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/atttaxpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/taxescost"
+                    android:text="@string/taxescost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/atttax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/attdiscountbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/attdiscountpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/discountcost"
+                    android:text="@string/discountcost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/attdiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/lineblue"
+                android:gravity="center"
+                android:hint=""
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/atttotalbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/atttotalpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/total"
+                    android:text="@string/total"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/atttotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
         </LinearLayout>
+    </android.support.v7.widget.CardView>
 
-        <TextView
-            android:id="@+id/equipnotice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/instruction"
-            android:gravity="center"
-            android:hint="@string/equipnotice"
-            android:text="@string/equipnotice"
-            android:textSize="@dimen/caption" />
+    <Button
+        android:id="@+id/gotoatt"
+        android:layout_width="@dimen/btnw"
+        android:layout_height="@dimen/btnh"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/btnspace"
+        android:gravity="center"
+        android:hint="@string/viewplan"
+        android:text="@string/viewplan" />
 
-        <TextView
-            android:id="@+id/tmonotice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:hint="@string/tmonotice"
-            android:text="@string/tmonotice"
-            android:textSize="@dimen/caption" />
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/vercard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginLeft="@dimen/cardmarg"
+        android:layout_marginRight="@dimen/cardmarg"
+        android:layout_marginTop="@dimen/topbotpad"
+        android:gravity="center"
+        card_view:cardBackgroundColor="@color/white_color"
+        card_view:cardCornerRadius="@dimen/cardcorner"
+        card_view:cardElevation="@dimen/card_elevation"
+        card_view:contentPadding="@dimen/cardpad" >
 
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/breakdowncard"
+        <LinearLayout
+            android:id="@+id/verplanbox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/cardmarg"
-            android:layout_marginLeft="@dimen/cardmarg"
-            android:layout_marginRight="@dimen/cardmarg"
-            android:layout_marginTop="@dimen/topcard"
-            android:gravity="center"
-            card_view:cardBackgroundColor="@color/white_color"
-            card_view:cardCornerRadius="@dimen/cardcorner"
-            card_view:cardElevation="@dimen/card_elevation"
-            card_view:contentPadding="@dimen/cardpad" >
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/ver_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/ver_breakdowntitle"
+                android:text="@string/ver_breakdowntitle"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/vername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textSize="@dimen/body" />
 
             <LinearLayout
-                android:id="@+id/attplanbox"
+                android:id="@+id/verplanboxx"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_marginTop="@dimen/btnspace" >
 
                 <TextView
-                    android:id="@+id/att_title"
+                    android:id="@+id/verplanpre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/att_breakdowntitle"
-                    android:text="@string/att_breakdowntitle"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
+                    android:hint="@string/plancost"
+                    android:text="@string/plancost"
+                    android:textSize="@dimen/body" />
 
                 <TextView
-                    android:id="@+id/attname"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/verplan"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:gravity="end"
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textSize="@dimen/body" />
-
-                <LinearLayout
-                    android:id="@+id/attplanboxx"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/btnspace" >
-
-                    <TextView
-                        android:id="@+id/attplanpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/plancost"
-                        android:text="@string/plancost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/attplan"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/attsmartbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/attsmartpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/smartcost"
-                        android:text="@string/smartcost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/attsmart"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/attbasicbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/attbasicpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/basiccost"
-                        android:text="@string/basiccost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/attbasic"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/atttabletbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/atttabletpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/tabletcost"
-                        android:text="@string/tabletcost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/atttablet"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/attmifibox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/attmifipre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/hotspotcost"
-                        android:text="@string/hotspotcost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/attmifi"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/atttaxbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/atttaxpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/taxescost"
-                        android:text="@string/taxescost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/atttax"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/attdiscountbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/attdiscountpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/discountcost"
-                        android:text="@string/discountcost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/attdiscount"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/line1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/lineblue"
-                    android:gravity="center"
-                    android:hint=""
-                    android:text="" />
-
-                <LinearLayout
-                    android:id="@+id/atttotalbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/atttotalpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/total"
-                        android:text="@string/total"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/atttotal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
             </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <Button
-            android:id="@+id/gotoatt"
-            android:layout_width="@dimen/btnw"
-            android:layout_height="@dimen/btnh"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/btnspace"
-            android:background="@color/accent"
-            android:gravity="center"
-            android:hint="@string/viewplan"
-            android:text="@string/viewplan"
-            android:textColor="@color/white_color" />
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/vercard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/cardmarg"
-            android:layout_marginLeft="@dimen/cardmarg"
-            android:layout_marginRight="@dimen/cardmarg"
-            android:layout_marginTop="@dimen/topbotpad"
-            android:gravity="center"
-            card_view:cardBackgroundColor="@color/white_color"
-            card_view:cardCornerRadius="@dimen/cardcorner"
-            card_view:cardElevation="@dimen/card_elevation"
-            card_view:contentPadding="@dimen/cardpad" >
 
             <LinearLayout
-                android:id="@+id/verplanbox"
+                android:id="@+id/versmartbox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/ver_title"
+                    android:id="@+id/versmartpre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/ver_breakdowntitle"
-                    android:text="@string/ver_breakdowntitle"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
+                    android:hint="@string/smartcost"
+                    android:text="@string/smartcost"
+                    android:textSize="@dimen/body" />
 
                 <TextView
-                    android:id="@+id/vername"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/versmart"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:gravity="end"
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textSize="@dimen/body" />
-
-                <LinearLayout
-                    android:id="@+id/verplanboxx"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/btnspace" >
-
-                    <TextView
-                        android:id="@+id/verplanpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/plancost"
-                        android:text="@string/plancost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/verplan"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/versmartbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/versmartpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/smartcost"
-                        android:text="@string/smartcost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/versmart"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/verbasicbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/verbasicpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/basiccost"
-                        android:text="@string/basiccost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/verbasic"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/vertabletbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/vertabletpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/tabletcost"
-                        android:text="@string/tabletcost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/vertablet"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/vermifibox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/vermifipre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/hotspotcost"
-                        android:text="@string/hotspotcost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/vermifi"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/vertaxbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/vertaxpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/taxescost"
-                        android:text="@string/taxescost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/vertax"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/verdiscountbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/verdiscountpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/discountcost"
-                        android:text="@string/discountcost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/verdiscount"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/line2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/lineblue"
-                    android:gravity="center"
-                    android:hint=""
-                    android:text="" />
-
-                <LinearLayout
-                    android:id="@+id/vertotalbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/vertotalpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/total"
-                        android:text="@string/total"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/vertotal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
             </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <Button
-            android:id="@+id/gotover"
-            android:layout_width="@dimen/btnw"
-            android:layout_height="@dimen/btnh"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/btnspace"
-            android:background="@color/accent"
-            android:gravity="center"
-            android:hint="@string/viewplan"
-            android:text="@string/viewplan"
-            android:textColor="@color/white_color" />
-
-        <com.applovin.adview.AppLovinAdView
-            xmlns:applovin="http://schemas.applovin.com/android/1.0"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/cardgut"
-            applovin:loadAdOnCreate="true" />
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/sprcard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/cardmarg"
-            android:layout_marginLeft="@dimen/cardmarg"
-            android:layout_marginRight="@dimen/cardmarg"
-            android:layout_marginTop="@dimen/topbotpad"
-            android:gravity="center"
-            card_view:cardBackgroundColor="@color/white_color"
-            card_view:cardCornerRadius="@dimen/cardcorner"
-            card_view:cardElevation="@dimen/card_elevation"
-            card_view:contentPadding="@dimen/cardpad" >
 
             <LinearLayout
-                android:id="@+id/sprplanbox"
+                android:id="@+id/verbasicbox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/spr_title"
+                    android:id="@+id/verbasicpre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/spr_breakdowntitle"
-                    android:text="@string/spr_breakdowntitle"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
+                    android:hint="@string/basiccost"
+                    android:text="@string/basiccost"
+                    android:textSize="@dimen/body" />
 
                 <TextView
-                    android:id="@+id/sprname"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/verbasic"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:gravity="end"
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textSize="@dimen/body" />
-
-                <LinearLayout
-                    android:id="@+id/sprplanboxx"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/btnspace" >
-
-                    <TextView
-                        android:id="@+id/sprplanpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/plancost"
-                        android:text="@string/plancost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/sprplan"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/sprsmartbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/sprsmartpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/smartcost"
-                        android:text="@string/smartcost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/sprsmart"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/sprbasicbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/sprbasicpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/basiccost"
-                        android:text="@string/basiccost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/sprbasic"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/sprtabletbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/sprtabletpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/tabletcost"
-                        android:text="@string/tabletcost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/sprtablet"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/sprmifibox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/sprmifipre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/hotspotcost"
-                        android:text="@string/hotspotcost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/sprmifi"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/sprtaxbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/sprtaxpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/taxescost"
-                        android:text="@string/taxescost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/sprtax"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/sprdiscountbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/sprdiscountpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/discountcost"
-                        android:text="@string/discountcost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/sprdiscount"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/line3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/lineblue"
-                    android:gravity="center"
-                    android:hint=""
-                    android:text="" />
-
-                <LinearLayout
-                    android:id="@+id/sprtotalbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/sprtotalpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/total"
-                        android:text="@string/total"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/sprtotal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
             </LinearLayout>
-        </android.support.v7.widget.CardView>
-
-        <Button
-            android:id="@+id/gotospr"
-            android:layout_width="@dimen/btnw"
-            android:layout_height="@dimen/btnh"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/btnspace"
-            android:background="@color/accent"
-            android:gravity="center"
-            android:hint="@string/viewplan"
-            android:text="@string/viewplan"
-            android:textColor="@color/white_color" />
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/tmocard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/cardmarg"
-            android:layout_marginLeft="@dimen/cardmarg"
-            android:layout_marginRight="@dimen/cardmarg"
-            android:layout_marginTop="@dimen/topbotpad"
-            android:gravity="center"
-            card_view:cardBackgroundColor="@color/white_color"
-            card_view:cardCornerRadius="@dimen/cardcorner"
-            card_view:cardElevation="@dimen/card_elevation"
-            card_view:contentPadding="@dimen/cardpad" >
 
             <LinearLayout
-                android:id="@+id/tmoplanbox"
+                android:id="@+id/vertabletbox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/tmo_title"
+                    android:id="@+id/vertabletpre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:hint="@string/tmo_breakdowntitle"
-                    android:text="@string/tmo_breakdowntitle"
-                    android:textSize="@dimen/body"
-                    android:textStyle="bold" />
+                    android:hint="@string/tabletcost"
+                    android:text="@string/tabletcost"
+                    android:textSize="@dimen/body" />
 
                 <TextView
-                    android:id="@+id/tmoname"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/vertablet"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:gravity="center"
+                    android:gravity="end"
                     android:hint="@string/blankstring"
                     android:text="@string/blankstring"
                     android:textSize="@dimen/body" />
+            </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/tmoplanboxx"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/btnspace" >
-
-                    <TextView
-                        android:id="@+id/tmoplanpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/additionaldata"
-                        android:text="@string/additionaldata"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/tmoplan"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tmophonebox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/tmophonepre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/phonecost"
-                        android:text="@string/phonecost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/tmophone"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tmotaxbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/tmotaxpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/taxescost"
-                        android:text="@string/taxescost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/tmotax"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/tmodiscountbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/tmodiscountpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/discountcost"
-                        android:text="@string/discountcost"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/tmodiscount"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
+            <LinearLayout
+                android:id="@+id/vermifibox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
 
                 <TextView
-                    android:id="@+id/line4"
+                    android:id="@+id/vermifipre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hotspotcost"
+                    android:text="@string/hotspotcost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/vermifi"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/lineblue"
-                    android:gravity="center"
-                    android:hint=""
-                    android:text="" />
-
-                <LinearLayout
-                    android:id="@+id/tmototalbox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" >
-
-                    <TextView
-                        android:id="@+id/tmototalpre"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:hint="@string/total"
-                        android:text="@string/total"
-                        android:textSize="@dimen/body" />
-
-                    <TextView
-                        android:id="@+id/tmototal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="end"
-                        android:hint="@string/blankstring"
-                        android:text="@string/blankstring"
-                        android:textSize="@dimen/body" />
-                </LinearLayout>
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
             </LinearLayout>
-        </android.support.v7.widget.CardView>
 
-        <Button
-            android:id="@+id/gototmo"
-            android:layout_width="@dimen/btnw"
-            android:layout_height="@dimen/btnh"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/btnspace"
-            android:background="@color/accent"
-            android:gravity="center"
-            android:hint="@string/viewplan"
-            android:text="@string/viewplan"
-            android:textColor="@color/white_color" />
-    </LinearLayout>
+            <LinearLayout
+                android:id="@+id/vertaxbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
 
-</ScrollView>
+                <TextView
+                    android:id="@+id/vertaxpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/taxescost"
+                    android:text="@string/taxescost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/vertax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/verdiscountbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/verdiscountpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/discountcost"
+                    android:text="@string/discountcost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/verdiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/lineblue"
+                android:gravity="center"
+                android:hint=""
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/vertotalbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/vertotalpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/total"
+                    android:text="@string/total"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/vertotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/gotover"
+        android:layout_width="@dimen/btnw"
+        android:layout_height="@dimen/btnh"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/btnspace"
+        android:gravity="center"
+        android:hint="@string/viewplan"
+        android:text="@string/viewplan" />
+
+    <com.applovin.adview.AppLovinAdView
+        xmlns:applovin="http://schemas.applovin.com/android/1.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/cardgut"
+        applovin:loadAdOnCreate="true" />
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sprcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginLeft="@dimen/cardmarg"
+        android:layout_marginRight="@dimen/cardmarg"
+        android:layout_marginTop="@dimen/topbotpad"
+        android:gravity="center"
+        card_view:cardBackgroundColor="@color/white_color"
+        card_view:cardCornerRadius="@dimen/cardcorner"
+        card_view:cardElevation="@dimen/card_elevation"
+        card_view:contentPadding="@dimen/cardpad" >
+
+        <LinearLayout
+            android:id="@+id/sprplanbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/spr_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/spr_breakdowntitle"
+                android:text="@string/spr_breakdowntitle"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sprname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textSize="@dimen/body" />
+
+            <LinearLayout
+                android:id="@+id/sprplanboxx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/btnspace" >
+
+                <TextView
+                    android:id="@+id/sprplanpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/plancost"
+                    android:text="@string/plancost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/sprplan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sprsmartbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/sprsmartpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/smartcost"
+                    android:text="@string/smartcost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/sprsmart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sprbasicbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/sprbasicpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/basiccost"
+                    android:text="@string/basiccost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/sprbasic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sprtabletbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/sprtabletpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/tabletcost"
+                    android:text="@string/tabletcost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/sprtablet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sprmifibox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/sprmifipre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hotspotcost"
+                    android:text="@string/hotspotcost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/sprmifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sprtaxbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/sprtaxpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/taxescost"
+                    android:text="@string/taxescost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/sprtax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sprdiscountbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/sprdiscountpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/discountcost"
+                    android:text="@string/discountcost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/sprdiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/line3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/lineblue"
+                android:gravity="center"
+                android:hint=""
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/sprtotalbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/sprtotalpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/total"
+                    android:text="@string/total"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/sprtotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/gotospr"
+        android:layout_width="@dimen/btnw"
+        android:layout_height="@dimen/btnh"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/btnspace"
+        android:gravity="center"
+        android:hint="@string/viewplan"
+        android:text="@string/viewplan" />
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tmocard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginLeft="@dimen/cardmarg"
+        android:layout_marginRight="@dimen/cardmarg"
+        android:layout_marginTop="@dimen/topbotpad"
+        android:gravity="center"
+        card_view:cardBackgroundColor="@color/white_color"
+        card_view:cardCornerRadius="@dimen/cardcorner"
+        card_view:cardElevation="@dimen/card_elevation"
+        card_view:contentPadding="@dimen/cardpad" >
+
+        <LinearLayout
+            android:id="@+id/tmoplanbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tmo_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/tmo_breakdowntitle"
+                android:text="@string/tmo_breakdowntitle"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tmoname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textSize="@dimen/body" />
+
+            <LinearLayout
+                android:id="@+id/tmoplanboxx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/btnspace" >
+
+                <TextView
+                    android:id="@+id/tmoplanpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/additionaldata"
+                    android:text="@string/additionaldata"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/tmoplan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tmophonebox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tmophonepre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/phonecost"
+                    android:text="@string/phonecost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/tmophone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tmotaxbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tmotaxpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/taxescost"
+                    android:text="@string/taxescost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/tmotax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tmodiscountbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tmodiscountpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/discountcost"
+                    android:text="@string/discountcost"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/tmodiscount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/line4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/lineblue"
+                android:gravity="center"
+                android:hint=""
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/tmototalbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tmototalpre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/total"
+                    android:text="@string/total"
+                    android:textSize="@dimen/body" />
+
+                <TextView
+                    android:id="@+id/tmototal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textSize="@dimen/body" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/gototmo"
+        android:layout_width="@dimen/btnw"
+        android:layout_height="@dimen/btnh"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/btnspace"
+        android:gravity="center"
+        android:hint="@string/viewplan"
+        android:text="@string/viewplan" />
+
+</LinearLayout>

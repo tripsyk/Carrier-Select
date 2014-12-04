@@ -2,8 +2,9 @@ package com.guardian.carrierselect;
 
 import com.applovin.sdk.AppLovinSdk;
 
-import android.app.FragmentTransaction;
-import android.app.FragmentManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -17,8 +18,6 @@ public class MainActivity extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		getSupportActionBar().hide();
-
 		AppLovinSdk.initializeSdk(getApplicationContext());
 
 		final String PREFS_NAME = "MyPrefsFile";
@@ -31,7 +30,7 @@ public class MainActivity extends ActionBarActivity {
 
 		} else {
 
-			final FragmentManager fm = getFragmentManager();
+			final FragmentManager fm = getSupportFragmentManager();
 			fm.popBackStack();
 			FragmentTransaction ft = fm.beginTransaction();
 			ft.add(R.id.fragment_container, new StartScreen());

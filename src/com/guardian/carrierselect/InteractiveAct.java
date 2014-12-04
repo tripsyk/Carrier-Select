@@ -1,106 +1,115 @@
 package com.guardian.carrierselect;
 
-import android.app.Fragment;
-import android.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v4.view.GravityCompat;
+import android.os.Handler;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.view.MenuItem;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
 public class InteractiveAct extends ActionBarActivity {
 
+	private Button savingsCheck;
+	private Toolbar toolbar;
 	private String[] listItems;
-	private DrawerLayout mDrawerLayout;
-	private LinearLayout mDrawer;
 	private ListView mDrawerList;
-	private ActionBarHelper mActionBar;
-	private ActionBarDrawerToggle mDrawerToggle;
 	private int[] icon;
-	private TextView mCarrier, mDevices, mData, mCost;
+	private CharSequence mTitle;
+	private DrawerLayout drawerLayout;
+	private ActionBarDrawerToggle drawerToggle;
+	private LinearLayout drawer;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-
 		super.onCreate(savedInstanceState);
-
 		setContentView(R.layout.interactive);
 
-		mCarrier = (TextView) findViewById(R.id.carrier);
-		mDevices = (TextView) findViewById(R.id.devices);
-		mData = (TextView) findViewById(R.id.data);
-		mCost = (TextView) findViewById(R.id.cost);
-		mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-		mDrawer = (LinearLayout) findViewById(R.id.left_drawer);
+		toolbar = (Toolbar) findViewById(R.id.intertool);
+		setSupportActionBar(toolbar);
+
+		final SharedPreferences profilepref = getSharedPreferences("profile",
+				Context.MODE_PRIVATE);
+		final TextView mCarrier = (TextView) findViewById(R.id.carrier);
+		final TextView mDevices = (TextView) findViewById(R.id.devices);
+		final TextView mData = (TextView) findViewById(R.id.data);
+		final TextView mCost = (TextView) findViewById(R.id.cost);
 		mDrawerList = (ListView) findViewById(R.id.start_drawer);
-		mDrawerLayout.setDrawerListener(new DemoDrawerListener());
 		listItems = getResources().getStringArray(R.array.menu_list);
 		icon = new int[] { R.drawable.news, R.drawable.myprofile,
 				R.drawable.service_plans, R.drawable.nocontract,
 				R.drawable.phonesearch2, R.drawable.knowledgebase,
 				R.drawable.about };
-
-		mDrawerLayout.setDrawerTitle(GravityCompat.START,
-				getString(R.string.drawer_title));
-		mDrawerList.setAdapter(new MenuListAdapter(this,
-				R.layout.drawer_list_item, listItems, icon));
-		mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
-
-		mActionBar = createActionBarHelper();
-		mActionBar.init();
-		mDrawerToggle = new ActionBarDrawerToggle(this, mDrawerLayout,
-				R.string.drawer_open, R.string.drawer_close);
-
-		final String PREFS_NAME = "MyPrefsFile";
-		final SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+		drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+		drawer = (LinearLayout) findViewById(R.id.left_drawer);
+		savingsCheck = (Button) findViewById(R.id.savecheck);
+		final SharedPreferences settings = getSharedPreferences("MyPrefsFile",
+				0);
 		final SharedPreferences.Editor editor = settings.edit();
 		editor.putBoolean("my_first_time", false);
 		editor.commit();
 
-		initHomePrefs();
+		mDrawerList.setAdapter(new MenuListAdapter(this,
+				R.layout.drawer_list_item, listItems, icon));
+		mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+		if (toolbar != null) {
+			mTitle = "News";
+			toolbar.setTitle("News");
+			setSupportActionBar(toolbar);
+		}
+
+		initDrawer();
+
+		final int carrier = profilepref.getInt("carrier", 0);
+		if (carrier == 1) {
+			mCarrier.setText("AT&T");
+		} else if (carrier == 2) {
+			mCarrier.setText("Sprint");
+		} else if (carrier == 3) {
+			mCarrier.setText("T-Mobile");
+		} else if (carrier == 4) {
+			mCarrier.setText("Verizon");
+		} else if (carrier == 5) {
+			mCarrier.setText("Prepaid");
+		}
+
+		savingsCheck.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				getSupportActionBar().hide();
+			}
+
+		});
+
+		mDevices.setText(String.valueOf(convertWord(profilepref.getString(
+				"smart", "Not Set"))
+				+ convertWord(profilepref.getString("basic", "Not Set"))
+				+ convertWord(profilepref.getString("tabs", "Not Set"))
+				+ convertWord(profilepref.getString("mifi", "Not Set"))));
+		mCost.setText("$" + profilepref.getInt("monthly", 0));
+		mData.setText(profilepref.getString("data", "Not Set"));
 
 		final Fragment fragment = new Home();
-		final FragmentTransaction fragmenttran = getFragmentManager()
+		final FragmentTransaction fragmenttran = getSupportFragmentManager()
 				.beginTransaction();
 		fragmenttran.replace(R.id.fragment_container, fragment);
 		fragmenttran.commit();
 
-	}
-
-	@Override
-	protected void onPostCreate(Bundle savedInstanceState) {
-
-		super.onPostCreate(savedInstanceState);
-		mDrawerToggle.syncState();
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-
-		if (mDrawerToggle.onOptionsItemSelected(item)) {
-
-			return true;
-		}
-
-		return super.onOptionsItemSelected(item);
-	}
-
-	@Override
-	public void onConfigurationChanged(Configuration newConfig) {
-
-		super.onConfigurationChanged(newConfig);
-		mDrawerToggle.onConfigurationChanged(newConfig);
 	}
 
 	private class DrawerItemClickListener implements
@@ -113,13 +122,7 @@ public class InteractiveAct extends ActionBarActivity {
 			setNavDrawerItemNormal();
 			TextView txtview = ((TextView) view.findViewById(R.id.menuTitle));
 			txtview.setTypeface(null, Typeface.BOLD);
-			txtview.setTextColor(getResources().getColor(android.R.color.black));
-			txtview.getTextColors();
-
 			selectItem(position);
-
-			mActionBar.setTitle(listItems[position]);
-			mDrawerLayout.closeDrawer(mDrawer);
 
 		}
 
@@ -129,87 +132,151 @@ public class InteractiveAct extends ActionBarActivity {
 
 		if (position == 0) {
 
-			final Fragment fragment = new Home();
-			final FragmentTransaction fragmenttran = getFragmentManager()
-					.beginTransaction();
-			fragmenttran.replace(R.id.fragment_container, fragment);
-			fragmenttran.addToBackStack(null);
-			fragmenttran.commit();
-			getFragmentManager().executePendingTransactions();
+			mTitle = (listItems[position]);
+			toolbar.setTitle(listItems[position]);
 			mDrawerList.setItemChecked(position, true);
-			mDrawerLayout.closeDrawer(mDrawer);
+			drawerLayout.closeDrawer(drawer);
 
+			new Handler().postDelayed(new Runnable() {
+				@Override
+				public void run() {
+					final Fragment fragment = new Home();
+					final FragmentTransaction fragmenttran = getSupportFragmentManager()
+							.beginTransaction();
+					fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+							R.anim.slide_out_left, R.anim.slide_in_left,
+							R.anim.slide_out_right);
+					fragmenttran.replace(R.id.fragment_container, fragment);
+					fragmenttran.addToBackStack(null);
+					fragmenttran.commit();
+				}
+			}, 275);
 		} else if (position == 1) {
 
-			final Fragment fragment = new MyProfile();
-			final FragmentTransaction fragmenttran = getFragmentManager()
-					.beginTransaction();
-			fragmenttran.replace(R.id.fragment_container, fragment);
-			fragmenttran.addToBackStack(null);
-			fragmenttran.commit();
-			getFragmentManager().executePendingTransactions();
+			mTitle = (listItems[position]);
+			toolbar.setTitle(listItems[position]);
 			mDrawerList.setItemChecked(position, true);
-			mDrawerLayout.closeDrawer(mDrawer);
+			drawerLayout.closeDrawer(drawer);
+
+			new Handler().postDelayed(new Runnable() {
+				@Override
+				public void run() {
+					final Fragment fragment = new MyProfile();
+					final FragmentTransaction fragmenttran = getSupportFragmentManager()
+							.beginTransaction();
+					fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+							R.anim.slide_out_left, R.anim.slide_in_left,
+							R.anim.slide_out_right);
+					fragmenttran.replace(R.id.fragment_container, fragment);
+					fragmenttran.addToBackStack(null);
+					fragmenttran.commit();
+				}
+			}, 275);
 		} else if (position == 2) {
 
-			final Fragment fragment = new QuoteFragment();
-			final FragmentTransaction fragmenttran = getFragmentManager()
-					.beginTransaction();
-			fragmenttran.replace(R.id.fragment_container, fragment);
-			fragmenttran.addToBackStack(null);
-			fragmenttran.commit();
-			getFragmentManager().executePendingTransactions();
+			mTitle = (listItems[position]);
+			toolbar.setTitle(listItems[position]);
 			mDrawerList.setItemChecked(position, true);
-			mDrawerLayout.closeDrawer(mDrawer);
+			drawerLayout.closeDrawer(drawer);
 
+			new Handler().postDelayed(new Runnable() {
+				@Override
+				public void run() {
+					final Fragment fragment = new QuoteFragment();
+					final FragmentTransaction fragmenttran = getSupportFragmentManager()
+							.beginTransaction();
+					fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+							R.anim.slide_out_left, R.anim.slide_in_left,
+							R.anim.slide_out_right);
+					fragmenttran.replace(R.id.fragment_container, fragment);
+					fragmenttran.addToBackStack(null);
+					fragmenttran.commit();
+				}
+			}, 275);
 		} else if (position == 3) {
 
-			final Fragment fragment = new NoContract1();
-			final FragmentTransaction fragmenttran = getFragmentManager()
-					.beginTransaction();
-			fragmenttran.replace(R.id.fragment_container, fragment);
-			fragmenttran.addToBackStack(null);
-			fragmenttran.commit();
-			getFragmentManager().executePendingTransactions();
+			mTitle = (listItems[position]);
+			toolbar.setTitle(listItems[position]);
 			mDrawerList.setItemChecked(position, true);
-			mDrawerLayout.closeDrawer(mDrawer);
+			drawerLayout.closeDrawer(drawer);
 
+			new Handler().postDelayed(new Runnable() {
+				@Override
+				public void run() {
+					final Fragment fragment = new NoContract1();
+					final FragmentTransaction fragmenttran = getSupportFragmentManager()
+							.beginTransaction();
+					fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+							R.anim.slide_out_left, R.anim.slide_in_left,
+							R.anim.slide_out_right);
+					fragmenttran.replace(R.id.fragment_container, fragment);
+					fragmenttran.addToBackStack(null);
+					fragmenttran.commit();
+				}
+			}, 275);
 		} else if (position == 4) {
 
-			final Fragment fragment = new PhoneSearch();
-			final FragmentTransaction fragmenttran = getFragmentManager()
-					.beginTransaction();
-			fragmenttran.replace(R.id.fragment_container, fragment);
-			fragmenttran.addToBackStack(null);
-			fragmenttran.commit();
-			getFragmentManager().executePendingTransactions();
+			mTitle = (listItems[position]);
+			toolbar.setTitle(listItems[position]);
 			mDrawerList.setItemChecked(position, true);
-			mDrawerLayout.closeDrawer(mDrawer);
+			drawerLayout.closeDrawer(drawer);
 
+			new Handler().postDelayed(new Runnable() {
+				@Override
+				public void run() {
+					final Fragment fragment = new PhoneSearch();
+					final FragmentTransaction fragmenttran = getSupportFragmentManager()
+							.beginTransaction();
+					fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+							R.anim.slide_out_left, R.anim.slide_in_left,
+							R.anim.slide_out_right);
+					fragmenttran.replace(R.id.fragment_container, fragment);
+					fragmenttran.addToBackStack(null);
+					fragmenttran.commit();
+				}
+			}, 275);
 		} else if (position == 5) {
 
-			final Fragment fragment = new KnowledgeBase1();
-			final FragmentTransaction fragmenttran = getFragmentManager()
-					.beginTransaction();
-			fragmenttran.replace(R.id.fragment_container, fragment);
-			fragmenttran.addToBackStack(null);
-			fragmenttran.commit();
-			getFragmentManager().executePendingTransactions();
+			mTitle = (listItems[position]);
+			toolbar.setTitle(listItems[position]);
 			mDrawerList.setItemChecked(position, true);
-			mDrawerLayout.closeDrawer(mDrawer);
+			drawerLayout.closeDrawer(drawer);
 
+			new Handler().postDelayed(new Runnable() {
+				@Override
+				public void run() {
+					final Fragment fragment = new KnowledgeBase1();
+					final FragmentTransaction fragmenttran = getSupportFragmentManager()
+							.beginTransaction();
+					fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+							R.anim.slide_out_left, R.anim.slide_in_left,
+							R.anim.slide_out_right);
+					fragmenttran.replace(R.id.fragment_container, fragment);
+					fragmenttran.addToBackStack(null);
+					fragmenttran.commit();
+				}
+			}, 275);
 		} else if (position == 6) {
 
-			final Fragment fragment = new About();
-			final FragmentTransaction fragmenttran = getFragmentManager()
-					.beginTransaction();
-			fragmenttran.replace(R.id.fragment_container, fragment);
-			fragmenttran.addToBackStack(null);
-			fragmenttran.commit();
-			getFragmentManager().executePendingTransactions();
+			mTitle = (listItems[position]);
+			toolbar.setTitle(listItems[position]);
 			mDrawerList.setItemChecked(position, true);
-			mDrawerLayout.closeDrawer(mDrawer);
+			drawerLayout.closeDrawer(drawer);
 
+			new Handler().postDelayed(new Runnable() {
+				@Override
+				public void run() {
+					final Fragment fragment = new About();
+					final FragmentTransaction fragmenttran = getSupportFragmentManager()
+							.beginTransaction();
+					fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+							R.anim.slide_out_left, R.anim.slide_in_left,
+							R.anim.slide_out_right);
+					fragmenttran.replace(R.id.fragment_container, fragment);
+					fragmenttran.addToBackStack(null);
+					fragmenttran.commit();
+				}
+			}, 275);
 		}
 
 	}
@@ -219,125 +286,51 @@ public class InteractiveAct extends ActionBarActivity {
 			View v = mDrawerList.getChildAt(i);
 			TextView txtview = ((TextView) v.findViewById(R.id.menuTitle));
 			txtview.setTypeface(Typeface.DEFAULT);
-			txtview.setTextColor(getResources().getColor(R.color.txt));
 		}
 	}
 
-	private class DemoDrawerListener implements DrawerLayout.DrawerListener {
+	private void initDrawer() {
+		// setup navigation drawer
+		drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar,
+				R.string.drawer_open, R.string.drawer_close) {
+			@Override
+			public void onDrawerClosed(View drawerView) {
+				super.onDrawerClosed(drawerView);
+				// when drawer closed
+				toolbar.setTitle(mTitle);
+			}
 
-		@Override
-		public void onDrawerOpened(View drawerView) {
-			mDrawerToggle.onDrawerOpened(drawerView);
-			mActionBar.onDrawerOpened();
-		}
+			@Override
+			public void onDrawerOpened(View drawerView) {
+				super.onDrawerOpened(drawerView);
+				// when drawer open
+				toolbar.setTitle("Carrier Select");
+			}
+		};
 
-		@Override
-		public void onDrawerClosed(View drawerView) {
-
-			mDrawerToggle.onDrawerClosed(drawerView);
-			mActionBar.onDrawerClosed();
-		}
-
-		@Override
-		public void onDrawerSlide(View drawerView, float slideOffset) {
-
-			mDrawerToggle.onDrawerSlide(drawerView, slideOffset);
-		}
-
-		@Override
-		public void onDrawerStateChanged(int newState) {
-
-			mDrawerToggle.onDrawerStateChanged(newState);
-		}
+		// setDrawerlisterner
+		drawerLayout.setDrawerListener(drawerToggle);
 	}
 
-	/**
-	 * 
-	 * Create a compatible helper that will manipulate the action bar if
-	 * available.
-	 */
-
-	private ActionBarHelper createActionBarHelper() {
-
-		return new ActionBarHelper();
+	@Override
+	protected void onPostCreate(Bundle savedInstanceState) {
+		super.onPostCreate(savedInstanceState);
+		drawerToggle.syncState();
 	}
 
-	private class ActionBarHelper {
-
-		private final ActionBar mActionBar;
-		private CharSequence mDrawerTitle;
-		private CharSequence mTitle;
-
-		ActionBarHelper() {
-
-			mActionBar = getSupportActionBar();
-		}
-
-		public void init() {
-
-			mActionBar.setDisplayHomeAsUpEnabled(true);
-			mActionBar.setDisplayShowHomeEnabled(false);
-			mTitle = mDrawerTitle = getTitle();
-		}
-
-		public void onDrawerClosed() {
-
-			mActionBar.setTitle(mTitle);
-
-		}
-
-		public void onDrawerOpened() {
-
-			mActionBar.setTitle(mDrawerTitle);
-		}
-
-		public void setTitle(CharSequence title) {
-
-			mTitle = title;
-
-		}
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+		super.onConfigurationChanged(newConfig);
+		drawerToggle.onConfigurationChanged(newConfig);
 	}
 
-	private void initHomePrefs() {
-
-		// Declare preferences
-		final SharedPreferences sharedPref = getSharedPreferences("profile",
-				Context.MODE_PRIVATE);
-
-		// Set the appropriate Carrier on the homescreen
-		final int carrier = sharedPref.getInt("carrier", 0);
-		if (carrier == 1) {
-			mCarrier.setText("AT&T");
-
-		} else if (carrier == 2) {
-			mCarrier.setText("Sprint");
-
-		} else if (carrier == 3) {
-			mCarrier.setText("T-Mobile");
-
-		} else if (carrier == 4) {
-			mCarrier.setText("Verizon");
-
-		} else if (carrier == 5) {
-			mCarrier.setText("Prepaid");
-
-		}
-
-		final int numsmart = convertWord(sharedPref.getString("smart",
-				"Not Set"));
-		final int numbasic = convertWord(sharedPref.getString("basic",
-				"Not Set"));
-		mData.setText(sharedPref.getString("data", "Not Set"));
-		final int numtabs = convertWord(sharedPref.getString("tabs", "Not Set"));
-		final int nummifi = convertWord(sharedPref.getString("mifi", "Not Set"));
-
-		mDevices.setText(String
-				.valueOf(numsmart + numbasic + numtabs + nummifi));
-
-		mCost.setText("$" + String.valueOf(sharedPref.getInt("monthly", 0)));
+	@Override
+	public void setTitle(CharSequence title) {
+		mTitle = title;
+		getSupportActionBar().setTitle(mTitle);
 	}
 
-	private int convertWord(String word) {
+	private static int convertWord(String word) {
 		int number = 0;
 
 		if (word.equals("One")) {

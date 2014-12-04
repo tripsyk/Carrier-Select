@@ -5,9 +5,9 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import android.annotation.SuppressLint;
-import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -74,10 +74,12 @@ public class PhoneSearch5 extends Fragment {
 				editor.commit();
 
 				final Fragment fragment = new PhoneSearch6();
-				final FragmentManager fm = getActivity().getFragmentManager();
-				final FragmentTransaction fragmenttran = fm.beginTransaction();
-				fragmenttran.setCustomAnimations(R.animator.right_in_off,
-						R.animator.left_in_off);
+
+				final FragmentTransaction fragmenttran = getActivity()
+						.getSupportFragmentManager().beginTransaction();
+				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+						R.anim.slide_out_left, R.anim.slide_in_left,
+						R.anim.slide_out_right);
 				fragmenttran.replace(R.id.fragment_container, fragment);
 				fragmenttran.addToBackStack(null);
 				fragmenttran.commit();
@@ -93,10 +95,12 @@ public class PhoneSearch5 extends Fragment {
 				editor.commit();
 
 				final Fragment fragment = new PhoneSearch6();
-				final FragmentManager fm = getActivity().getFragmentManager();
-				final FragmentTransaction fragmenttran = fm.beginTransaction();
-				fragmenttran.setCustomAnimations(R.animator.right_in_off,
-						R.animator.left_in_off);
+
+				final FragmentTransaction fragmenttran = getActivity()
+						.getSupportFragmentManager().beginTransaction();
+				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+						R.anim.slide_out_left, R.anim.slide_in_left,
+						R.anim.slide_out_right);
 				fragmenttran.replace(R.id.fragment_container, fragment);
 				fragmenttran.addToBackStack(null);
 				fragmenttran.commit();
@@ -112,10 +116,12 @@ public class PhoneSearch5 extends Fragment {
 				editor.commit();
 
 				final Fragment fragment = new PhoneSearch6();
-				final FragmentManager fm = getActivity().getFragmentManager();
-				final FragmentTransaction fragmenttran = fm.beginTransaction();
-				fragmenttran.setCustomAnimations(R.animator.right_in_off,
-						R.animator.left_in_off);
+
+				final FragmentTransaction fragmenttran = getActivity()
+						.getSupportFragmentManager().beginTransaction();
+				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+						R.anim.slide_out_left, R.anim.slide_in_left,
+						R.anim.slide_out_right);
 				fragmenttran.replace(R.id.fragment_container, fragment);
 				fragmenttran.addToBackStack(null);
 				fragmenttran.commit();
@@ -131,10 +137,12 @@ public class PhoneSearch5 extends Fragment {
 				editor.commit();
 
 				final Fragment fragment = new PhoneSearch6();
-				final FragmentManager fm = getActivity().getFragmentManager();
-				final FragmentTransaction fragmenttran = fm.beginTransaction();
-				fragmenttran.setCustomAnimations(R.animator.right_in_off,
-						R.animator.left_in_off);
+
+				final FragmentTransaction fragmenttran = getActivity()
+						.getSupportFragmentManager().beginTransaction();
+				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+						R.anim.slide_out_left, R.anim.slide_in_left,
+						R.anim.slide_out_right);
 				fragmenttran.replace(R.id.fragment_container, fragment);
 				fragmenttran.addToBackStack(null);
 				fragmenttran.commit();
@@ -150,10 +158,12 @@ public class PhoneSearch5 extends Fragment {
 				editor.commit();
 
 				final Fragment fragment = new PhoneSearch6();
-				final FragmentManager fm = getActivity().getFragmentManager();
-				final FragmentTransaction fragmenttran = fm.beginTransaction();
-				fragmenttran.setCustomAnimations(R.animator.right_in_off,
-						R.animator.left_in_off);
+
+				final FragmentTransaction fragmenttran = getActivity()
+						.getSupportFragmentManager().beginTransaction();
+				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+						R.anim.slide_out_left, R.anim.slide_in_left,
+						R.anim.slide_out_right);
 				fragmenttran.replace(R.id.fragment_container, fragment);
 				fragmenttran.addToBackStack(null);
 				fragmenttran.commit();
@@ -166,7 +176,8 @@ public class PhoneSearch5 extends Fragment {
 	@SuppressLint("DefaultLocale")
 	public void performSearch() {
 
-		progress = new ProgressDialog(getActivity());
+		progress = new ProgressDialog(getActivity(),
+				AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
 		progress.setTitle("Phone Search");
 		progress.setMessage("Just a sec...");
 		progress.setCancelable(false);
@@ -237,14 +248,13 @@ public class PhoneSearch5 extends Fragment {
 						ps25.setVisibility(View.VISIBLE);
 					}
 
-					final long delayInMillis = 250;
-					Timer timer = new Timer();
+					final Timer timer = new Timer();
 					timer.schedule(new TimerTask() {
 						@Override
 						public void run() {
 							progress.dismiss();
 						}
-					}, delayInMillis);
+					}, 200);
 				} else {
 					ps21.setText("No phone found.");
 				}

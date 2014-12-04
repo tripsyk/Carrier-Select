@@ -6,9 +6,9 @@ import java.util.TimerTask;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.Fragment;
+import android.app.AlertDialog;
+import android.support.v4.app.Fragment;
 import android.app.ProgressDialog;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,7 +34,6 @@ public class PlanViewer extends Fragment {
 	private static final String ARGS_CARRIER = "carrier";
 
 	private static int smartphones, basicphones, gigs, tabs, hotspotprice;
-	private double discount;
 
 	private String carrier;
 
@@ -49,9 +48,8 @@ public class PlanViewer extends Fragment {
 		rootView = inflater.inflate(R.layout.planviewer, container, false);
 
 		title = (TextView) rootView.findViewById(R.id.pvsubtitle);
-		title.setTypeface(null, Typeface.BOLD);
 
-		double randomNum = Math.random() * 3;
+		final double randomNum = Math.random() * 3;
 
 		if ((int) randomNum == 1)
 			AppLovinInterstitialAd.show(getActivity());
@@ -84,7 +82,7 @@ public class PlanViewer extends Fragment {
 				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
 
 		// Test Query
-		ParseQuery<ParseObject> query = ParseQuery.getQuery("Postpaid");
+		final ParseQuery<ParseObject> query = ParseQuery.getQuery("Postpaid");
 		query.whereContains("Carrier", "AT&T");
 		query.whereContains("DataFinder", "A" + Integer.toString(gigs) + "GB");
 		query.findInBackground(new FindCallback<ParseObject>() {
@@ -93,28 +91,6 @@ public class PlanViewer extends Fragment {
 				if (e == null) {
 
 					title.setText(PlanList.get(0).getString("Name"));
-
-					final TextView b1typepre = (TextView) rootView
-							.findViewById(R.id.box1typepre);
-					b1typepre.setTypeface(null, Typeface.BOLD);
-					final TextView b1devicespre = (TextView) rootView
-							.findViewById(R.id.box1devicespre);
-					b1devicespre.setTypeface(null, Typeface.BOLD);
-					final TextView b1ttpre = (TextView) rootView
-							.findViewById(R.id.box1ttpre);
-					b1ttpre.setTypeface(null, Typeface.BOLD);
-					final TextView b1datapre = (TextView) rootView
-							.findViewById(R.id.box1datapre);
-					b1datapre.setTypeface(null, Typeface.BOLD);
-					final TextView b1overpre = (TextView) rootView
-							.findViewById(R.id.box1overagepre);
-					b1overpre.setTypeface(null, Typeface.BOLD);
-					final TextView b1etfpre = (TextView) rootView
-							.findViewById(R.id.box1etfpre);
-					b1etfpre.setTypeface(null, Typeface.BOLD);
-					final TextView b1etfinstallpre = (TextView) rootView
-							.findViewById(R.id.box1etfinstallpre);
-					b1etfinstallpre.setTypeface(null, Typeface.BOLD);
 
 					final TextView b1type = (TextView) rootView
 							.findViewById(R.id.box1type);
@@ -153,7 +129,7 @@ public class PlanViewer extends Fragment {
 							"ETFInstallments"));
 
 					final long delayInMillis = 250;
-					Timer timer = new Timer();
+					final Timer timer = new Timer();
 					timer.schedule(new TimerTask() {
 						@Override
 						public void run() {
@@ -189,8 +165,7 @@ public class PlanViewer extends Fragment {
 			phones = "Individual";
 		}
 
-		// Test Query
-		ParseQuery<ParseObject> query = ParseQuery.getQuery("Postpaid");
+		final ParseQuery<ParseObject> query = ParseQuery.getQuery("Postpaid");
 		query.whereContains("Carrier", "Verizon Wireless");
 		query.whereEqualTo("Type", phones);
 		query.whereContains("DataFinder", "A" + Integer.toString(gigs) + "GB");
@@ -200,28 +175,6 @@ public class PlanViewer extends Fragment {
 				if (e == null) {
 
 					title.setText(PlanList.get(0).getString("Name"));
-
-					final TextView b1typepre = (TextView) rootView
-							.findViewById(R.id.box1typepre);
-					b1typepre.setTypeface(null, Typeface.BOLD);
-					final TextView b1devicespre = (TextView) rootView
-							.findViewById(R.id.box1devicespre);
-					b1devicespre.setTypeface(null, Typeface.BOLD);
-					final TextView b1ttpre = (TextView) rootView
-							.findViewById(R.id.box1ttpre);
-					b1ttpre.setTypeface(null, Typeface.BOLD);
-					final TextView b1datapre = (TextView) rootView
-							.findViewById(R.id.box1datapre);
-					b1datapre.setTypeface(null, Typeface.BOLD);
-					final TextView b1overpre = (TextView) rootView
-							.findViewById(R.id.box1overagepre);
-					b1overpre.setTypeface(null, Typeface.BOLD);
-					final TextView b1etfpre = (TextView) rootView
-							.findViewById(R.id.box1etfpre);
-					b1etfpre.setTypeface(null, Typeface.BOLD);
-					final TextView b1etfinstallpre = (TextView) rootView
-							.findViewById(R.id.box1etfinstallpre);
-					b1etfinstallpre.setTypeface(null, Typeface.BOLD);
 
 					final TextView b1type = (TextView) rootView
 							.findViewById(R.id.box1type);
@@ -240,40 +193,34 @@ public class PlanViewer extends Fragment {
 					final TextView b1etfinstall = (TextView) rootView
 							.findViewById(R.id.box1etfinstall);
 
-					String type = PlanList.get(0).getString("Type");
-					String devices = PlanList.get(0).getString("Devices");
-					String data = PlanList.get(0).getString("Data");
-					String overage = PlanList.get(0).getString("Overage");
-					String smartetf = PlanList.get(0).getString("SmartETF");
-					String smartetflower = PlanList.get(0).getString(
-							"SmartETFDown");
-					String basicetf = PlanList.get(0).getString("BasicETF");
-					String basicetflower = PlanList.get(0).getString(
-							"BasicETFDown");
-					String installetf = PlanList.get(0).getString(
-							"ETFInstallments");
-
-					b1type.setText(type);
-					b1devices.setText(devices);
+					b1type.setText(PlanList.get(0).getString("Type"));
+					b1devices.setText(PlanList.get(0).getString("Devices"));
 					b1tt.setText("Unlimited Talk & Text Nationwide");
 
 					if (smartphones + basicphones + tabs == 1 && gigs < 3) {
-						b1data.setText(data + " for individual");
+						b1data.setText(PlanList.get(0).getString("Data")
+								+ " for individual");
 					} else {
-						b1data.setText(data + " shared for group");
+						b1data.setText(PlanList.get(0).getString("Data")
+								+ " shared for group");
 					}
 
-					b1over.setText(overage);
-					b1etfsmart.setText("Smartphones - $" + smartetf
-							+ " and declines $" + smartetflower
+					b1over.setText(PlanList.get(0).getString("Overage"));
+					b1etfsmart.setText("Smartphones - $"
+							+ PlanList.get(0).getString("SmartETF")
+							+ " and declines $"
+							+ PlanList.get(0).getString("SmartETFDown")
 							+ " per month into contract.");
 					b1etfbasic.setText("Basic phones, Tablets, Hotspots - $"
-							+ basicetf + " and declines $" + basicetflower
+							+ PlanList.get(0).getString("BasicETF")
+							+ " and declines $"
+							+ PlanList.get(0).getString("BasicETFDown")
 							+ " per month into contract.");
-					b1etfinstall.setText(installetf);
+					b1etfinstall.setText(PlanList.get(0).getString(
+							"ETFInstallments"));
 
 					final long delayInMillis = 250;
-					Timer timer = new Timer();
+					final Timer timer = new Timer();
 					timer.schedule(new TimerTask() {
 						@Override
 						public void run() {
@@ -308,7 +255,7 @@ public class PlanViewer extends Fragment {
 		}
 
 		// Test Query
-		ParseQuery<ParseObject> query = ParseQuery.getQuery("Postpaid");
+		final ParseQuery<ParseObject> query = ParseQuery.getQuery("Postpaid");
 		query.whereContains("Carrier", "Sprint");
 		query.whereContains("DataFinder", "A" + adjustedGB + "GB");
 		query.findInBackground(new FindCallback<ParseObject>() {
@@ -317,28 +264,6 @@ public class PlanViewer extends Fragment {
 				if (e == null) {
 
 					title.setText(PlanList.get(0).getString("Name"));
-
-					final TextView b1typepre = (TextView) rootView
-							.findViewById(R.id.box1typepre);
-					b1typepre.setTypeface(null, Typeface.BOLD);
-					final TextView b1devicespre = (TextView) rootView
-							.findViewById(R.id.box1devicespre);
-					b1devicespre.setTypeface(null, Typeface.BOLD);
-					final TextView b1ttpre = (TextView) rootView
-							.findViewById(R.id.box1ttpre);
-					b1ttpre.setTypeface(null, Typeface.BOLD);
-					final TextView b1datapre = (TextView) rootView
-							.findViewById(R.id.box1datapre);
-					b1datapre.setTypeface(null, Typeface.BOLD);
-					final TextView b1overpre = (TextView) rootView
-							.findViewById(R.id.box1overagepre);
-					b1overpre.setTypeface(null, Typeface.BOLD);
-					final TextView b1etfpre = (TextView) rootView
-							.findViewById(R.id.box1etfpre);
-					b1etfpre.setTypeface(null, Typeface.BOLD);
-					final TextView b1etfinstallpre = (TextView) rootView
-							.findViewById(R.id.box1etfinstallpre);
-					b1etfinstallpre.setTypeface(null, Typeface.BOLD);
 
 					final TextView b1type = (TextView) rootView
 							.findViewById(R.id.box1type);
@@ -357,34 +282,27 @@ public class PlanViewer extends Fragment {
 					final TextView b1etfinstall = (TextView) rootView
 							.findViewById(R.id.box1etfinstall);
 
-					String type = PlanList.get(0).getString("Type");
-					String devices = PlanList.get(0).getString("Devices");
-					String data = PlanList.get(0).getString("Data");
-					String overage = PlanList.get(0).getString("Overage");
-					String smartetf = PlanList.get(0).getString("SmartETF");
-					String smartetflower = PlanList.get(0).getString(
-							"SmartETFDown");
-					String basicetf = PlanList.get(0).getString("BasicETF");
-					String basicetflower = PlanList.get(0).getString(
-							"BasicETFDown");
-					String installetf = PlanList.get(0).getString(
-							"ETFInstallments");
-
-					b1type.setText(type);
-					b1devices.setText(devices);
+					b1type.setText(PlanList.get(0).getString("Type"));
+					b1devices.setText(PlanList.get(0).getString("Devices"));
 					b1tt.setText("Unlimited Talk & Text Nationwide");
-					b1data.setText(data + " shared for group");
-					b1over.setText(overage);
-					b1etfsmart.setText("Smartphones - $" + smartetf
-							+ " and declines $" + smartetflower
+					b1data.setText(PlanList.get(0).getString("Data")
+							+ " shared for group");
+					b1over.setText(PlanList.get(0).getString("Overage"));
+					b1etfsmart.setText("Smartphones - $"
+							+ PlanList.get(0).getString("SmartETF")
+							+ " and declines $"
+							+ PlanList.get(0).getString("SmartETFDown")
 							+ " per month starting at 17 months.");
 					b1etfbasic.setText("Basic phones, Tablets, Hotspots - $"
-							+ basicetf + " and declines $" + basicetflower
+							+ PlanList.get(0).getString("BasicETF")
+							+ " and declines $"
+							+ PlanList.get(0).getString("BasicETFDown")
 							+ " per starting at 19 months.");
-					b1etfinstall.setText(installetf);
+					b1etfinstall.setText(PlanList.get(0).getString(
+							"ETFInstallments"));
 
 					final long delayInMillis = 250;
-					Timer timer = new Timer();
+					final Timer timer = new Timer();
 					timer.schedule(new TimerTask() {
 						@Override
 						public void run() {
@@ -400,13 +318,14 @@ public class PlanViewer extends Fragment {
 	@SuppressLint("DefaultLocale")
 	public void buildTmo() {
 
-		progress = new ProgressDialog(getActivity());
+		progress = new ProgressDialog(getActivity(),
+				AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
 		progress.setTitle("Building your plan");
 		progress.setMessage("Just a sec...");
 		progress.setCancelable(false);
 		progress.show();
 
-		String phones = String.valueOf(smartphones + basicphones + tabs);
+		final String phones = String.valueOf(smartphones + basicphones + tabs);
 		String adjustedGB = String.valueOf(gigs);
 
 		if (phones.equals("1") && gigs > 5) {
@@ -428,7 +347,7 @@ public class PlanViewer extends Fragment {
 				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
 
 		// Test Query
-		ParseQuery<ParseObject> query = ParseQuery.getQuery("Postpaid");
+		final ParseQuery<ParseObject> query = ParseQuery.getQuery("Postpaid");
 		query.whereContains("Carrier", "T-Mobile");
 		query.whereContains("Name", phones + " Lines");
 		query.whereContains("DataFinder", "A" + adjustedGB + "GB");
@@ -438,29 +357,6 @@ public class PlanViewer extends Fragment {
 				if (e == null) {
 
 					title.setText(PlanList.get(0).getString("Name"));
-
-					final TextView b1typepre = (TextView) rootView
-							.findViewById(R.id.box1typepre);
-					b1typepre.setTypeface(null, Typeface.BOLD);
-					final TextView b1devicespre = (TextView) rootView
-							.findViewById(R.id.box1devicespre);
-					b1devicespre.setTypeface(null, Typeface.BOLD);
-					final TextView b1ttpre = (TextView) rootView
-							.findViewById(R.id.box1ttpre);
-					b1ttpre.setTypeface(null, Typeface.BOLD);
-					final TextView b1datapre = (TextView) rootView
-							.findViewById(R.id.box1datapre);
-					b1datapre.setText("High Speed Data");
-					b1datapre.setTypeface(null, Typeface.BOLD);
-					final TextView b1overpre = (TextView) rootView
-							.findViewById(R.id.box1overagepre);
-					b1overpre.setTypeface(null, Typeface.BOLD);
-					final TextView b1etfpre = (TextView) rootView
-							.findViewById(R.id.box1etfpre);
-					b1etfpre.setTypeface(null, Typeface.BOLD);
-					final TextView b1etfinstallpre = (TextView) rootView
-							.findViewById(R.id.box1etfinstallpre);
-					b1etfinstallpre.setTypeface(null, Typeface.BOLD);
 
 					final TextView b1type = (TextView) rootView
 							.findViewById(R.id.box1type);
@@ -480,36 +376,30 @@ public class PlanViewer extends Fragment {
 					final TextView b1etfinstall = (TextView) rootView
 							.findViewById(R.id.box1etfinstall);
 
-					String type = PlanList.get(0).getString("Type");
-					String devices = PlanList.get(0).getString("Devices");
-					String data = PlanList.get(0).getString("Data");
-					String overage = PlanList.get(0).getString("Overage");
-					String smartetf = PlanList.get(0).getString("SmartETF");
-					String basicetf = PlanList.get(0).getString("BasicETF");
-					String basicetflower = PlanList.get(0).getString(
-							"BasicETFDown");
-					String installetf = PlanList.get(0).getString(
-							"ETFInstallments");
-
-					b1type.setText(type);
-					b1devices.setText(devices);
+					b1type.setText(PlanList.get(0).getString("Type"));
+					b1devices.setText(PlanList.get(0).getString("Devices"));
 					b1tt.setText("Unlimited Talk & Text Nationwide");
-					b1data.setText(data + " total. Each line differs.");
-					b1over.setText(overage + " " + data);
-					b1etfsmart.setText("Smartphones - $" + smartetf
-							+ " if 6 months or longer remain, $" + basicetf
-							+ " if 3-6 months remain, $" + basicetflower
+					b1data.setText(PlanList.get(0).getString("Data")
+							+ " total. Each line differs.");
+					b1over.setText(PlanList.get(0).getString("Overage") + " "
+							+ PlanList.get(0).getString("Data"));
+					b1etfsmart.setText("Smartphones - $"
+							+ PlanList.get(0).getString("SmartETF")
+							+ " if 6 months or longer remain, $"
+							+ PlanList.get(0).getString("BasicETF")
+							+ " if 3-6 months remain, $"
+							+ PlanList.get(0).getString("BasicETFDown")
 							+ " if less than 3 months remain.");
-					b1etfinstall.setText(installetf);
+					b1etfinstall.setText(PlanList.get(0).getString(
+							"ETFInstallments"));
 
-					final long delayInMillis = 250;
-					Timer timer = new Timer();
+					final Timer timer = new Timer();
 					timer.schedule(new TimerTask() {
 						@Override
 						public void run() {
 							progress.dismiss();
 						}
-					}, delayInMillis);
+					}, 200);
 				} else {
 				}
 			}
@@ -545,7 +435,6 @@ public class PlanViewer extends Fragment {
 		basicphones = args.getInt(ARGS_BASICPHONES);
 		gigs = args.getInt(ARGS_GIGS);
 		tabs = args.getInt(ARGS_TABS);
-		discount = args.getDouble(ARGS_DISCOUNT);
 		carrier = args.getString(ARGS_CARRIER);
 
 	}

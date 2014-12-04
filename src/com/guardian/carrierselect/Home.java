@@ -5,7 +5,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import android.annotation.SuppressLint;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -22,13 +23,13 @@ import com.parse.ParseQuery;
 
 public class Home extends Fragment {
 
-	private TextView attnews1, attnews2, attnews3, attnews4, attnews5,
+	private static TextView attnews1, attnews2, attnews3, attnews4, attnews5,
 			vernews1, vernews2, vernews3, vernews4, vernews5, sprnews1,
 			sprnews2, sprnews3, sprnews4, sprnews5, tmonews1, tmonews2,
 			tmonews3, tmonews4, tmonews5;
 	private ProgressDialog progress;
 	private static View rootView;
-	private int iconer;
+	private static int iconer;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -64,7 +65,8 @@ public class Home extends Fragment {
 	@SuppressLint("DefaultLocale")
 	public void initHomeNews() {
 
-		progress = new ProgressDialog(getActivity());
+		progress = new ProgressDialog(getActivity(),
+				AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
 		progress.setTitle("Just a sec...");
 		progress.setMessage("Updating your news...");
 		progress.setCancelable(false);
@@ -75,18 +77,6 @@ public class Home extends Fragment {
 				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
 				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
 
-		/*
-		 * ParseQuery<ParseObject> querynews =
-		 * ParseQuery.getQuery("Plan_Promo"); querynews.whereEqualTo("Tag",
-		 * "Title"); querynews.findInBackground(new FindCallback<ParseObject>()
-		 * { public void done(List<ParseObject> NewsList, ParseException e) {
-		 * 
-		 * if (e == null) { newstitle.setText("");
-		 * newstitle.setText(NewsList.get(0).getString("Title") + "\n" +
-		 * NewsList.get(0).getString("Date") + "\n"); } else { } } });
-		 */
-
-		// Test Query
 		ParseQuery<ParseObject> queryplanscontent = ParseQuery
 				.getQuery("Plan_Promo");
 		queryplanscontent.whereEqualTo("Carrier", "AT&T");
@@ -96,13 +86,7 @@ public class Home extends Fragment {
 
 				if (e == null) {
 
-					attnews1.setText("");
-					attnews2.setText("");
-					attnews3.setText("");
-					attnews4.setText("");
-					attnews5.setText("");
-
-					int attSize = NewsList.size();
+					final int attSize = NewsList.size();
 					if (attSize == 1) {
 
 						attnews1.setVisibility(View.VISIBLE);
@@ -217,11 +201,7 @@ public class Home extends Fragment {
 
 				if (e == null) {
 
-					vernews1.setText("");
-					vernews2.setText("");
-					vernews3.setText("");
-
-					int verSize = NewsList.size();
+					final int verSize = NewsList.size();
 					if (verSize == 1) {
 
 						vernews1.setVisibility(View.VISIBLE);
@@ -336,11 +316,7 @@ public class Home extends Fragment {
 
 				if (e == null) {
 
-					sprnews1.setText("");
-					sprnews2.setText("");
-					sprnews3.setText("");
-
-					int sprSize = NewsList.size();
+					final int sprSize = NewsList.size();
 					if (sprSize == 1) {
 
 						sprnews1.setVisibility(View.VISIBLE);
@@ -455,11 +431,7 @@ public class Home extends Fragment {
 
 				if (e == null) {
 
-					tmonews1.setText("");
-					tmonews2.setText("");
-					tmonews3.setText("");
-
-					int tmoSize = NewsList.size();
+					final int tmoSize = NewsList.size();
 					if (tmoSize == 1) {
 
 						tmonews1.setVisibility(View.VISIBLE);
@@ -562,14 +534,13 @@ public class Home extends Fragment {
 
 					}
 
-					final long delayInMillis = 250;
-					Timer timer = new Timer();
+					final Timer timer = new Timer();
 					timer.schedule(new TimerTask() {
 						@Override
 						public void run() {
 							progress.dismiss();
 						}
-					}, delayInMillis);
+					}, 200);
 
 				} else {
 				}
@@ -577,7 +548,7 @@ public class Home extends Fragment {
 		});
 	}
 
-	private void setNewsIcon(TextView tv, int iconId) {
+	private static void setNewsIcon(TextView tv, int iconId) {
 		if (iconId == 0) {
 			tv.setCompoundDrawablesWithIntrinsicBounds(0,
 					R.drawable.newssavings, 0, 0);

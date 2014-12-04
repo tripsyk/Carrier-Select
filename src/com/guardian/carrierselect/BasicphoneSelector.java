@@ -1,8 +1,7 @@
 package com.guardian.carrierselect;
 
-import android.app.Fragment;
-import android.app.FragmentTransaction;
-import android.app.FragmentManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -26,10 +25,10 @@ public class BasicphoneSelector extends Fragment {
 				false);
 
 		// Declare preferences
-		final SharedPreferences sharedPref = getActivity().getSharedPreferences(
-				"profile", Context.MODE_PRIVATE);
+		final SharedPreferences sharedPref = getActivity()
+				.getSharedPreferences("profile", Context.MODE_PRIVATE);
 		final SharedPreferences.Editor editor = sharedPref.edit();
-		
+
 		next = (Button) rootView.findViewById(R.id.next);
 		final Spinner spinner = (Spinner) rootView
 				.findViewById(R.id.basicspinner);
@@ -65,15 +64,14 @@ public class BasicphoneSelector extends Fragment {
 
 			@Override
 			public void onClick(View v) {
-				
+
 				final Fragment fragment = new DataSelector();
 
-				final FragmentManager fm = getActivity().getFragmentManager();
-
-				final FragmentTransaction fragmenttran = fm.beginTransaction();
-
-				fragmenttran.setCustomAnimations(R.animator.right_in_off,
-						R.animator.left_in_off);
+				final FragmentTransaction fragmenttran = getActivity()
+						.getSupportFragmentManager().beginTransaction();
+				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+						R.anim.slide_out_left, R.anim.slide_in_left,
+						R.anim.slide_out_right);
 				fragmenttran.replace(R.id.fragment_container, fragment);
 				fragmenttran.addToBackStack(null);
 				fragmenttran.commit();
