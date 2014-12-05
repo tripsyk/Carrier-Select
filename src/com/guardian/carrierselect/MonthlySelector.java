@@ -42,8 +42,7 @@ public class MonthlySelector extends Fragment {
 								Context.INPUT_METHOD_SERVICE);
 				imm.hideSoftInputFromWindow(userMonthly.getWindowToken(), 0);
 
-				editor.putInt("monthly",
-						Integer.parseInt(userMonthly.getText().toString()));
+				editor.putString("monthly", userMonthly.getText().toString());
 				editor.commit();
 
 				Intent intent = new Intent(getActivity(), InteractiveAct.class);

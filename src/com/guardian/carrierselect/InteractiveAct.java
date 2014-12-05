@@ -1,13 +1,13 @@
 package com.guardian.carrierselect;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -101,7 +101,7 @@ public class InteractiveAct extends ActionBarActivity {
 				+ convertWord(profilepref.getString("basic", "Not Set"))
 				+ convertWord(profilepref.getString("tabs", "Not Set"))
 				+ convertWord(profilepref.getString("mifi", "Not Set"))));
-		mCost.setText("$" + profilepref.getInt("monthly", 0));
+		mCost.setText("$" + profilepref.getString("monthly", "Not Set"));
 		mData.setText(profilepref.getString("data", "Not Set"));
 
 		final Fragment fragment = new Home();
@@ -224,7 +224,7 @@ public class InteractiveAct extends ActionBarActivity {
 			new Handler().postDelayed(new Runnable() {
 				@Override
 				public void run() {
-					final Fragment fragment = new PhoneSearch();
+					final Fragment fragment = new SearchType();
 					final FragmentTransaction fragmenttran = getSupportFragmentManager()
 							.beginTransaction();
 					fragmenttran.setCustomAnimations(R.anim.slide_in_right,

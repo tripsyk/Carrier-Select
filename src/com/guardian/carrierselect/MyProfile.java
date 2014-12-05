@@ -108,11 +108,11 @@ public class MyProfile extends Fragment {
 		theDiscount.setText(discount);
 
 		// Set the appropriate monthly bill on the homescreen
-		int installs = sharedPref.getInt("installments", 0);
+		String installs = sharedPref.getString("installments", "Not Set");
 		theInstalls.setText("$" + String.valueOf(installs) + "/month");
 
 		// Set the appropriate monthly bill on the homescreen
-		int monthly = sharedPref.getInt("monthly", 0);
+		String monthly = sharedPref.getString("monthly", "Not Set");
 		theMonthly.setText("$" + String.valueOf(monthly));
 	}
 

@@ -34,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginBottom="@dimen/cardgut"
         android:layout_marginLeft="@dimen/cardmarg"
         android:layout_marginRight="@dimen/cardmarg"
         android:layout_marginTop="@dimen/topcard"
@@ -73,8 +73,9 @@
                 android:textSize="@dimen/body" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal" >
 
                 <Button
@@ -85,7 +86,7 @@
                     android:background="@drawable/circlebtn"
                     android:gravity="center"
                     android:text="@string/minus"
-                    android:textSize="@dimen/title_dimens" />
+                    android:textSize="@dimen/iconbtn" />
 
                 <TextView
                     android:id="@+id/sphone_input"
@@ -95,7 +96,7 @@
                     android:gravity="center"
                     android:hint="@string/zero"
                     android:text="@string/zero"
-                    android:textSize="@dimen/title_dimens" />
+                    android:textSize="@dimen/iconbtn" />
 
                 <Button
                     android:id="@+id/sphone_p"
@@ -104,14 +105,14 @@
                     android:background="@drawable/circlebtn"
                     android:gravity="center"
                     android:text="@string/plus"
-                    android:textSize="@dimen/title_dimens" />
+                    android:textSize="@dimen/iconbtn" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/bphone_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/elmtspace"
+                android:layout_marginTop="@dimen/topbotpad"
                 android:gravity="center"
                 android:hint="@string/bphone_label"
                 android:text="@string/bphone_label"
@@ -130,7 +131,7 @@
                     android:background="@drawable/circlebtn"
                     android:gravity="center"
                     android:text="@string/minus"
-                    android:textSize="@dimen/title_dimens" />
+                    android:textSize="@dimen/iconbtn" />
 
                 <TextView
                     android:id="@+id/bphone_input"
@@ -140,7 +141,7 @@
                     android:gravity="center"
                     android:hint="@string/zero"
                     android:text="@string/zero"
-                    android:textSize="@dimen/title_dimens" />
+                    android:textSize="@dimen/iconbtn" />
 
                 <Button
                     android:id="@+id/bphone_p"
@@ -149,14 +150,14 @@
                     android:background="@drawable/circlebtn"
                     android:gravity="center"
                     android:text="@string/plus"
-                    android:textSize="@dimen/title_dimens" />
+                    android:textSize="@dimen/iconbtn" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/data_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/elmtspace"
+                android:layout_marginTop="@dimen/topbotpad"
                 android:gravity="center"
                 android:hint="@string/data_label"
                 android:text="@string/data_label"
@@ -175,7 +176,7 @@
                     android:background="@drawable/circlebtn"
                     android:gravity="center"
                     android:text="@string/minus"
-                    android:textSize="@dimen/title_dimens" />
+                    android:textSize="@dimen/iconbtn" />
 
                 <TextView
                     android:id="@+id/data_input"
@@ -185,7 +186,7 @@
                     android:gravity="center"
                     android:hint="@string/zero"
                     android:text="@string/zero"
-                    android:textSize="@dimen/title_dimens" />
+                    android:textSize="@dimen/iconbtn" />
 
                 <Button
                     android:id="@+id/data_p"
@@ -194,14 +195,14 @@
                     android:background="@drawable/circlebtn"
                     android:gravity="center"
                     android:text="@string/plus"
-                    android:textSize="@dimen/title_dimens" />
+                    android:textSize="@dimen/iconbtn" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/tab_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/elmtspace"
+                android:layout_marginTop="@dimen/topbotpad"
                 android:gravity="center"
                 android:hint="@string/tab_label"
                 android:text="@string/tab_label"
@@ -220,7 +221,7 @@
                     android:background="@drawable/circlebtn"
                     android:gravity="center"
                     android:text="@string/minus"
-                    android:textSize="@dimen/title_dimens" />
+                    android:textSize="@dimen/iconbtn" />
 
                 <TextView
                     android:id="@+id/tab_input"
@@ -230,7 +231,7 @@
                     android:gravity="center"
                     android:hint="@string/zero"
                     android:text="@string/zero"
-                    android:textSize="@dimen/title_dimens" />
+                    android:textSize="@dimen/iconbtn" />
 
                 <Button
                     android:id="@+id/tab_p"
@@ -239,14 +240,14 @@
                     android:background="@drawable/circlebtn"
                     android:gravity="center"
                     android:text="@string/plus"
-                    android:textSize="@dimen/title_dimens" />
+                    android:textSize="@dimen/iconbtn" />
             </LinearLayout>
 
             <TextView
                 android:id="@+id/mifi_label"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/elmtspace"
+                android:layout_marginTop="@dimen/topbotpad"
                 android:gravity="center"
                 android:hint="@string/mifi_label"
                 android:text="@string/mifi_label"
@@ -265,7 +266,7 @@
                     android:background="@drawable/circlebtn"
                     android:gravity="center"
                     android:text="@string/minus"
-                    android:textSize="@dimen/title_dimens" />
+                    android:textSize="@dimen/iconbtn" />
 
                 <TextView
                     android:id="@+id/mifi_input"
@@ -275,7 +276,7 @@
                     android:gravity="center"
                     android:hint="@string/zero"
                     android:text="@string/zero"
-                    android:textSize="@dimen/title_dimens" />
+                    android:textSize="@dimen/iconbtn" />
 
                 <Button
                     android:id="@+id/mifi_p"
@@ -284,7 +285,7 @@
                     android:background="@drawable/circlebtn"
                     android:gravity="center"
                     android:text="@string/plus"
-                    android:textSize="@dimen/title_dimens" />
+                    android:textSize="@dimen/iconbtn" />
             </LinearLayout>
         </LinearLayout>
     </android.support.v7.widget.CardView>
@@ -348,11 +349,11 @@
                 android:id="@+id/dis_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/elmtspace"
+                android:layout_marginTop="@dimen/contentspace"
                 android:gravity="center"
                 android:hint="@string/dis_value"
                 android:text="@string/dis_value"
-                android:textSize="@dimen/body" />
+                android:textSize="@dimen/subtitle_dimens" />
 
             <SeekBar
                 android:id="@+id/discount_bar"
@@ -368,13 +369,11 @@
     </android.support.v7.widget.CardView>
 
     <Button
-        android:id="@+id/button_send"
-        android:layout_width="@dimen/btnw"
-        android:layout_height="@dimen/btnh"
-        android:layout_gravity="center|bottom"
-        android:layout_marginTop="@dimen/btnspace"
-        android:gravity="center"
-        android:hint="@string/next"
-        android:text="@string/next" />
+        android:id="@+id/next"
+        style="@style/iconbtn"
+        android:layout_width="@dimen/plusminbtn"
+        android:layout_height="@dimen/plusminbtn"
+        android:layout_marginTop="@dimen/circbtnspace"
+        android:text="@string/arrow" />
 
 </LinearLayout>

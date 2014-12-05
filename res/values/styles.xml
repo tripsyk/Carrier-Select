@@ -10,7 +10,7 @@
         <item name="windowActionBar">false</item>
         <item name="colorControlHighlight">@color/accent</item>
         <item name="actionBarStyle">@style/MyActionBar</item>
-        <item name="android:textColor">@color/txt</item>
+        <item name="android:textColor">@color/white_color</item>
         <item name="android:fontFamily">@string/font_fontFamily</item>
         <item name="android:buttonStyle">@style/ButtonStyle</item>
     </style>
@@ -24,11 +24,31 @@
         <item name="android:textColor">@color/white_color</item>
     </style>
 
+    <style name="iconbtn" parent="@style/Widget.AppCompat.ActionButton">
+        <item name="android:layout_width">@dimen/plusminbtn</item>
+        <item name="android:layout_height">@dimen/plusminbtn</item>
+        <item name="android:textColor">@color/white_color</item>
+        <item name="android:background">@drawable/circlebtn</item>
+        <item name="android:fontFamily">@string/font_fontFamily_medium</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/iconbtn</item>
+    </style>
+
+    <style name="focusbtn" parent="@style/Widget.AppCompat.ActionButton">
+        <item name="android:layout_width">@dimen/plusminbtn</item>
+        <item name="android:layout_height">@dimen/plusminbtn</item>
+        <item name="android:textColor">@color/white_color</item>
+        <item name="android:background">@drawable/circlebtn</item>
+        <item name="android:fontFamily">@string/font_fontFamily_medium</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/iconbtn</item>
+    </style>
+
     <style name="ButtonStyle" parent="@style/Widget.AppCompat.ActionButton">
         <item name="android:textSize">@dimen/button</item>
         <item name="android:textColor">@color/white_color</item>
         <item name="android:fontFamily">@string/font_fontFamily_medium</item>
-        <item name="android:background">@color/accent</item>
+        <item name="android:background">@color/btn</item>
         <item name="android:textAllCaps">true</item>
     </style>
 

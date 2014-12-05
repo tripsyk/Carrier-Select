@@ -2,6 +2,8 @@
 <resources>
 
     <string name="app_name">Carrier Select</string>
+    <string name="changelog">Change log</string>
+    <string name="changelogstring">Change log v0.5 ALPHA\n\n\nFEATURES\n\n\tADDED - No contract plans will now show more detailed carrier information such as network type, which companies cell towers are used, and what network bands are supported by that carrier.\n\n\tADDED - No contract carriers will now show daily and pay per use plans in search results.\n\n\tADDED - Service plans now give an option for 2 year contract pricing.\n\n\tADDED - Service plans now give the ability to add X number of mifi hotspot devices.\n\n\tCHANGED - Phone search has been renamed to \'Device Search\' to prepare for the ability to look up tablets and wearable devices.\n\n\tCHANGED - When selecting \'Device Search\' on the navigation menu, you are now brought to a screen allowing you to search for phones, tablets, and wearables.\n\n\tCHANGED - Advanced customization has been added to the \'My Profile\' section to prepare for a future build.\n\n\nTECHNICAL STUFF\n\n\tIMPROVED - Modified the following to Material Design guidelines- \n\t\t-Navigation Drawer\n\t\t-Action Bar\n\t\t-Text size/color\n\t\t-Button design\n\t\t-Button touch response\n\t\t-Card padding, elevation, content padding, and color\n\t\t-Application background color\n\n\tIMPROVED - Flattened view hierarchy on the news screen, navigation drawer, and service plans sections.</string>
     <string name="sphone_label">How many smartphones? </string>
     <string name="data_label">How many GB of data? </string>
     <string name="bphone_label">How many basic phones? </string>
@@ -46,6 +48,7 @@
 
     <string name="plus">+</string>
     <string name="minus">-</string>
+    <string name="arrow">></string>
     <string name="zero">0</string>
     <string name="zerodollar">$0</string>
     <string name="discount_text">Bill discount (employer, etc)?</string>
@@ -63,7 +66,7 @@
     <string name="discountcost">Employer Discount:</string>
     <string name="installments">Financed Equipment:</string>
     <string name="total">Total:</string>
-    <string name="installhint">Enter amount here</string>
+    <string name="installhint">Enter monthly amount here</string>
     <string name="installtitle">How much do you pay each month for equipment you have financed (if any?)</string>
     <string name="viewplan">Details</string>
     <string name="pvtitle">Service Plan Viewer</string>
@@ -79,6 +82,9 @@
     <string name="mifi_label">How many mifi devices (hotspots)?</string>
     <string name="contractpricing">2 year contract pricing</string>
     <string name="search">Device Search</string>
+    <string name="phonesearch">Phone Search</string>
+    <string name="tabletsearch">Tablet Search</string>
+    <string name="wearablesearch">Wearable Search</string>
     <string name="psdesc">Enter a phone to see technical specs</string>
     <string name="pscomparedesc">Enter the phone you would like to compare</string>
     <string name="searchTermHint">(ex. iPhone 6)</string>
@@ -117,11 +123,11 @@
     <string name="carriertitle">Which carrier do you currently reside on?</string>
     <string name="smartphonestitle">How many smartphones do you have?</string>
     <string name="basicphonestitle">How many basic phones do you have?</string>
-    <string name="datatitle">How much data do you have between all phones?</string>
+    <string name="datatitle">How much data do you have between all devices?</string>
     <string name="tabstitle">How many tablets do you have on a cellular network?</string>
     <string name="monthlytitle">How much do you pay on average per month for your mobile service?</string>
     <string name="blankstring"></string>
-    <string name="monthlyhint">Enter monthly bill</string>
+    <string name="monthlyhint">Enter monthly bill here</string>
     <string name="equipnotice">Prices include no equipment. Click for more info.</string>
     <string name="tmonotice">T-Mobile no longer offers contracts and pricing for tablets and hotspots are separate.</string>
     <string name="version">Version 0.5 ALPHA</string>
@@ -188,31 +194,40 @@
     <string name="comparephone">Compare</string>
     <string name="designinfo">Design &amp; Info</string>
     <string name="releasedate">Release Date:</string>
+    <string name="sim">SIM Card Size:</string>
     <string name="os">Operating System:</string>
     <string name="dimensions">Dimensions:</string>
     <string name="thickness">Thickness:</string>
     <string name="weight">Weight:</string>
     <string name="display">Display</string>
     <string name="displaysize">Display Size:</string>
+    <string name="displaytype">Display Technology:</string>
     <string name="resolution">Screen Resolution:</string>
     <string name="pixden">Pixel Density:</string>
     <string name="camera">Camera</string>
     <string name="backcam">Rear Camera:</string>
+    <string name="hdr">HDR Pictures:</string>
+    <string name="dualled">Dual LED Flash:</string>
     <string name="frontcam">Front-facing Camera:</string>
     <string name="video">Video Quality:</string>
     <string name="hardware">Hardware</string>
-    <string name="processor">Processor:</string>
+    <string name="cpubrand">Processor Model:</string>
+    <string name="gpu">Graphics Processor:</string>
+    <string name="processor">Processor Speed:</string>
     <string name="ram">RAM:</string>
     <string name="storage">Built-in Storage:</string>
     <string name="battery">Battery Size:</string>
     <string name="microsd">MicroSD Slot:</string>
     <string name="features">Features</string>
+    <string name="charge">Quick Charge:</string>
     <string name="imagestab">Image Stabilizing:</string>
     <string name="nfc">NFC:</string>
     <string name="infra">Infrared Shooter:</string>
     <string name="wireless">Wireless Charging:</string>
     <string name="bt">Bluetooth:</string>
-    <string name="noisecanceling">Active Noise Canceling:</string>
+    <string name="wifidirect">WiFi Direct Capable:</string>
+    <string name="dlna">DLNA Certified:</string>
+    <string name="noisecanceling">Noise Canceling:</string>
     <string name="sensors">Device Sensors:</string>
     <string name="kbsearchgo">Search</string>
     <string name="kbsearchhint">Enter search term</string>
@@ -231,6 +246,9 @@
     <string name="mdatatitle">Data</string>
     <string name="mtotaltitle">Total</string>
     <string name="savecheck">Check for potential savings</string>
+    <string name="phones">Phones</string>
+    <string name="tablets">Tablets</string>
+    <string name="wearables">Wearables</string>
 
     <string-array name="dataselector">
         <item>No Data</item>
@@ -306,6 +324,11 @@
         <item>80GB</item>
     </string-array>
     <string-array name="discountspinner">
+        <item>0%</item>
+        <item>1%</item>
+        <item>2%</item>
+        <item>3%</item>
+        <item>4%</item>
         <item>5%</item>
         <item>6%</item>
         <item>7%</item>

@@ -3,10 +3,13 @@
 
     <color name="primary">#2196F3</color>
     <color name="secondary">#1976D2</color>
-    <color name="background">#ECEFF1</color>
-    <color name="accent">#2979FF</color>
+    <color name="background">#1976D2</color>
+    <color name="cardbg">#2196F3</color>
+    <color name="btn">#2196F3</color>
+    <color name="accent">#00E676</color>
     <color name="white_color">#FFFFFF</color>
+    <color name="cardtxt">#95000000</color>
     <color name="txt">#95000000</color>
-    <color name="controlhigh">#0D47A1</color>
+    <color name="controlhigh">#311B92</color>
 
 </resources>

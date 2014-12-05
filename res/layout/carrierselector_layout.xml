@@ -9,8 +9,8 @@
         android:layout_width="wrap_content"
         android:layout_height="@dimen/titlespace"
         android:layout_gravity="center"
+        android:layout_margin="@dimen/border"
         android:gravity="center"
-        android:hint="@string/carriertitle"
         android:text="@string/carriertitle"
         android:textSize="@dimen/title_dimens" />
 
@@ -21,10 +21,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="80dip"
         android:gravity="center"
-        android:hint="@string/att"
-        android:padding="8dip"
         android:text="@string/att"
-        android:textColor="@color/white_color"
         android:textSize="@dimen/body" />
 
     <Button
@@ -34,9 +31,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="8dip"
         android:gravity="center"
-        android:hint="@string/verizon"
         android:text="@string/verizon"
-        android:textColor="@color/white_color"
         android:textSize="@dimen/body" />
 
     <Button
@@ -46,9 +41,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="8dip"
         android:gravity="center"
-        android:hint="@string/sprint"
         android:text="@string/sprint"
-        android:textColor="@color/white_color"
         android:textSize="@dimen/body" />
 
     <Button
@@ -58,9 +51,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="8dip"
         android:gravity="center"
-        android:hint="@string/tmobile"
         android:text="@string/tmobile"
-        android:textColor="@color/white_color"
         android:textSize="@dimen/body" />
 
     <Button
@@ -70,7 +61,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="8dip"
         android:gravity="center"
-        android:hint="@string/other"
         android:text="@string/other" />
 
 </LinearLayout>

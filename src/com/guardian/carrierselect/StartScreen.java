@@ -25,7 +25,7 @@ public class StartScreen extends Fragment {
 
 		// Begin startup flow.
 		final AlphaAnimation animation1 = new AlphaAnimation(0.0f, 1.0f);
-		animation1.setDuration(1250);
+		animation1.setDuration(2000);
 		rootView.startAnimation(animation1);
 
 		next.setOnClickListener(new View.OnClickListener() {
@@ -41,7 +41,6 @@ public class StartScreen extends Fragment {
 						R.anim.slide_out_left, R.anim.slide_in_left,
 						R.anim.slide_out_right);
 				fragmenttran.replace(R.id.fragment_container, fragment);
-				fragmenttran.addToBackStack(null);
 				fragmenttran.commit();
 			}
 

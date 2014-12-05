@@ -1,8 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="-12dp"
+    android:layout_marginLeft="-17dp"
+    android:layout_marginRight="-17dp"
     android:orientation="vertical" >
-    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlespace"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/pstitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/search"
+            android:text="@string/search"
+            android:textColor="@color/txt"
+            android:textSize="@dimen/title_dimens" />
+
+        <TextView
+            android:id="@+id/pssubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/pssubtitle"
+            android:text="@string/pssubtitle"
+            android:textColor="@color/txt"
+            android:textSize="@dimen/subtitle_dimens" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/phones"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dsHeight"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/phoneimage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dsHeight"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/phones" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="#8888"
+            android:gravity="center"
+            android:text="@string/phones"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/subtitle_dimens" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dsHeight"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/tabletimages"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dsHeight"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tablets" />
+
+        <TextView
+            android:id="@+id/tablets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="#8888"
+            android:gravity="center"
+            android:text="@string/tablets"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/subtitle_dimens" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/wear"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dsHeight"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/wearablesimage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dsHeight"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/wearables" />
+
+        <TextView
+            android:id="@+id/wearables"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="#8888"
+            android:gravity="center"
+            android:text="@string/wearables"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/subtitle_dimens" />
+    </FrameLayout>
 
 </LinearLayout>

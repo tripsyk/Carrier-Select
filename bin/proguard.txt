@@ -1,4 +1,3 @@
-# view res/layout/activity_main.xml #generated:2
 # view res/layout/interactive.xml #generated:15
 -keep class android.support.v4.widget.DrawerLayout { <init>(...); }
 
@@ -52,7 +51,7 @@
 # view res/layout/abc_action_menu_layout.xml #generated:17
 -keep class android.support.v7.widget.ActionMenuView { <init>(...); }
 
-# view res/layout/about.xml #generated:73
+# view res/layout/about.xml #generated:64
 # view res/layout/activity_breakdown.xml #generated:306
 # view res/layout/activity_breakdown.xml #generated:56
 # view res/layout/activity_breakdown.xml #generated:563
@@ -73,23 +72,18 @@
 # view res/layout/nocontract2.xml #generated:58
 # view res/layout/nocontract2.xml #generated:710
 # view res/layout/nocontract2.xml #generated:871
-# view res/layout/phonesearch3.xml #generated:229
-# view res/layout/phonesearch3.xml #generated:338
-# view res/layout/phonesearch3.xml #generated:447
-# view res/layout/phonesearch3.xml #generated:613
-# view res/layout/phonesearch3.xml #generated:72
-# view res/layout/phonesearch6.xml #generated:1011
-# view res/layout/phonesearch6.xml #generated:1112
-# view res/layout/phonesearch6.xml #generated:1257
-# view res/layout/phonesearch6.xml #generated:208
-# view res/layout/phonesearch6.xml #generated:310
-# view res/layout/phonesearch6.xml #generated:412
-# view res/layout/phonesearch6.xml #generated:557
-# view res/layout/phonesearch6.xml #generated:64
-# view res/layout/phonesearch6.xml #generated:766
-# view res/layout/phonesearch6.xml #generated:910
+# view res/layout/phonesearch3.xml #generated:251
+# view res/layout/phonesearch3.xml #generated:384
+# view res/layout/phonesearch3.xml #generated:541
+# view res/layout/phonesearch3.xml #generated:70
+# view res/layout/phonesearch3.xml #generated:755
+# view res/layout/phonesearch6.xml #generated:107
+# view res/layout/phonesearch6.xml #generated:1296
+# view res/layout/phonesearch6.xml #generated:424
+# view res/layout/phonesearch6.xml #generated:652
+# view res/layout/phonesearch6.xml #generated:930
 # view res/layout/planviewer.xml #generated:46
-# view res/layout/quote_layout.xml #generated:292
+# view res/layout/quote_layout.xml #generated:293
 # view res/layout/quote_layout.xml #generated:31
 -keep class android.support.v7.widget.CardView { <init>(...); }
 
@@ -108,9 +102,9 @@
 # view res/layout/knowledge3.xml #generated:125
 # view res/layout/nocontract2.xml #generated:1354
 # view res/layout/phonesearch2.xml #generated:123
-# view res/layout/phonesearch3.xml #generated:604
+# view res/layout/phonesearch3.xml #generated:746
 # view res/layout/phonesearch5.xml #generated:122
-# view res/layout/phonesearch6.xml #generated:1448
+# view res/layout/phonesearch6.xml #generated:1798
 # view res/layout/planviewer.xml #generated:234
 -keep class com.applovin.adview.AppLovinAdView { <init>(...); }
 

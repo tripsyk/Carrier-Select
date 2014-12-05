@@ -42,8 +42,8 @@ public class InstallSelector extends Fragment {
 								Context.INPUT_METHOD_SERVICE);
 				imm.hideSoftInputFromWindow(installments.getWindowToken(), 0);
 
-				editor.putInt("installments",
-						Integer.parseInt(installments.getText().toString()));
+				editor.putString("installments", installments.getText()
+						.toString());
 				editor.commit();
 
 				final Fragment fragment = new MonthlySelector();

@@ -31,12 +31,11 @@ public class PhoneSearch3 extends Fragment {
 
 	private String searchTerm;
 	private ProgressDialog progress;
-	private TextView ps3mantitle, ps3carrier, release, os, size, thickness,
-			weight, display, pixden, reso, backcam, frontcam, video, pc, ram,
-			storage, battery, microsd, imagestab, bt, nfc, infra, nc, wireless,
-			sensors;
-	private TextView t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13,
-			t14, t15, t16, t17, t18, t19, t20, t21, t22, t23;
+	private TextView ps3mantitle, manufacturer, release, sim, os, size,
+			thickness, weight, display, displaytype, pixden, reso, backcam,
+			hdr, dualLED, frontcam, video, cpubrand, pc, gpu, ram, storage,
+			battery, microsd, charge, imagestab, bt, nfc, wifidirect, dlna,
+			infra, nc, wireless, sensors;
 	private Button compare;
 	private View rootView;
 
@@ -55,80 +54,41 @@ public class PhoneSearch3 extends Fragment {
 		ps3mantitle = (TextView) rootView.findViewById(R.id.ps3mantitle);
 		ps3mantitle.setText(searchTerm);
 		ps3mantitle.setTypeface(null, Typeface.BOLD);
-		ps3carrier = (TextView) rootView.findViewById(R.id.ps3carrier);
+		manufacturer = (TextView) rootView.findViewById(R.id.manufacturer);
 
 		// Load results TextViews
 		release = (TextView) rootView.findViewById(R.id.releasetext);
+		sim = (TextView) rootView.findViewById(R.id.simtext);
 		os = (TextView) rootView.findViewById(R.id.ostext);
 		size = (TextView) rootView.findViewById(R.id.dimentext);
 		thickness = (TextView) rootView.findViewById(R.id.thicktext);
 		weight = (TextView) rootView.findViewById(R.id.weighttext);
 		display = (TextView) rootView.findViewById(R.id.displaytext);
+		displaytype = (TextView) rootView.findViewById(R.id.displaytypetext);
 		pixden = (TextView) rootView.findViewById(R.id.pixdentext);
 		reso = (TextView) rootView.findViewById(R.id.resotext);
-		reso = (TextView) rootView.findViewById(R.id.resotext);
 		backcam = (TextView) rootView.findViewById(R.id.backcamtext);
+		hdr = (TextView) rootView.findViewById(R.id.hdrtext);
+		dualLED = (TextView) rootView.findViewById(R.id.dualledtext);
 		frontcam = (TextView) rootView.findViewById(R.id.frontcamtext);
 		video = (TextView) rootView.findViewById(R.id.videotext);
+		cpubrand = (TextView) rootView.findViewById(R.id.cpubrandtext);
 		pc = (TextView) rootView.findViewById(R.id.processortext);
+		gpu = (TextView) rootView.findViewById(R.id.gputext);
 		ram = (TextView) rootView.findViewById(R.id.ramtext);
 		storage = (TextView) rootView.findViewById(R.id.storagetext);
 		battery = (TextView) rootView.findViewById(R.id.batterytext);
 		microsd = (TextView) rootView.findViewById(R.id.microsdtext);
+		charge = (TextView) rootView.findViewById(R.id.chargetext);
 		imagestab = (TextView) rootView.findViewById(R.id.istext);
 		bt = (TextView) rootView.findViewById(R.id.bttext);
 		nfc = (TextView) rootView.findViewById(R.id.nfctext);
+		wifidirect = (TextView) rootView.findViewById(R.id.wifidirecttext);
+		dlna = (TextView) rootView.findViewById(R.id.dlnatext);
 		infra = (TextView) rootView.findViewById(R.id.infratext);
 		wireless = (TextView) rootView.findViewById(R.id.wirelesstext);
 		nc = (TextView) rootView.findViewById(R.id.nctext);
 		sensors = (TextView) rootView.findViewById(R.id.sensortext);
-
-		t1 = (TextView) rootView.findViewById(R.id.releasedate);
-		t1.setTypeface(null, Typeface.BOLD);
-		t2 = (TextView) rootView.findViewById(R.id.os);
-		t2.setTypeface(null, Typeface.BOLD);
-		t3 = (TextView) rootView.findViewById(R.id.dimensions);
-		t3.setTypeface(null, Typeface.BOLD);
-		t4 = (TextView) rootView.findViewById(R.id.thickness);
-		t4.setTypeface(null, Typeface.BOLD);
-		t5 = (TextView) rootView.findViewById(R.id.weight);
-		t5.setTypeface(null, Typeface.BOLD);
-		t6 = (TextView) rootView.findViewById(R.id.displaysize);
-		t6.setTypeface(null, Typeface.BOLD);
-		t7 = (TextView) rootView.findViewById(R.id.pixden);
-		t7.setTypeface(null, Typeface.BOLD);
-		t8 = (TextView) rootView.findViewById(R.id.resolution);
-		t8.setTypeface(null, Typeface.BOLD);
-		t9 = (TextView) rootView.findViewById(R.id.backcam);
-		t9.setTypeface(null, Typeface.BOLD);
-		t10 = (TextView) rootView.findViewById(R.id.frontcam);
-		t10.setTypeface(null, Typeface.BOLD);
-		t11 = (TextView) rootView.findViewById(R.id.video);
-		t11.setTypeface(null, Typeface.BOLD);
-		t12 = (TextView) rootView.findViewById(R.id.processor);
-		t12.setTypeface(null, Typeface.BOLD);
-		t13 = (TextView) rootView.findViewById(R.id.ram);
-		t13.setTypeface(null, Typeface.BOLD);
-		t14 = (TextView) rootView.findViewById(R.id.storage);
-		t14.setTypeface(null, Typeface.BOLD);
-		t15 = (TextView) rootView.findViewById(R.id.battery);
-		t15.setTypeface(null, Typeface.BOLD);
-		t16 = (TextView) rootView.findViewById(R.id.microsd);
-		t16.setTypeface(null, Typeface.BOLD);
-		t17 = (TextView) rootView.findViewById(R.id.imagestab);
-		t17.setTypeface(null, Typeface.BOLD);
-		t18 = (TextView) rootView.findViewById(R.id.bt);
-		t18.setTypeface(null, Typeface.BOLD);
-		t19 = (TextView) rootView.findViewById(R.id.nfc);
-		t19.setTypeface(null, Typeface.BOLD);
-		t20 = (TextView) rootView.findViewById(R.id.infra);
-		t20.setTypeface(null, Typeface.BOLD);
-		t21 = (TextView) rootView.findViewById(R.id.wireless);
-		t21.setTypeface(null, Typeface.BOLD);
-		t22 = (TextView) rootView.findViewById(R.id.noisecanceling);
-		t22.setTypeface(null, Typeface.BOLD);
-		t23 = (TextView) rootView.findViewById(R.id.sensors);
-		t23.setTypeface(null, Typeface.BOLD);
 		double randomNum = Math.random() * 3;
 
 		if ((int) randomNum == 1)
@@ -179,8 +139,10 @@ public class PhoneSearch3 extends Fragment {
 			public void done(List<ParseObject> PhoneList, ParseException e) {
 
 				if (e == null) {
-					ps3carrier.setText(PhoneList.get(0).getString("Carriers"));
+					manufacturer.setText(PhoneList.get(0).getString(
+							"Manufacturer"));
 					release.setText(PhoneList.get(0).getString("ReleaseDate"));
+					sim.setText(PhoneList.get(0).getString("SIM"));
 					os.setText(PhoneList.get(0).getString("OS"));
 					size.setText(PhoneList.get(0).getString("Dimensions"));
 					thickness.setText(PhoneList.get(0).getString("Thickness"));
@@ -188,12 +150,26 @@ public class PhoneSearch3 extends Fragment {
 					display.setText(PhoneList.get(0).getNumber("Screensize")
 							.toString()
 							+ "\"");
+					displaytype.setText(PhoneList.get(0).getString(
+							"DisplayType"));
 					pixden.setText(PhoneList.get(0).getString("PPI"));
 					reso.setText(PhoneList.get(0).getString("Resolution"));
 					backcam.setText(PhoneList.get(0).getString("RearCam"));
+					if (PhoneList.get(0).getBoolean("HDR")) {
+						hdr.setText("Yes");
+					} else {
+						hdr.setText("No");
+					}
+					if (PhoneList.get(0).getBoolean("DualLED")) {
+						dualLED.setText("Yes");
+					} else {
+						dualLED.setText("No");
+					}
 					frontcam.setText(PhoneList.get(0).getString("FrontCam"));
 					video.setText(PhoneList.get(0).getString("VideoRate"));
+					cpubrand.setText(PhoneList.get(0).getString("CPUBrand"));
 					pc.setText(PhoneList.get(0).getString("CPU"));
+					gpu.setText(PhoneList.get(0).getString("GPU"));
 					ram.setText(PhoneList.get(0).getString("RAM"));
 					storage.setText(PhoneList.get(0).getString("Storage"));
 					battery.setText(PhoneList.get(0).getString("Battery"));
@@ -201,6 +177,11 @@ public class PhoneSearch3 extends Fragment {
 						microsd.setText("Yes");
 					} else {
 						microsd.setText("No");
+					}
+					if (PhoneList.get(0).getBoolean("BoostCharge")) {
+						charge.setText("Yes");
+					} else {
+						charge.setText("No");
 					}
 					if (PhoneList.get(0).getBoolean("OIS")) {
 						imagestab.setText("Yes");
@@ -212,6 +193,16 @@ public class PhoneSearch3 extends Fragment {
 						nfc.setText("Yes");
 					} else {
 						nfc.setText("No");
+					}
+					if (PhoneList.get(0).getBoolean("WifiDirect")) {
+						wifidirect.setText("Yes");
+					} else {
+						wifidirect.setText("No");
+					}
+					if (PhoneList.get(0).getBoolean("DLNA")) {
+						dlna.setText("Yes");
+					} else {
+						dlna.setText("No");
 					}
 					if (PhoneList.get(0).getBoolean("Infrared")) {
 						infra.setText("Yes");

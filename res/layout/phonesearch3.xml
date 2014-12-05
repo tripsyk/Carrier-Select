@@ -35,7 +35,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/ps3mantitle"
+        android:id="@+id/manufacturer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -44,11 +44,10 @@
         android:hint="@string/blankstring"
         android:text="@string/blankstring"
         android:textColor="@color/txt"
-        android:textSize="@dimen/body"
-        android:textStyle="bold" />
+        android:textSize="@dimen/subtitle_dimens" />
 
     <TextView
-        android:id="@+id/ps3carrier"
+        android:id="@+id/ps3mantitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -56,15 +55,14 @@
         android:hint="@string/blankstring"
         android:text="@string/blankstring"
         android:textColor="@color/txt"
-        android:textSize="@dimen/body"
-        android:textStyle="bold" />
+        android:textSize="@dimen/body" />
 
     <Button
         android:id="@+id/compare"
         android:layout_width="@dimen/btnw"
         android:layout_height="@dimen/btnh"
         android:layout_gravity="center"
-        android:layout_marginTop="30dip"
+        android:layout_marginTop="16dip"
         android:gravity="center"
         android:hint="@string/comparephone"
         android:text="@string/comparephone" />
@@ -75,7 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginBottom="@dimen/cardgut"
         android:layout_marginLeft="@dimen/cardmarg"
         android:layout_marginRight="@dimen/cardmarg"
         android:layout_marginTop="@dimen/topcard"
@@ -119,6 +117,30 @@
 
             <TextView
                 android:id="@+id/releasetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body" />
+
+            <TextView
+                android:id="@+id/sim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dip"
+                android:gravity="center"
+                android:hint="@string/sim"
+                android:text="@string/sim"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/simtext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -232,7 +254,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginBottom="@dimen/cardgut"
         android:layout_marginLeft="@dimen/cardmarg"
         android:layout_marginRight="@dimen/cardmarg"
         android:layout_marginTop="@dimen/cardgut"
@@ -276,6 +298,30 @@
 
             <TextView
                 android:id="@+id/displaytext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body" />
+
+            <TextView
+                android:id="@+id/displaytype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dip"
+                android:gravity="center"
+                android:hint="@string/displaytype"
+                android:text="@string/displaytype"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/displaytypetext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -341,7 +387,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginBottom="@dimen/cardgut"
         android:layout_marginLeft="@dimen/cardmarg"
         android:layout_marginRight="@dimen/cardmarg"
         android:layout_marginTop="@dimen/cardgut"
@@ -385,6 +431,54 @@
 
             <TextView
                 android:id="@+id/backcamtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body" />
+
+            <TextView
+                android:id="@+id/hdr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dip"
+                android:gravity="center"
+                android:hint="@string/hdr"
+                android:text="@string/hdr"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/hdrtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body" />
+
+            <TextView
+                android:id="@+id/dualled"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dip"
+                android:gravity="center"
+                android:hint="@string/dualled"
+                android:text="@string/dualled"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dualledtext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -450,7 +544,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginBottom="@dimen/cardgut"
         android:layout_marginLeft="@dimen/cardmarg"
         android:layout_marginRight="@dimen/cardmarg"
         android:layout_marginTop="@dimen/cardgut"
@@ -480,6 +574,30 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/cpubrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dip"
+                android:gravity="center"
+                android:hint="@string/cpubrand"
+                android:text="@string/cpubrand"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cpubrandtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body" />
+
+            <TextView
                 android:id="@+id/processor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -494,6 +612,30 @@
 
             <TextView
                 android:id="@+id/processortext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body" />
+
+            <TextView
+                android:id="@+id/gpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dip"
+                android:gravity="center"
+                android:hint="@string/gpu"
+                android:text="@string/gpu"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/gputext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -616,7 +758,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/cardmarg"
+        android:layout_marginBottom="@dimen/topbotpad"
         android:layout_marginLeft="@dimen/cardmarg"
         android:layout_marginRight="@dimen/cardmarg"
         android:layout_marginTop="@dimen/cardgut"
@@ -644,6 +786,30 @@
                 android:textColor="@color/txt"
                 android:textSize="@dimen/subtitle_dimens"
                 android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/charge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dip"
+                android:gravity="center"
+                android:hint="@string/charge"
+                android:text="@string/charge"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/chargetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body" />
 
             <TextView
                 android:id="@+id/imagestab"
@@ -708,6 +874,54 @@
 
             <TextView
                 android:id="@+id/nfctext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body" />
+
+            <TextView
+                android:id="@+id/wifidirect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dip"
+                android:gravity="center"
+                android:hint="@string/wifidirect"
+                android:text="@string/wifidirect"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/wifidirecttext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:hint="@string/blankstring"
+                android:text="@string/blankstring"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body" />
+
+            <TextView
+                android:id="@+id/dlna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dip"
+                android:gravity="center"
+                android:hint="@string/dlna"
+                android:text="@string/dlna"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/dlnatext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

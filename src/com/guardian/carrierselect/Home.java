@@ -555,6 +555,12 @@ public class Home extends Fragment {
 		} else if (iconId == 1) {
 			tv.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.newsdata,
 					0, 0);
+		} else if (iconId == 2) {
+			tv.setCompoundDrawablesWithIntrinsicBounds(0,
+					R.drawable.newsandroid, 0, 0);
+		} else {
+			tv.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.about, 0,
+					0);
 		}
 	}
 }

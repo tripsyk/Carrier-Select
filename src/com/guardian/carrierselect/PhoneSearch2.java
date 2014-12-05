@@ -253,7 +253,7 @@ public class PhoneSearch2 extends Fragment {
 						public void run() {
 							progress.dismiss();
 						}
-					}, 200);
+					}, 550);
 				} else {
 					ps21.setText("No phone found.");
 				}

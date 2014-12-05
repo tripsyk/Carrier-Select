@@ -60,7 +60,7 @@ public class QuoteFragment extends Fragment {
 		final Button tabp = (Button) rootView.findViewById(R.id.tab_p);
 		final Button mifim = (Button) rootView.findViewById(R.id.mifi_m);
 		final Button mifip = (Button) rootView.findViewById(R.id.mifi_p);
-		final Button send = (Button) rootView.findViewById(R.id.button_send);
+		final Button send = (Button) rootView.findViewById(R.id.next);
 
 		discBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
 
@@ -196,7 +196,7 @@ public class QuoteFragment extends Fragment {
 			@Override
 			public void onClick(View arg0) {
 				eTab.setText(String.valueOf(Integer.parseInt(eTab.getText()
-						.toString() + 1)));
+						.toString()) + 1));
 				arg0.startAnimation(animScale);
 				eTab.startAnimation(animScalet);
 			}
@@ -258,9 +258,8 @@ public class QuoteFragment extends Fragment {
 		// begin fragment trans
 		final FragmentTransaction ft = getActivity()
 				.getSupportFragmentManager().beginTransaction();
-		ft.setCustomAnimations(R.anim.slide_in_right,
-				R.anim.slide_out_left, R.anim.slide_in_left,
-				R.anim.slide_out_right);
+		ft.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left,
+				R.anim.slide_in_left, R.anim.slide_out_right);
 		ft.replace(
 				R.id.fragment_container,
 				DisplayMessageFragment.create(twoyear,

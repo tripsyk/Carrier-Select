@@ -1,30 +1,45 @@
 <resources>
 
     <!-- Default screen margins, per the Android Design guidelines. -->
+
+
+    <!-- Components -->
+    <dimen name="resultw">216dip</dimen>
+    <dimen name="resulth">48dip</dimen>
+    <dimen name="btnw">112dip</dimen>
+    <dimen name="btnh">36dip</dimen>
+    <dimen name="spinnerw">160dip</dimen>
+    <dimen name="spinnerh">36dip</dimen>
+    <dimen name="plusminbtn">48dip</dimen>
+    <dimen name="startbtnspace">48dip</dimen>
+    <dimen name="btnspace">4dip</dimen>
+    <dimen name="circbtnspace">16dip</dimen>
+
+    <!-- Generic dimensions -->
+    <dimen name="titlespace">72dip</dimen>
+    <dimen name="icon">32dip</dimen>
+    <dimen name="instruction">24dip</dimen>
+    <dimen name="border">8dip</dimen>
+    <dimen name="topbotpad">16dip</dimen>
+    <dimen name="elmtspace">8dip</dimen>
+    <dimen name="contentspace">4dip</dimen>
+    <dimen name="dsHeight">50dip</dimen>
+
+    <!-- Card layout -->
+    <dimen name="card_elevation">2dip</dimen>
+    <dimen name="cardmarg">8dip</dimen>
+    <dimen name="cardgut">4dip</dimen>
+    <dimen name="topcard">16dip</dimen>
+    <dimen name="cardpad">16dip</dimen>
+    <dimen name="cardcorner">2dip</dimen>
+
+    <!-- Application font sizes. -->
     <dimen name="title_dimens">20sp</dimen>
     <dimen name="subtitle_dimens">16sp</dimen>
     <dimen name="body">14sp</dimen>
     <dimen name="button">14sp</dimen>
     <dimen name="caption">12sp</dimen>
-    <dimen name="resultw">216dip</dimen>
-    <dimen name="resulth">40dip</dimen>
-    <dimen name="btnw">112dip</dimen>
-    <dimen name="btnh">40dip</dimen>
-    <dimen name="plusminbtn">40dip</dimen>
-    <dimen name="titlespace">72dip</dimen>
-    <dimen name="icon">32dip</dimen>
-    <dimen name="card_elevation">2dip</dimen>
-    <dimen name="cardmarg">4dip</dimen>
-    <dimen name="cardgut">8dip</dimen>
-    <dimen name="topcard">16dip</dimen>
-    <dimen name="cardpad">16dip</dimen>
-    <dimen name="cardcorner">4dip</dimen>
-    <dimen name="instruction">24dip</dimen>
-    <dimen name="border">16dip</dimen>
-    <dimen name="topbotpad">16dip</dimen>
-    <dimen name="btnspace">2dip</dimen>
-    <dimen name="elmtspace">8dip</dimen>
-    <dimen name="contentspace">4dip</dimen>
+    <dimen name="iconbtn">24sp</dimen>
 
     <!-- NAV DRAWER DIMENS -->
     <dimen name="drawerw">320dip</dimen>

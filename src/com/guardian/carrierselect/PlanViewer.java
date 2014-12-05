@@ -70,7 +70,8 @@ public class PlanViewer extends Fragment {
 	@SuppressLint("DefaultLocale")
 	public void buildATT() {
 
-		progress = new ProgressDialog(getActivity());
+		progress = new ProgressDialog(getActivity(),
+				AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
 		progress.setTitle("Building your plan");
 		progress.setMessage("Just a sec...");
 		progress.setCancelable(false);
