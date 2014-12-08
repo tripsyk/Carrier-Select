@@ -23,7 +23,7 @@ public class KnowledgeBase1 extends Fragment {
 			Bundle savedInstanceState) {
 		rootView = inflater.inflate(R.layout.knowledge1, container, false);
 
-		search = (Button) rootView.findViewById(R.id.kbsearchgo);
+		search = (Button) rootView.findViewById(R.id.next);
 		searchTerm = (EditText) rootView.findViewById(R.id.searchTerm);
 
 		searchTerm.setOnFocusChangeListener(new OnFocusChangeListener() {

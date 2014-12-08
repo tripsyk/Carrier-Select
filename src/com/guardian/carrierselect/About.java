@@ -27,7 +27,8 @@ public class About extends Fragment {
 			@Override
 			public void onClick(View arg0) {
 
-				new AlertDialog.Builder(rootView.getContext(), 5)
+				new AlertDialog.Builder(rootView.getContext(),
+						AlertDialog.THEME_DEVICE_DEFAULT_DARK)
 						.setTitle("Change Log")
 						.setMessage(R.string.changelogstring)
 						.setPositiveButton(android.R.string.ok,

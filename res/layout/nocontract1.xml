@@ -1,74 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/nc1titlebox"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:orientation="vertical" >
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/titlebox"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleh"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/phoneimage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleh"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bills" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="#60000000"
+            android:gravity="center"
+            android:text="@string/nocontracttitle"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/title_dimens" />
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/titlespace"
-        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlebox"
+        android:layout_gravity="center"
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/nocontract"
+            android:id="@+id/nctitlesub"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="96dip"
             android:gravity="center"
-            android:hint="@string/nocontracttitle"
-            android:text="@string/nocontracttitle"
-            android:textColor="@color/white_color"
-            android:textSize="@dimen/title_dimens" />
+            android:hint="@string/nctitlesub"
+            android:text="@string/nctitlesub"
+            android:textSize="@dimen/body" />
 
-        <TextView
-            android:id="@+id/ncsubtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <Spinner
+            android:id="@+id/carrierspinner"
+            android:layout_width="@dimen/spinnerw"
+            android:layout_height="@dimen/spinnerh"
             android:layout_gravity="center"
+            android:layout_marginTop="16dip"
+            android:background="@color/primary"
+            android:dropDownWidth="@dimen/spinnerw"
+            android:entries="@array/nocontractarray"
             android:gravity="center"
-            android:hint="@string/ncsubtitle"
-            android:text="@string/ncsubtitle"
+            android:spinnerMode="dropdown"
+            android:textAllCaps="true"
             android:textColor="@color/white_color"
-            android:textSize="@dimen/subtitle_dimens" />
+            android:textSize="14sp" />
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/nctitlesub"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="96dip"
-        android:gravity="center"
-        android:hint="@string/nctitlesub"
-        android:text="@string/nctitlesub"
-        android:textColor="@color/white_color"
-        android:textSize="@dimen/body" />
-
-    <Spinner
-        android:id="@+id/carrierspinner"
-        android:layout_width="@dimen/spinnerw"
-        android:layout_height="@dimen/spinnerh"
-        android:layout_marginTop="16dip"
-        android:background="@color/primary"
-        android:dropDownWidth="@dimen/spinnerw"
-        android:entries="@array/nocontractarray"
-        android:gravity="center"
-        android:spinnerMode="dropdown"
-        android:textAllCaps="true"
-        android:textColor="@color/white_color"
-        android:textSize="14sp" />
-
     <Button
-        android:id="@+id/nextnc1"
-        android:layout_width="@dimen/btnw"
-        android:layout_height="@dimen/btnh"
-        android:layout_gravity="center"
-        android:layout_marginTop="150dip"
+        android:id="@+id/next"
+        style="@style/nextbtn"
+        android:layout_width="@dimen/plusminbtn"
+        android:layout_height="@dimen/plusminbtn"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/startbtnspace"
         android:gravity="center"
-        android:hint="@string/next"
-        android:text="@string/next" />
+        android:text="@string/arrow"
+        android:textStyle="bold" />
 
-</LinearLayout>
+</RelativeLayout>

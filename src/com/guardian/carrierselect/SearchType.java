@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 public class SearchType extends Fragment {
 
@@ -47,9 +46,16 @@ public class SearchType extends Fragment {
 			@Override
 			public void onClick(View view) {
 
-				Toast.makeText(rootView.getContext(),
-						"Tablet search will be implemented in a future build.",
-						Toast.LENGTH_SHORT).show();
+				final Fragment fragment = new TabletSearch();
+
+				final FragmentTransaction fragmenttran = getActivity()
+						.getSupportFragmentManager().beginTransaction();
+				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+						R.anim.slide_out_left, R.anim.slide_in_left,
+						R.anim.slide_out_right);
+				fragmenttran.replace(R.id.fragment_container, fragment);
+				fragmenttran.addToBackStack(null);
+				fragmenttran.commit();
 			}
 		});
 
@@ -58,10 +64,16 @@ public class SearchType extends Fragment {
 			@Override
 			public void onClick(View view) {
 
-				Toast.makeText(
-						rootView.getContext(),
-						"Wearable search will be implemented in a future build.",
-						Toast.LENGTH_SHORT).show();
+				final Fragment fragment = new WearableSearch();
+
+				final FragmentTransaction fragmenttran = getActivity()
+						.getSupportFragmentManager().beginTransaction();
+				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
+						R.anim.slide_out_left, R.anim.slide_in_left,
+						R.anim.slide_out_right);
+				fragmenttran.replace(R.id.fragment_container, fragment);
+				fragmenttran.addToBackStack(null);
+				fragmenttran.commit();
 			}
 		});
 

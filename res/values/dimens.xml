@@ -6,7 +6,7 @@
     <!-- Components -->
     <dimen name="resultw">216dip</dimen>
     <dimen name="resulth">48dip</dimen>
-    <dimen name="btnw">112dip</dimen>
+    <dimen name="btnw">96dip</dimen>
     <dimen name="btnh">36dip</dimen>
     <dimen name="spinnerw">160dip</dimen>
     <dimen name="spinnerh">36dip</dimen>
@@ -17,8 +17,6 @@
 
     <!-- Generic dimensions -->
     <dimen name="titlespace">72dip</dimen>
-    <dimen name="icon">32dip</dimen>
-    <dimen name="instruction">24dip</dimen>
     <dimen name="border">8dip</dimen>
     <dimen name="topbotpad">16dip</dimen>
     <dimen name="elmtspace">8dip</dimen>
@@ -43,9 +41,7 @@
 
     <!-- NAV DRAWER DIMENS -->
     <dimen name="drawerw">320dip</dimen>
-    <dimen name="topicon">32dip</dimen>
     <dimen name="colorboxh">60dip</dimen>
-    <dimen name="listmarg">8dip</dimen>
     <dimen name="savecheckh">56dip</dimen>
 
 </resources>

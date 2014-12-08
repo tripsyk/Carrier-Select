@@ -34,9 +34,10 @@ public class BreakdownFragment extends Fragment {
 	private static final String ARGS_GIGS = "gigs";
 	private static final String ARGS_TABS = "tabs";
 	private static final String ARGS_DISCOUNT = "discount";
+	private static final String ARGS_INSTALLS = "installments";
 
-	private static int smartphones, basicphones, gigs, tabs, hotspots;
-	private double discount;
+	private static int smartphones, basicphones, gigs, tabs, hotspots, devices;
+	private double discount, installs;
 
 	private String carrier;
 
@@ -45,13 +46,13 @@ public class BreakdownFragment extends Fragment {
 	private static boolean twoyear;
 
 	private TextView attname, attplan, attsmart, attbasic, atttablets, attmifi,
-			atttax, attdiscount, atttotal;
+			attinstalls, atttax, attdiscount, atttotal;
 	private TextView vername, verplan, versmart, verbasic, vertablets, vermifi,
-			vertax, verdiscount, vertotal;
+			verinstalls, vertax, verdiscount, vertotal;
 	private TextView sprname, sprplan, sprsmart, sprbasic, sprtablets, sprmifi,
-			sprtax, sprdiscount, sprtotal;
+			sprinstalls, sprtax, sprdiscount, sprtotal;
 	private TextView tmoname, tmoplan, tmophones, tmotax, tmodiscount,
-			tmototal;
+			tmoinstalls, tmototal;
 
 	private static View rootView;
 
@@ -60,6 +61,8 @@ public class BreakdownFragment extends Fragment {
 			Bundle savedInstanceState) {
 		rootView = inflater.inflate(R.layout.activity_breakdown, container,
 				false);
+
+		devices = smartphones + basicphones + tabs + hotspots;
 
 		final Button attviewer = (Button) rootView.findViewById(R.id.gotoatt);
 		final Button verviewer = (Button) rootView.findViewById(R.id.gotover);
@@ -96,6 +99,11 @@ public class BreakdownFragment extends Fragment {
 		attmifi = (TextView) rootView.findViewById(R.id.attmifi);
 		vermifi = (TextView) rootView.findViewById(R.id.vermifi);
 		sprmifi = (TextView) rootView.findViewById(R.id.sprmifi);
+
+		attinstalls = (TextView) rootView.findViewById(R.id.attinstalls);
+		verinstalls = (TextView) rootView.findViewById(R.id.verinstalls);
+		sprinstalls = (TextView) rootView.findViewById(R.id.sprinstalls);
+		tmoinstalls = (TextView) rootView.findViewById(R.id.tmoinstalls);
 
 		atttax = (TextView) rootView.findViewById(R.id.atttax);
 		vertax = (TextView) rootView.findViewById(R.id.vertax);
@@ -204,7 +212,7 @@ public class BreakdownFragment extends Fragment {
 	public void buildATT() {
 
 		progress = new ProgressDialog(getActivity(),
-				AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
+				AlertDialog.THEME_DEVICE_DEFAULT_DARK);
 		progress.setTitle("Building your plans");
 		progress.setMessage("Just a sec...");
 		progress.setCancelable(false);
@@ -251,8 +259,8 @@ public class BreakdownFragment extends Fragment {
 					tablets = tablets * tabs;
 					mifi = mifi * hotspots;
 					double dis = 1 - (discount / 100);
-					final int tax = (int) Math.round((((plan * dis) + smart
-							+ basic + tablets + mifi) * .16) * 100) / 100;
+					final int tax = (int) Math
+							.round((((plan * dis) + smart + basic + tablets + mifi) * .16 + (devices * 2)) * 100) / 100;
 					dis = Math.round(plan - (plan * dis));
 
 					attname.setText(PlanList.get(0).getString("Name"));
@@ -261,11 +269,12 @@ public class BreakdownFragment extends Fragment {
 					attbasic.setText("$" + basic);
 					atttablets.setText("$" + tablets);
 					attmifi.setText("$" + mifi);
+					attinstalls.setText("$" + Math.round(installs));
 					attdiscount.setText("-$" + Math.round(dis));
 					atttax.setText("$" + tax);
 					atttotal.setText("$"
 							+ Math.round(((plan + smart + basic + tablets + mifi)
-									+ tax - dis)));
+									+ tax - dis + installs)));
 
 				} else {
 				}
@@ -325,8 +334,8 @@ public class BreakdownFragment extends Fragment {
 					tablets = tablets * tabs;
 					mifi = mifi * hotspots;
 					double dis = 1 - (discount / 100);
-					final int tax = (int) Math.round((((plan * dis) + smart
-							+ basic + tablets + mifi) * .16) * 100) / 100;
+					final int tax = (int) Math
+							.round((((plan * dis) + smart + basic + tablets + mifi) * .16 + (devices * 2)) * 100) / 100;
 					dis = Math.round(plan - (plan * dis));
 
 					vername.setText(PlanList.get(0).getString("Name"));
@@ -335,11 +344,12 @@ public class BreakdownFragment extends Fragment {
 					verbasic.setText("$" + basic);
 					vertablets.setText("$" + tablets);
 					vermifi.setText("$" + mifi);
+					verinstalls.setText("$" + Math.round(installs));
 					verdiscount.setText("-$" + Math.round(dis));
 					vertax.setText("$" + tax);
 					vertotal.setText("$"
 							+ Math.round(((plan + smart + basic + tablets + mifi)
-									+ tax - dis)));
+									+ tax - dis + installs)));
 
 				} else {
 				}
@@ -398,8 +408,8 @@ public class BreakdownFragment extends Fragment {
 					tablets = tablets * tabs;
 					mifi = mifi * hotspots;
 					double dis = 1 - (discount / 100);
-					final int tax = (int) Math.round((((plan * dis) + smart
-							+ basic + tablets + mifi) * .16) * 100) / 100;
+					final int tax = (int) Math
+							.round((((plan * dis) + smart + basic + tablets + mifi) * .16 + (devices * 2)) * 100) / 100;
 					dis = Math.round(plan - (plan * dis));
 
 					sprname.setText(PlanList.get(0).getString("Name"));
@@ -408,11 +418,12 @@ public class BreakdownFragment extends Fragment {
 					sprbasic.setText("$" + basic);
 					sprtablets.setText("$" + tablets);
 					sprmifi.setText("$" + mifi);
+					sprinstalls.setText("$" + Math.round(installs));
 					sprdiscount.setText("-$" + Math.round(dis));
 					sprtax.setText("$" + tax);
 					sprtotal.setText("$"
 							+ Math.round(((plan + smart + basic + tablets + mifi)
-									+ tax - dis)));
+									+ tax - dis + installs)));
 
 				} else {
 				}
@@ -460,18 +471,17 @@ public class BreakdownFragment extends Fragment {
 					final int smart = Integer.parseInt(PlanList.get(0)
 							.getString("SmartPrice"));
 
-					double dis = 1 - (discount / 100);
 					final int tax = (int) Math
-							.round((((smart * dis) + plan) * .16) * 100) / 100;
-					dis = Math.round(smart - (smart * dis));
+							.round(((smart + plan) * .16 + ((smartphones + basicphones) * 2))) * 100 / 100;
 
 					tmoname.setText(PlanList.get(0).getString("Name"));
 					tmoplan.setText("$" + plan);
 					tmophones.setText("$" + smart);
-					tmodiscount.setText("-$" + Math.round(dis));
+					tmoinstalls.setText("$" + Math.round(installs));
+					tmodiscount.setText("-$0");
 					tmotax.setText("$" + tax);
 					tmototal.setText("$"
-							+ Math.round(((plan + smart) + tax - dis)));
+							+ Math.round(((plan + smart) + tax + installs)));
 
 					final Timer timer = new Timer();
 					timer.schedule(new TimerTask() {
@@ -487,7 +497,8 @@ public class BreakdownFragment extends Fragment {
 	}
 
 	public static BreakdownFragment create(boolean twoyear, int smartphones,
-			int basicphones, int gigs, int tabs, int hotspots, double discount) {
+			int basicphones, int gigs, int tabs, int hotspots, double discount,
+			double installs) {
 		final BreakdownFragment fragment = new BreakdownFragment();
 
 		final Bundle args = new Bundle();
@@ -499,6 +510,7 @@ public class BreakdownFragment extends Fragment {
 		args.putInt(ARGS_GIGS, gigs);
 		args.putInt(ARGS_TABS, tabs);
 		args.putDouble(ARGS_DISCOUNT, discount);
+		args.putDouble(ARGS_INSTALLS, installs);
 		fragment.setArguments(args);
 
 		return fragment;
@@ -517,6 +529,7 @@ public class BreakdownFragment extends Fragment {
 		gigs = args.getInt(ARGS_GIGS);
 		tabs = args.getInt(ARGS_TABS);
 		discount = args.getDouble(ARGS_DISCOUNT);
+		installs = args.getDouble(ARGS_INSTALLS);
 
 	}
 

@@ -1,14 +1,30 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <style name="iconbtn" parent="android:style/Widget.Material.Button">
-        <item name="android:textColor">@color/white_color</item>
+        <item name="android:layout_width">@dimen/plusminbtn</item>
+        <item name="android:layout_height">@dimen/plusminbtn</item>
         <item name="android:background">@drawable/circlebtnl</item>
         <item name="android:textSize">@dimen/iconbtn</item>
     </style>
 
+    <style name="nextbtn" parent="android:style/Widget.Material.Button">
+        <item name="android:layout_width">@dimen/plusminbtn</item>
+        <item name="android:layout_height">@dimen/plusminbtn</item>
+        <item name="android:background">@drawable/nextbtnl</item>
+        <item name="android:textSize">@dimen/iconbtn</item>
+        <item name="android:textColor">@color/cardtxt</item>
+    </style>
+
+    <style name="FocusButton" parent="android:style/Widget.Material.Button">
+        <item name="android:textSize">@dimen/button</item>
+        <item name="android:textColor">@color/cardtxt</item>
+        <item name="android:fontFamily">@string/font_fontFamily_medium</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:background">@drawable/focusbtn</item>
+    </style>
+
     <style name="ButtonStyle" parent="android:style/Widget.Material.Button">
-        <item name="android:textColor">@color/white_color</item>
-        <item name="android:background">@drawable/raised_btn_bg</item>
+        <item name="android:background">@drawable/raised_btn</item>
     </style>
 
 </resources>

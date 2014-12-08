@@ -33,7 +33,7 @@ public class PlanViewer extends Fragment {
 	private static final String ARGS_DISCOUNT = "discount";
 	private static final String ARGS_CARRIER = "carrier";
 
-	private static int smartphones, basicphones, gigs, tabs, hotspotprice;
+	private static int smartphones, basicphones, gigs, tabs;
 
 	private String carrier;
 
@@ -71,7 +71,7 @@ public class PlanViewer extends Fragment {
 	public void buildATT() {
 
 		progress = new ProgressDialog(getActivity(),
-				AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
+				AlertDialog.THEME_DEVICE_DEFAULT_DARK);
 		progress.setTitle("Building your plan");
 		progress.setMessage("Just a sec...");
 		progress.setCancelable(false);
@@ -129,14 +129,13 @@ public class PlanViewer extends Fragment {
 					b1etfinstall.setText(PlanList.get(0).getString(
 							"ETFInstallments"));
 
-					final long delayInMillis = 250;
 					final Timer timer = new Timer();
 					timer.schedule(new TimerTask() {
 						@Override
 						public void run() {
 							progress.dismiss();
 						}
-					}, delayInMillis);
+					}, 200);
 
 				} else {
 				}
@@ -220,14 +219,13 @@ public class PlanViewer extends Fragment {
 					b1etfinstall.setText(PlanList.get(0).getString(
 							"ETFInstallments"));
 
-					final long delayInMillis = 250;
 					final Timer timer = new Timer();
 					timer.schedule(new TimerTask() {
 						@Override
 						public void run() {
 							progress.dismiss();
 						}
-					}, delayInMillis);
+					}, 200);
 				} else {
 				}
 			}
@@ -302,14 +300,13 @@ public class PlanViewer extends Fragment {
 					b1etfinstall.setText(PlanList.get(0).getString(
 							"ETFInstallments"));
 
-					final long delayInMillis = 250;
 					final Timer timer = new Timer();
 					timer.schedule(new TimerTask() {
 						@Override
 						public void run() {
 							progress.dismiss();
 						}
-					}, delayInMillis);
+					}, 200);
 				} else {
 				}
 			}
@@ -431,7 +428,6 @@ public class PlanViewer extends Fragment {
 
 		final Bundle args = getArguments();
 
-		hotspotprice = args.getInt(ARGS_HOT_SPOT);
 		smartphones = args.getInt(ARGS_SMARTPHONES);
 		basicphones = args.getInt(ARGS_BASICPHONES);
 		gigs = args.getInt(ARGS_GIGS);

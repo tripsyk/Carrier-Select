@@ -10,5 +10,4 @@
     android:spinnerMode="dropdown"
     android:textAllCaps="true"
     android:textColor="@color/white_color"
-    android:textSize="@dimen/body"
-    android:textStyle="bold" />
+    android:textSize="@dimen/body" />

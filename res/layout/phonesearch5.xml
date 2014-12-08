@@ -1,44 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:orientation="vertical" >
+    android:layout_height="match_parent" >
 
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/titlebox"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/titlespace"
-        android:gravity="center"
-        android:orientation="vertical" >
+        android:layout_height="@dimen/titleh"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/phoneimage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleh"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/phones" />
 
         <TextView
-            android:id="@+id/pstitle"
-            android:layout_width="wrap_content"
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="#60000000"
             android:gravity="center"
-            android:hint="@string/search"
-            android:text="@string/search"
-            android:textColor="@color/txt"
+            android:text="@string/ps4sub"
+            android:textColor="#FFFFFF"
             android:textSize="@dimen/title_dimens" />
-
-        <TextView
-            android:id="@+id/ps2sub"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:hint="@string/ps5sub"
-            android:text="@string/ps5sub"
-            android:textColor="@color/txt"
-            android:textSize="@dimen/subtitle_dimens" />
-    </LinearLayout>
+    </FrameLayout>
 
     <LinearLayout
-        android:id="@+id/ps2subtitlebox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_below="@id/titlebox"
+        android:layout_gravity="center"
         android:gravity="center"
         android:orientation="vertical" >
 
@@ -47,6 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="@dimen/topbotpad"
             android:gravity="center"
             android:hint="@string/ps2subtitle"
             android:text="@string/ps2subtitle"
@@ -63,21 +59,12 @@
             android:textColor="@color/txt"
             android:textSize="@dimen/body"
             android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/ps2resultsbox"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center"
-        android:orientation="vertical" >
 
         <Button
             android:id="@+id/ps21"
             android:layout_width="@dimen/resultw"
             android:layout_height="@dimen/resulth"
-            android:layout_marginTop="@dimen/cardgut"
+            android:layout_marginTop="@dimen/elmtspace"
             android:gravity="center"
             android:hint="@string/loadingphone"
             android:text="@string/loadingphone" />
@@ -86,7 +73,7 @@
             android:id="@+id/ps22"
             android:layout_width="@dimen/resultw"
             android:layout_height="@dimen/resulth"
-            android:layout_marginTop="@dimen/cardgut"
+            android:layout_marginTop="@dimen/contentspace"
             android:gravity="center"
             android:hint="@string/loadingphone"
             android:text="@string/loadingphone" />
@@ -95,7 +82,7 @@
             android:id="@+id/ps23"
             android:layout_width="@dimen/resultw"
             android:layout_height="@dimen/resulth"
-            android:layout_marginTop="@dimen/cardgut"
+            android:layout_marginTop="@dimen/contentspace"
             android:gravity="center"
             android:hint="@string/loadingphone"
             android:text="@string/loadingphone" />
@@ -104,7 +91,7 @@
             android:id="@+id/ps24"
             android:layout_width="@dimen/resultw"
             android:layout_height="@dimen/resulth"
-            android:layout_marginTop="@dimen/cardgut"
+            android:layout_marginTop="@dimen/contentspace"
             android:gravity="center"
             android:hint="@string/loadingphone"
             android:text="@string/loadingphone" />
@@ -113,18 +100,18 @@
             android:id="@+id/ps25"
             android:layout_width="@dimen/resultw"
             android:layout_height="@dimen/resulth"
-            android:layout_marginTop="@dimen/cardgut"
+            android:layout_marginTop="@dimen/contentspace"
             android:gravity="center"
             android:hint="@string/loadingphone"
             android:text="@string/loadingphone" />
+
+        <com.applovin.adview.AppLovinAdView
+            xmlns:applovin="http://schemas.applovin.com/android/1.0"
+            android:layout_width="350dip"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/topbotpad"
+            android:layout_marginTop="@dimen/elmtspace"
+            applovin:loadAdOnCreate="true" />
     </LinearLayout>
 
-    <com.applovin.adview.AppLovinAdView
-        xmlns:applovin="http://schemas.applovin.com/android/1.0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/cardgut"
-        android:layout_marginTop="@dimen/cardgut"
-        applovin:loadAdOnCreate="true" />
-
-</LinearLayout>
+</RelativeLayout>

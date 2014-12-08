@@ -1,75 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:orientation="vertical" >
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/titlebox"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleh"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/phoneimage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleh"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/phonepaper" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="#60000000"
+            android:gravity="center"
+            android:text="@string/kb"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/title_dimens" />
+    </FrameLayout>
 
     <LinearLayout
-        android:id="@+id/kbtitlebox"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/titlespace"
-        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlebox"
+        android:layout_gravity="center"
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/kbtitle"
+            android:id="@+id/kb1searchtext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="72dip"
             android:gravity="center"
-            android:hint="@string/kb"
-            android:text="@string/kb"
+            android:hint="@string/kbsearchtext"
+            android:text="@string/kbsearchtext"
             android:textColor="@color/txt"
-            android:textSize="@dimen/title_dimens" />
+            android:textSize="@dimen/body" />
 
-        <TextView
-            android:id="@+id/kbsubtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <EditText
+            android:id="@+id/searchTerm"
+            android:layout_width="@dimen/resultw"
+            android:layout_height="@dimen/resulth"
             android:layout_gravity="center"
-            android:gravity="center"
-            android:hint="@string/kbsub"
-            android:text="@string/kbsub"
-            android:textColor="@color/txt"
-            android:textSize="@dimen/subtitle_dimens" />
+            android:layout_marginTop="10dip"
+            android:background="@color/primary"
+            android:hint="@string/kbsearchhint"
+            android:padding="@dimen/elmtspace"
+            android:singleLine="true"
+            android:textColor="@color/white_color"
+            android:textColorHint="@color/white_color"
+            android:textSize="@dimen/body" >
+        </EditText>
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/kb1searchtext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="72dip"
-        android:gravity="center"
-        android:hint="@string/kbsearchtext"
-        android:text="@string/kbsearchtext"
-        android:textColor="@color/txt"
-        android:textSize="@dimen/body" />
-
-    <EditText
-        android:id="@+id/searchTerm"
-        android:layout_width="@dimen/resultw"
-        android:layout_height="@dimen/resulth"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dip"
-        android:background="@color/accent"
-        android:hint="@string/kbsearchhint"
-        android:padding="@dimen/elmtspace"
-        android:singleLine="true"
-        android:textColor="@color/white_color"
-        android:textColorHint="@color/white_color"
-        android:textSize="@dimen/body" >
-    </EditText>
-
     <Button
-        android:id="@+id/kbsearchgo"
-        android:layout_width="@dimen/btnw"
-        android:layout_height="@dimen/btnh"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dip"
+        android:id="@+id/next"
+        style="@style/nextbtn"
+        android:layout_width="@dimen/plusminbtn"
+        android:layout_height="@dimen/plusminbtn"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/startbtnspace"
         android:gravity="center"
-        android:text="@string/kbsearchgo" >
-    </Button>
+        android:text="@string/arrow"
+        android:textStyle="bold" />
 
-</LinearLayout>
+</RelativeLayout>

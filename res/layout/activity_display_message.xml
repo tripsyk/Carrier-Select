@@ -1,223 +1,240 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:orientation="vertical" >
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/titlebox"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titleh"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/phoneimage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleh"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bills" />
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#60000000"
+            android:gravity="center"
+            android:text="@string/serviceplans"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/title_dimens" />
+    </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/titlespace"
-        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlebox"
+        android:layout_gravity="center"
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/contract_plans"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center"
-            android:hint="@string/sp2title"
-            android:text="@string/sp2title"
-            android:textSize="@dimen/title_dimens" />
-
-        <TextView
-            android:id="@+id/contract_sub"
+            android:id="@+id/equipnotice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="@dimen/topbotpad"
             android:gravity="center"
-            android:hint="@string/quotecompare"
-            android:text="@string/quotecompare"
-            android:textSize="@dimen/subtitle_dimens" />
-    </LinearLayout>
+            android:hint="@string/equipnotice"
+            android:text="@string/equipnotice"
+            android:textSize="@dimen/caption" />
 
-    <TextView
-        android:id="@+id/equipnotice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/instruction"
-        android:gravity="center"
-        android:hint="@string/equipnotice"
-        android:text="@string/equipnotice"
-        android:textSize="@dimen/caption" />
+        <TextView
+            android:id="@+id/tmonotice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/topbotpad"
+            android:gravity="center"
+            android:hint="@string/tmonotice"
+            android:text="@string/tmonotice"
+            android:textSize="@dimen/caption" />
 
-    <TextView
-        android:id="@+id/tmonotice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/instruction"
-        android:gravity="center"
-        android:hint="@string/tmonotice"
-        android:text="@string/tmonotice"
-        android:textSize="@dimen/caption" />
-
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/displaycard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/cardmarg"
-        android:layout_marginLeft="@dimen/cardmarg"
-        android:layout_marginRight="@dimen/cardmarg"
-        android:layout_marginTop="@dimen/topcard"
-        android:gravity="center"
-        card_view:cardBackgroundColor="@color/white_color"
-        card_view:cardCornerRadius="@dimen/cardcorner"
-        card_view:cardElevation="@dimen/card_elevation"
-        card_view:contentPadding="@dimen/cardpad" >
-
-        <LinearLayout
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/displaycard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/cardgut"
+            android:layout_marginLeft="@dimen/cardmarg"
+            android:layout_marginRight="@dimen/cardmarg"
+            android:layout_marginTop="@dimen/topcard"
             android:gravity="center"
-            android:orientation="vertical" >
+            card_view:cardBackgroundColor="@color/cardbg"
+            card_view:cardCornerRadius="@dimen/cardcorner"
+            card_view:cardElevation="@dimen/card_elevation"
+            card_view:contentPadding="@dimen/cardpad" >
 
-            <TextView
-                android:id="@+id/attplan"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:hint="@string/blankstring"
-                android:text="@string/blankstring"
-                android:textSize="@dimen/body"
-                android:textStyle="bold" />
+                android:orientation="vertical" >
 
-            <TextView
-                android:id="@+id/att_pretotal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/monthlycost"
-                android:text="@string/monthlycost"
-                android:textSize="@dimen/body" />
+                <TextView
+                    android:id="@+id/attplan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/cardtxt"
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/att_total"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/loadingprices"
-                android:text="@string/loadingprices"
-                android:textSize="@dimen/body"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/att_pretotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/monthlycost"
+                    android:text="@string/monthlycost"
+                    android:textColor="@color/cardtxt"
+                    android:textSize="@dimen/body" />
 
-            <TextView
-                android:id="@+id/verplan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/topbotpad"
-                android:gravity="center"
-                android:hint="@string/blankstring"
-                android:text="@string/blankstring"
-                android:textSize="@dimen/body"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/att_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/loadingprices"
+                    android:text="@string/loadingprices"
+                    android:textColor="@color/cardtxt"
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/ver_pretotal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/monthlycost"
-                android:text="@string/monthlycost"
-                android:textSize="@dimen/body" />
+                <TextView
+                    android:id="@+id/verplan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/topbotpad"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/cardtxt"
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/ver_total"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/loadingprices"
-                android:text="@string/loadingprices"
-                android:textSize="@dimen/body"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/ver_pretotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/monthlycost"
+                    android:text="@string/monthlycost"
+                    android:textColor="@color/cardtxt"
+                    android:textSize="@dimen/body" />
 
-            <TextView
-                android:id="@+id/sprplan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/topbotpad"
-                android:gravity="center"
-                android:hint="@string/blankstring"
-                android:text="@string/blankstring"
-                android:textSize="@dimen/body"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/ver_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/loadingprices"
+                    android:text="@string/loadingprices"
+                    android:textColor="@color/cardtxt"
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/spr_pretotal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/monthlycost"
-                android:text="@string/monthlycost"
-                android:textSize="@dimen/body" />
+                <TextView
+                    android:id="@+id/sprplan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/topbotpad"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/cardtxt"
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/spr_total"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/loadingprices"
-                android:text="@string/loadingprices"
-                android:textSize="@dimen/body"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/spr_pretotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/monthlycost"
+                    android:text="@string/monthlycost"
+                    android:textColor="@color/cardtxt"
+                    android:textSize="@dimen/body" />
 
-            <TextView
-                android:id="@+id/tmoplan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/topbotpad"
-                android:gravity="center"
-                android:hint="@string/blankstring"
-                android:text="@string/blankstring"
-                android:textSize="@dimen/body"
-                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/spr_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/loadingprices"
+                    android:text="@string/loadingprices"
+                    android:textColor="@color/cardtxt"
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tmo_pretotal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/monthlycost"
-                android:text="@string/monthlycost"
-                android:textSize="@dimen/body" />
+                <TextView
+                    android:id="@+id/tmoplan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/topbotpad"
+                    android:gravity="center"
+                    android:hint="@string/blankstring"
+                    android:text="@string/blankstring"
+                    android:textColor="@color/cardtxt"
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/tmo_total"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:hint="@string/loadingprices"
-                android:text="@string/loadingprices"
-                android:textSize="@dimen/body"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </android.support.v7.widget.CardView>
+                <TextView
+                    android:id="@+id/tmo_pretotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/monthlycost"
+                    android:text="@string/monthlycost"
+                    android:textColor="@color/cardtxt"
+                    android:textSize="@dimen/body" />
 
-    <Button
-        android:id="@+id/breakdown_send"
-        android:layout_width="@dimen/btnw"
-        android:layout_height="@dimen/btnh"
-        android:layout_gravity="center"
-        android:layout_marginTop="@dimen/btnspace"
-        android:gravity="center"
-        android:hint="@string/viewbreakdown"
-        android:text="@string/viewbreakdown" />
+                <TextView
+                    android:id="@+id/tmo_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:hint="@string/loadingprices"
+                    android:text="@string/loadingprices"
+                    android:textColor="@color/cardtxt"
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
-</LinearLayout>
+        <Button
+            android:id="@+id/next"
+            style="@style/nextbtn"
+            android:layout_width="@dimen/plusminbtn"
+            android:layout_height="@dimen/plusminbtn"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/circbtnspace"
+            android:layout_marginTop="@dimen/circbtnspace"
+            android:gravity="center"
+            android:text="@string/arrow" />
+    </LinearLayout>
+
+</RelativeLayout>

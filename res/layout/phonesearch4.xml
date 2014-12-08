@@ -1,74 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:orientation="vertical" >
+    android:layout_height="match_parent" >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/titlespace"
-        android:gravity="center"
-        android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/pstitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:hint="@string/search"
-            android:text="@string/search"
-            android:textColor="@color/txt"
-            android:textSize="@dimen/title_dimens" />
-
-        <TextView
-            android:id="@+id/pssubtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:hint="@string/ps4sub"
-            android:text="@string/ps4sub"
-            android:textColor="@color/txt"
-            android:textSize="@dimen/subtitle_dimens" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/ps1searchdesc"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="72dip"
-        android:gravity="center"
-        android:hint="@string/pscomparedesc"
-        android:text="@string/pscomparedesc"
-        android:textColor="@color/txt"
-        android:textSize="@dimen/body" />
+        android:orientation="vertical" >
 
-    <EditText
-        android:id="@+id/searchTerm"
-        android:layout_width="@dimen/resultw"
-        android:layout_height="@dimen/resulth"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
-        android:background="@color/accent"
-        android:hint="@string/searchTermHint"
-        android:padding="@dimen/elmtspace"
-        android:singleLine="true"
-        android:textColor="@color/white_color"
-        android:textColorHint="@color/white_color"
-        android:textSize="@dimen/body" >
-    </EditText>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleh"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/phoneimage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titleh"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/phones" />
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:background="#60000000"
+                android:gravity="center"
+                android:text="@string/ps4sub"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/title_dimens" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/ps1searchdesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="72dip"
+                android:gravity="center"
+                android:hint="@string/psdesc"
+                android:text="@string/psdesc"
+                android:textColor="@color/txt"
+                android:textSize="@dimen/body" />
+
+            <EditText
+                android:id="@+id/searchTerm"
+                android:layout_width="@dimen/resultw"
+                android:layout_height="@dimen/resulth"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/elmtspace"
+                android:background="@color/primary"
+                android:hint="@string/searchTermHint"
+                android:padding="@dimen/elmtspace"
+                android:singleLine="true"
+                android:textColor="@color/white_color"
+                android:textColorHint="@color/white_color"
+                android:textSize="@dimen/body" >
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
 
     <Button
-        android:id="@+id/searchGo"
-        android:layout_width="@dimen/btnw"
-        android:layout_height="@dimen/btnh"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:id="@+id/next"
+        style="@style/nextbtn"
+        android:layout_width="@dimen/plusminbtn"
+        android:layout_height="@dimen/plusminbtn"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/startbtnspace"
         android:gravity="center"
-        android:text="@string/searchGoBox" >
-    </Button>
+        android:text="@string/arrow"
+        android:textStyle="bold" />
 
-</LinearLayout>
+</RelativeLayout>

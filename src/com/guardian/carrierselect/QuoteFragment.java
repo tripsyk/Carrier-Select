@@ -11,6 +11,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -245,6 +246,8 @@ public class QuoteFragment extends Fragment {
 		}
 
 		// retrieve final values from user input
+		final EditText installet = (EditText) rootView
+				.findViewById(R.id.installs);
 		final TextView eSmart = (TextView) rootView
 				.findViewById(R.id.sphone_input);
 		final TextView eBasic = (TextView) rootView
@@ -255,19 +258,26 @@ public class QuoteFragment extends Fragment {
 		final TextView eMifi = (TextView) rootView
 				.findViewById(R.id.mifi_input);
 
+		double installments;
+
+		if (installet.getText().toString().matches("")) {
+			installments = 0;
+		} else {
+			installments = Double.parseDouble(installet.getText().toString());
+		}
+
 		// begin fragment trans
 		final FragmentTransaction ft = getActivity()
 				.getSupportFragmentManager().beginTransaction();
 		ft.setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left,
 				R.anim.slide_in_left, R.anim.slide_out_right);
-		ft.replace(
-				R.id.fragment_container,
-				DisplayMessageFragment.create(twoyear,
-						Integer.parseInt(eSmart.getText().toString()),
-						Integer.parseInt(eBasic.getText().toString()),
-						Integer.parseInt(eData.getText().toString()),
-						Integer.parseInt(eTab.getText().toString()),
-						Integer.parseInt(eMifi.getText().toString()), discount));
+		ft.replace(R.id.fragment_container, DisplayMessageFragment.create(
+				twoyear, Integer.parseInt(eSmart.getText().toString()),
+				Integer.parseInt(eBasic.getText().toString()),
+				Integer.parseInt(eData.getText().toString()),
+				Integer.parseInt(eTab.getText().toString()),
+				Integer.parseInt(eMifi.getText().toString()), discount,
+				installments));
 		ft.addToBackStack(null);
 		ft.commit();
 	}

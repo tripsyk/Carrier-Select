@@ -25,7 +25,7 @@
             android:layout_height="@dimen/resulth"
             android:layout_gravity="center"
             android:layout_marginTop="80dip"
-            android:background="@color/accent"
+            android:background="@color/primary"
             android:hint="@string/monthlyhint"
             android:inputType="number"
             android:padding="@dimen/elmtspace"
@@ -37,12 +37,14 @@
 
     <Button
         android:id="@+id/next"
-        style="@style/iconbtn"
+        style="@style/nextbtn"
         android:layout_width="@dimen/plusminbtn"
         android:layout_height="@dimen/plusminbtn"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/startbtnspace"
-        android:text="@string/arrow" />
+        android:gravity="center"
+        android:text="@string/arrow"
+        android:textStyle="bold" />
 
 </RelativeLayout>

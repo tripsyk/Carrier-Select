@@ -26,10 +26,11 @@ public class Home extends Fragment {
 	private static TextView attnews1, attnews2, attnews3, attnews4, attnews5,
 			vernews1, vernews2, vernews3, vernews4, vernews5, sprnews1,
 			sprnews2, sprnews3, sprnews4, sprnews5, tmonews1, tmonews2,
-			tmonews3, tmonews4, tmonews5;
+			tmonews3, tmonews4, tmonews5, prenews1, prenews2, prenews3,
+			prenews4, prenews5, devnews1, devnews2, devnews3, devnews4,
+			devnews5;
 	private ProgressDialog progress;
 	private static View rootView;
-	private static int iconer;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,6 +57,16 @@ public class Home extends Fragment {
 		tmonews3 = (TextView) rootView.findViewById(R.id.tmoupdates3);
 		tmonews4 = (TextView) rootView.findViewById(R.id.tmoupdates4);
 		tmonews5 = (TextView) rootView.findViewById(R.id.tmoupdates5);
+		prenews1 = (TextView) rootView.findViewById(R.id.preupdates1);
+		prenews2 = (TextView) rootView.findViewById(R.id.preupdates2);
+		prenews3 = (TextView) rootView.findViewById(R.id.preupdates3);
+		prenews4 = (TextView) rootView.findViewById(R.id.preupdates4);
+		prenews5 = (TextView) rootView.findViewById(R.id.preupdates5);
+		devnews1 = (TextView) rootView.findViewById(R.id.devupdates1);
+		devnews2 = (TextView) rootView.findViewById(R.id.devupdates2);
+		devnews3 = (TextView) rootView.findViewById(R.id.devupdates3);
+		devnews4 = (TextView) rootView.findViewById(R.id.devupdates4);
+		devnews5 = (TextView) rootView.findViewById(R.id.devupdates5);
 
 		initHomeNews();
 
@@ -66,7 +77,7 @@ public class Home extends Fragment {
 	public void initHomeNews() {
 
 		progress = new ProgressDialog(getActivity(),
-				AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
+				AlertDialog.THEME_DEVICE_DEFAULT_DARK);
 		progress.setTitle("Just a sec...");
 		progress.setMessage("Updating your news...");
 		progress.setCancelable(false);
@@ -92,100 +103,70 @@ public class Home extends Fragment {
 						attnews1.setVisibility(View.VISIBLE);
 						attnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(attnews1, iconer);
 
 					} else if (attSize == 2) {
 
 						attnews1.setVisibility(View.VISIBLE);
 						attnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(attnews1, iconer);
 
 						attnews2.setVisibility(View.VISIBLE);
 						attnews2.setText(NewsList.get(1)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(1).getInt("IconType");
-						setNewsIcon(attnews2, iconer);
 
 					} else if (attSize == 3) {
 
 						attnews1.setVisibility(View.VISIBLE);
 						attnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(attnews1, iconer);
 
 						attnews2.setVisibility(View.VISIBLE);
 						attnews2.setText(NewsList.get(1)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(1).getInt("IconType");
-						setNewsIcon(attnews2, iconer);
 
 						attnews3.setVisibility(View.VISIBLE);
 						attnews3.setText(NewsList.get(2)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(2).getInt("IconType");
-						setNewsIcon(attnews3, iconer);
 
 					} else if (attSize == 4) {
 
 						attnews1.setVisibility(View.VISIBLE);
 						attnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(attnews1, iconer);
 
 						attnews2.setVisibility(View.VISIBLE);
 						attnews2.setText(NewsList.get(1)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(1).getInt("IconType");
-						setNewsIcon(attnews2, iconer);
 
 						attnews3.setVisibility(View.VISIBLE);
 						attnews3.setText(NewsList.get(2)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(2).getInt("IconType");
-						setNewsIcon(attnews3, iconer);
 
 						attnews4.setVisibility(View.VISIBLE);
 						attnews4.setText(NewsList.get(3)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(3).getInt("IconType");
-						setNewsIcon(attnews4, iconer);
 
 					} else if (attSize == 5) {
 
 						attnews1.setVisibility(View.VISIBLE);
 						attnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(attnews1, iconer);
 
 						attnews2.setVisibility(View.VISIBLE);
 						attnews2.setText(NewsList.get(1)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(1).getInt("IconType");
-						setNewsIcon(attnews2, iconer);
 
 						attnews3.setVisibility(View.VISIBLE);
 						attnews3.setText(NewsList.get(2)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(2).getInt("IconType");
-						setNewsIcon(attnews3, iconer);
 
 						attnews4.setVisibility(View.VISIBLE);
 						attnews4.setText(NewsList.get(3)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(3).getInt("IconType");
-						setNewsIcon(attnews4, iconer);
 
 						attnews5.setVisibility(View.VISIBLE);
 						attnews5.setText(NewsList.get(4)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(4).getInt("IconType");
-						setNewsIcon(attnews5, iconer);
 
 					}
 				} else {
@@ -207,100 +188,70 @@ public class Home extends Fragment {
 						vernews1.setVisibility(View.VISIBLE);
 						vernews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(vernews1, iconer);
 
 					} else if (verSize == 2) {
 
 						vernews1.setVisibility(View.VISIBLE);
 						vernews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(vernews1, iconer);
 
 						vernews2.setVisibility(View.VISIBLE);
 						vernews2.setText(NewsList.get(1)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(1).getInt("IconType");
-						setNewsIcon(vernews2, iconer);
 
 					} else if (verSize == 3) {
 
 						vernews1.setVisibility(View.VISIBLE);
 						vernews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(vernews1, iconer);
 
 						vernews2.setVisibility(View.VISIBLE);
 						vernews2.setText(NewsList.get(1)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(1).getInt("IconType");
-						setNewsIcon(vernews2, iconer);
 
 						vernews3.setVisibility(View.VISIBLE);
 						vernews3.setText(NewsList.get(2)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(2).getInt("IconType");
-						setNewsIcon(vernews3, iconer);
 
 					} else if (verSize == 4) {
 
 						vernews1.setVisibility(View.VISIBLE);
 						vernews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(vernews1, iconer);
 
 						vernews2.setVisibility(View.VISIBLE);
 						vernews2.setText(NewsList.get(1)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(1).getInt("IconType");
-						setNewsIcon(vernews2, iconer);
 
 						vernews3.setVisibility(View.VISIBLE);
 						vernews3.setText(NewsList.get(2)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(2).getInt("IconType");
-						setNewsIcon(vernews3, iconer);
 
 						vernews4.setVisibility(View.VISIBLE);
 						vernews4.setText(NewsList.get(3)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(3).getInt("IconType");
-						setNewsIcon(vernews4, iconer);
 
 					} else if (verSize == 5) {
 
 						vernews1.setVisibility(View.VISIBLE);
 						vernews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(vernews1, iconer);
 
 						vernews2.setVisibility(View.VISIBLE);
 						vernews2.setText(NewsList.get(1)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(1).getInt("IconType");
-						setNewsIcon(vernews2, iconer);
 
 						vernews3.setVisibility(View.VISIBLE);
 						vernews3.setText(NewsList.get(2)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(2).getInt("IconType");
-						setNewsIcon(vernews3, iconer);
 
 						vernews4.setVisibility(View.VISIBLE);
 						vernews4.setText(NewsList.get(3)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(3).getInt("IconType");
-						setNewsIcon(vernews4, iconer);
 
 						vernews5.setVisibility(View.VISIBLE);
 						vernews5.setText(NewsList.get(4)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(4).getInt("IconType");
-						setNewsIcon(vernews5, iconer);
 
 					}
 				} else {
@@ -322,100 +273,70 @@ public class Home extends Fragment {
 						sprnews1.setVisibility(View.VISIBLE);
 						sprnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(sprnews1, iconer);
 
 					} else if (sprSize == 2) {
 
 						sprnews1.setVisibility(View.VISIBLE);
 						sprnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(sprnews1, iconer);
 
 						sprnews2.setVisibility(View.VISIBLE);
 						sprnews2.setText(NewsList.get(1)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(1).getInt("IconType");
-						setNewsIcon(sprnews2, iconer);
 
 					} else if (sprSize == 3) {
 
 						sprnews1.setVisibility(View.VISIBLE);
 						sprnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(sprnews1, iconer);
 
 						sprnews2.setVisibility(View.VISIBLE);
 						sprnews2.setText(NewsList.get(1)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(1).getInt("IconType");
-						setNewsIcon(sprnews2, iconer);
 
 						sprnews3.setVisibility(View.VISIBLE);
 						sprnews3.setText(NewsList.get(2)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(2).getInt("IconType");
-						setNewsIcon(sprnews3, iconer);
 
 					} else if (sprSize == 4) {
 
 						sprnews1.setVisibility(View.VISIBLE);
 						sprnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(sprnews1, iconer);
 
 						sprnews2.setVisibility(View.VISIBLE);
 						sprnews2.setText(NewsList.get(1)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(1).getInt("IconType");
-						setNewsIcon(sprnews2, iconer);
 
 						sprnews3.setVisibility(View.VISIBLE);
 						sprnews3.setText(NewsList.get(2)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(2).getInt("IconType");
-						setNewsIcon(sprnews3, iconer);
 
 						sprnews4.setVisibility(View.VISIBLE);
 						sprnews4.setText(NewsList.get(3)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(3).getInt("IconType");
-						setNewsIcon(sprnews4, iconer);
 
 					} else if (sprSize == 5) {
 
 						sprnews1.setVisibility(View.VISIBLE);
 						sprnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(sprnews1, iconer);
 
 						sprnews2.setVisibility(View.VISIBLE);
 						sprnews2.setText(NewsList.get(1)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(1).getInt("IconType");
-						setNewsIcon(sprnews2, iconer);
 
 						sprnews3.setVisibility(View.VISIBLE);
 						sprnews3.setText(NewsList.get(2)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(2).getInt("IconType");
-						setNewsIcon(sprnews3, iconer);
 
 						sprnews4.setVisibility(View.VISIBLE);
 						sprnews4.setText(NewsList.get(3)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(3).getInt("IconType");
-						setNewsIcon(sprnews4, iconer);
 
 						sprnews5.setVisibility(View.VISIBLE);
 						sprnews5.setText(NewsList.get(4)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(4).getInt("IconType");
-						setNewsIcon(sprnews5, iconer);
 
 					}
 				} else {
@@ -437,100 +358,241 @@ public class Home extends Fragment {
 						tmonews1.setVisibility(View.VISIBLE);
 						tmonews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(tmonews1, iconer);
 
 					} else if (tmoSize == 2) {
 
 						tmonews1.setVisibility(View.VISIBLE);
 						tmonews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(tmonews1, iconer);
 
 						tmonews2.setVisibility(View.VISIBLE);
 						tmonews2.setText(NewsList.get(1)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(1).getInt("IconType");
-						setNewsIcon(tmonews2, iconer);
 
 					} else if (tmoSize == 3) {
 
 						tmonews1.setVisibility(View.VISIBLE);
 						tmonews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(tmonews1, iconer);
 
 						tmonews2.setVisibility(View.VISIBLE);
 						tmonews2.setText(NewsList.get(1)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(1).getInt("IconType");
-						setNewsIcon(tmonews2, iconer);
 
 						tmonews3.setVisibility(View.VISIBLE);
 						tmonews3.setText(NewsList.get(2)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(2).getInt("IconType");
-						setNewsIcon(tmonews3, iconer);
 
 					} else if (tmoSize == 4) {
 
 						tmonews1.setVisibility(View.VISIBLE);
 						tmonews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(tmonews1, iconer);
 
 						tmonews2.setVisibility(View.VISIBLE);
 						tmonews2.setText(NewsList.get(1)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(1).getInt("IconType");
-						setNewsIcon(tmonews2, iconer);
 
 						tmonews3.setVisibility(View.VISIBLE);
 						tmonews3.setText(NewsList.get(2)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(2).getInt("IconType");
-						setNewsIcon(tmonews3, iconer);
 
 						tmonews4.setVisibility(View.VISIBLE);
 						tmonews4.setText(NewsList.get(3)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(3).getInt("IconType");
-						setNewsIcon(tmonews4, iconer);
 
 					} else if (tmoSize == 5) {
 
 						tmonews1.setVisibility(View.VISIBLE);
 						tmonews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(0).getInt("IconType");
-						setNewsIcon(tmonews1, iconer);
 
 						tmonews2.setVisibility(View.VISIBLE);
 						tmonews2.setText(NewsList.get(1)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(1).getInt("IconType");
-						setNewsIcon(tmonews2, iconer);
 
 						tmonews3.setVisibility(View.VISIBLE);
 						tmonews3.setText(NewsList.get(2)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(2).getInt("IconType");
-						setNewsIcon(tmonews3, iconer);
 
 						tmonews4.setVisibility(View.VISIBLE);
 						tmonews4.setText(NewsList.get(3)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(3).getInt("IconType");
-						setNewsIcon(tmonews4, iconer);
 
 						tmonews5.setVisibility(View.VISIBLE);
 						tmonews5.setText(NewsList.get(4)
 								.getString("PromoAdded"));
-						iconer = NewsList.get(4).getInt("IconType");
-						setNewsIcon(tmonews5, iconer);
+
+					}
+
+				} else {
+				}
+			}
+		});
+
+		queryplanscontent = ParseQuery.getQuery("Plan_Promo");
+		queryplanscontent.whereEqualTo("Carrier", "Prepaid");
+		queryplanscontent.orderByAscending("PromoAdded");
+		queryplanscontent.findInBackground(new FindCallback<ParseObject>() {
+			public void done(List<ParseObject> NewsList, ParseException e) {
+
+				if (e == null) {
+
+					final int preSize = NewsList.size();
+					if (preSize == 1) {
+
+						prenews1.setVisibility(View.VISIBLE);
+						prenews1.setText(NewsList.get(0)
+								.getString("PromoAdded"));
+
+					} else if (preSize == 2) {
+
+						prenews1.setVisibility(View.VISIBLE);
+						prenews1.setText(NewsList.get(0)
+								.getString("PromoAdded"));
+
+						prenews2.setVisibility(View.VISIBLE);
+						prenews2.setText(NewsList.get(1)
+								.getString("PromoAdded"));
+
+					} else if (preSize == 3) {
+
+						prenews1.setVisibility(View.VISIBLE);
+						prenews1.setText(NewsList.get(0)
+								.getString("PromoAdded"));
+
+						prenews2.setVisibility(View.VISIBLE);
+						prenews2.setText(NewsList.get(1)
+								.getString("PromoAdded"));
+
+						prenews3.setVisibility(View.VISIBLE);
+						prenews3.setText(NewsList.get(2)
+								.getString("PromoAdded"));
+
+					} else if (preSize == 4) {
+
+						prenews1.setVisibility(View.VISIBLE);
+						prenews1.setText(NewsList.get(0)
+								.getString("PromoAdded"));
+
+						prenews2.setVisibility(View.VISIBLE);
+						prenews2.setText(NewsList.get(1)
+								.getString("PromoAdded"));
+
+						prenews3.setVisibility(View.VISIBLE);
+						prenews3.setText(NewsList.get(2)
+								.getString("PromoAdded"));
+
+						prenews4.setVisibility(View.VISIBLE);
+						prenews4.setText(NewsList.get(3)
+								.getString("PromoAdded"));
+
+					} else if (preSize == 5) {
+
+						prenews1.setVisibility(View.VISIBLE);
+						prenews1.setText(NewsList.get(0)
+								.getString("PromoAdded"));
+
+						prenews2.setVisibility(View.VISIBLE);
+						prenews2.setText(NewsList.get(1)
+								.getString("PromoAdded"));
+
+						prenews3.setVisibility(View.VISIBLE);
+						prenews3.setText(NewsList.get(2)
+								.getString("PromoAdded"));
+
+						prenews4.setVisibility(View.VISIBLE);
+						prenews4.setText(NewsList.get(3)
+								.getString("PromoAdded"));
+
+						prenews5.setVisibility(View.VISIBLE);
+						prenews5.setText(NewsList.get(4)
+								.getString("PromoAdded"));
+
+					}
+				} else {
+				}
+			}
+		});
+
+		queryplanscontent = ParseQuery.getQuery("Plan_Promo");
+		queryplanscontent.whereEqualTo("Carrier", "Device");
+		queryplanscontent.orderByAscending("PromoAdded");
+		queryplanscontent.findInBackground(new FindCallback<ParseObject>() {
+			public void done(List<ParseObject> NewsList, ParseException e) {
+
+				if (e == null) {
+
+					final int devSize = NewsList.size();
+					if (devSize == 1) {
+
+						devnews1.setVisibility(View.VISIBLE);
+						devnews1.setText(NewsList.get(0)
+								.getString("PromoAdded"));
+
+					} else if (devSize == 2) {
+
+						devnews1.setVisibility(View.VISIBLE);
+						devnews1.setText(NewsList.get(0)
+								.getString("PromoAdded"));
+
+						devnews2.setVisibility(View.VISIBLE);
+						devnews2.setText(NewsList.get(1)
+								.getString("PromoAdded"));
+
+					} else if (devSize == 3) {
+
+						devnews1.setVisibility(View.VISIBLE);
+						devnews1.setText(NewsList.get(0)
+								.getString("PromoAdded"));
+
+						devnews2.setVisibility(View.VISIBLE);
+						devnews2.setText(NewsList.get(1)
+								.getString("PromoAdded"));
+
+						devnews3.setVisibility(View.VISIBLE);
+						devnews3.setText(NewsList.get(2)
+								.getString("PromoAdded"));
+
+					} else if (devSize == 4) {
+
+						devnews1.setVisibility(View.VISIBLE);
+						devnews1.setText(NewsList.get(0)
+								.getString("PromoAdded"));
+
+						devnews2.setVisibility(View.VISIBLE);
+						devnews2.setText(NewsList.get(1)
+								.getString("PromoAdded"));
+
+						devnews3.setVisibility(View.VISIBLE);
+						devnews3.setText(NewsList.get(2)
+								.getString("PromoAdded"));
+
+						devnews4.setVisibility(View.VISIBLE);
+						devnews4.setText(NewsList.get(3)
+								.getString("PromoAdded"));
+
+					} else if (devSize == 5) {
+
+						devnews1.setVisibility(View.VISIBLE);
+						devnews1.setText(NewsList.get(0)
+								.getString("PromoAdded"));
+
+						devnews2.setVisibility(View.VISIBLE);
+						devnews2.setText(NewsList.get(1)
+								.getString("PromoAdded"));
+
+						devnews3.setVisibility(View.VISIBLE);
+						devnews3.setText(NewsList.get(2)
+								.getString("PromoAdded"));
+
+						devnews4.setVisibility(View.VISIBLE);
+						devnews4.setText(NewsList.get(3)
+								.getString("PromoAdded"));
+
+						devnews5.setVisibility(View.VISIBLE);
+						devnews5.setText(NewsList.get(4)
+								.getString("PromoAdded"));
 
 					}
 
@@ -541,26 +603,9 @@ public class Home extends Fragment {
 							progress.dismiss();
 						}
 					}, 200);
-
 				} else {
 				}
 			}
 		});
-	}
-
-	private static void setNewsIcon(TextView tv, int iconId) {
-		if (iconId == 0) {
-			tv.setCompoundDrawablesWithIntrinsicBounds(0,
-					R.drawable.newssavings, 0, 0);
-		} else if (iconId == 1) {
-			tv.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.newsdata,
-					0, 0);
-		} else if (iconId == 2) {
-			tv.setCompoundDrawablesWithIntrinsicBounds(0,
-					R.drawable.newsandroid, 0, 0);
-		} else {
-			tv.setCompoundDrawablesWithIntrinsicBounds(0, R.drawable.about, 0,
-					0);
-		}
 	}
 }

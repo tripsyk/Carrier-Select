@@ -55,7 +55,7 @@ public class NoContract2 extends Fragment {
 	public void grabPlans() {
 
 		progress = new ProgressDialog(getActivity(),
-				AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
+				AlertDialog.THEME_DEVICE_DEFAULT_DARK);
 		progress.setTitle("Looking up plans");
 		progress.setMessage("Just a sec...");
 		progress.setCancelable(false);

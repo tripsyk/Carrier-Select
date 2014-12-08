@@ -34,12 +34,13 @@ public class DisplayMessageFragment extends Fragment {
 	private static final String ARGS_GIGS = "gigs";
 	private static final String ARGS_TABS = "tabs";
 	private static final String ARGS_DISCOUNT = "discount";
+	private static final String ARGS_INSTALLS = "installments";
 
-	private static int smartphones, basicphones, gigs, tabs, hotspots;
+	private static int smartphones, basicphones, gigs, tabs, hotspots, devices;
 
 	private boolean twoyear;
 
-	private double discount;
+	private double discount, installs;
 
 	private ProgressDialog progress;
 
@@ -49,7 +50,7 @@ public class DisplayMessageFragment extends Fragment {
 
 	public static DisplayMessageFragment create(boolean twoyear,
 			int smartphones, int basicphones, int gigs, int tabs, int hotspots,
-			double discount) {
+			double discount, double installs) {
 		final DisplayMessageFragment fragment = new DisplayMessageFragment();
 
 		final Bundle args = new Bundle();
@@ -61,6 +62,7 @@ public class DisplayMessageFragment extends Fragment {
 		args.putInt(ARGS_TABS, tabs);
 		args.putInt(ARGS_HOT_SPOT, hotspots);
 		args.putDouble(ARGS_DISCOUNT, discount);
+		args.putDouble(ARGS_INSTALLS, installs);
 		fragment.setArguments(args);
 
 		return fragment;
@@ -74,13 +76,11 @@ public class DisplayMessageFragment extends Fragment {
 				container, false);
 
 		// init next
-		final Button sendbox = (Button) rootView
-				.findViewById(R.id.breakdown_send);
+		final Button sendbox = (Button) rootView.findViewById(R.id.next);
 
 		equipnotice = (TextView) rootView.findViewById(R.id.equipnotice);
 		tmonotice = (TextView) rootView.findViewById(R.id.tmonotice);
-
-		buildPlans();
+		devices = smartphones + basicphones + tabs + hotspots;
 
 		sendbox.setOnClickListener(new OnClickListener() {
 
@@ -93,7 +93,7 @@ public class DisplayMessageFragment extends Fragment {
 						R.anim.slide_out_right);
 				fragmenttran.replace(R.id.fragment_container, BreakdownFragment
 						.create(twoyear, smartphones, basicphones, gigs, tabs,
-								hotspots, discount));
+								hotspots, discount, installs));
 				fragmenttran.addToBackStack(null);
 				fragmenttran.commit();
 			}
@@ -117,6 +117,8 @@ public class DisplayMessageFragment extends Fragment {
 
 		});
 
+		buildPlans();
+
 		return rootView;
 
 	}
@@ -134,23 +136,24 @@ public class DisplayMessageFragment extends Fragment {
 		gigs = args.getInt(ARGS_GIGS);
 		tabs = args.getInt(ARGS_TABS);
 		discount = args.getDouble(ARGS_DISCOUNT);
+		installs = args.getDouble(ARGS_INSTALLS);
 
 	}
 
 	@SuppressLint("DefaultLocale")
 	private void buildPlans() {
 
-		progress = new ProgressDialog(getActivity(),
-				AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
-		progress.setTitle("Building your plans");
-		progress.setMessage("Just a sec...");
-		progress.setCancelable(false);
-		progress.show();
-
 		ParseObject.registerSubclass(Phone.class);
 		Parse.initialize(rootView.getContext(),
 				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
 				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
+
+		progress = new ProgressDialog(getActivity(),
+				AlertDialog.THEME_DEVICE_DEFAULT_DARK);
+		progress.setTitle("Building your plans");
+		progress.setMessage("Just a sec...");
+		progress.setCancelable(false);
+		progress.show();
 
 		// begin att search
 		final ParseQuery<ParseObject> query = ParseQuery.getQuery("Postpaid");
@@ -199,12 +202,12 @@ public class DisplayMessageFragment extends Fragment {
 
 					final int tax = (int) Math
 							.round((((plan * (1 - (discount / 100))) + smart
-									+ basic + tablets + mifi) * .16) * 100) / 100;
+									+ basic + tablets + mifi) * .16 + (devices * 2)) * 100) / 100;
 
 					dis = Math.round(plan - (plan * dis));
 					att.setText("$"
 							+ Math.round(((plan + smart + basic + tablets + mifi)
-									+ tax - dis)));
+									+ tax - dis + installs)));
 
 				} else {
 				}
@@ -266,13 +269,13 @@ public class DisplayMessageFragment extends Fragment {
 					tablets = tablets * tabs;
 					mifi = mifi * hotspots;
 					double dis = 1 - (discount / 100);
-					final int tax = (int) Math.round((((plan * dis) + smart
-							+ basic + tablets + mifi) * .16) * 100) / 100;
+					final int tax = (int) Math
+							.round((((plan * dis) + smart + basic + tablets + mifi) * .16 + (devices * 2)) * 100) / 100;
 					dis = Math.round(plan - (plan * dis));
 
 					ver.setText("$"
 							+ Math.round(((plan + smart + basic + tablets + mifi)
-									+ tax - dis)));
+									+ tax - dis + installs)));
 
 				} else {
 				}
@@ -332,13 +335,13 @@ public class DisplayMessageFragment extends Fragment {
 					tablets = tablets * tabs;
 					mifi = mifi * hotspots;
 					double dis = 1 - (discount / 100);
-					final int tax = (int) Math.round((((plan * dis) + smart
-							+ basic + tablets + mifi) * .16) * 100) / 100;
+					final int tax = (int) Math
+							.round((((plan * dis) + smart + basic + tablets + mifi) * .16 + (devices * 2)) * 100) / 100;
 					dis = Math.round(plan - (plan * dis));
 
 					spr.setText("$"
 							+ Math.round(((plan + smart + basic + tablets + mifi)
-									+ tax - dis)));
+									+ tax - dis + installs)));
 
 				} else {
 				}
@@ -385,12 +388,10 @@ public class DisplayMessageFragment extends Fragment {
 
 					tmoplan.setText(PlanList.get(0).getString("Name"));
 
-					double dis = 1 - (discount / 100);
 					final int tax = (int) Math
-							.round((((smart * dis) + plan) * .16) * 100) / 100;
-					dis = Math.round(smart - (smart * dis));
+							.round(((smart + plan) * .16 + ((smartphones + basicphones) * 2)) * 100) / 100;
 
-					tmo.setText("$" + Math.round(smart + plan + tax - dis));
+					tmo.setText("$" + Math.round(smart + plan + tax + installs));
 
 					final Timer timer = new Timer();
 					timer.schedule(new TimerTask() {

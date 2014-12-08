@@ -7,9 +7,9 @@
         android:id="@+id/menuTitle"
         android:layout_width="match_parent"
         android:layout_height="48dip"
-        android:layout_marginStart="16dip"
-        android:drawablePadding="18dip"
+        android:drawablePadding="20dip"
         android:gravity="center_vertical"
+        android:paddingStart="16dip"
         android:textSize="@dimen/body" />
 
 </LinearLayout>

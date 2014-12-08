@@ -26,7 +26,7 @@ public class NoContract1 extends Fragment {
 		final SharedPreferences sharedPref = getActivity().getPreferences(
 				Context.MODE_PRIVATE);
 		final SharedPreferences.Editor editor = sharedPref.edit();
-		final Button next = (Button) rootView.findViewById(R.id.nextnc1);
+		final Button next = (Button) rootView.findViewById(R.id.next);
 		final Spinner spinner = (Spinner) rootView
 				.findViewById(R.id.carrierspinner);
 

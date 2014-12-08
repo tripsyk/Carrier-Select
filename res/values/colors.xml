@@ -3,13 +3,16 @@
 
     <color name="primary">#2196F3</color>
     <color name="secondary">#1976D2</color>
-    <color name="background">#1976D2</color>
-    <color name="cardbg">#2196F3</color>
-    <color name="btn">#2196F3</color>
-    <color name="accent">#00E676</color>
+    <color name="background">#607D8B</color>
+    <color name="backgroundhighlight">#546E7A</color>
+    <color name="cardbg">#BBDEFB</color>
+    <color name="accent">#1976D2</color>
+    <color name="focus">#FF9100</color>
     <color name="white_color">#FFFFFF</color>
-    <color name="cardtxt">#95000000</color>
-    <color name="txt">#95000000</color>
-    <color name="controlhigh">#311B92</color>
+    <color name="txt">#FFFFFF</color>
+    <color name="cardtxt">#263238</color>
+    <color name="caption">#93000000</color>
+    <color name="controlhigh">#90CAF9</color>
+    <color name="controlfocus">#FFD180</color>
 
 </resources>

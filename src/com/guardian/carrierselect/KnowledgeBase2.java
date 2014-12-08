@@ -147,7 +147,7 @@ public class KnowledgeBase2 extends Fragment {
 	public void performSearch() {
 
 		progress = new ProgressDialog(getActivity(),
-				AlertDialog.THEME_DEVICE_DEFAULT_LIGHT);
+				AlertDialog.THEME_DEVICE_DEFAULT_DARK);
 		progress.setTitle("Knowledge Base Search");
 		progress.setMessage("Just a sec...");
 		progress.setCancelable(false);

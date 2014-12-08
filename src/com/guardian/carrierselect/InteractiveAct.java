@@ -49,8 +49,8 @@ public class InteractiveAct extends ActionBarActivity {
 		mDrawerList = (ListView) findViewById(R.id.start_drawer);
 		listItems = getResources().getStringArray(R.array.menu_list);
 		icon = new int[] { R.drawable.news, R.drawable.myprofile,
-				R.drawable.service_plans, R.drawable.nocontract,
-				R.drawable.phonesearch2, R.drawable.knowledgebase,
+				R.drawable.serviceplans, R.drawable.nocontract,
+				R.drawable.devicesearch, R.drawable.knowledgebase,
 				R.drawable.about };
 		drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		drawer = (LinearLayout) findViewById(R.id.left_drawer);
@@ -122,6 +122,8 @@ public class InteractiveAct extends ActionBarActivity {
 			setNavDrawerItemNormal();
 			TextView txtview = ((TextView) view.findViewById(R.id.menuTitle));
 			txtview.setTypeface(null, Typeface.BOLD);
+			txtview.setBackgroundColor(getResources().getColor(
+					R.color.backgroundhighlight));
 			selectItem(position);
 
 		}
@@ -285,7 +287,11 @@ public class InteractiveAct extends ActionBarActivity {
 		for (int i = 0; i < mDrawerList.getChildCount(); i++) {
 			View v = mDrawerList.getChildAt(i);
 			TextView txtview = ((TextView) v.findViewById(R.id.menuTitle));
+			txtview.setBackgroundColor(getResources().getColor(
+					R.color.background));
 			txtview.setTypeface(Typeface.DEFAULT);
+			txtview.setBackgroundColor(getResources().getColor(
+					R.color.background));
 		}
 	}
 

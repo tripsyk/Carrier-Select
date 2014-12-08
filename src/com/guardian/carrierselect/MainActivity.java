@@ -1,14 +1,13 @@
 package com.guardian.carrierselect;
 
-import com.applovin.sdk.AppLovinSdk;
-
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
+
+import com.applovin.sdk.AppLovinSdk;
 
 public class MainActivity extends ActionBarActivity {
 

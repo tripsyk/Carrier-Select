@@ -1,21 +1,21 @@
 package com.guardian.carrierselect;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnFocusChangeListener;
+import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 public class PhoneSearch extends Fragment {
 
-	private TextView search;
+	private Button next;
 	private EditText searchTerm;
 	private static View rootView;
 
@@ -24,14 +24,14 @@ public class PhoneSearch extends Fragment {
 			Bundle savedInstanceState) {
 		rootView = inflater.inflate(R.layout.phonesearch1, container, false);
 
-		search = (TextView) rootView.findViewById(R.id.searchGo);
+		next = (Button) rootView.findViewById(R.id.next);
 		searchTerm = (EditText) rootView.findViewById(R.id.searchTerm);
 
 		final SharedPreferences sharedPref = getActivity()
 				.getSharedPreferences("data", Context.MODE_PRIVATE);
 		final SharedPreferences.Editor editor = sharedPref.edit();
 
-		search.setOnClickListener(new View.OnClickListener() {
+		next.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View view) {

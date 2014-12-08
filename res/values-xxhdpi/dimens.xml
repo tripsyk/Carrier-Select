@@ -1,5 +1,6 @@
 <resources>
 
-    <dimen name="dsHeight">134dip</dimen>
+    <dimen name="dsHeight">157dip</dimen>
+    <dimen name="titleh">104dip</dimen>
 
 </resources>

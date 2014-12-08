@@ -17,7 +17,7 @@ public class TellUs extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		rootView = inflater.inflate(R.layout.tellus_layout, container, false);
-		next = (Button) rootView.findViewById(R.id.next2);
+		next = (Button) rootView.findViewById(R.id.next);
 
 		next.setOnClickListener(new View.OnClickListener() {
 
