@@ -79,7 +79,8 @@
                     android:hint="@string/definition"
                     android:text="@string/definition"
                     android:textColor="@color/cardtxt"
-                    android:textSize="@dimen/body" />
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/kb3def"
@@ -111,7 +112,8 @@
                     android:hint="@string/example"
                     android:text="@string/example"
                     android:textColor="@color/cardtxt"
-                    android:textSize="@dimen/body" />
+                    android:textSize="@dimen/body"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/kb3ex"
@@ -124,15 +126,6 @@
                     android:textSize="@dimen/body" />
             </LinearLayout>
         </android.support.v7.widget.CardView>
-
-        <com.applovin.adview.AppLovinAdView
-            xmlns:applovin="http://schemas.applovin.com/android/1.0"
-            android:layout_width="350dip"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/elmtspace"
-            android:layout_marginTop="@dimen/elmtspace"
-            applovin:loadAdOnCreate="true" />
     </LinearLayout>
 
 </RelativeLayout>

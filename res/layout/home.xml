@@ -22,19 +22,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center_horizontal"
-            android:background="#60000000"
+            android:background="@color/titletxt"
             android:gravity="center"
             android:text="@string/homenews"
-            android:textColor="#FFFFFF"
             android:textSize="@dimen/title_dimens" />
     </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@id/titlebox"
         android:layout_gravity="center"
-        android:gravity="center"
         android:orientation="vertical" >
 
         <android.support.v7.widget.CardView
@@ -42,7 +40,6 @@
             android:id="@+id/attcard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginBottom="@dimen/cardgut"
             android:layout_marginLeft="@dimen/cardmarg"
             android:layout_marginRight="@dimen/cardmarg"
@@ -58,66 +55,47 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical" >
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/attdate"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:weightSum="2" >
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="end"
+                    android:text="@string/testdate"
+                    android:textColor="@color/caption"
+                    android:textSize="@dimen/caption" />
 
-                    <TextView
-                        android:id="@+id/attnews"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="start"
-                        android:layout_marginEnd="@dimen/elmtspace"
-                        android:layout_weight="1"
-                        android:hint="@string/attnews"
-                        android:text="@string/attnews"
-                        android:textColor="@color/cardtxt"
-                        android:textSize="@dimen/title_dimens"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/attdate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:layout_weight="1"
-                        android:gravity="end"
-                        android:hint="@string/testdate"
-                        android:text="@string/testdate"
-                        android:textColor="@color/caption"
-                        android:textSize="@dimen/caption" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/attnews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="@dimen/elmtspace"
+                    android:text="@string/attnews"
+                    android:textColor="@color/cardtxt"
+                    android:textSize="@dimen/title_dimens"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/line"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginBottom="@dimen/elmtspace"
                     android:background="@drawable/lineblack"
-                    android:gravity="center"
-                    android:hint=""
-                    android:text="" />
+                    android:gravity="center" />
 
                 <TextView
                     android:id="@+id/attupdates1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
-                    android:textSize="@dimen/body"
-                    android:visibility="gone" />
+                    android:textSize="@dimen/body" />
 
                 <TextView
                     android:id="@+id/attupdates2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -127,8 +105,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -138,8 +114,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -149,8 +123,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -162,7 +134,6 @@
             android:id="@+id/vercard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginBottom="@dimen/cardgut"
             android:layout_marginLeft="@dimen/cardmarg"
             android:layout_marginRight="@dimen/cardmarg"
@@ -178,65 +149,47 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical" >
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:weightSum="2" >
-
-                    <TextView
-                        android:id="@+id/vernews"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="start"
-                        android:layout_marginEnd="@dimen/elmtspace"
-                        android:layout_weight="1"
-                        android:hint="@string/vernews"
-                        android:text="@string/vernews"
-                        android:textColor="@color/cardtxt"
-                        android:textSize="@dimen/title_dimens"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/verdate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:layout_weight="1"
-                        android:gravity="end"
-                        android:hint="@string/testdate"
-                        android:text="@string/testdate"
-                        android:textColor="@color/caption"
-                        android:textSize="@dimen/caption" />
-                </LinearLayout>
-
                 <TextView
+                    android:id="@+id/verdate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_gravity="bottom"
+                    android:gravity="end"
+                    android:text="@string/testdate"
+                    android:textColor="@color/caption"
+                    android:textSize="@dimen/caption" />
+
+                <TextView
+                    android:id="@+id/vernews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="@dimen/elmtspace"
+                    android:text="@string/vernews"
+                    android:textColor="@color/cardtxt"
+                    android:textSize="@dimen/title_dimens"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/line2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/elmtspace"
                     android:background="@drawable/lineblack"
-                    android:gravity="center"
-                    android:hint=""
-                    android:text="" />
+                    android:gravity="center" />
 
                 <TextView
                     android:id="@+id/verupdates1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
-                    android:textSize="@dimen/body"
-                    android:visibility="gone" />
+                    android:textSize="@dimen/body" />
 
                 <TextView
                     android:id="@+id/verupdates2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -246,8 +199,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -257,8 +208,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -268,8 +217,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -281,7 +228,6 @@
             android:id="@+id/sprcard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginBottom="@dimen/cardgut"
             android:layout_marginLeft="@dimen/cardmarg"
             android:layout_marginRight="@dimen/cardmarg"
@@ -297,65 +243,47 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical" >
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:weightSum="2" >
-
-                    <TextView
-                        android:id="@+id/sprnews"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="start"
-                        android:layout_marginEnd="@dimen/elmtspace"
-                        android:layout_weight="1"
-                        android:hint="@string/sprnews"
-                        android:text="@string/sprnews"
-                        android:textColor="@color/cardtxt"
-                        android:textSize="@dimen/title_dimens"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/sprdate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:layout_weight="1"
-                        android:gravity="end"
-                        android:hint="@string/testdate"
-                        android:text="@string/testdate"
-                        android:textColor="@color/caption"
-                        android:textSize="@dimen/caption" />
-                </LinearLayout>
-
                 <TextView
+                    android:id="@+id/sprdate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_gravity="bottom"
+                    android:gravity="end"
+                    android:text="@string/testdate"
+                    android:textColor="@color/caption"
+                    android:textSize="@dimen/caption" />
+
+                <TextView
+                    android:id="@+id/sprnews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="@dimen/elmtspace"
+                    android:text="@string/sprnews"
+                    android:textColor="@color/cardtxt"
+                    android:textSize="@dimen/title_dimens"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/line3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/elmtspace"
                     android:background="@drawable/lineblack"
-                    android:gravity="center"
-                    android:hint=""
-                    android:text="" />
+                    android:gravity="center" />
 
                 <TextView
                     android:id="@+id/sprupdates1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
-                    android:textSize="@dimen/body"
-                    android:visibility="gone" />
+                    android:textSize="@dimen/body" />
 
                 <TextView
                     android:id="@+id/sprupdates2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -365,8 +293,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -376,8 +302,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -387,8 +311,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -400,7 +322,6 @@
             android:id="@+id/tmocard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginBottom="@dimen/cardgut"
             android:layout_marginLeft="@dimen/cardmarg"
             android:layout_marginRight="@dimen/cardmarg"
@@ -416,65 +337,47 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical" >
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:weightSum="2" >
-
-                    <TextView
-                        android:id="@+id/tmonews"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="start"
-                        android:layout_marginEnd="@dimen/elmtspace"
-                        android:layout_weight="1"
-                        android:hint="@string/tmonews"
-                        android:text="@string/tmonews"
-                        android:textColor="@color/cardtxt"
-                        android:textSize="@dimen/title_dimens"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/tmodate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:layout_weight="1"
-                        android:gravity="end"
-                        android:hint="@string/testdate"
-                        android:text="@string/testdate"
-                        android:textColor="@color/caption"
-                        android:textSize="@dimen/caption" />
-                </LinearLayout>
-
                 <TextView
+                    android:id="@+id/tmodate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
+                    android:layout_gravity="bottom"
+                    android:gravity="end"
+                    android:text="@string/testdate"
+                    android:textColor="@color/caption"
+                    android:textSize="@dimen/caption" />
+
+                <TextView
+                    android:id="@+id/tmonews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="@dimen/elmtspace"
+                    android:text="@string/tmonews"
+                    android:textColor="@color/cardtxt"
+                    android:textSize="@dimen/title_dimens"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/line4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/elmtspace"
                     android:background="@drawable/lineblack"
-                    android:gravity="center"
-                    android:hint=""
-                    android:text="" />
+                    android:gravity="center" />
 
                 <TextView
                     android:id="@+id/tmoupdates1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
-                    android:textSize="@dimen/body"
-                    android:visibility="gone" />
+                    android:textSize="@dimen/body" />
 
                 <TextView
                     android:id="@+id/tmoupdates2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -484,8 +387,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -495,8 +396,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -506,8 +405,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -519,7 +416,6 @@
             android:id="@+id/precard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginBottom="@dimen/cardgut"
             android:layout_marginLeft="@dimen/cardmarg"
             android:layout_marginRight="@dimen/cardmarg"
@@ -535,66 +431,47 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical" >
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/predate"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:weightSum="2" >
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="end"
+                    android:text="@string/testdate"
+                    android:textColor="@color/caption"
+                    android:textSize="@dimen/caption" />
 
-                    <TextView
-                        android:id="@+id/prenews"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="start"
-                        android:layout_marginEnd="@dimen/elmtspace"
-                        android:layout_weight="1"
-                        android:hint="@string/prenews"
-                        android:text="@string/prenews"
-                        android:textColor="@color/cardtxt"
-                        android:textSize="@dimen/title_dimens"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/predate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:layout_weight="1"
-                        android:gravity="end"
-                        android:hint="@string/testdate"
-                        android:text="@string/testdate"
-                        android:textColor="@color/caption"
-                        android:textSize="@dimen/caption" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/prenews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="@dimen/elmtspace"
+                    android:text="@string/prenews"
+                    android:textColor="@color/cardtxt"
+                    android:textSize="@dimen/title_dimens"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/line5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginBottom="@dimen/elmtspace"
                     android:background="@drawable/lineblack"
-                    android:gravity="center"
-                    android:hint=""
-                    android:text="" />
+                    android:gravity="center" />
 
                 <TextView
                     android:id="@+id/preupdates1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
-                    android:textSize="@dimen/body"
-                    android:visibility="gone" />
+                    android:textSize="@dimen/body" />
 
                 <TextView
                     android:id="@+id/preupdates2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -604,8 +481,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -615,8 +490,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -626,8 +499,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -639,8 +510,7 @@
             android:id="@+id/devcard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/cardmarg"
+            android:layout_marginBottom="@dimen/cardgut"
             android:layout_marginLeft="@dimen/cardmarg"
             android:layout_marginRight="@dimen/cardmarg"
             android:layout_marginTop="@dimen/cardgut"
@@ -655,66 +525,47 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical" >
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/devdate"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:weightSum="2" >
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="end"
+                    android:text="@string/testdate"
+                    android:textColor="@color/caption"
+                    android:textSize="@dimen/caption" />
 
-                    <TextView
-                        android:id="@+id/devnews"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="start"
-                        android:layout_marginEnd="@dimen/elmtspace"
-                        android:layout_weight="1"
-                        android:hint="@string/devnews"
-                        android:text="@string/devnews"
-                        android:textColor="@color/cardtxt"
-                        android:textSize="@dimen/title_dimens"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/devdate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom"
-                        android:layout_weight="1"
-                        android:gravity="end"
-                        android:hint="@string/testdate"
-                        android:text="@string/testdate"
-                        android:textColor="@color/caption"
-                        android:textSize="@dimen/caption" />
-                </LinearLayout>
+                <TextView
+                    android:id="@+id/devnews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginEnd="@dimen/elmtspace"
+                    android:text="@string/devnews"
+                    android:textColor="@color/cardtxt"
+                    android:textSize="@dimen/title_dimens"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/line6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
                     android:layout_marginBottom="@dimen/elmtspace"
                     android:background="@drawable/lineblack"
-                    android:gravity="center"
-                    android:hint=""
-                    android:text="" />
+                    android:gravity="center" />
 
                 <TextView
                     android:id="@+id/devupdates1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
-                    android:textSize="@dimen/body"
-                    android:visibility="gone" />
+                    android:textSize="@dimen/body" />
 
                 <TextView
                     android:id="@+id/devupdates2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -724,8 +575,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -735,8 +584,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />
@@ -746,8 +593,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
-                    android:hint="@string/blankstring"
-                    android:text="@string/blankstring"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
                     android:visibility="gone" />

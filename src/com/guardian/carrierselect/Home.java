@@ -1,22 +1,18 @@
 package com.guardian.carrierselect;
 
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import android.annotation.SuppressLint;
-import android.support.v4.app.Fragment;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.guardian.carrierselect.model.NewsUpdaterr;
 import com.parse.FindCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -37,37 +33,6 @@ public class Home extends Fragment {
 			Bundle savedInstanceState) {
 		rootView = inflater.inflate(R.layout.home, container, false);
 
-		attnews1 = (TextView) rootView.findViewById(R.id.attupdates1);
-		attnews2 = (TextView) rootView.findViewById(R.id.attupdates2);
-		attnews3 = (TextView) rootView.findViewById(R.id.attupdates3);
-		attnews4 = (TextView) rootView.findViewById(R.id.attupdates4);
-		attnews5 = (TextView) rootView.findViewById(R.id.attupdates5);
-		vernews1 = (TextView) rootView.findViewById(R.id.verupdates1);
-		vernews2 = (TextView) rootView.findViewById(R.id.verupdates2);
-		vernews3 = (TextView) rootView.findViewById(R.id.verupdates3);
-		vernews4 = (TextView) rootView.findViewById(R.id.verupdates4);
-		vernews5 = (TextView) rootView.findViewById(R.id.verupdates5);
-		sprnews1 = (TextView) rootView.findViewById(R.id.sprupdates1);
-		sprnews2 = (TextView) rootView.findViewById(R.id.sprupdates2);
-		sprnews3 = (TextView) rootView.findViewById(R.id.sprupdates3);
-		sprnews4 = (TextView) rootView.findViewById(R.id.sprupdates4);
-		sprnews5 = (TextView) rootView.findViewById(R.id.sprupdates5);
-		tmonews1 = (TextView) rootView.findViewById(R.id.tmoupdates1);
-		tmonews2 = (TextView) rootView.findViewById(R.id.tmoupdates2);
-		tmonews3 = (TextView) rootView.findViewById(R.id.tmoupdates3);
-		tmonews4 = (TextView) rootView.findViewById(R.id.tmoupdates4);
-		tmonews5 = (TextView) rootView.findViewById(R.id.tmoupdates5);
-		prenews1 = (TextView) rootView.findViewById(R.id.preupdates1);
-		prenews2 = (TextView) rootView.findViewById(R.id.preupdates2);
-		prenews3 = (TextView) rootView.findViewById(R.id.preupdates3);
-		prenews4 = (TextView) rootView.findViewById(R.id.preupdates4);
-		prenews5 = (TextView) rootView.findViewById(R.id.preupdates5);
-		devnews1 = (TextView) rootView.findViewById(R.id.devupdates1);
-		devnews2 = (TextView) rootView.findViewById(R.id.devupdates2);
-		devnews3 = (TextView) rootView.findViewById(R.id.devupdates3);
-		devnews4 = (TextView) rootView.findViewById(R.id.devupdates4);
-		devnews5 = (TextView) rootView.findViewById(R.id.devupdates5);
-
 		initHomeNews();
 
 		return rootView;
@@ -83,11 +48,6 @@ public class Home extends Fragment {
 		progress.setCancelable(false);
 		progress.show();
 
-		ParseObject.registerSubclass(NewsUpdaterr.class);
-		Parse.initialize(rootView.getContext(),
-				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
-				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
-
 		ParseQuery<ParseObject> queryplanscontent = ParseQuery
 				.getQuery("Plan_Promo");
 		queryplanscontent.whereEqualTo("Carrier", "AT&T");
@@ -100,13 +60,19 @@ public class Home extends Fragment {
 					final int attSize = NewsList.size();
 					if (attSize == 1) {
 
-						attnews1.setVisibility(View.VISIBLE);
+						attnews1 = (TextView) rootView
+								.findViewById(R.id.attupdates1);
+
 						attnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
 					} else if (attSize == 2) {
 
-						attnews1.setVisibility(View.VISIBLE);
+						attnews1 = (TextView) rootView
+								.findViewById(R.id.attupdates1);
+						attnews2 = (TextView) rootView
+								.findViewById(R.id.attupdates2);
+
 						attnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -116,7 +82,13 @@ public class Home extends Fragment {
 
 					} else if (attSize == 3) {
 
-						attnews1.setVisibility(View.VISIBLE);
+						attnews1 = (TextView) rootView
+								.findViewById(R.id.attupdates1);
+						attnews2 = (TextView) rootView
+								.findViewById(R.id.attupdates2);
+						attnews3 = (TextView) rootView
+								.findViewById(R.id.attupdates3);
+
 						attnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -130,7 +102,15 @@ public class Home extends Fragment {
 
 					} else if (attSize == 4) {
 
-						attnews1.setVisibility(View.VISIBLE);
+						attnews1 = (TextView) rootView
+								.findViewById(R.id.attupdates1);
+						attnews2 = (TextView) rootView
+								.findViewById(R.id.attupdates2);
+						attnews3 = (TextView) rootView
+								.findViewById(R.id.attupdates3);
+						attnews4 = (TextView) rootView
+								.findViewById(R.id.attupdates4);
+
 						attnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -148,7 +128,17 @@ public class Home extends Fragment {
 
 					} else if (attSize == 5) {
 
-						attnews1.setVisibility(View.VISIBLE);
+						attnews1 = (TextView) rootView
+								.findViewById(R.id.attupdates1);
+						attnews2 = (TextView) rootView
+								.findViewById(R.id.attupdates2);
+						attnews3 = (TextView) rootView
+								.findViewById(R.id.attupdates3);
+						attnews4 = (TextView) rootView
+								.findViewById(R.id.attupdates4);
+						attnews5 = (TextView) rootView
+								.findViewById(R.id.attupdates5);
+
 						attnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -185,13 +175,19 @@ public class Home extends Fragment {
 					final int verSize = NewsList.size();
 					if (verSize == 1) {
 
-						vernews1.setVisibility(View.VISIBLE);
+						vernews1 = (TextView) rootView
+								.findViewById(R.id.verupdates1);
+
 						vernews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
 					} else if (verSize == 2) {
 
-						vernews1.setVisibility(View.VISIBLE);
+						vernews1 = (TextView) rootView
+								.findViewById(R.id.verupdates1);
+						vernews2 = (TextView) rootView
+								.findViewById(R.id.verupdates2);
+
 						vernews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -201,7 +197,13 @@ public class Home extends Fragment {
 
 					} else if (verSize == 3) {
 
-						vernews1.setVisibility(View.VISIBLE);
+						vernews1 = (TextView) rootView
+								.findViewById(R.id.verupdates1);
+						vernews2 = (TextView) rootView
+								.findViewById(R.id.verupdates2);
+						vernews3 = (TextView) rootView
+								.findViewById(R.id.verupdates3);
+
 						vernews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -215,7 +217,15 @@ public class Home extends Fragment {
 
 					} else if (verSize == 4) {
 
-						vernews1.setVisibility(View.VISIBLE);
+						vernews1 = (TextView) rootView
+								.findViewById(R.id.verupdates1);
+						vernews2 = (TextView) rootView
+								.findViewById(R.id.verupdates2);
+						vernews3 = (TextView) rootView
+								.findViewById(R.id.verupdates3);
+						vernews4 = (TextView) rootView
+								.findViewById(R.id.verupdates4);
+
 						vernews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -233,7 +243,17 @@ public class Home extends Fragment {
 
 					} else if (verSize == 5) {
 
-						vernews1.setVisibility(View.VISIBLE);
+						vernews1 = (TextView) rootView
+								.findViewById(R.id.verupdates1);
+						vernews2 = (TextView) rootView
+								.findViewById(R.id.verupdates2);
+						vernews3 = (TextView) rootView
+								.findViewById(R.id.verupdates3);
+						vernews4 = (TextView) rootView
+								.findViewById(R.id.verupdates4);
+						vernews5 = (TextView) rootView
+								.findViewById(R.id.verupdates5);
+
 						vernews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -270,13 +290,19 @@ public class Home extends Fragment {
 					final int sprSize = NewsList.size();
 					if (sprSize == 1) {
 
-						sprnews1.setVisibility(View.VISIBLE);
+						sprnews1 = (TextView) rootView
+								.findViewById(R.id.sprupdates1);
+
 						sprnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
 					} else if (sprSize == 2) {
 
-						sprnews1.setVisibility(View.VISIBLE);
+						sprnews1 = (TextView) rootView
+								.findViewById(R.id.sprupdates1);
+						sprnews2 = (TextView) rootView
+								.findViewById(R.id.sprupdates2);
+
 						sprnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -286,7 +312,13 @@ public class Home extends Fragment {
 
 					} else if (sprSize == 3) {
 
-						sprnews1.setVisibility(View.VISIBLE);
+						sprnews1 = (TextView) rootView
+								.findViewById(R.id.sprupdates1);
+						sprnews2 = (TextView) rootView
+								.findViewById(R.id.sprupdates2);
+						sprnews3 = (TextView) rootView
+								.findViewById(R.id.sprupdates3);
+
 						sprnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -300,7 +332,15 @@ public class Home extends Fragment {
 
 					} else if (sprSize == 4) {
 
-						sprnews1.setVisibility(View.VISIBLE);
+						sprnews1 = (TextView) rootView
+								.findViewById(R.id.sprupdates1);
+						sprnews2 = (TextView) rootView
+								.findViewById(R.id.sprupdates2);
+						sprnews3 = (TextView) rootView
+								.findViewById(R.id.sprupdates3);
+						sprnews4 = (TextView) rootView
+								.findViewById(R.id.sprupdates4);
+
 						sprnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -318,7 +358,17 @@ public class Home extends Fragment {
 
 					} else if (sprSize == 5) {
 
-						sprnews1.setVisibility(View.VISIBLE);
+						sprnews1 = (TextView) rootView
+								.findViewById(R.id.sprupdates1);
+						sprnews2 = (TextView) rootView
+								.findViewById(R.id.sprupdates2);
+						sprnews3 = (TextView) rootView
+								.findViewById(R.id.sprupdates3);
+						sprnews4 = (TextView) rootView
+								.findViewById(R.id.sprupdates4);
+						sprnews5 = (TextView) rootView
+								.findViewById(R.id.sprupdates5);
+
 						sprnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -355,13 +405,19 @@ public class Home extends Fragment {
 					final int tmoSize = NewsList.size();
 					if (tmoSize == 1) {
 
-						tmonews1.setVisibility(View.VISIBLE);
+						tmonews1 = (TextView) rootView
+								.findViewById(R.id.tmoupdates1);
+
 						tmonews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
 					} else if (tmoSize == 2) {
 
-						tmonews1.setVisibility(View.VISIBLE);
+						tmonews1 = (TextView) rootView
+								.findViewById(R.id.tmoupdates1);
+						tmonews2 = (TextView) rootView
+								.findViewById(R.id.tmoupdates2);
+
 						tmonews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -371,7 +427,13 @@ public class Home extends Fragment {
 
 					} else if (tmoSize == 3) {
 
-						tmonews1.setVisibility(View.VISIBLE);
+						tmonews1 = (TextView) rootView
+								.findViewById(R.id.tmoupdates1);
+						tmonews2 = (TextView) rootView
+								.findViewById(R.id.tmoupdates2);
+						tmonews3 = (TextView) rootView
+								.findViewById(R.id.tmoupdates3);
+
 						tmonews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -385,7 +447,15 @@ public class Home extends Fragment {
 
 					} else if (tmoSize == 4) {
 
-						tmonews1.setVisibility(View.VISIBLE);
+						tmonews1 = (TextView) rootView
+								.findViewById(R.id.tmoupdates1);
+						tmonews2 = (TextView) rootView
+								.findViewById(R.id.tmoupdates2);
+						tmonews3 = (TextView) rootView
+								.findViewById(R.id.tmoupdates3);
+						tmonews4 = (TextView) rootView
+								.findViewById(R.id.tmoupdates4);
+
 						tmonews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -403,7 +473,17 @@ public class Home extends Fragment {
 
 					} else if (tmoSize == 5) {
 
-						tmonews1.setVisibility(View.VISIBLE);
+						tmonews1 = (TextView) rootView
+								.findViewById(R.id.tmoupdates1);
+						tmonews2 = (TextView) rootView
+								.findViewById(R.id.tmoupdates2);
+						tmonews3 = (TextView) rootView
+								.findViewById(R.id.tmoupdates3);
+						tmonews4 = (TextView) rootView
+								.findViewById(R.id.tmoupdates4);
+						tmonews5 = (TextView) rootView
+								.findViewById(R.id.tmoupdates5);
+
 						tmonews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -441,13 +521,19 @@ public class Home extends Fragment {
 					final int preSize = NewsList.size();
 					if (preSize == 1) {
 
-						prenews1.setVisibility(View.VISIBLE);
+						prenews1 = (TextView) rootView
+								.findViewById(R.id.preupdates1);
+
 						prenews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
 					} else if (preSize == 2) {
 
-						prenews1.setVisibility(View.VISIBLE);
+						prenews1 = (TextView) rootView
+								.findViewById(R.id.preupdates1);
+						prenews2 = (TextView) rootView
+								.findViewById(R.id.preupdates2);
+
 						prenews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -457,7 +543,13 @@ public class Home extends Fragment {
 
 					} else if (preSize == 3) {
 
-						prenews1.setVisibility(View.VISIBLE);
+						prenews1 = (TextView) rootView
+								.findViewById(R.id.preupdates1);
+						prenews2 = (TextView) rootView
+								.findViewById(R.id.preupdates2);
+						prenews3 = (TextView) rootView
+								.findViewById(R.id.preupdates3);
+
 						prenews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -471,7 +563,15 @@ public class Home extends Fragment {
 
 					} else if (preSize == 4) {
 
-						prenews1.setVisibility(View.VISIBLE);
+						prenews1 = (TextView) rootView
+								.findViewById(R.id.preupdates1);
+						prenews2 = (TextView) rootView
+								.findViewById(R.id.preupdates2);
+						prenews3 = (TextView) rootView
+								.findViewById(R.id.preupdates3);
+						prenews4 = (TextView) rootView
+								.findViewById(R.id.preupdates4);
+
 						prenews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -489,7 +589,17 @@ public class Home extends Fragment {
 
 					} else if (preSize == 5) {
 
-						prenews1.setVisibility(View.VISIBLE);
+						prenews1 = (TextView) rootView
+								.findViewById(R.id.preupdates1);
+						prenews2 = (TextView) rootView
+								.findViewById(R.id.preupdates2);
+						prenews3 = (TextView) rootView
+								.findViewById(R.id.preupdates3);
+						prenews4 = (TextView) rootView
+								.findViewById(R.id.preupdates4);
+						prenews5 = (TextView) rootView
+								.findViewById(R.id.preupdates5);
+
 						prenews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -526,13 +636,19 @@ public class Home extends Fragment {
 					final int devSize = NewsList.size();
 					if (devSize == 1) {
 
-						devnews1.setVisibility(View.VISIBLE);
+						devnews1 = (TextView) rootView
+								.findViewById(R.id.devupdates1);
+
 						devnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
 					} else if (devSize == 2) {
 
-						devnews1.setVisibility(View.VISIBLE);
+						devnews1 = (TextView) rootView
+								.findViewById(R.id.devupdates1);
+						devnews2 = (TextView) rootView
+								.findViewById(R.id.devupdates2);
+
 						devnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -542,7 +658,13 @@ public class Home extends Fragment {
 
 					} else if (devSize == 3) {
 
-						devnews1.setVisibility(View.VISIBLE);
+						devnews1 = (TextView) rootView
+								.findViewById(R.id.devupdates1);
+						devnews2 = (TextView) rootView
+								.findViewById(R.id.devupdates2);
+						devnews3 = (TextView) rootView
+								.findViewById(R.id.devupdates3);
+
 						devnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -556,7 +678,15 @@ public class Home extends Fragment {
 
 					} else if (devSize == 4) {
 
-						devnews1.setVisibility(View.VISIBLE);
+						devnews1 = (TextView) rootView
+								.findViewById(R.id.devupdates1);
+						devnews2 = (TextView) rootView
+								.findViewById(R.id.devupdates2);
+						devnews3 = (TextView) rootView
+								.findViewById(R.id.devupdates3);
+						devnews4 = (TextView) rootView
+								.findViewById(R.id.devupdates4);
+
 						devnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -574,7 +704,17 @@ public class Home extends Fragment {
 
 					} else if (devSize == 5) {
 
-						devnews1.setVisibility(View.VISIBLE);
+						devnews1 = (TextView) rootView
+								.findViewById(R.id.devupdates1);
+						devnews2 = (TextView) rootView
+								.findViewById(R.id.devupdates2);
+						devnews3 = (TextView) rootView
+								.findViewById(R.id.devupdates3);
+						devnews4 = (TextView) rootView
+								.findViewById(R.id.devupdates4);
+						devnews5 = (TextView) rootView
+								.findViewById(R.id.devupdates5);
+
 						devnews1.setText(NewsList.get(0)
 								.getString("PromoAdded"));
 
@@ -596,13 +736,7 @@ public class Home extends Fragment {
 
 					}
 
-					final Timer timer = new Timer();
-					timer.schedule(new TimerTask() {
-						@Override
-						public void run() {
-							progress.dismiss();
-						}
-					}, 200);
+					progress.dismiss();
 				} else {
 				}
 			}

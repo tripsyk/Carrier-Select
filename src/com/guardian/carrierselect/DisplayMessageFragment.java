@@ -7,10 +7,10 @@ import java.util.TimerTask;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -20,7 +20,6 @@ import android.widget.TextView;
 
 import com.guardian.carrierselect.model.Phone;
 import com.parse.FindCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -104,13 +103,15 @@ public class DisplayMessageFragment extends Fragment {
 
 			@Override
 			public void onClick(View arg0) {
+
+				final Fragment fragment = new KnowledgeBase3();
+
 				final FragmentTransaction fragmenttran = getActivity()
 						.getSupportFragmentManager().beginTransaction();
 				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
 						R.anim.slide_out_left, R.anim.slide_in_left,
 						R.anim.slide_out_right);
-				fragmenttran.replace(R.id.fragment_container,
-						KnowledgeBase3.create("Installment Billing"));
+				fragmenttran.replace(R.id.fragment_container, fragment);
 				fragmenttran.addToBackStack(null);
 				fragmenttran.commit();
 			}
@@ -144,9 +145,6 @@ public class DisplayMessageFragment extends Fragment {
 	private void buildPlans() {
 
 		ParseObject.registerSubclass(Phone.class);
-		Parse.initialize(rootView.getContext(),
-				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
-				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
 
 		progress = new ProgressDialog(getActivity(),
 				AlertDialog.THEME_DEVICE_DEFAULT_DARK);

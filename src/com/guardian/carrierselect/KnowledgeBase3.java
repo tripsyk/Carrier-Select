@@ -1,35 +1,25 @@
 package com.guardian.carrierselect;
 
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.support.v4.app.Fragment;
-import android.app.ProgressDialog;
-import android.graphics.Typeface;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.applovin.adview.AppLovinInterstitialAd;
-import com.guardian.carrierselect.model.Phone;
 import com.parse.FindCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
 public class KnowledgeBase3 extends Fragment {
 
-	private static final String SEARCHTERM = "search_term";
 	private String searchTerm;
-	private TextView kbtitle, kbdef, kbdef2, kbdefpre, kbex, kbexpre;
-	private ProgressDialog progress;
+	private TextView kbtitle, kbdef, kbdef2, kbex;
 	private static View rootView;
 
 	@Override
@@ -42,39 +32,19 @@ public class KnowledgeBase3 extends Fragment {
 		kbdef2 = (TextView) rootView.findViewById(R.id.kb3def2);
 		kbex = (TextView) rootView.findViewById(R.id.kb3ex);
 
-		kbdefpre = (TextView) rootView.findViewById(R.id.kb3defpre);
-		kbdefpre.setTypeface(null, Typeface.BOLD);
-		kbexpre = (TextView) rootView.findViewById(R.id.kb3expre);
-		kbexpre.setTypeface(null, Typeface.BOLD);
+		final SharedPreferences sharedPref = getActivity()
+				.getSharedPreferences("data", Context.MODE_PRIVATE);
+		searchTerm = sharedPref.getString("kb2", "");
 
-		double randomNum = Math.random() * 2;
-
-		if ((int) randomNum == 1)
-			AppLovinInterstitialAd.show(getActivity());
-
-		performSearch();
+		init();
 
 		return rootView;
 	}
 
-	@SuppressLint("DefaultLocale")
-	public void performSearch() {
-
-		progress = new ProgressDialog(getActivity(),
-				AlertDialog.THEME_DEVICE_DEFAULT_DARK);
-		progress.setTitle("Knowledge Base Search");
-		progress.setMessage("Just a sec...");
-		progress.setCancelable(false);
-		progress.show();
-
-		ParseObject.registerSubclass(Phone.class);
-		Parse.initialize(rootView.getContext(),
-				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
-				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
-
-		// Test Query
+	private void init() {
 		ParseQuery<ParseObject> query = ParseQuery.getQuery("KnowledgeBase");
-		query.whereContains("Title", searchTerm);
+		query.whereEqualTo("Title", searchTerm);
+		query.fromLocalDatastore();
 		query.findInBackground(new FindCallback<ParseObject>() {
 			public void done(List<ParseObject> KBResult, ParseException e) {
 
@@ -86,39 +56,10 @@ public class KnowledgeBase3 extends Fragment {
 							+ KBResult.get(0).getString("Definition2"));
 					kbex.setText("\t\t" + KBResult.get(0).getString("Example"));
 
-					final Timer timer = new Timer();
-					timer.schedule(new TimerTask() {
-						@Override
-						public void run() {
-							progress.dismiss();
-						}
-					}, 200);
-
 				} else {
+
 				}
 			}
 		});
-
-	}
-
-	public static KnowledgeBase3 create(String searchName) {
-		final KnowledgeBase3 fragment = new KnowledgeBase3();
-
-		final Bundle args = new Bundle();
-
-		args.putString(SEARCHTERM, searchName);
-		fragment.setArguments(args);
-
-		return fragment;
-	}
-
-	@Override
-	public void onAttach(Activity activity) {
-		super.onAttach(activity);
-
-		final Bundle args = getArguments();
-
-		searchTerm = args.getString(SEARCHTERM);
-
 	}
 }

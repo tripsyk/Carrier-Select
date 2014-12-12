@@ -137,13 +137,15 @@ public class BreakdownFragment extends Fragment {
 
 			@Override
 			public void onClick(View arg0) {
+
+				final Fragment fragment = new KnowledgeBase3();
+
 				final FragmentTransaction fragmenttran = getActivity()
 						.getSupportFragmentManager().beginTransaction();
 				fragmenttran.setCustomAnimations(R.anim.slide_in_right,
 						R.anim.slide_out_left, R.anim.slide_in_left,
 						R.anim.slide_out_right);
-				fragmenttran.replace(R.id.fragment_container,
-						KnowledgeBase3.create("Installment Billing"));
+				fragmenttran.replace(R.id.fragment_container, fragment);
 				fragmenttran.addToBackStack(null);
 				fragmenttran.commit();
 			}
@@ -219,9 +221,6 @@ public class BreakdownFragment extends Fragment {
 		progress.show();
 
 		ParseObject.registerSubclass(Phone.class);
-		Parse.initialize(rootView.getContext(),
-				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
-				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
 
 		final ParseQuery<ParseObject> query = ParseQuery.getQuery("Postpaid");
 		query.whereContains("Carrier", "AT&T");

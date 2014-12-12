@@ -42,6 +42,6 @@
     <!-- NAV DRAWER DIMENS -->
     <dimen name="drawerw">320dip</dimen>
     <dimen name="colorboxh">60dip</dimen>
-    <dimen name="savecheckh">56dip</dimen>
+    <dimen name="savecheckh">48dip</dimen>
 
 </resources>

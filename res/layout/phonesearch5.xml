@@ -104,14 +104,6 @@
             android:gravity="center"
             android:hint="@string/loadingphone"
             android:text="@string/loadingphone" />
-
-        <com.applovin.adview.AppLovinAdView
-            xmlns:applovin="http://schemas.applovin.com/android/1.0"
-            android:layout_width="350dip"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/topbotpad"
-            android:layout_marginTop="@dimen/elmtspace"
-            applovin:loadAdOnCreate="true" />
     </LinearLayout>
 
 </RelativeLayout>

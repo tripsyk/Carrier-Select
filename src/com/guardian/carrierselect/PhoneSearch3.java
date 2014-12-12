@@ -1,28 +1,20 @@
 package com.guardian.carrierselect;
 
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
-import android.annotation.SuppressLint;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.applovin.adview.AppLovinInterstitialAd;
-import com.guardian.carrierselect.model.Phone;
 import com.parse.FindCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -30,7 +22,6 @@ import com.parse.ParseQuery;
 public class PhoneSearch3 extends Fragment {
 
 	private String searchTerm;
-	private ProgressDialog progress;
 	private TextView ps3mantitle, manufacturer, release, sim, os, size,
 			thickness, weight, display, displaytype, pixden, reso, backcam,
 			hdr, dualLED, frontcam, video, cpubrand, pc, gpu, ram, storage,
@@ -50,7 +41,7 @@ public class PhoneSearch3 extends Fragment {
 
 		searchTerm = sharedPref.getString("ps2", "");
 
-		compare = (Button) rootView.findViewById(R.id.compare);
+		compare = (Button) rootView.findViewById(R.id.next);
 		ps3mantitle = (TextView) rootView.findViewById(R.id.ps3mantitle);
 		ps3mantitle.setText(searchTerm);
 		ps3mantitle.setTypeface(null, Typeface.BOLD);
@@ -89,12 +80,7 @@ public class PhoneSearch3 extends Fragment {
 		wireless = (TextView) rootView.findViewById(R.id.wirelesstext);
 		nc = (TextView) rootView.findViewById(R.id.nctext);
 		sensors = (TextView) rootView.findViewById(R.id.sensortext);
-		double randomNum = Math.random() * 3;
-
-		if ((int) randomNum == 1)
-			AppLovinInterstitialAd.show(getActivity());
-
-		performSearch();
+		// performSearch();
 
 		compare.setOnClickListener(new View.OnClickListener() {
 
@@ -113,32 +99,19 @@ public class PhoneSearch3 extends Fragment {
 			}
 		});
 
+		init();
+
 		return rootView;
 	}
 
-	@SuppressLint("DefaultLocale")
-	public void performSearch() {
-
-		progress = new ProgressDialog(getActivity(),
-				AlertDialog.THEME_DEVICE_DEFAULT_DARK);
-		progress.setTitle("Phone Search");
-		progress.setMessage("Just a sec...");
-		progress.setCancelable(false);
-		progress.show();
-
-		ParseObject.registerSubclass(Phone.class);
-		Parse.initialize(rootView.getContext(),
-				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
-				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
-
-		// Test Query
+	private void init() {
 		ParseQuery<ParseObject> query = ParseQuery.getQuery("Phones");
-		query.setLimit(5);
-		query.whereContains("Name", searchTerm);
+		query.whereEqualTo("Name", searchTerm);
+		query.fromLocalDatastore();
 		query.findInBackground(new FindCallback<ParseObject>() {
 			public void done(List<ParseObject> PhoneList, ParseException e) {
-
 				if (e == null) {
+
 					manufacturer.setText(PhoneList.get(0).getString(
 							"Manufacturer"));
 					release.setText(PhoneList.get(0).getString("ReleaseDate"));
@@ -221,18 +194,11 @@ public class PhoneSearch3 extends Fragment {
 					}
 					sensors.setText(PhoneList.get(0).getString("Sensors"));
 
-					final Timer timer = new Timer();
-					timer.schedule(new TimerTask() {
-						@Override
-						public void run() {
-							progress.dismiss();
-						}
-					}, 200);
 				} else {
+
 				}
 			}
 		});
-
 	}
 
 }

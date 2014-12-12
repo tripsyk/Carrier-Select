@@ -54,15 +54,15 @@
 # view res/layout/about.xml #generated:64
 # view res/layout/activity_breakdown.xml #generated:353
 # view res/layout/activity_breakdown.xml #generated:60
-# view res/layout/activity_breakdown.xml #generated:655
-# view res/layout/activity_breakdown.xml #generated:948
+# view res/layout/activity_breakdown.xml #generated:646
+# view res/layout/activity_breakdown.xml #generated:939
 # view res/layout/activity_display_message.xml #generated:60
-# view res/layout/home.xml #generated:160
-# view res/layout/home.xml #generated:279
-# view res/layout/home.xml #generated:398
-# view res/layout/home.xml #generated:40
-# view res/layout/home.xml #generated:517
-# view res/layout/home.xml #generated:637
+# view res/layout/home.xml #generated:132
+# view res/layout/home.xml #generated:226
+# view res/layout/home.xml #generated:320
+# view res/layout/home.xml #generated:38
+# view res/layout/home.xml #generated:414
+# view res/layout/home.xml #generated:508
 # view res/layout/knowledge3.xml #generated:38
 # view res/layout/myprofile.xml #generated:370
 # view res/layout/myprofile.xml #generated:38
@@ -77,15 +77,15 @@
 # view res/layout/phonesearch3.xml #generated:257
 # view res/layout/phonesearch3.xml #generated:390
 # view res/layout/phonesearch3.xml #generated:547
+# view res/layout/phonesearch3.xml #generated:752
 # view res/layout/phonesearch3.xml #generated:76
-# view res/layout/phonesearch3.xml #generated:761
 # view res/layout/phonesearch6.xml #generated:113
 # view res/layout/phonesearch6.xml #generated:1370
 # view res/layout/phonesearch6.xml #generated:451
 # view res/layout/phonesearch6.xml #generated:692
 # view res/layout/phonesearch6.xml #generated:983
 # view res/layout/planviewer.xml #generated:50
-# view res/layout/quote_layout.xml #generated:300
+# view res/layout/quote_layout.xml #generated:289
 # view res/layout/quote_layout.xml #generated:38
 -keep class android.support.v7.widget.CardView { <init>(...); }
 
@@ -99,26 +99,9 @@
 # view res/layout/interactive.xml #generated:7
 -keep class android.support.v7.widget.Toolbar { <init>(...); }
 
-# view res/layout/activity_breakdown.xml #generated:646
-# view res/layout/knowledge2.xml #generated:107
-# view res/layout/knowledge3.xml #generated:128
-# view res/layout/nocontract2.xml #generated:1356
-# view res/layout/phonesearch2.xml #generated:108
-# view res/layout/phonesearch3.xml #generated:752
-# view res/layout/phonesearch5.xml #generated:108
-# view res/layout/phonesearch6.xml #generated:1901
-# view res/layout/planviewer.xml #generated:253
--keep class com.applovin.adview.AppLovinAdView { <init>(...); }
-
-# view AndroidManifest.xml #generated:28
--keep class com.applovin.adview.AppLovinConfirmationActivity { <init>(...); }
-
-# view AndroidManifest.xml #generated:27
--keep class com.applovin.adview.AppLovinInterstitialActivity { <init>(...); }
-
-# view AndroidManifest.xml #generated:30
+# view AndroidManifest.xml #generated:20
 -keep class com.guardian.carrierselect.InteractiveAct { <init>(...); }
 
-# view AndroidManifest.xml #generated:37
+# view AndroidManifest.xml #generated:27
 -keep class com.guardian.carrierselect.MainActivity { <init>(...); }
 

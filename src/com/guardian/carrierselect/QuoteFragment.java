@@ -1,11 +1,15 @@
 package com.guardian.carrierselect;
 
+import android.annotation.SuppressLint;
+import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -16,11 +20,14 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+@SuppressLint("ClickableViewAccessibility")
 public class QuoteFragment extends Fragment {
 
+	private Handler mHandler;
 	private static View rootView;
-	private static int discount;;
-	private static boolean twoyear;
+	private TextView eSmart, eBasic, eData, eTab, eMifi;
+	private int discount, temp;
+	private View current;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -40,15 +47,11 @@ public class QuoteFragment extends Fragment {
 				.findViewById(R.id.discount_bar);
 
 		// init TVs for retrieving values
-		final TextView eSmart = (TextView) rootView
-				.findViewById(R.id.sphone_input);
-		final TextView eBasic = (TextView) rootView
-				.findViewById(R.id.bphone_input);
-		final TextView eData = (TextView) rootView
-				.findViewById(R.id.data_input);
-		final TextView eTab = (TextView) rootView.findViewById(R.id.tab_input);
-		final TextView eMifi = (TextView) rootView
-				.findViewById(R.id.mifi_input);
+		eSmart = (TextView) rootView.findViewById(R.id.sphone_input);
+		eBasic = (TextView) rootView.findViewById(R.id.bphone_input);
+		eData = (TextView) rootView.findViewById(R.id.data_input);
+		eTab = (TextView) rootView.findViewById(R.id.tab_input);
+		eMifi = (TextView) rootView.findViewById(R.id.mifi_input);
 
 		// init buttons for - and +
 		final Button sphonem = (Button) rootView.findViewById(R.id.sphone_m);
@@ -75,166 +78,235 @@ public class QuoteFragment extends Fragment {
 			public void onProgressChanged(SeekBar bar, int paramInt,
 					boolean paramBoolean) {
 				discount = paramInt;
-				disValue.setText(paramInt + "%");// here in textView the
-													// percent will be shown
+				disValue.setText(paramInt + "%");
 			}
 		});
 
-		// user hits next
-		send.setOnClickListener(new OnClickListener() {
-
+		OnTouchListener longAdj = new OnTouchListener() {
 			@Override
-			public void onClick(View arg0) {
-
-				if (Integer.valueOf(eSmart.getText().toString())
-						+ Integer.valueOf(eBasic.getText().toString()) == 0) {
-					Toast.makeText(rootView.getContext(),
-							"You must have at least 1 phone on a plan.",
-							Toast.LENGTH_SHORT).show();
-				} else {
-					next();
+			public boolean onTouch(View v, MotionEvent event) {
+				current = v;
+				switch (event.getAction()) {
+				case MotionEvent.ACTION_DOWN:
+					if (mHandler != null)
+						return true;
+					mHandler = new Handler();
+					mHandler.postDelayed(mAction, 200);
+					break;
+				case MotionEvent.ACTION_UP:
+					if (mHandler == null)
+						return true;
+					mHandler.removeCallbacks(mAction);
+					mHandler = null;
+					break;
 				}
+				return false;
 			}
-		});
 
-		// -1 smartphone
-		sphonem.setOnClickListener(new OnClickListener() {
+			Runnable mAction = new Runnable() {
+				@Override
+				public void run() {
+					switch (current.getId()) {
+					case R.id.sphone_p:
+						eSmart.setText(String.valueOf(Integer.parseInt(eSmart
+								.getText().toString()) + 1));
+						eSmart.startAnimation(animScalet);
+						break;
 
-			@Override
-			public void onClick(View arg0) {
-				final int number = Integer
-						.parseInt(eSmart.getText().toString());
-				if (number > 0) {
-					eSmart.setText(String.valueOf(number - 1));
+					case R.id.bphone_p:
+						eBasic.setText(String.valueOf(Integer.parseInt(eBasic
+								.getText().toString()) + 1));
+						eBasic.startAnimation(animScalet);
+						break;
+
+					case R.id.data_p:
+						eData.setText(String.valueOf(Integer.parseInt(eData
+								.getText().toString()) + 1));
+						eData.startAnimation(animScalet);
+						break;
+
+					case R.id.tab_p:
+						eTab.setText(String.valueOf(Integer.parseInt(eTab
+								.getText().toString()) + 1));
+						eTab.startAnimation(animScalet);
+						break;
+
+					case R.id.mifi_p:
+						eMifi.setText(String.valueOf(Integer.parseInt(eMifi
+								.getText().toString()) + 1));
+						eMifi.startAnimation(animScalet);
+						break;
+					case R.id.sphone_m:
+						temp = Integer.parseInt(eSmart.getText().toString());
+						if (temp > 0) {
+							eSmart.setText(String.valueOf(temp - 1));
+						}
+						eSmart.startAnimation(animScalet);
+						break;
+
+					case R.id.bphone_m:
+						temp = Integer.parseInt(eBasic.getText().toString());
+						if (temp > 0) {
+							eBasic.setText(String.valueOf(temp - 1));
+						}
+						eBasic.startAnimation(animScalet);
+						break;
+
+					case R.id.data_m:
+						temp = Integer.parseInt(eData.getText().toString());
+						if (temp > 0) {
+							eData.setText(String.valueOf(temp - 1));
+						}
+						eData.startAnimation(animScalet);
+						break;
+
+					case R.id.tab_m:
+						temp = Integer.parseInt(eTab.getText().toString());
+						if (temp > 0) {
+							eTab.setText(String.valueOf(temp - 1));
+						}
+						eTab.startAnimation(animScalet);
+						break;
+
+					case R.id.mifi_m:
+						temp = Integer.parseInt(eMifi.getText().toString());
+						if (temp > 0) {
+							eMifi.setText(String.valueOf(temp - 1));
+						}
+						eMifi.startAnimation(animScalet);
+						break;
+
+					}
+					mHandler.postDelayed(this, 200);
 				}
-				arg0.startAnimation(animScale);
-				eSmart.startAnimation(animScalet);
-			}
+			};
+		};
 
-		});
-
-		sphonep.setOnClickListener(new OnClickListener() {
-
+		OnClickListener oneAdj = new OnClickListener() {
 			@Override
-			public void onClick(View arg0) {
-				eSmart.setText(String.valueOf(Integer.parseInt(eSmart.getText()
-						.toString()) + 1));
-				arg0.startAnimation(animScale);
-				eSmart.startAnimation(animScalet);
-			}
+			public void onClick(View v) {
 
-		});
+				v.startAnimation(animScale);
 
-		bphonem.setOnClickListener(new OnClickListener() {
+				switch (v.getId()) {
+				case R.id.sphone_p:
+					eSmart.setText(String.valueOf(Integer.parseInt(eSmart
+							.getText().toString()) + 1));
+					v.startAnimation(animScale);
+					eSmart.startAnimation(animScalet);
+					break;
 
-			@Override
-			public void onClick(View arg0) {
-				final int number = Integer
-						.parseInt(eBasic.getText().toString());
-				if (number > 0) {
-					eBasic.setText(String.valueOf(number - 1));
-				}
-				arg0.startAnimation(animScale);
-				eBasic.startAnimation(animScalet);
-			}
+				case R.id.bphone_p:
+					eBasic.setText(String.valueOf(Integer.parseInt(eBasic
+							.getText().toString()) + 1));
+					v.startAnimation(animScale);
+					eBasic.startAnimation(animScalet);
+					break;
 
-		});
+				case R.id.data_p:
+					eData.setText(String.valueOf(Integer.parseInt(eData
+							.getText().toString()) + 1));
+					v.startAnimation(animScale);
+					eData.startAnimation(animScalet);
+					break;
 
-		bphonep.setOnClickListener(new OnClickListener() {
+				case R.id.tab_p:
+					eTab.setText(String.valueOf(Integer.parseInt(eTab.getText()
+							.toString()) + 1));
+					v.startAnimation(animScale);
+					eTab.startAnimation(animScalet);
+					break;
 
-			@Override
-			public void onClick(View arg0) {
-				eBasic.setText(String.valueOf(Integer.parseInt(eBasic.getText()
-						.toString()) + 1));
-				arg0.startAnimation(animScale);
-				eBasic.startAnimation(animScalet);
-			}
-
-		});
-
-		datam.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				int number = Integer.parseInt(eData.getText().toString());
-				if (number > 0) {
-					eData.setText(String.valueOf(number - 1));
-				}
-				arg0.startAnimation(animScale);
-				eData.startAnimation(animScalet);
-			}
-
-		});
-
-		datap.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				eData.setText(String.valueOf(Integer.parseInt(eData.getText()
-						.toString()) + 1));
-				arg0.startAnimation(animScale);
-				eData.startAnimation(animScalet);
-			}
-
-		});
-
-		tabm.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				final int number = Integer.parseInt(eTab.getText().toString());
-				if (number > 0) {
-					eTab.setText(String.valueOf(number - 1));
-				}
-				arg0.startAnimation(animScale);
-				eTab.startAnimation(animScalet);
-			}
-
-		});
-
-		tabp.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				eTab.setText(String.valueOf(Integer.parseInt(eTab.getText()
-						.toString()) + 1));
-				arg0.startAnimation(animScale);
-				eTab.startAnimation(animScalet);
-			}
-
-		});
-
-		mifim.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				final int number = Integer.parseInt(eMifi.getText().toString());
-				if (number > 0) {
+				case R.id.mifi_p:
 					eMifi.setText(String.valueOf(Integer.parseInt(eMifi
-							.getText().toString()) - 1));
+							.getText().toString()) + 1));
+					v.startAnimation(animScale);
+					eMifi.startAnimation(animScalet);
+					break;
+
+				case R.id.sphone_m:
+					temp = Integer.parseInt(eSmart.getText().toString());
+					if (temp > 0) {
+						eSmart.setText(String.valueOf(temp - 1));
+					}
+					eSmart.startAnimation(animScalet);
+					break;
+
+				case R.id.bphone_m:
+					temp = Integer.parseInt(eBasic.getText().toString());
+					if (temp > 0) {
+						eBasic.setText(String.valueOf(temp - 1));
+					}
+					eBasic.startAnimation(animScalet);
+					break;
+
+				case R.id.data_m:
+					temp = Integer.parseInt(eData.getText().toString());
+					if (temp > 0) {
+						eData.setText(String.valueOf(temp - 1));
+					}
+					eData.startAnimation(animScalet);
+					break;
+
+				case R.id.tab_m:
+					temp = Integer.parseInt(eTab.getText().toString());
+					if (temp > 0) {
+						eTab.setText(String.valueOf(temp - 1));
+					}
+					eTab.startAnimation(animScalet);
+					break;
+
+				case R.id.mifi_m:
+					temp = Integer.parseInt(eMifi.getText().toString());
+					if (temp > 0) {
+						eMifi.setText(String.valueOf(temp - 1));
+					}
+					eMifi.startAnimation(animScalet);
+					break;
+
+				case R.id.next:
+					if (Integer.valueOf(eSmart.getText().toString())
+							+ Integer.valueOf(eBasic.getText().toString()) == 0) {
+						Toast.makeText(rootView.getContext(),
+								"You must have at least 1 phone on a plan.",
+								Toast.LENGTH_SHORT).show();
+					} else
+						next();
+					break;
 				}
-				arg0.startAnimation(animScale);
-				eMifi.startAnimation(animScalet);
+
 			}
+		};
 
-		});
+		sphonep.setOnTouchListener(longAdj);
+		bphonep.setOnTouchListener(longAdj);
+		datap.setOnTouchListener(longAdj);
+		tabp.setOnTouchListener(longAdj);
+		mifip.setOnTouchListener(longAdj);
+		sphonep.setOnClickListener(oneAdj);
+		bphonep.setOnClickListener(oneAdj);
+		datap.setOnClickListener(oneAdj);
+		tabp.setOnClickListener(oneAdj);
+		mifip.setOnClickListener(oneAdj);
+		send.setOnClickListener(oneAdj);
 
-		mifip.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View arg0) {
-				eMifi.setText(String.valueOf(Integer.parseInt(eMifi.getText()
-						.toString()) + 1));
-				arg0.startAnimation(animScale);
-				eMifi.startAnimation(animScalet);
-			}
-
-		});
+		sphonem.setOnTouchListener(longAdj);
+		bphonem.setOnTouchListener(longAdj);
+		datam.setOnTouchListener(longAdj);
+		tabm.setOnTouchListener(longAdj);
+		mifim.setOnTouchListener(longAdj);
+		sphonem.setOnClickListener(oneAdj);
+		bphonem.setOnClickListener(oneAdj);
+		datam.setOnClickListener(oneAdj);
+		tabm.setOnClickListener(oneAdj);
+		mifim.setOnClickListener(oneAdj);
 
 		return rootView;
 	}
 
 	private void next() {
+
+		boolean twoyear;
 
 		// assign twoyear boolean
 		final CheckBox checkBox = (CheckBox) rootView
@@ -242,21 +314,12 @@ public class QuoteFragment extends Fragment {
 		if (checkBox.isChecked()) {
 			twoyear = true;
 		} else {
-			twoyear = false;
+			twoyear = true;
 		}
 
 		// retrieve final values from user input
 		final EditText installet = (EditText) rootView
 				.findViewById(R.id.installs);
-		final TextView eSmart = (TextView) rootView
-				.findViewById(R.id.sphone_input);
-		final TextView eBasic = (TextView) rootView
-				.findViewById(R.id.bphone_input);
-		final TextView eData = (TextView) rootView
-				.findViewById(R.id.data_input);
-		final TextView eTab = (TextView) rootView.findViewById(R.id.tab_input);
-		final TextView eMifi = (TextView) rootView
-				.findViewById(R.id.mifi_input);
 
 		double installments;
 

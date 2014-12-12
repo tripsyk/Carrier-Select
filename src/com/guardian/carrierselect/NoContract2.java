@@ -4,19 +4,18 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import android.support.v4.app.Fragment;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.applovin.adview.AppLovinInterstitialAd;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
@@ -33,12 +32,6 @@ public class NoContract2 extends Fragment {
 			Bundle savedInstanceState) {
 
 		rootView = inflater.inflate(R.layout.nocontract2, container, false);
-
-		double randomNum = Math.random() * 3;
-
-		if ((int) randomNum == 1)
-			AppLovinInterstitialAd.show(getActivity());
-
 		final SharedPreferences sharedPref = getActivity().getPreferences(
 				Context.MODE_PRIVATE);
 

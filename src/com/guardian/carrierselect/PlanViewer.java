@@ -15,7 +15,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.applovin.adview.AppLovinInterstitialAd;
 import com.guardian.carrierselect.model.Phone;
 import com.parse.FindCallback;
 import com.parse.Parse;
@@ -48,12 +47,6 @@ public class PlanViewer extends Fragment {
 		rootView = inflater.inflate(R.layout.planviewer, container, false);
 
 		title = (TextView) rootView.findViewById(R.id.pvsubtitle);
-
-		final double randomNum = Math.random() * 3;
-
-		if ((int) randomNum == 1)
-			AppLovinInterstitialAd.show(getActivity());
-
 		if (carrier.equalsIgnoreCase("AT&T")) {
 			buildATT();
 		} else if (carrier.equalsIgnoreCase("Verizon Wireless")) {
@@ -78,9 +71,6 @@ public class PlanViewer extends Fragment {
 		progress.show();
 
 		ParseObject.registerSubclass(Phone.class);
-		Parse.initialize(rootView.getContext(),
-				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
-				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
 
 		// Test Query
 		final ParseQuery<ParseObject> query = ParseQuery.getQuery("Postpaid");

@@ -7,8 +7,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 
-import com.applovin.sdk.AppLovinSdk;
-
 public class MainActivity extends ActionBarActivity {
 
 	@Override
@@ -16,16 +14,13 @@ public class MainActivity extends ActionBarActivity {
 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
-		AppLovinSdk.initializeSdk(getApplicationContext());
-
-		final String PREFS_NAME = "MyPrefsFile";
-		SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+		SharedPreferences settings = getSharedPreferences("data", 0);
 
 		if (settings.getBoolean("my_first_time", true) != true) {
 
 			final Intent intent = new Intent(this, InteractiveAct.class);
 			startActivity(intent);
+			this.finish();
 
 		} else {
 

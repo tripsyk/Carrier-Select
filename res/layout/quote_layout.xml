@@ -64,7 +64,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:hint="@string/quotetop_label"
                     android:text="@string/quotetop_label"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
@@ -76,7 +75,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/elmtspace"
                     android:gravity="center"
-                    android:hint="@string/sphone_label"
                     android:text="@string/sphone_label"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body" />
@@ -101,7 +99,6 @@
                         android:layout_height="@dimen/plusminbtn"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:hint="@string/zero"
                         android:text="@string/zero"
                         android:textColor="@color/cardtxt"
                         android:textSize="@dimen/iconbtn" />
@@ -121,7 +118,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/topbotpad"
                     android:gravity="center"
-                    android:hint="@string/bphone_label"
                     android:text="@string/bphone_label"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body" />
@@ -146,7 +142,6 @@
                         android:layout_height="@dimen/plusminbtn"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:hint="@string/zero"
                         android:text="@string/zero"
                         android:textColor="@color/cardtxt"
                         android:textSize="@dimen/iconbtn" />
@@ -166,7 +161,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/topbotpad"
                     android:gravity="center"
-                    android:hint="@string/data_label"
                     android:text="@string/data_label"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body" />
@@ -191,7 +185,6 @@
                         android:layout_height="@dimen/plusminbtn"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:hint="@string/zero"
                         android:text="@string/zero"
                         android:textColor="@color/cardtxt"
                         android:textSize="@dimen/iconbtn" />
@@ -211,7 +204,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/topbotpad"
                     android:gravity="center"
-                    android:hint="@string/tab_label"
                     android:text="@string/tab_label"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body" />
@@ -236,7 +228,6 @@
                         android:layout_height="@dimen/plusminbtn"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:hint="@string/zero"
                         android:text="@string/zero"
                         android:textColor="@color/cardtxt"
                         android:textSize="@dimen/iconbtn" />
@@ -256,7 +247,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/topbotpad"
                     android:gravity="center"
-                    android:hint="@string/mifi_label"
                     android:text="@string/mifi_label"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body" />
@@ -281,7 +271,6 @@
                         android:layout_height="@dimen/plusminbtn"
                         android:layout_gravity="center"
                         android:gravity="center"
-                        android:hint="@string/zero"
                         android:text="@string/zero"
                         android:textColor="@color/cardtxt"
                         android:textSize="@dimen/iconbtn" />
@@ -326,7 +315,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:hint="@string/extras_label"
                     android:text="@string/extras_label"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body"
@@ -338,7 +326,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/elmtspace"
                     android:gravity="center"
-                    android:hint="@string/contractpricing"
                     android:text="@string/contractpricing"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body" />
@@ -349,7 +336,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/elmtspace"
                     android:gravity="center"
-                    android:hint="@string/factorinstall"
                     android:text="@string/factorinstall"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body" />
@@ -358,16 +344,13 @@
                     android:id="@+id/installs"
                     android:layout_width="144dip"
                     android:layout_height="@dimen/btnh"
-                    android:layout_gravity="center"
                     android:layout_marginBottom="@dimen/contentspace"
+                    android:layout_marginTop="@dimen/contentspace"
                     android:background="@color/secondary"
                     android:gravity="center"
                     android:hint="@string/spinstallhint"
                     android:inputType="number"
                     android:padding="@dimen/elmtspace"
-                    android:text="@string/blankstring"
-                    android:textColor="@color/white_color"
-                    android:textColorHint="@color/white_color"
                     android:textSize="@dimen/body" />
 
                 <TextView
@@ -376,7 +359,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/elmtspace"
                     android:gravity="center"
-                    android:hint="@string/discount_text"
                     android:text="@string/discount_text"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/body" />
@@ -387,14 +369,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/contentspace"
                     android:gravity="center"
-                    android:hint="@string/dis_value"
                     android:text="@string/dis_value"
                     android:textColor="@color/cardtxt"
                     android:textSize="@dimen/title_dimens" />
 
                 <SeekBar
                     android:id="@+id/discount_bar"
-                    android:layout_width="200dp"
+                    android:layout_width="225dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/topbotpad"
                     android:layout_marginTop="@dimen/elmtspace"

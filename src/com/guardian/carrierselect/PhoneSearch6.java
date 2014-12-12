@@ -1,12 +1,7 @@
 package com.guardian.carrierselect;
 
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
-import android.annotation.SuppressLint;
-import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -16,10 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.applovin.adview.AppLovinInterstitialAd;
-import com.guardian.carrierselect.model.Phone;
 import com.parse.FindCallback;
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -27,7 +19,6 @@ import com.parse.ParseQuery;
 public class PhoneSearch6 extends Fragment {
 
 	private String initial, compare;
-	private ProgressDialog progress;
 	private TextView phone1, manufacturer1, phone2, manufacturer2, release1,
 			sim1, os1, size1, thickness1, weight1, release2, sim2, os2, size2,
 			thickness2, weight2, display1, displaytype1, pixden1, reso1,
@@ -50,7 +41,7 @@ public class PhoneSearch6 extends Fragment {
 				.getSharedPreferences("data", Context.MODE_PRIVATE);
 
 		initial = sharedPref.getString("ps2", "");
-		compare = sharedPref.getString("compare", "");
+		compare = sharedPref.getString("ps5", "");
 
 		phone1 = (TextView) rootView.findViewById(R.id.phone1);
 		phone1.setText(initial);
@@ -128,40 +119,20 @@ public class PhoneSearch6 extends Fragment {
 		wireless2 = (TextView) rootView.findViewById(R.id.wirelesstext2);
 		nc2 = (TextView) rootView.findViewById(R.id.nctext2);
 		sensors2 = (TextView) rootView.findViewById(R.id.sensortext2);
-		double randomNum = Math.random() * 3;
-
-		if ((int) randomNum == 1)
-			AppLovinInterstitialAd.show(getActivity());
-
-		grabInitial();
-		grabCompare();
+		init1();
+		init2();
 
 		return rootView;
 	}
 
-	@SuppressLint("DefaultLocale")
-	public void grabInitial() {
-
-		progress = new ProgressDialog(getActivity(),
-				AlertDialog.THEME_DEVICE_DEFAULT_DARK);
-		progress.setTitle("Phone Search");
-		progress.setMessage("Just a sec...");
-		progress.setCancelable(false);
-		progress.show();
-
-		ParseObject.registerSubclass(Phone.class);
-		Parse.initialize(rootView.getContext(),
-				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
-				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
-
-		// Test Query
-		ParseQuery<ParseObject> query = ParseQuery.getQuery("Phones");
-		query.setLimit(5);
-		query.whereContains("Name", initial);
-		query.findInBackground(new FindCallback<ParseObject>() {
+	private void init1() {
+		ParseQuery<ParseObject> phone1 = ParseQuery.getQuery("Phones");
+		phone1.whereEqualTo("Name", initial);
+		phone1.fromLocalDatastore();
+		phone1.findInBackground(new FindCallback<ParseObject>() {
 			public void done(List<ParseObject> PhoneList, ParseException e) {
-
 				if (e == null) {
+
 					manufacturer1.setText(PhoneList.get(0).getString(
 							"Manufacturer"));
 					release1.setText(PhoneList.get(0).getString("ReleaseDate"));
@@ -247,30 +218,21 @@ public class PhoneSearch6 extends Fragment {
 						nc1.setText("No");
 					}
 					sensors1.setText(PhoneList.get(0).getString("Sensors"));
+
 				} else {
 				}
 			}
-		});
 
+		});
 	}
 
-	@SuppressLint("DefaultLocale")
-	public void grabCompare() {
-
-		ParseObject.registerSubclass(Phone.class);
-		Parse.initialize(rootView.getContext(),
-				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
-				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
-
-		// Test Query
-		ParseQuery<ParseObject> query = ParseQuery.getQuery("Phones");
-		query.setLimit(5);
-		query.whereContains("Name", compare);
-		query.findInBackground(new FindCallback<ParseObject>() {
+	private void init2() {
+		ParseQuery<ParseObject> phone2 = ParseQuery.getQuery("Phones");
+		phone2.whereEqualTo("Name", compare);
+		phone2.fromLocalDatastore();
+		phone2.findInBackground(new FindCallback<ParseObject>() {
 			public void done(List<ParseObject> PhoneList, ParseException e) {
-
 				if (e == null) {
-
 					manufacturer2.setText(PhoneList.get(0).getString(
 							"Manufacturer"));
 					release2.setText(PhoneList.get(0).getString("ReleaseDate"));
@@ -356,14 +318,6 @@ public class PhoneSearch6 extends Fragment {
 						nc2.setText("No");
 					}
 					sensors2.setText(PhoneList.get(0).getString("Sensors"));
-
-					final Timer timer = new Timer();
-					timer.schedule(new TimerTask() {
-						@Override
-						public void run() {
-							progress.dismiss();
-						}
-					}, 200);
 				} else {
 				}
 			}

@@ -18,6 +18,3 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
--dontwarn com.applovin.**
--libraryjars libs/applovin-sdk-5.4.1.jar
--keep public class com.applovin.**.*

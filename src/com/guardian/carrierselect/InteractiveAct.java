@@ -1,6 +1,7 @@
 package com.guardian.carrierselect;
 
-import android.content.Context;
+import com.parse.Parse;
+
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
@@ -40,8 +41,7 @@ public class InteractiveAct extends ActionBarActivity {
 		toolbar = (Toolbar) findViewById(R.id.intertool);
 		setSupportActionBar(toolbar);
 
-		final SharedPreferences profilepref = getSharedPreferences("profile",
-				Context.MODE_PRIVATE);
+		final SharedPreferences profilepref = getSharedPreferences("profile", 0);
 		final TextView mCarrier = (TextView) findViewById(R.id.carrier);
 		final TextView mDevices = (TextView) findViewById(R.id.devices);
 		final TextView mData = (TextView) findViewById(R.id.data);
@@ -55,8 +55,7 @@ public class InteractiveAct extends ActionBarActivity {
 		drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 		drawer = (LinearLayout) findViewById(R.id.left_drawer);
 		savingsCheck = (Button) findViewById(R.id.savecheck);
-		final SharedPreferences settings = getSharedPreferences("MyPrefsFile",
-				0);
+		final SharedPreferences settings = getSharedPreferences("data", 0);
 		final SharedPreferences.Editor editor = settings.edit();
 		editor.putBoolean("my_first_time", false);
 		editor.commit();
@@ -103,6 +102,11 @@ public class InteractiveAct extends ActionBarActivity {
 				+ convertWord(profilepref.getString("mifi", "Not Set"))));
 		mCost.setText("$" + profilepref.getString("monthly", "Not Set"));
 		mData.setText(profilepref.getString("data", "Not Set"));
+
+		Parse.enableLocalDatastore(getApplicationContext());
+		Parse.initialize(getApplicationContext(),
+				"2XacmZEB9hLKANtTk7Rx9ejJipHI3GkmxhVt0Q0y",
+				"mAmItywfUeIlMgZCK1LwvQSfneS0SaG1MGqfB65d");
 
 		final Fragment fragment = new Home();
 		final FragmentTransaction fragmenttran = getSupportFragmentManager()
