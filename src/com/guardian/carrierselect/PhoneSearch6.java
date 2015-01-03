@@ -29,7 +29,7 @@ public class PhoneSearch6 extends Fragment {
 			imagestab1, bt1, nfc1, wifidirect1, dlna1, infra1, nc1, wireless1,
 			sensors1, charge2, imagestab2, bt2, nfc2, wifidirect2, dlna2,
 			infra2, nc2, wireless2, sensors2;
-	private View rootView;
+	private static View rootView;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,

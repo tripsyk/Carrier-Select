@@ -43,7 +43,7 @@ public class BreakdownFragment extends Fragment {
 
 	private ProgressDialog progress;
 
-	private static boolean twoyear;
+	private boolean twoyear;
 
 	private TextView attname, attplan, attsmart, attbasic, atttablets, attmifi,
 			attinstalls, atttax, attdiscount, atttotal;

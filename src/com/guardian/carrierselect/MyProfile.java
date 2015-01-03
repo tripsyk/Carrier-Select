@@ -14,7 +14,7 @@ import android.widget.TextView;
 public class MyProfile extends Fragment {
 
 	private static View rootView;
-	private static TextView theCarrier, theSmarts, theBasics, theData, theTabs,
+	private TextView theCarrier, theSmarts, theBasics, theData, theTabs,
 			theMifi, theDiscount, theInstalls, theMonthly;
 
 	@Override

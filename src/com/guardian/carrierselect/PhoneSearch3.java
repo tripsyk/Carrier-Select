@@ -28,7 +28,7 @@ public class PhoneSearch3 extends Fragment {
 			battery, microsd, charge, imagestab, bt, nfc, wifidirect, dlna,
 			infra, nc, wireless, sensors;
 	private Button compare;
-	private View rootView;
+	private static View rootView;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,

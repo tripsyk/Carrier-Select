@@ -1,6 +1,7 @@
 package com.guardian.carrierselect;
 
 import android.annotation.SuppressLint;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -82,7 +83,7 @@ public class QuoteFragment extends Fragment {
 			}
 		});
 
-		OnTouchListener longAdj = new OnTouchListener() {
+		final OnTouchListener longAdj = new OnTouchListener() {
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
 				current = v;
@@ -182,7 +183,7 @@ public class QuoteFragment extends Fragment {
 			};
 		};
 
-		OnClickListener oneAdj = new OnClickListener() {
+		final OnClickListener oneAdj = new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 

@@ -19,7 +19,7 @@ import com.parse.ParseQuery;
 
 public class Home extends Fragment {
 
-	private static TextView attnews1, attnews2, attnews3, attnews4, attnews5,
+	private TextView attnews1, attnews2, attnews3, attnews4, attnews5,
 			vernews1, vernews2, vernews3, vernews4, vernews5, sprnews1,
 			sprnews2, sprnews3, sprnews4, sprnews5, tmonews1, tmonews2,
 			tmonews3, tmonews4, tmonews5, prenews1, prenews2, prenews3,
